@@ -1,7 +1,7 @@
 <!-- Original inspiration from my 3 year old daughter loving Micky Mouse. A google search of first JavaScript projects
 repeatedly showed 'memory game'. I was able to envision my daughter enjoying playing a memory game with Micky Mouse characters  -->
 
-<!-- Inspiration for description from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
+<!-- Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
 # Micky-Mouse-Memory-Game
 
 Memory game is a simple grid based game where the player has to flip over two
@@ -83,6 +83,9 @@ remaining cards to flip over.
 
 # Technologies Used
 
+- Images compressed on [TinyPNG](https://tinypng.com/).
+
+
 ## Languages Used
 
 ## Frameworks, Libraries & Programs Used
@@ -106,6 +109,10 @@ remaining cards to flip over.
 
 
 ### Imagery 
+
+
+- Mickey Mouse character images taken from [PNGWing](https://www.pngwing.com/).
+- Images compressed on [TinyPNG](https://tinypng.com/).
 
 
 
@@ -193,6 +200,8 @@ The site was deployed on github pages.
 ## Mobile View
 
 # Credits
+
+- Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git)
 
 ## Content
 
