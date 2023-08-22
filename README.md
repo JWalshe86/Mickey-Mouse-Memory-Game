@@ -10,9 +10,19 @@ are then removed from the game, leaving the player with the remainder of the car
 to flip over. The game is over when all the cards have been matched and there's no 
 remaining cards to flip over.
 
+<!-- Inspiration for rules of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
+## Rules of Memory Game
+
+- One card is flipped to start the game
+- If the next card is identical, then you get +1 score
+- These cards then disappear from the game
+- If the next card you pick doesn't match, the cards flip back and remain in the game.
+- The game continues until all the cards have been matched and have been removed.
+
 ## Contents
 
 - [Micky-Mouse-Memory-Game](#micky-mouse-memory-game)
+  - [Rules of Memory Game](#rules-of-memory-game)
   - [Contents](#contents)
 - [User-Experience](#user-experience)
   - [As a new visitor](#as-a-new-visitor)
@@ -86,6 +96,7 @@ remaining cards to flip over.
 - Images compressed on [TinyPNG](https://tinypng.com/).
 
 
+
 ## Languages Used
 
 ## Frameworks, Libraries & Programs Used
@@ -110,9 +121,9 @@ remaining cards to flip over.
 
 ### Imagery 
 
-
 - Mickey Mouse character images taken from [PNGWing](https://www.pngwing.com/).
 - Images compressed on [TinyPNG](https://tinypng.com/).
+- Disney logo sourced from [Disney UK](https://static-mh.content.disney.io/matterhorn/assets/logos/disney_logo_dark-baa807690db7.png);
 
 
 
