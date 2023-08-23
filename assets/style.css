@@ -29,3 +29,36 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.baby {
+    background-image: url(./images/baby.png);
+}
+
+.daisy-duck {
+    background-image: url(./images/daisy-duck.png);
+}
+
+
+.donald-duck {
+    background-image: url(./images/donald-duck.png);
+}
+
+.goofy {
+    background-image: url(./images/goofy.png);
+}
+
+.mickey-mouse {
+    background-image: url(./images/mickey-mouse.png);
+}
+
+.minnie-mouse {
+    background-image: url(./images/minnie-mouse.png);
+}
+
+.pete {
+    background-image: url(./images/pete.png);
+}
+
+.pluto {
+    background-image: url(./images/pluto.png);
+}
