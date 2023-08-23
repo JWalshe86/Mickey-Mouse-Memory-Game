@@ -12,6 +12,31 @@ body {
     background-color: blue;
 }
 
-img {
-    width: 100px;
+/* styling for game */
+/* Code adapted from [Marina-Ferria](https: //www.youtube.com/watch?v=ZniVgo8U7ek) */
+
+.card-container {
+    /* set width for container */
+    width: 640px;
+    height: 640px;
+    display: flex;
+    /* introduce rows  */
+    flex-wrap: wrap;
+}
+
+.memory-card {
+    /* 4 cards @ 25% each for row, 3 cards @ 33% each for columns */
+    width: 25%;
+    height: 33%;
+    margin: 5px;
+    /* gives the cards a position which the front and back cards can position themselves from */
+    position: relative;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    /* places the front and back cards on top of one another */
+    position: absolute;
 }
