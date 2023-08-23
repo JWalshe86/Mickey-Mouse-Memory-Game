@@ -1,16 +1,31 @@
-body {
+* {
     background-color: blue;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
 
-/* code template from Love Maths */
+/* code adapted from Iris Smok [kids memory game](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/assets/css/style.css); */
 
 .card-container {
-    background-color: #E6ECF0;
-    box-sizing: border-box;
-    width: 85%;
-    height: 65vh;
-    max-height: 450px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
+    float: left;
+    width: 100%;
+    /* put boxes in grid format  */
+    display: grid;
+    /* specifies having 4 columns */
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+}
+
+.card {
+    /* takes as much space as required */
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: solid black;
+    margin: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

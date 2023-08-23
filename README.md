@@ -213,6 +213,8 @@ The site was deployed on github pages.
 # Credits
 
 - Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git)
+- Card container code adapted from Iris Smok [kids memory game](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/assets/css/style.css);
+
 
 ## Content
 
