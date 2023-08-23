@@ -124,8 +124,7 @@ remaining cards to flip over.
 - Mickey Mouse character images taken from [PNGWing](https://www.pngwing.com/).
 - Images compressed on [TinyPNG](https://tinypng.com/).
 - Disney logo sourced from [Disney UK](https://static-mh.content.disney.io/matterhorn/assets/logos/disney_logo_dark-baa807690db7.png);
-
-
+- Background to images removed using [remove website](<https://www.remove.bg/>)
 
 ### Iconography
 
