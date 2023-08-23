@@ -1,65 +1,17 @@
 * {
-    background-color: blue;
     margin: 0;
     padding: 0;
+    /* padding not included in size  */
     box-sizing: border-box;
 
 }
 
-/* code adapted from Iris Smok [kids memory game](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/assets/css/style.css); */
-
-.card-container {
-    float: left;
-    width: 100%;
-    /* put boxes in grid format  */
-    display: grid;
-    /* specifies having 4 columns */
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
+body {
+    /* body will take 100% of available viewport space */
+    height: 100vh;
+    background-color: blue;
 }
 
-.card {
-    /* takes as much space as required */
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    border: solid black;
-    margin: 5px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: white;
-}
-
-.baby {
-    background-image: url(./images/baby-removebg-preview.png);
-}
-
-.daisy-duck {
-    background-image: url(./images/daisy-duck-bkground-removed.png);
-}
-
-
-.donald-duck {
-    background-image: url(./images/donald-duck-removebg-preview.png);
-}
-
-.goofy {
-    background-image: url(./images/goofy-removebg-preview.png);
-}
-
-.mickey-mouse {
-    background-image: url(./images/mickey-mouse-removebg-preview.png);
-}
-
-.minnie-mouse {
-    background-image: url(./images/minnie-mouse-removebg-preview.png);
-}
-
-.pete {
-    background-image: url(./images/pete-removebg-preview.png);
-}
-
-.pluto {
-    background-image: url(./images/pluto-removebg-preview.png);
+img {
+    width: 100px;
 }
