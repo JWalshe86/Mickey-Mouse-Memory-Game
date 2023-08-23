@@ -9,6 +9,8 @@
 body {
     /* body will take 100% of available viewport space */
     height: 100vh;
+    /* By setting the body to display flex and the container to margin auto, this centers the container vertically & horizontally */
+    display: flex;
     background-color: blue;
 }
 
@@ -22,21 +24,37 @@ body {
     display: flex;
     /* introduce rows  */
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .memory-card {
     /* 4 cards @ 25% each for row, 3 cards @ 33% each for columns */
-    width: 25%;
-    height: 33%;
-    margin: 5px;
+    /* The css calc function allows one to remove 
+    the width of the margin from the width & height so that the cards fit into the container again 
+    and the 3*4 structure is maintained */
+    width: calc(25% - 10px);
+    height: calc(33%-10px);
     /* gives the cards a position which the front and back cards can position themselves from */
     position: relative;
+    margin: 5px;
+    /* so the active card knows to start from 1 when transitioning */
+    transform: scale(1);
+}
+
+/* The card will decrease by .3 when active over .2s */
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
 }
 
 .card-front,
 .card-back {
+    /* images take whole width & height of container */
     width: 100%;
     height: 100%;
     /* places the front and back cards on top of one another */
     position: absolute;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
 }
