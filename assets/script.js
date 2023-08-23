@@ -6,12 +6,14 @@ card elements here*/
 
 const cards = document.querySelectorAll('.memory-card');
 
-/* The this keyword in the flipCard function represents the memory-card class. Thats because memory card here is the 'owner'.
+/* The this keyword in the flipCard function represents the memory-card class. Memory card 
+is stored in this. Thats because this represents the element that activated it.
 */
 
 function flipCard() {
-    alert("working");
-    console.log(this);
+    /* Access the class list of the memory card and to toggle it. Toggle here means if 
+    the class is there remove it, if it's not there add it. */
+    this.classList.toggle('flip');
 }
 
 /*One will loop through the array of elements that are returned and
@@ -19,6 +21,4 @@ function flipCard() {
  this click event occurs a function named cardflip will activate  */
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-
-
 
