@@ -25,8 +25,9 @@ is stored in this. Thats because this represents the element that activated it.
 */
 
 function flipCard() {
-    // timer starts when first card is flipped
-    startTimer();
+    // startTimer function adapted so it only runs once to stop time speeding up on every card click
+    fn();
+
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
 
@@ -159,24 +160,39 @@ var interval;
 
 /** startTimer function sets the timer html into minutes and seconds
  * if it reaches 60 seconds seconds go back to zero and minutes go up by one. If
- * the minutes reach 60 the minutes reset to zero.
+ * the minutes reach 60 the minutes reset to zero. Getting the function to only 
+ * run once was taken from Ankit Saxena
  */
 
 function startTimer() {
-    // the setInterval function delays the starting of the timer by 1000ms or 1 second
-    interval = setInterval(function () {
-        timer.innerHTML = minute + "mins " + second + "secs";
-        second++;
+    // the creation of a 'closure'
+    let called = 0;
+    return function () {
+        /* called is true here so the code below is activated.
+        however the called++ means on the next loop it's not zero 
+        thus the function isn't called again */
+        if (called === 0) {
+            // the setInterval function delays the starting of the timer by 1000ms or 1 second
+            interval = setInterval(function () {
+                timer.innerHTML = minute + "mins " + second + "secs";
+                second++;
 
-        if (second == 60) {
-            minute++;
-            second = 0;
+                if (second == 60) {
+                    minute++;
+                    second = 0;
+                }
+                if (minute == 60) {
+                    minute = 0;
+                }
+
+
+            }, 1000);
+            called++;
         }
-        if (minute == 60) {
-            minute = 0;
-        }
+    };
 
 
-    }, 1000);
 
-}
+} const fn = startTimer();
+
+
