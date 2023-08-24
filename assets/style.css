@@ -36,6 +36,8 @@ body {
     background-color: red;
     width: 100%;
     text-align: center;
+    font-size: 2rem;
+    margin: 25px;
 }
 
 .timer {
@@ -48,6 +50,7 @@ body {
     background-color: pink;
     position: relative;
     display: inline-block;
+    padding-left: 180px;
 }
 
 #reset-container {

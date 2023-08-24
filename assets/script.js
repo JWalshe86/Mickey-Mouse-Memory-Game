@@ -25,6 +25,8 @@ is stored in this. Thats because this represents the element that activated it.
 */
 
 function flipCard() {
+    // timer starts when first card is flipped
+    startTimer();
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
 
@@ -147,3 +149,34 @@ By wrapping the function in parentheses means it will be immediately invoked aft
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+// js for timer 
+/* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/assets/js/script.js) */
+
+var second = 0,
+    minute = 0;
+var timer = document.querySelector(".timer");
+var interval;
+
+/** startTimer function sets the timer html into minutes and seconds
+ * if it reaches 60 seconds seconds go back to zero and minutes go up by one. If
+ * the minutes reach 60 the minutes reset to zero.
+ */
+
+function startTimer() {
+    // the setInterval function delays the starting of the timer by 1000ms or 1 second
+    interval = setInterval(function () {
+        timer.innerHTML = minute + "mins " + second + "secs";
+        second++;
+
+        if (second == 60) {
+            minute++;
+            second = 0;
+        }
+        if (minute == 60) {
+            minute = 0;
+        }
+
+
+    }, 1000);
+
+}
