@@ -30,6 +30,10 @@ body {
     perspective: 1000px;
 }
 
+.timer-counter-container {
+    
+}
+
 .memory-card {
     /* 4 cards @ 25% each for row, 3 cards @ 33% each for columns */
     /* The css calc function allows one to remove 

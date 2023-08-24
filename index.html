@@ -10,6 +10,17 @@
   <script src="assets/js/script.js"></script>
   <body>
     <section class="card-container">
+      <!-- container so flex can be used -->
+      <div class="timer-counter-container">
+        <!-- using onclick when the flipcard() is activated the timer & counter start -->
+        <div onclick="flipcard()" class="timer-counter">
+          <span class="timer">Timer 0:00</span>
+        </div>
+        <div class="timer-counter">
+          Moves
+          <span class="moves">0</span>
+        </div>
+      </div>
       <div class="memory-card" data-framework="daisy-duck">
         <img
           class="card-front"
