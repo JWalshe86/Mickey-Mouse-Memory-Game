@@ -1,4 +1,4 @@
-// Card Flip
+
 
 /* Store all memory card elements in a cards variable. This is where the function will reach to when looking for cards to flip. The 
 querySelectorAll function returns all the elements from the memory-card document. Memory card is the class that contains all the
@@ -24,9 +24,15 @@ let firstCard, secondCard;
 is stored in this. Thats because this represents the element that activated it.
 */
 
+let moves = 0;
+let counter = document.querySelector(".counter"); // MOVES COUNTER
+
+// Card Flip
+
 function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
     fn();
+    moveCounter();
 
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
@@ -193,6 +199,16 @@ function startTimer() {
 
 
 
-} const fn = startTimer();
+}
 
+const fn = startTimer();
+
+// moves counter
+/** 1 added to counter variable each time a move is made */
+
+function moveCounter() {
+    moves++;
+    counter.innerHTML = moves;
+
+}
 

@@ -12,11 +12,15 @@
     <!-- timer & counter -->
     <!-- Code adapted from [Iris Smok](https://github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) -->
     <!-- container so flex can be used -->
-    <div class="timer-counter-container">
-      <div class="timer">Timer</div>
+    <div class="info-container">
+      <div>
+        Timer:
+        <div class="timer"></div>
+      </div>
 
-      <div class="counter">
-        <p>Moves: <span class="counter"></span></p>
+      <div>
+        Moves:
+        <div class="counter"></div>
       </div>
     </div>
     <section class="card-container">
@@ -164,13 +168,13 @@
           alt="disney logo with micky mouse"
         />
       </div>
-   </section>
+    </section>
 
-<div id="reset-container">
-    <button id="reset" class="reset" type="reset" onclick="startGame()">
+    <div id="reset-container">
+      <button id="reset" class="reset" type="reset" onclick="startGame()">
         Reset
-    </button>
-</div>
+      </button>
+    </div>
     <script src="assets/script.js"></script>
   </body>
 </html>

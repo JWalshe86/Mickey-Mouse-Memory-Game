@@ -32,25 +32,32 @@ body {
 /* styling for Reset button, timer and counter */
 /* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) */
 
-.timer-counter-container {
+.info-container {
     background-color: red;
     width: 100%;
     text-align: center;
     font-size: 2rem;
     margin: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
 }
 
 .timer {
     background-color: yellow;
-    position: relative;
-    display: inline-block;
+    float: right;
+    padding-left: 3px;
 }
 
 .counter {
     background-color: pink;
     position: relative;
     display: inline-block;
-    padding-left: 180px;
+    padding-left: 3px;
+}
+
+span.counter {
+    padding-left: 1px;
 }
 
 #reset-container {
