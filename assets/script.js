@@ -27,6 +27,15 @@ is stored in this. Thats because this represents the element that activated it.
 function flipCard() {
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
+
+    /*If the first card is clicked twice then the eventlistener is removed
+    and the card will remain unflipped, as if it was correctly matched. It it's
+    the first card click the this variable holds the first card but the condition
+    is unset so it's going to move to false. If it is the second click then the second
+    div holds the second card.*/
+
+    if (this === firstCard) return;
+
     /* Access the class list of the memory card and toggle it. Add here means if 
     the class is not there add it. */
     this.classList.add('flip');
@@ -99,7 +108,33 @@ function unflipCards() {
         secondCard.classList.remove('flip');
         // lockBoard turns false once the cards have been flipped
         lockBoard = false;
+
+        resetBoard();
     }, 1500);
+}
+
+
+/**  In order for the function to work after each round the first card and second card 
+need to be reset to null. The destructuring assignment is used. */
+
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false],
+        [firstCard, secondCard] = [null, null];
+}
+
+/** The flexbox property order will be used to shuffle the cards. 
+This puts every flex item into the same group. Then they're grouped by
+source order. A random number will be assigned to each card, so the order of the cards is random. 
+To start the cards are iterated through. The Math.random function will be used.
+ */
+function shuffle() {
+    cards.forEach(card => {
+        /* Multiply by 12 as result will be a number between 0 and 1 
+        Math.floor is used to return an integer*/
+        let randomPos = Math.floor(Math.random() * 12);
+        // this random number is then applied to the order property
+        card.style.order = randomPos;
+    });
 }
 
 /*One will loop through the array of elements that are returned and
