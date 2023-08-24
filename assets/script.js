@@ -10,6 +10,13 @@ const cards = document.querySelectorAll('.memory-card');
 front of the card, so the matching logic can then be activated  */
 
 let hasFlippedCard = false;
+
+/*If one tries to flip a second set of cards before the first set 
+has finished unflipping, then the logic doesn't work. The board needs
+ to be 'locked' or to 'wait' until the cards finish unflipping */
+
+let lockBoard = false;
+
 // variables below store whether card has been flipped or not
 let firstCard, secondCard;
 
@@ -18,6 +25,8 @@ is stored in this. Thats because this represents the element that activated it.
 */
 
 function flipCard() {
+    // if lockBoard is true the rest of the function won't get executed
+    if (lockBoard) return;
     /* Access the class list of the memory card and toggle it. Add here means if 
     the class is not there add it. */
     this.classList.add('flip');
@@ -36,13 +45,16 @@ function flipCard() {
         another card is now flipped, as hasFlippedCard is now true, the if statement with !hasFlippedCard
         is no longer activated */
 
+        /* if the hasFlippedCard is true the return statement stops the function here. If
+        it is true it will move on to teh hasFlippedCard = false clause */
+        return;
 
     }
     /* if hasFlipped Card is set to true it means that the player is clicking on the second card.
         Using this the element here is now stored in the secondCard variable. When the second card
         is now clicked the following is returned: {hasFlippedCard: false, secondCard: div.memory-card.flip
      */
-    else {
+    {
         hasFlippedCard = false;
         secondCard = this;
 
@@ -62,20 +74,14 @@ function flipCard() {
 function checkForMatch() {
     /*  If the first and second cards are the same then the eventListener will be removed
   from these cards to prevent them from being clicked again. If they're not the same
-  then the cards will be unflipped back to their original state.
-    */
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        // event listener removed
-        disableCards();
-    }
-
-    else {
-
-        /*If the cards don't match then they need to be unflipped. To do this the 
+  then the cards will be unflipped back to their original state.  /*If the cards don't match then they need to be unflipped. To do this the 
         flip class is removed. As this occurs so quickly a setTimeout function is used
         so one can see the second card before it flips back */
-        unflipCards();
-    }
+
+    // ternary operator used here for simplicity
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+    isMatch ? disableCards() : unflipCards();
 }
 
 // called if the cards match
@@ -86,9 +92,13 @@ function disableCards() {
 
 // called if cards don't match
 function unflipCards() {
+    /* If the cards don't match they will be locked 
+    and will only be unlocked once they've been flipped */
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
+        // lockBoard turns false once the cards have been flipped
+        lockBoard = false;
     }, 1500);
 }
 
