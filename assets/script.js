@@ -36,7 +36,8 @@ function flipCard() {
 
     if (this === firstCard) return;
 
-    /* Access the class list of the memory card and toggle it. Add here means if 
+
+    /* Access the class list of the memory card. Add here means if 
     the class is not there add it. */
     this.classList.add('flip');
 
@@ -101,6 +102,7 @@ function disableCards() {
 
 // called if cards don't match
 function unflipCards() {
+    lockBoard = true;
     /* If the cards don't match they will be locked 
     and will only be unlocked once they've been flipped */
     setTimeout(() => {
@@ -127,7 +129,9 @@ This puts every flex item into the same group. Then they're grouped by
 source order. A random number will be assigned to each card, so the order of the cards is random. 
 To start the cards are iterated through. The Math.random function will be used.
  */
-function shuffle() {
+/* The cards need to be shuffled before the player starts the game.
+By wrapping the function in parentheses means it will be immediately invoked after it's definition */
+(function shuffle() {
     cards.forEach(card => {
         /* Multiply by 12 as result will be a number between 0 and 1 
         Math.floor is used to return an integer*/
@@ -135,7 +139,7 @@ function shuffle() {
         // this random number is then applied to the order property
         card.style.order = randomPos;
     });
-}
+})();
 
 /*One will loop through the array of elements that are returned and
  attach an eventlistener to each that listens for a click event. Whenever 
