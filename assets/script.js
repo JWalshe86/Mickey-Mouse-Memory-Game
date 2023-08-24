@@ -11,7 +11,7 @@ is stored in this. Thats because this represents the element that activated it.
 */
 
 function flipCard() {
-    /* Access the class list of the memory card and to toggle it. Toggle here means if 
+    /* Access the class list of the memory card and toggle it. Toggle here means if 
     the class is there remove it, if it's not there add it. */
     this.classList.toggle('flip');
 }
