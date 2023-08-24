@@ -217,7 +217,7 @@ The site was deployed on github pages.
 
 - Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git)
 - Code for memory card game adapted from [Marina-Ferria](https://www.youtube.com/watch?v=ZniVgo8U7ek);
-- Code for timer and counter adapted from [Moira Hartigan](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game.git)
+- Code for timer and counter adapted from [Moira Hartigan](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game.git) &[Iris Smok](https://github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html)
 
 
 ## Content

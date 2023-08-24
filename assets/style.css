@@ -9,8 +9,6 @@
 body {
     /* body will take 100% of available viewport space */
     height: 100vh;
-    /* By setting the body to display flex and the container to margin auto, this centers the container vertically & horizontally */
-    display: flex;
     background-color: blue;
 }
 
@@ -24,15 +22,40 @@ body {
     display: flex;
     /* introduce rows  */
     flex-wrap: wrap;
+    /* to keep container in center */
     margin: auto;
     /* For 3D effect when card flipped.Perspective property gives depth to elements
      */
     perspective: 1000px;
 }
 
+/* styling for Reset button, timer and counter */
+/* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) */
+
 .timer-counter-container {
-    
+    background-color: red;
+    width: 100%;
+    text-align: center;
 }
+
+.timer {
+    background-color: yellow;
+    position: relative;
+    display: inline-block;
+}
+
+.counter {
+    background-color: pink;
+    position: relative;
+    display: inline-block;
+}
+
+#reset-container {
+    width: 100%;
+    text-align: center;
+}
+
+
 
 .memory-card {
     /* 4 cards @ 25% each for row, 3 cards @ 33% each for columns */
