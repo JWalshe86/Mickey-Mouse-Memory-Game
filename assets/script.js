@@ -48,7 +48,31 @@ function flipCard() {
 
         /*One now needs to check if the first and second cards match? 
         The data attribute will be used which allows one to add any information
-        to an element.   */
+        to an element. In order to access the data attribute defined in html (data-framework)
+        one uses the dataset object. console.log(firstCard.dataset.framework); logs the name
+        of the first card now selected. The same goes for the second card.
+
+        If the first and second cards are the same then the eventListener will be removed
+        from these cards to prevent them from being clicked again. If they're not the same
+        then the cards will be unflipped back to their original state.
+          */
+        if (firstCard.dataset.framework === secondCard.dataset.framework) {
+            // event listener removed
+            firstCard.removeEventListener('click', flipCard);
+            secondCard.removeEventListener('click', flipCard);
+        }
+
+        else {
+
+            /*If the cards don't match then they need to be unflipped. To do this the 
+            flip class is removed. As this occurs so quickly a setTimeout function is used
+            so one can see the second card before it flips back */
+            setTimeout(() => {
+                firstCard.classList.remove('flip');
+                secondCard.classList.remove('flip');
+            }, 1500);
+        }
+
     }
 }
 
