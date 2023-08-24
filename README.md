@@ -10,6 +10,8 @@ are then removed from the game, leaving the player with the remainder of the car
 to flip over. The game is over when all the cards have been matched and there's no 
 remaining cards to flip over.
 
+View [live site here](https://jwalshe86.github.io/Micky-Mouse-Memory-Game/);
+
 <!-- Inspiration for rules of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
 ## Rules of Memory Game
 
@@ -72,6 +74,8 @@ remaining cards to flip over.
 # User-Experience
 
 ## As a new visitor
+- As a child I want to have fun. 
+- To have fun while also learning something valuable.
 
 
 ## As a returning visitor
