@@ -146,6 +146,9 @@ View [live site here](https://jwalshe86.github.io/Micky-Mouse-Memory-Game/);
 
 ## Hero Image
 
+- The Disney themed hero image was used to capture the fun and excitement of Disney. The aim was to get the viewer to further explore the page and play the game. 
+  
+  ![Hero-Image](./assets/images/test.jpg)
 
 ## About section
 

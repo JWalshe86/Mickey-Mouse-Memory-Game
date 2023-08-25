@@ -1,5 +1,4 @@
 
-
 /* Store all memory card elements in a cards variable. This is where the function will reach to when looking for cards to flip. The 
 querySelectorAll function returns all the elements from the memory-card document. Memory card is the class that contains all the
 card elements here*/
@@ -31,7 +30,7 @@ let counter = document.querySelector(".counter"); // MOVES COUNTER
 
 function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
-    fn();
+    startClock();
     moveCounter();
 
     // if lockBoard is true the rest of the function won't get executed
@@ -201,7 +200,7 @@ function startTimer() {
 
 }
 
-const fn = startTimer();
+const startClock = startTimer();
 
 // moves counter
 /** 1 added to counter variable each time a move is made */
@@ -211,4 +210,16 @@ function moveCounter() {
     counter.innerHTML = moves;
 
 }
+
+// reset game feature adapted from Iris Smoks Memory Game
+
+// Store all reset elements in a reset variable. This is where the reset function will reach when looking to reset. 
+
+function resetGame() {
+    alert('hi there');
+}
+// get reference to button
+var btn = document.getElementById("reset");
+// add event listener for the button, for action "click"
+btn.addEventListener("click", resetGame);
 
