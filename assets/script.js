@@ -178,7 +178,7 @@ function startTimer() {
         however the called++ means on the next loop it's not zero 
         thus the function isn't called again */
         if (called === 0) {
-            // the setInterval function delays the starting of the timer by 1000ms or 1 second
+            // the setInterval sets the timing interval to 1 second
             interval = setInterval(function () {
                 timer.innerHTML = minute + "mins " + second + "secs";
                 second++;

@@ -12,6 +12,24 @@ body {
     background-color: blue;
 }
 
+/* styling for landing page */
+
+.hero-image {
+    background-image: url(./images/test.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 130vh;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 /* styling for game */
 /* Code adapted from [Marina-Ferria](https: //www.youtube.com/watch?v=ZniVgo8U7ek) */
 
@@ -112,6 +130,8 @@ span.counter {
      defaults to visible so one needs to put this to hidden before the front of the cards 
      can be shown when flipped*/
     backface-visibility: hidden;
+    /* so image is sharp */
+    object-fit: contain;
 }
 
 .card-front {
