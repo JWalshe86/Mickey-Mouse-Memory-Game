@@ -215,11 +215,14 @@ function moveCounter() {
 
 // Store all reset elements in a reset variable. This is where the reset function will reach when looking to reset. 
 
+/**
+ * The page refreshes when the reset button is clicked and
+ * all the parameters are reset to default
+ */
 function resetGame() {
-    alert('hi there');
-}
+    window.location.reload();
 // get reference to button
-var btn = document.getElementById("reset");
+let reset = document.getElementById("reset");
 // add event listener for the button, for action "click"
-btn.addEventListener("click", resetGame);
-
+reset.addEventListener("click", resetGame);
+}
