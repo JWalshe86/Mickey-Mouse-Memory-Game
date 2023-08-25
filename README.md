@@ -76,6 +76,7 @@ View [live site here](https://jwalshe86.github.io/Micky-Mouse-Memory-Game/);
 ## As a new visitor
 - As a child I want to have fun. 
 - To have fun while also learning something valuable.
+- I want to experience the magic of Disney
 
 
 ## As a returning visitor

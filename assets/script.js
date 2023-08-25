@@ -1,4 +1,7 @@
 
+let match = 0;
+
+
 /* Store all memory card elements in a cards variable. This is where the function will reach to when looking for cards to flip. The 
 querySelectorAll function returns all the elements from the memory-card document. Memory card is the class that contains all the
 card elements here*/
@@ -25,6 +28,7 @@ is stored in this. Thats because this represents the element that activated it.
 
 let moves = 0;
 let counter = document.querySelector(".counter"); // MOVES COUNTER
+
 
 // Card Flip
 
@@ -100,7 +104,26 @@ function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
     isMatch ? disableCards() : unflipCards();
+
+    /* if there are 6 matches this means the player has won. 
+    a variable for match was set to zero and when this reached
+    6 then the won function is activated */
+
+    if(isMatch){
+       match++;
+    }
+    // The settimeout function is used here so the final card can show before the you won message appears
+    setTimeout(() => {
+        if (match === 6) {
+            alert('You Won!');
+            resetGame();
+            
+        }
+    }, 1500);
+   
 }
+
+
 
 // called if the cards match
 function disableCards() {
@@ -158,9 +181,9 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 // js for timer 
 /* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/assets/js/script.js) */
 
-var second = 0,
-    minute = 0;
+var second = 0;
 var timer = document.querySelector(".timer");
+
 var interval;
 
 /** startTimer function sets the timer html into minutes and seconds
@@ -179,24 +202,14 @@ function startTimer() {
         if (called === 0) {
             // the setInterval sets the timing interval to 1 second
             interval = setInterval(function () {
-                timer.innerHTML = minute + "mins " + second + "secs";
+                timer.innerHTML = second;
                 second++;
 
-                if (second == 60) {
-                    minute++;
-                    second = 0;
-                }
-                if (minute == 60) {
-                    minute = 0;
-                }
-
-
+               
             }, 1000);
             called++;
         }
     };
-
-
 
 }
 
@@ -215,14 +228,24 @@ function moveCounter() {
 
 // Store all reset elements in a reset variable. This is where the reset function will reach when looking to reset. 
 
-/**
- * The page refreshes when the reset button is clicked and
- * all the parameters are reset to default
- */
+/** When the reset button is clicked the reset function is activated
+ * and the game is reset
+
+*/
 function resetGame() {
     window.location.reload();
+}
 // get reference to button
 let reset = document.getElementById("reset");
 // add event listener for the button, for action "click"
 reset.addEventListener("click", resetGame);
-}
+
+// You Won Function
+//This should fire when all the cards are flipped
+
+
+
+
+
+
+
