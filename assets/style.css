@@ -63,10 +63,19 @@ body {
     align-items: center;
 }
 
+/* to keep timer & counter on same line & responsive to screen size */
+
 .timer-counter-container {
     display: inline-flex;
     justify-content: space-between;
     gap: 50px;
+}
+/* game & info stay in same screen */
+
+.info-game-container{
+    display: flex;
+    flex-direction: column;
+    height: inherit;
 }
 
 .timer {
