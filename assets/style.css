@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     /* padding not included in size  */
@@ -19,7 +21,6 @@ body {
     background-size: cover;
     background-position: center;
     height: 130vh;
-    text-align: center;
 }
 
 
@@ -54,14 +55,6 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
-    /* alignment of buttons to bottom of landing page */
-.play-howToPlay-buttons-container {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 90vh;
-}
-
 
 
 /* to keep timer & counter on same line & responsive to screen size */
@@ -157,3 +150,70 @@ span.counter {
     /*front card rotated 180 degrees so it can be seen when filpcard is activated */
     transform: rotateY(180deg);
 }
+
+/* styling for modal. Code adapted from WebDevSimplified */
+
+.modal{
+        position: fixed;
+        /* centers the top of the text to the middle */
+        top: 50%;
+        left: 50%;
+        /* change the position of the elements 
+        50% here is 50% of the size of the container 
+        not the entire screen like above*/
+        transform: translate(-50%, -50%);
+        border: 1px solid black;
+        border-radius: 10px;
+        /* want modal to draw above everything else */
+        z-index: 10;
+        background-color: white;
+        width: 500px;
+        max-width: 80%;
+}
+
+.modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 10px 15px;
+}
+
+#modal-overlay {
+    position: fixed;
+    /* so by default the modal doesn't display */
+    /* opacity: 0; */
+    /* stretches overlay all over the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+
+
+
+
+
+
+
