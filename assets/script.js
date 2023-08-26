@@ -250,7 +250,7 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
 
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 
-const overlay = document.getElementById('overlay');
+const overlay = document.getElementById('modal-overlay');
 // for each button add an event listener
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -258,6 +258,14 @@ openModalButtons.forEach(button => {
         const modal = document.querySelector(button.dataset.modalTarget);
         // once the modal is captured one wants to pass it into a function to open it
         openModal(modal);
+    })
+})
+
+// Adding eventlistener to overlay object so it closes when overlay is preessed
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+    closeModal(modal)
     })
 })
 
@@ -272,7 +280,7 @@ closeModalButtons.forEach(button => {
 
 
 function openModal(modal){
-    if (modal === null) return
+    if (modal == null) return
     modal.classList.add('active')
     // everytime the modal is open one also wants the overlay open    
     overlay.classList.add('active')
