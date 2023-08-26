@@ -55,13 +55,21 @@ body {
     width: 100%;
     text-align: center;
     font-size: 2rem;
-    margin: 25px;
     display: flex;
     justify-content: center;
     gap: 2vh;
     flex-direction: column;
     align-items: center;
 }
+
+    /* alignment of buttons to bottom of landing page */
+.play-howToPlay-buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 90vh;
+}
+
+
 
 /* to keep timer & counter on same line & responsive to screen size */
 
@@ -70,9 +78,10 @@ body {
     justify-content: space-between;
     gap: 50px;
 }
+
 /* game & info stay in same screen */
 
-.info-game-container{
+.info-game-container {
     display: flex;
     flex-direction: column;
     height: inherit;
