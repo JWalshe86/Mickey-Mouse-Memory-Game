@@ -244,7 +244,45 @@ reset.addEventListener("click", resetGame);
 //This should fire when all the cards are flipped
 
 
+// script code for modal adapted from WebDivSimplified
+// anything with the data modal target will be inside the openModal variable
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
 
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+
+const overlay = document.getElementById('overlay');
+// for each button add an event listener
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // using the dataset selector from the button get the data from the html #modal
+        const modal = document.querySelector(button.dataset.modalTarget);
+        // once the modal is captured one wants to pass it into a function to open it
+        openModal(modal);
+    })
+})
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // gets the closest parent element with the class modal
+        const modal = button.closest('.modal')
+        // once the modal is captured one wants to pass it into a function to open it
+        closeModal(modal);
+    });
+})
+
+
+function openModal(modal){
+    if (modal === null) return
+    modal.classList.add('active')
+    // everytime the modal is open one also wants the overlay open    
+    overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+    if (modal === null) return;
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+}
 
 
 

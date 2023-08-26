@@ -160,8 +160,11 @@ span.counter {
         left: 50%;
         /* change the position of the elements 
         50% here is 50% of the size of the container 
-        not the entire screen like above*/
-        transform: translate(-50%, -50%);
+        not the entire screen like above
+        Setting the scale to zero means it's invisible*/
+        transform: translate(-50%, -50%) scale(0);
+        /* scale allows for a smooth transition, as opposed to display: none */
+        transition: 200ms ease-in-out;
         border: 1px solid black;
         border-radius: 10px;
         /* want modal to draw above everything else */
@@ -169,6 +172,11 @@ span.counter {
         background-color: white;
         width: 500px;
         max-width: 80%;
+}
+
+.modal.active{
+ transform: translate(-50%, -50%) scale(1);
+
 }
 
 .modal-header{
@@ -200,15 +208,23 @@ span.counter {
 #modal-overlay {
     position: fixed;
     /* so by default the modal doesn't display */
-    /* opacity: 0; */
+    opacity: 0; 
+    transition: 200ms ease-in-out;
     /* stretches overlay all over the screen */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .5);
+    /* so the open modal button works when the overlay is not active */
+    pointer-events: none;
 }
 
+/* so one can toggle between overlay being present of not */
+#modal-overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
 
 
 
