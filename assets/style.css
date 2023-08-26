@@ -23,6 +23,10 @@ body {
     height: 130vh;
 }
 
+.play-button{
+    background-color: red;
+}
+
 
 /* styling for game */
 /* Code adapted from [Marina-Ferria](https: //www.youtube.com/watch?v=ZniVgo8U7ek) */

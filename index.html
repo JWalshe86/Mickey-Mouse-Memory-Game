@@ -12,15 +12,15 @@
     <!-- Hero Image -->
 
     <div class="hero-image">
+       <div class="play-button"><a href="#card-click">Play!</a><br />
+    </div> 
       <div class="play-howToPlay-buttons-container">
-        '
         <!-- code for modal adapted from WebDevSimplified -->
         <button data-modal-target="#modal">How to play</button>
         <!-- modal container which as model identifier
         active class for when modal is present -->
         <div class="modal" id="modal">
           <!-- &times is easier to center than text  -->
-
           <div class="modal-header">
             <div class="title">How to play</div>
             <button data-close-button class="close-button">&times;</button>
@@ -48,7 +48,7 @@
       <!-- Code adapted from [Iris Smok](https://github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) -->
       <!-- container so flex can be used -->
       <div class="info-container">
-        <h3>Click any card to begin</h3>
+        <h3 id="card-click">Click any card to begin</h3>
         <div class="timer-counter-container">
           <div>
             Timer:
