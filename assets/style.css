@@ -1,4 +1,4 @@
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     /* padding not included in size  */
@@ -21,13 +21,6 @@ body {
     height: 130vh;
     text-align: center;
 }
-
-
-
-
-
-
-
 
 
 /* styling for game */
