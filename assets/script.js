@@ -257,9 +257,15 @@ openModalButtons.forEach(button => {
         // using the dataset selector from the button get the data from the html #modal
         const modal = document.querySelector(button.dataset.modalTarget);
         // once the modal is captured one wants to pass it into a function to open it
-        openModal(modal);
+        setTimeout(function () {
+            openModal(modal);
+        }, 1000)  
     });
 });
+
+ 
+
+
 
 // Adding eventlistener to overlay object so it closes when overlay is preessed
 overlay.addEventListener('click', () => {
@@ -293,5 +299,24 @@ function closeModal(modal) {
 }
 
 
+// code for button animation adapted from GreatStack
 
+let play = document.getElementById("modal");
+// As there are multiple spans it will be an array
+let spans = document.getElementsByTagName("span");
+
+
+play.onclick = function(){
+    // this will apply the css for each span
+    for(let span of spans){
+    //    the class anim will be added to each span
+        span.classList.add("anim");
+    }
+    setTimeout(function(){
+        for (let span of spans) {
+            //    the class anim will be removed from each span after .5s
+            span.classList.remove("anim");
+        }
+    },500)   
+}
 
