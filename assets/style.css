@@ -23,8 +23,32 @@ body {
     height: 130vh;
 }
 
-.play-button{
-    background-color: red;
+/* styling of play & how to play buttons code adapted from GreatStack */
+
+ button, .play-button {
+        display: inline-block;
+        font-size: 18px;
+        padding: 24px 70px;
+        background: #ff1876;
+        color: #fff;
+        border-radius: 40px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        box-shadow: 0 2px 25px;
+}
+
+.play-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+    top: 70%;
+    position: relative;
 }
 
 

@@ -109,18 +109,18 @@ function checkForMatch() {
     a variable for match was set to zero and when this reached
     6 then the won function is activated */
 
-    if(isMatch){
-       match++;
+    if (isMatch) {
+        match++;
     }
     // The settimeout function is used here so the final card can show before the you won message appears
     setTimeout(() => {
         if (match === 6) {
             alert('You Won!');
             resetGame();
-            
+
         }
     }, 1500);
-   
+
 }
 
 
@@ -205,7 +205,7 @@ function startTimer() {
                 timer.innerHTML = second;
                 second++;
 
-               
+
             }, 1000);
             called++;
         }
@@ -246,9 +246,9 @@ reset.addEventListener("click", resetGame);
 
 // script code for modal adapted from WebDivSimplified
 // anything with the data modal target will be inside the openModal variable
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
 
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
 
 const overlay = document.getElementById('modal-overlay');
 // for each button add an event listener
@@ -258,38 +258,38 @@ openModalButtons.forEach(button => {
         const modal = document.querySelector(button.dataset.modalTarget);
         // once the modal is captured one wants to pass it into a function to open it
         openModal(modal);
-    })
-})
+    });
+});
 
 // Adding eventlistener to overlay object so it closes when overlay is preessed
 overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
+    const modals = document.querySelectorAll('.modal.active');
     modals.forEach(modal => {
-    closeModal(modal)
-    })
-})
+        closeModal(modal);
+    });
+});
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         // gets the closest parent element with the class modal
-        const modal = button.closest('.modal')
+        const modal = button.closest('.modal');
         // once the modal is captured one wants to pass it into a function to open it
         closeModal(modal);
     });
-})
+});
 
 
-function openModal(modal){
-    if (modal == null) return
-    modal.classList.add('active')
+function openModal(modal) {
+    if (modal == null) return;
+    modal.classList.add('active');
     // everytime the modal is open one also wants the overlay open    
-    overlay.classList.add('active')
+    overlay.classList.add('active');
 }
 
 function closeModal(modal) {
     if (modal === null) return;
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
 }
 
 

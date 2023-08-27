@@ -12,36 +12,35 @@
     <!-- Hero Image -->
 
     <div class="hero-image">
-       <div class="play-button"><a href="#card-click">Play!</a><br />
-    </div> 
-      <div class="play-howToPlay-buttons-container">
-        <!-- code for modal adapted from WebDevSimplified -->
-        <button data-modal-target="#modal">How to play</button>
-        <!-- modal container which as model identifier
-        active class for when modal is present -->
-        <div class="modal" id="modal">
-          <!-- &times is easier to center than text  -->
-          <div class="modal-header">
-            <div class="title">How to play</div>
-            <button data-close-button class="close-button">&times;</button>
-          </div>
-
-          <div class="modal-body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
-            et suscipit velit esse autem accusantium repellendus mollitia
-            deleniti vel in accusamus nemo nobis ipsam quo architecto, qui
-            officia, amet eius temporibus non nisi aliquid! Accusamus dolore,
-            odio illo fugit labore optio magnam fuga voluptatibus natus atque
-            saepe aperiam ad voluptatum ut exercitationem? Earum aperiam vero
-            illum id eveniet! Quo aspernatur iusto exercitationem velit, magni,
-            incidunt nesciunt ab, quas qui earum quam culpa sunt? Quibusdam,
-            aspernatur. Facere similique eos harum quidem.
-          </div>
+     
+        <div class="buttons-container">
+      
+            <div class="play-button"><a href="#card-click">Play!</a><br /> </div>
+    
+            <div class="play-howToPlay-buttons-container">
+             <!-- code for modal adapted from WebDevSimplified -->
+                 <button data-modal-target="#modal">How to play</button>
+                 <!-- modal container which as model identifier
+               active class for when modal is present -->
+                   <div class="modal" id="modal">
+              <!-- &times is easier to center than text  -->
+              <div class="modal-header">
+                <div class="title">How to play</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+    
+            <div class="modal-body">
+                  One card is flipped to start the game <br>
+                  If the next card is identical, then you get +1 score <br>
+                  These cards then disappear from the game <br>
+                  If the next card you pick doesn't match, the cards flip back and remain in the game <br>
+                  The game continues until all the cards have been matched and have been removed <br>
+            </div>
         </div>
-      </div>
-      <!-- to create darker background when modal pops up -->
-      <div id="modal-overlay"></div>
     </div>
+    <!-- to create darker background when modal pops up -->
+    <div id="modal-overlay"></div>
+    </div></div> 
 
     <div class="info-game-container">
       <!-- timer & counter -->
@@ -61,6 +60,25 @@
           </div>
         </div>
       </div>
+                <!-- pop up for when player wins -->
+
+ <!-- <div class="" id=""> -->
+            <!-- &times is easier to center than text  -->
+            <!-- <div class="">
+                <div class="">How to play</div>
+                <button data-close-button class="">&times;</button>
+            </div>
+    
+            <div class="">
+                  YOU WON
+            </div>
+        </div>
+    </div> -->
+    <!-- to create darker background when modal pops up -->
+    <!-- <div id=""></div>
+    </div></div>  -->
+
+
       <section class="card-container">
         <div class="memory-card" data-framework="daisy-duck">
           <img
