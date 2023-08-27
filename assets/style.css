@@ -25,26 +25,57 @@ body {
 
 /* styling of play & how to play buttons code adapted from GreatStack */
 
- button, .play-button {
-        display: inline-block;
-        font-size: 18px;
-        padding: 24px 70px;
-        background: #ff1876;
-        color: #fff;
-        border-radius: 40px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        position: relative;
-        box-shadow: 0 2px 25px;
+button,
+.play-button {
+    display: inline-block;
+    font-size: 18px;
+    padding: 24px 70px;
+    background: #ff1876;
+    color: #fff;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 2px 25px;
 }
 
-.play-button a {
+/* creates 'bubbles' */
+button span,
+.play-button span {
+        background: #ff1876;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid #ff1876;
+}
+
+
+.play-button span:nth-child(1),
+button span:nth-child(1) {
+    top: -20px;
+    left: -10px;
+}
+
+
+.play-button {
     color: white;
     text-decoration: none;
 }
 
-.buttons-container{
+/* styling for when the buttons are clicked */
+
+button:active,
+.play-button:active {
+    background: #d80972;
+    box-shadow: 0 2px 25px;
+}
+
+
+
+
+.buttons-container {
     display: flex;
     justify-content: space-evenly;
     top: 70%;
@@ -181,33 +212,33 @@ span.counter {
 
 /* styling for modal. Code adapted from WebDevSimplified */
 
-.modal{
-        position: fixed;
-        /* centers the top of the text to the middle */
-        top: 50%;
-        left: 50%;
-        /* change the position of the elements 
+.modal {
+    position: fixed;
+    /* centers the top of the text to the middle */
+    top: 50%;
+    left: 50%;
+    /* change the position of the elements 
         50% here is 50% of the size of the container 
         not the entire screen like above
         Setting the scale to zero means it's invisible*/
-        transform: translate(-50%, -50%) scale(0);
-        /* scale allows for a smooth transition, as opposed to display: none */
-        transition: 200ms ease-in-out;
-        border: 1px solid black;
-        border-radius: 10px;
-        /* want modal to draw above everything else */
-        z-index: 10;
-        background-color: white;
-        width: 500px;
-        max-width: 80%;
+    transform: translate(-50%, -50%) scale(0);
+    /* scale allows for a smooth transition, as opposed to display: none */
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* want modal to draw above everything else */
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
 }
 
-.modal.active{
- transform: translate(-50%, -50%) scale(1);
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
 
 }
 
-.modal-header{
+.modal-header {
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
@@ -220,23 +251,25 @@ span.counter {
     font-weight: bold;
 }
 
-.modal-header .close-button{
+.modal-header .close-button {
     cursor: pointer;
     border: none;
     outline: none;
     background: none;
     font-size: 1.25rem;
     font-weight: bold;
+    color: black;
+    box-shadow: none;
 }
 
-.modal-body{
+.modal-body {
     padding: 10px 15px;
 }
 
 #modal-overlay {
     position: fixed;
     /* so by default the modal doesn't display */
-    opacity: 0; 
+    opacity: 0;
     transition: 200ms ease-in-out;
     /* stretches overlay all over the screen */
     top: 0;
@@ -253,11 +286,3 @@ span.counter {
     pointer-events: all;
     opacity: 1;
 }
-
-
-
-
-
-
-
-
