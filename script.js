@@ -247,11 +247,11 @@ reset.addEventListener("click", resetGame);
 
 // script code for modal adapted from WebDivSimplified
 // anything with the data modal target will be inside the openModal variable
-// const openModalButtons = document.querySelectorAll('data-modal-target');
+const openModalButtons = document.querySelectorAll('data-modal-target');
 
-// const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
 
-// const overlay = document.getElementById('modal-overlay');
+const overlay = document.getElementById('modal-overlay');
 // for each button add an event listener
 
 // openModalButtons.addEventListener('click', () => {
@@ -271,15 +271,15 @@ reset.addEventListener("click", resetGame);
 
 
 // Adding eventlistener to overlay object so it closes when overlay is preessed
-// overlay.addEventListener('click', () => {
-//     const modals = document.querySelectorAll('.modal.active');
-//     modals.forEach(modal => {
-//         closeModal(modal);
-//     });
-// });
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active');
+    modals.forEach(modal => {
+        closeModal(modal);
+    });
+});
 
 // closeModalButtons.forEach(button => {
-//     button.addEventListener('click', () => {
+    // button.addEventListener('click', () => {
 // gets the closest parent element with the class modal
 // const modal = button.closest('.modal');
 // once the modal is captured one wants to pass it into a function to open it
@@ -292,7 +292,7 @@ function openModal(modal) {
     // if (modal == null) return;
    modal.classList.add('active');
     // everytime the modal is open one also wants the overlay open    
-    // overlay.classList.add('active');
+    overlay.classList.add('active');
 
     
 }
@@ -329,6 +329,7 @@ playHow.onclick = function () {
         for (let span of spans) {
             //    the class anim will be removed from each span after .5s
             span.classList.remove("anim");
+            // model pops up once bubbles have gone
             openModal(modal);
 
         }
