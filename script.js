@@ -255,13 +255,13 @@ const overlay = document.getElementById('modal-overlay');
 // for each button add an event listener
 
 // openModalButtons.addEventListener('click', () => {
-    // using the dataset selector from the button get the data from the html #modal
-    // const modal = document.querySelector(button.dataset.modalTarget);
-    // once the modal is captured one wants to pass it into a function to open it
+// using the dataset selector from the button get the data from the html #modal
+// const modal = document.querySelector(button.dataset.modalTarget);
+// once the modal is captured one wants to pass it into a function to open it
 
 
-    // balloonsPop();
-    // openModal(modal);
+// balloonsPop();
+// openModal(modal);
 
 
 // });
@@ -280,9 +280,9 @@ overlay.addEventListener('click', () => {
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-// gets the closest parent element with the class modal
-const modal = button.closest('.modal');
-// once the modal is captured one wants to pass it into a function to open it
+        // gets the closest parent element with the class modal
+        const modal = button.closest('.modal');
+        // once the modal is captured one wants to pass it into a function to open it
         closeModal(modal);
     });
 });
@@ -290,14 +290,14 @@ const modal = button.closest('.modal');
 
 function openModal(modal) {
     // if (modal == null) return;
-   modal.classList.add('active');
+    modal.classList.add('active');
     // everytime the modal is open one also wants the overlay open    
     overlay.classList.add('active');
 
-    
+
 }
 
- 
+
 
 function closeModal(modal) {
     if (modal === null) return;
@@ -311,22 +311,21 @@ function closeModal(modal) {
 
 
 // As there are multiple spans it will be an array
-let spans = document.getElementsByTagName("span");
-
-
+// let spans = document.getElementsByTagName("span");
 let playHow = document.getElementById('howToPlay1');
+let playHowChildren = document.getElementById('howToPlay1').children;
 
 
 
 playHow.onclick = function () {
     // this will apply the css for each span
-    for (let span of spans) {
+    for (let span of playHowChildren) {
         //    the class anim will be added to each span
         span.classList.add("anim");
-               
+
     }
     setTimeout(function () {
-        for (let span of spans) {
+        for (let span of playHowChildren) {
             //    the class anim will be removed from each span after .5s
             span.classList.remove("anim");
             // model pops up once bubbles have gone
@@ -335,4 +334,30 @@ playHow.onclick = function () {
         }
     }, 500);
 };
+
+let anchor = document.getElementById('anchor');
+let anchorChildren = anchor.children;
+
+
+
+
+anchor.onclick = function () {
+    // this will apply the css for each span
+    // anchorChildren used so both buttons don't fire ballons at same time
+    for (let span of anchorChildren) {
+        //    the class anim will be added to each span
+        span.classList.add("anim");
+
+    }
+    setTimeout(function () {
+        for (let span of spans) {
+            //    the class anim will be removed from each span after .5s
+            span.classList.remove("anim");
+            // model pops up once bubbles have gone
+
+        }
+    }, 500);
+};
+
+
 

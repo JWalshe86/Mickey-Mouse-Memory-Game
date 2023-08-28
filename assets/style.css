@@ -372,6 +372,7 @@ span.counter {
     backface-visibility: hidden;
     /* so image is sharp */
     object-fit: contain;
+    cursor: pointer;
 }
 
 .card-front {
