@@ -247,27 +247,25 @@ reset.addEventListener("click", resetGame);
 
 // script code for modal adapted from WebDivSimplified
 // anything with the data modal target will be inside the openModal variable
-// const openModalButtons = document.querySelectorAll('d');
+// const openModalButtons = document.querySelectorAll('data-modal-target');
 
 // const closeModalButtons = document.querySelectorAll('[data-close-button]');
 
 // const overlay = document.getElementById('modal-overlay');
 // for each button add an event listener
-// openModalButtons.forEach(button => {
-//     button.addEventListener('click', () => {
-        // using the dataset selector from the button get the data from the html #modal
-        // const modal = document.querySelector(button.dataset.modalTarget);
-        // once the modal is captured one wants to pass it into a function to open it
-        
-        
-            // balloonsPop();
-            // openModal(modal);
-                
-            
 
-        
-//     });
+// openModalButtons.addEventListener('click', () => {
+    // using the dataset selector from the button get the data from the html #modal
+    // const modal = document.querySelector(button.dataset.modalTarget);
+    // once the modal is captured one wants to pass it into a function to open it
+
+
+    // balloonsPop();
+    // openModal(modal);
+
+
 // });
+
 
 
 
@@ -282,9 +280,9 @@ reset.addEventListener("click", resetGame);
 
 // closeModalButtons.forEach(button => {
 //     button.addEventListener('click', () => {
-        // gets the closest parent element with the class modal
-        // const modal = button.closest('.modal');
-        // once the modal is captured one wants to pass it into a function to open it
+// gets the closest parent element with the class modal
+// const modal = button.closest('.modal');
+// once the modal is captured one wants to pass it into a function to open it
 //         closeModal(modal);
 //     });
 // });
@@ -292,12 +290,14 @@ reset.addEventListener("click", resetGame);
 
 function openModal(modal) {
     // if (modal == null) return;
-    modal.classList.add('active');
+   modal.classList.add('active');
     // everytime the modal is open one also wants the overlay open    
-    overlay.classList.add('active');
+    // overlay.classList.add('active');
 
-   
+    
 }
+
+ 
 
 function closeModal(modal) {
     if (modal === null) return;
@@ -317,19 +317,21 @@ let spans = document.getElementsByTagName("span");
 let playHow = document.getElementById('howToPlay1');
 
 
-    playHow.onclick = function () {
-        // this will apply the css for each span
-       for (let span of spans) {
-            //    the class anim will be added to each span
-            span.classList.add("anim");
+
+playHow.onclick = function () {
+    // this will apply the css for each span
+    for (let span of spans) {
+        //    the class anim will be added to each span
+        span.classList.add("anim");
+               
+    }
+    setTimeout(function () {
+        for (let span of spans) {
+            //    the class anim will be removed from each span after .5s
+            span.classList.remove("anim");
+            openModal(modal);
+
         }
-        setTimeout(function () {
-            for (let span of spans) {
-                //    the class anim will be removed from each span after .5s
-                span.classList.remove("anim");
-
-            }
-        }, 500);
-    };
-
+    }, 500);
+};
 
