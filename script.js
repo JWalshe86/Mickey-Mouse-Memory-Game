@@ -278,14 +278,14 @@ overlay.addEventListener('click', () => {
     });
 });
 
-// closeModalButtons.forEach(button => {
-    // button.addEventListener('click', () => {
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
 // gets the closest parent element with the class modal
-// const modal = button.closest('.modal');
+const modal = button.closest('.modal');
 // once the modal is captured one wants to pass it into a function to open it
-//         closeModal(modal);
-//     });
-// });
+        closeModal(modal);
+    });
+});
 
 
 function openModal(modal) {
