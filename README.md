@@ -200,6 +200,11 @@ View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/);
 
 # Solved bugs
 
+One was able to select the div surrounding the span elements for the bubble but it would not store
+in the variable 'howPlay'. When howPlay was logged it kept reading 'null'. When one tried the JS in
+the html it worked. One researched this issue in [stackoverflow: Javascript only working when inside the html document](https://stackoverflow.com/questions/44160340/javascript-only-working-when-inside-the-html-document). On the final line of answers heres
+someone mentioned ensuring both js files and html files were in the same document. When one did this the issue was resolved.
+
 
 # Unfixed bugs
 

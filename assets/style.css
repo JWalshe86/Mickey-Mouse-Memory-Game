@@ -25,7 +25,7 @@ body {
 
 /* styling of play & how to play buttons code adapted from GreatStack */
 
-button,
+.howToPlay1,
 .play-button {
     display: inline-block;
     font-size: 18px;
@@ -38,182 +38,190 @@ button,
     cursor: pointer;
     position: relative;
     box-shadow: 0 2px 25px;
+    /* put bubbles behind button */
+    z-index: 2;
 }
 
 /* creates 'bubbles' */
-button span,
+.howToPlay1 span,
 .play-button span {
-        background: #ff1876;
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        border: 1px solid #ff1876;
+    background: #ff1876;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #ff1876;
+    z-index: -1;
+    /* so the bubbles will be invisible */
+    transform: scale(0);
 }
 
 
 .play-button span:nth-child(1),
-button span:nth-child(1) {
+.howToPlay1 span:nth-child(1) {
     top: -20%;
     left: -10%;
 }
 
 .play-button span:nth-child(2),
-button span:nth-child(2) {
+.howToPlay1 span:nth-child(2) {
     top: -130%;
     left: 0;
 }
 
 .play-button span:nth-child(3),
-button span:nth-child(3) {
+.howToPlay1 span:nth-child(3) {
     top: -50%;
     left: 10%;
     background: transparent;
 }
 
 .play-button span:nth-child(4),
-button span:nth-child(4) {
+.howToPlay1 span:nth-child(4) {
     top: -66%;
     left: 20%;
 }
 
 .play-button span:nth-child(5),
-button span:nth-child(5) {
+.howToPlay1 span:nth-child(5) {
     top: -90%;
     left: 28%;
 }
 
 .play-button span:nth-child(6),
-button span:nth-child(6) {
+.howToPlay1 span:nth-child(6) {
     top: -70%;
     left: 42%;
 }
 
 .play-button span:nth-child(7),
-button span:nth-child(7) {
+.howToPlay1 span:nth-child(7) {
     top: -90%;
     left: 60%;
     background: transparent;
 }
 
 .play-button span:nth-child(8),
-button span:nth-child(8) {
+.howToPlay1 span:nth-child(8) {
     top: -50%;
     left: 70%;
 }
 
 .play-button span:nth-child(9),
-button span:nth-child(9) {
+.howToPlay1 span:nth-child(9) {
     top: -120%;
     left: 80%;
 }
 
 .play-button span:nth-child(10),
-button span:nth-child(10) {
+.howToPlay1 span:nth-child(10) {
     top: -70%;
     left: 90%;
 }
 
 .play-button span:nth-child(11),
-button span:nth-child(11) {
+.howToPlay1 span:nth-child(11) {
     top: -80%;
     left: 100%;
     background: transparent;
 }
 
 .play-button span:nth-child(12),
-button span:nth-child(12) {
+.howToPlay1 span:nth-child(12) {
     top: -50%;
     left: 110%;
 }
 
 .play-button span:nth-child(13),
-button span:nth-child(13) {
+.howToPlay1 span:nth-child(13) {
     top: 40%;
     left: -20%;
 }
 
 .play-button span:nth-child(14),
-button span:nth-child(14) {
+.howToPlay1 span:nth-child(14) {
     top: 60%;
     left: 120%;
 }
 
 .play-button span:nth-child(15),
-button span:nth-child(15) {
+.howToPlay1 span:nth-child(15) {
     top: 160%;
     left: -10%;
 }
 
 .play-button span:nth-child(16),
-button span:nth-child(16) {
+.howToPlay1 span:nth-child(16) {
     top: 120%;
     left: 5%;
     background: transparent;
 }
 
 .play-button span:nth-child(17),
-button span:nth-child(17) {
+.howToPlay1 span:nth-child(17) {
     top: 180%;
     left: 10%;
 }
+
 .play-button span:nth-child(18),
-button span:nth-child(18) {
+.howToPlay1 span:nth-child(18) {
     top: 130%;
     left: 20%;
 }
 
 .play-button span:nth-child(19),
-button span:nth-child(19) {
+.howToPlay1 span:nth-child(19) {
     top: 180%;
     left: 33%;
     background: transparent;
 }
 
 .play-button span:nth-child(20),
-button span:nth-child(20) {
+.howToPlay1 span:nth-child(20) {
     top: -70%;
     left: 55%;
 }
 
 .play-button span:nth-child(21),
-button span:nth-child(21) {
+.howToPlay1 span:nth-child(21) {
     top: 160%;
     left: 75%;
 }
 
 .play-button span:nth-child(22),
-button span:nth-child(22) {
+.howToPlay1 span:nth-child(22) {
     top: -150%;
     left: 88%;
     background-color: transparent;
 }
 
 .play-button span:nth-child(23),
-button span:nth-child(23) {
+.howToPlay1 span:nth-child(23) {
     top: 140%;
     left: 100%;
 }
 
 .play-button span:nth-child(24),
-button span:nth-child(24) {
+.howToPlay1 span:nth-child(24) {
     top: 190%;
     left: 120%;
 }
 
 /* forwards means it will stop the animation after one time running */
-.anim{
+.anim {
     animation: moving 0.5s linear reverse forwards;
 }
 
-@keyframes moving  {
+@keyframes moving {
     0% {
         transform: scale(0);
     }
-    10%{
+
+    10% {
         transform: scale(1);
     }
-    100%{
+
+    100% {
         top: 50%;
         left: 50%;
     }
@@ -227,7 +235,7 @@ button span:nth-child(24) {
 
 /* styling for when the buttons are clicked */
 
-button:active,
+.howToPlay1:active,
 .play-button:active {
     background: #d80972;
     box-shadow: 0 2px 25px;
