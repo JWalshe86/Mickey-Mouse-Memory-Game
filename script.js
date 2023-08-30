@@ -69,7 +69,7 @@ function flipCard() {
         is no longer activated */
 
         /* if the hasFlippedCard is true the return statement stops the function here. If
-        it is true it will move on to teh hasFlippedCard = false clause */
+        it is true it will move on to the hasFlippedCard = false clause */
         return;
 
     }
@@ -104,7 +104,10 @@ function checkForMatch() {
     // ternary operator used here for simplicity
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
+
     isMatch ? disableCards() : unflipCards();
+
+
 
     /* if there are 6 matches this means the player has won. 
     a variable for match was set to zero and when this reached
@@ -113,6 +116,7 @@ function checkForMatch() {
     if (isMatch) {
         match++;
     }
+
     // The settimeout function is used here so the final card can show before the you won message appears
     setTimeout(() => {
         if (match === 6) {
@@ -130,7 +134,17 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    console.log('disable');
+
+    
 }
+
+function animateCards() {
+    firstCard.classList.add('animate__animated', 'animate__flip');
+    secondCard.classList.add('animate__animated', 'animate__flip');   
+}
+
+
 
 // called if cards don't match
 function unflipCards() {
@@ -141,6 +155,7 @@ function unflipCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         // lockBoard turns false once the cards have been flipped
+
         lockBoard = false;
 
         resetBoard();
