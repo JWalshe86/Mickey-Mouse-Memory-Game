@@ -407,3 +407,22 @@ anchor.onclick = function () {
 };
 
 
+
+
+// get rubberBand to activate after start button & onto page
+
+let playButton = document.querySelector('a');
+playButton.addEventListener('click', rubberBand);
+
+
+function rubberBand() {
+    setTimeout(() => {
+        let titleClick = document.getElementsByTagName('h3');
+
+        titleClick[0].classList.add('animate__animated', 'animate__rubberBand');
+    }, 1000);
+}
+anchor.addEventListener('click', rubberBand, false);
+
+
+
