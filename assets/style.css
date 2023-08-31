@@ -16,8 +16,20 @@ body {
 
 /* styling for landing page */
 
+.heroTitle {
+    /* centers the top of the text to the middle */
+    position: absolute;
+    top: 20%;
+    left: 27%;
+    color: yellow;
+    font-size: 70px;
+    text-shadow: 2px 2px 10px yellow,
+        15px 15px 10px black
+}
+
+/* styling for hero image title */
 .hero-image {
-    background-image: url(./images/test.jpg);
+    background-image: url(/assets/images/test.jpg);
     background-size: cover;
     background-position: center;
     height: 130vh;

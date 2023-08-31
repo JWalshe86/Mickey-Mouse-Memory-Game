@@ -358,7 +358,7 @@ function closeModal(modal) {
 
 
 // As there are multiple spans it will be an array
-// let spans = document.getElementsByTagName("span");
+let spans = document.getElementsByTagName("span");
 let playHow = document.getElementById('howToPlay1');
 let playHowChildren = document.getElementById('howToPlay1').children;
 
