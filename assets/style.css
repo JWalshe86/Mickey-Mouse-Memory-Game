@@ -342,11 +342,13 @@ span.counter {
     transform-style: preserve-3d;
     /* evokes the action of the transform property */
     transition: transform.5s;
+
+    background-color: #d80972;
 }
 
 /* The card will decrease by .3 when active over .2s */
 .memory-card:active {
-    transform: scale(.97);
+    /* transform: scale(.97); */
     transition: transform .2s;
 }
 
@@ -376,8 +378,13 @@ span.counter {
 }
 
 .card-front {
-    /*front card rotated 180 degrees so it can be seen when filpcard is activated */
+    /* front card rotated 180 degrees so it can be seen when filpcard is activated */
     transform: rotateY(180deg);
+}
+
+.card-front.front1 {
+    transform: inherit;
+
 }
 
 /* styling for modal. Code adapted from WebDevSimplified */
@@ -456,4 +463,3 @@ span.counter {
     pointer-events: all;
     opacity: 1;
 }
-

@@ -1,4 +1,19 @@
+let cardsMatched = [];
+let allCards = document.getElementsByTagName('img');
+let cardsback = document.getElementsByClassName('card-back');
+let cardsFront = document.getElementsByClassName('card-front');
 
+// cardsFrontAgain()
+
+// adds and removes whether images display
+function cardsFrontAgain() {
+    for (let i = 0; i < allCards.length; i++) {
+        allCards[i].classList.add('front1');
+
+    }
+    // firstCard.classList.add('front1');
+    // secondCard.classList.add('front1');
+}
 
 let match = 0;
 
@@ -22,6 +37,8 @@ let lockBoard = false;
 
 // variables below store whether card has been flipped or not
 let firstCard, secondCard;
+
+let firstCardFrontAfterMatch, secondCardFrontAfterMatch;
 
 /* The this keyword in the flipCard function represents the memory-card class. Memory card 
 is stored in this. Thats because this represents the element that activated it.
@@ -86,6 +103,9 @@ function flipCard() {
     }
 }
 
+
+
+
 /**
  * A function for the matching logic. 
  * One now needs to check if the first and second cards match? 
@@ -114,6 +134,20 @@ function checkForMatch() {
     6 then the won function is activated */
 
     if (isMatch) {
+
+
+
+        animateCards();
+        firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
+        secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
+        //push 1st & 2nd matched card into an array so they can be manipulated
+        cardsMatched.push(firstCardFrontAfterMatch, secondCardFrontAfterMatch);
+        //    cards now remain flipped after animation
+        firstCardFrontAfterMatch[1].classList.add('front1');
+        secondCardFrontAfterMatch[1].classList.add('front1');
+
+
+
         match++;
     }
 
@@ -129,19 +163,17 @@ function checkForMatch() {
 }
 
 
-
 // called if the cards match
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    console.log('disable');
 
-    
+
 }
 
 function animateCards() {
-    firstCard.classList.add('animate__animated', 'animate__flip');
-    secondCard.classList.add('animate__animated', 'animate__flip');   
+    firstCard.classList.add('animate__animated', 'animate__tada');
+    secondCard.classList.add('animate__animated', 'animate__tada');
 }
 
 
@@ -373,6 +405,5 @@ anchor.onclick = function () {
         }
     }, 500);
 };
-
 
 
