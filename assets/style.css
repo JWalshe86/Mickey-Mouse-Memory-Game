@@ -263,17 +263,22 @@ body {
     animation: moving 1s linear reverse forwards;
 }
 
+/* forwards means it will stop the animation after one time running */
+.anim {
+    animation: moving 2s linear reverse forwards;
+}
+
 @keyframes moving {
-    0% {
-        transform: scale(0);
+    50% {
+        transform: scale(.5);
     }
 
-    10% {
+    100% {
         transform: scale(1);
     }
 
     100% {
-        top: 50%;
+        top: 100%;
         left: 50%;
     }
 }
