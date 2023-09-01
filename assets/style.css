@@ -45,6 +45,14 @@ body {
     height: 130vh;
 }
 
+.buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    top: 70%;
+    position: relative;
+    height: 7vh;
+}
+
 /* styling of play & how to play buttons code adapted from GreatStack */
 
 .howToPlay1,
@@ -74,7 +82,7 @@ body {
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
     z-index: -1;
-    position: relative;
+    position: absolute;
     display: block;
     /* so the bubbles will be invisible */
     transform: scale(0);
@@ -252,7 +260,7 @@ body {
 
 /* forwards means it will stop the animation after one time running */
 .anim {
-    animation: moving 0.5s linear reverse forwards;
+    animation: moving 1s linear reverse forwards;
 }
 
 @keyframes moving {
@@ -283,18 +291,6 @@ body {
     background: #d80972;
     box-shadow: 0 2px 25px;
 }
-
-
-
-
-.buttons-container {
-    display: flex;
-    justify-content: space-evenly;
-    top: 70%;
-    position: relative;
-    height: 7vh;
-}
-
 
 /* styling for game */
 /* Code adapted from [Marina-Ferria](https: //www.youtube.com/watch?v=ZniVgo8U7ek) */
