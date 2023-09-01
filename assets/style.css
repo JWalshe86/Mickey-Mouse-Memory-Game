@@ -416,7 +416,7 @@ span.counter {
     height: 100%;
     /* places the front and back cards on top of one another */
     position: absolute;
-    padding: 20px;
+    padding: 2%;
     border-radius: 5px;
     background-color: white;
     /*Every HTML element has a mirrored image of itself. The property backface-visibility 
