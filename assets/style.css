@@ -47,9 +47,11 @@ body {
 .buttons-container {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     top: 70%;
     position: relative;
     height: 7vh;
+    width: 100%;
 }
 
 /* styling of play & how to play buttons code adapted from GreatStack */
@@ -57,7 +59,6 @@ body {
 .howToPlay1,
 .play-button {
     display: inline-block;
-    font-size: 18px;
     padding: 24px 70px;
     background: #ff1876;
     color: #fff;
@@ -69,6 +70,7 @@ body {
     box-shadow: 0 2px 25px;
     /* put bubbles behind button */
     z-index: 2;
+    min-width: fit-content;
 }
 
 /* creates 'bubbles' */
