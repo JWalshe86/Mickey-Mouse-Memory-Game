@@ -28,11 +28,10 @@ body {
 
 .heroTitle {
     /* centers the top of the text to the middle */
-    position: absolute;
+    position: relative;
     top: 20%;
-    left: 27%;
     color: yellow;
-    font-size: 70px;
+    font-size: 350%;
     text-shadow: 2px 2px 10px yellow,
         15px 15px 10px black
 }
@@ -302,8 +301,8 @@ body {
 
 .card-container {
     /* set width for container */
-    width: 640px;
-    height: 640px;
+    width: 70vw;
+    height: 70vh;
     display: flex;
     /* introduce rows  */
     flex-wrap: wrap;
