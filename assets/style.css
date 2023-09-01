@@ -22,8 +22,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 15%;
+    position: absolute;
+    top: 20%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
 }
 
 .heroTitle {
@@ -41,15 +45,17 @@ body {
     background-image: url(./images/test.jpg);
     background-size: cover;
     background-position: center;
+    justify-content: center;
     height: 130vh;
+    display: flex;
 }
 
 .buttons-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    top: 70%;
-    position: relative;
+    top: 100%;
+    position: absolute;
     height: 7vh;
     width: 100%;
 }
@@ -389,7 +395,6 @@ span.counter {
     /* evokes the action of the transform property */
     transition: transform.5s;
 
-    background-color: #d80972;
 }
 
 /* The card will decrease by .3 when active over .2s */
