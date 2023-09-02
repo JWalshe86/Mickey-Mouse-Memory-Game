@@ -1,4 +1,3 @@
-
 let cardsMatched = [];
 let allCards = document.getElementsByTagName('img');
 let cardsback = document.getElementsByClassName('card-back');
