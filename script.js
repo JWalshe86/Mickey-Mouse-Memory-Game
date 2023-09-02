@@ -151,6 +151,13 @@ function checkForMatch() {
         match++;
     }
 
+    if(match === 1){
+        document.querySelector('div.congratsCounter').textContent =counter.textContent;
+        
+        
+        openCongratsModalPopup();
+    }
+
     // The settimeout function is used here so the final card can show before the you won message appears
     setTimeout(() => {
         if (match === 6) {
@@ -434,3 +441,8 @@ function openCongratsModalPopup() {
 function closeCongratsModalPopup() {
     congratsPopup.classList.remove("opencongratsModal-popup");
 }
+
+let congratsCounter = document.getElementsByClassName('congratsCounter')
+
+
+
