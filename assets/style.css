@@ -530,7 +530,7 @@ span.counter {
     position: absolute;
     left: 50%;
     /* to add zoom out effect */
-    /* transform: translate(-50%, -50%) scale(0.1); */
+    transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0 30px 30px;
     color: #333;
@@ -541,9 +541,10 @@ span.counter {
 
 .opencongratsModal-popup {
     visibility: visible;
-    margin-bottom: -30%;
     transform: translate(-50%, -50%) scale(1.1);
-    z-index: 2;
+    position: fixed;
+    bottom: -14vh;
+    
 
 }
 
