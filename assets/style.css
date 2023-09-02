@@ -525,11 +525,9 @@ span.counter {
 
 .congratsModal-popup {
     width: 30vw;
-    height: auto;
     background: white;
     border-radius: 6px;
     position: absolute;
-    top: 180%;
     left: 50%;
     /* to add zoom out effect */
     /* transform: translate(-50%, -50%) scale(0.1); */
@@ -567,4 +565,9 @@ span.counter {
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
 }

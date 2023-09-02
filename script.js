@@ -152,7 +152,7 @@ function checkForMatch() {
     }
 
     if(match === 1){
-        document.querySelector('div.congratsCounter').textContent =counter.textContent;
+        document.querySelector('div.congratsCounter').textContent =counter.textContent; 
         
         
         openCongratsModalPopup();
