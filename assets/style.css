@@ -11,7 +11,6 @@
 body {
     /* body will take 100% of available viewport space */
     height: 100vh;
-    background-color: blue;
 }
 
 /* styling for landing page */
@@ -325,7 +324,6 @@ body {
 /* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) */
 
 .info-container {
-    background-color: red;
     width: 100%;
     text-align: center;
     font-size: 2rem;
@@ -335,7 +333,6 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 
 /* to keep timer & counter on same line & responsive to screen size */
 
@@ -351,6 +348,8 @@ body {
     display: flex;
     flex-direction: column;
     height: inherit;
+    background-image:url(./images/game-background\ 1500px.png);
+    background-size: contain;
 }
 
 .timer {
