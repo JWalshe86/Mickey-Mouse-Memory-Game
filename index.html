@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="assets/style.css" />
     <title class="main-title">Mickey Mouse Memory Game</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 </head>
 
 <body>
     <!-- Hero Image -->
 
     <div class="hero-image">
-    <div class="title-container">
-        <h1 class="heroTitle">Mickey Mouse Memory Game</h1>
+        <div class="title-container">
+            <h1 class="heroTitle">Mickey Mouse Memory Game</h1>
 
-    </div>
+        </div>
         <div class="buttons-container">
 
             <!-- code adapted from nattik Gur-Arie, stackoverflow -->
@@ -124,21 +126,14 @@
         </div>
         <!-- pop up for when player wins -->
 
-        <!-- <div class="" id=""> -->
-        <!-- &times is easier to center than text  -->
-        <!-- <div class="">
-                <div class="">How to play</div>
-                <button data-close-button class="">&times;</button>
-            </div>
-    
-            <div class="">
-                  YOU WON
+        <div class="congratsModal-container">
+            <div class="congratsModal-popup" id="congratsModal-popup">
+                <img src="./assets/images/congrats-img.gif" alt="mickey-mouse-celebrating">
+                <p>These are your stats:</p>
+                <button type="button" onclick="closeCongratsModalPopup(), resetGame();
+                ">OK</button>
             </div>
         </div>
-    </div> -->
-        <!-- to create darker background when modal pops up -->
-        <!-- <div id=""></div>
-    </div></div>  -->
 
 
         <section class="card-container">
@@ -216,6 +211,7 @@
             <button type="button" id="reset">Reset</button>
         </div>
     </div>
+
 
     <script src="script.js">
 

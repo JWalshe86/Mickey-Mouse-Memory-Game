@@ -514,3 +514,55 @@ span.counter {
     pointer-events: all;
     opacity: 1;
 }
+
+.congratsModal-container {
+    background: #3c5077;
+    /* all contents in this container will be displayed in the center of the webpage */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.congratsModal-popup {
+    width: 400px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    /* to add zoom out effect */
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.opencongratsModal-popup {
+    visibility: visible;
+    top: 180%;
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 2;
+
+}
+
+.congratsModal-popup img {
+    width: 100%;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.congratsModal-popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+
+}

@@ -154,9 +154,7 @@ function checkForMatch() {
     // The settimeout function is used here so the final card can show before the you won message appears
     setTimeout(() => {
         if (match === 6) {
-            alert('You Won!');
-            resetGame();
-
+            openCongratsModalPopup();
         }
     }, 1500);
 
@@ -424,5 +422,14 @@ function rubberBand() {
 }
 anchor.addEventListener('click', rubberBand, false);
 
+// script for congratulations you won
 
+let congratsPopup = document.getElementById("congratsModal-popup");
 
+function openCongratsModalPopup() {
+    congratsPopup.classList.add("opencongratsModal-popup");
+}
+
+function closeCongratsModalPopup() {
+    congratsPopup.classList.remove("opencongratsModal-popup");
+}
