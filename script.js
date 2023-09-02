@@ -151,16 +151,12 @@ function checkForMatch() {
         match++;
     }
 
-    if(match === 1){
-        document.querySelector('div.congratsCounter').textContent = "Took you " + counter.textContent +' moves'; 
-        document.querySelector('div.congratsTimer').textContent = "in " + timer.textContent + ' seconds';
-        
-        openCongratsModalPopup();
-    }
-
+   
     // The settimeout function is used here so the final card can show before the you won message appears
     setTimeout(() => {
         if (match === 6) {
+            document.querySelector('div.congratsCounter').textContent = "Took you " + counter.textContent +' moves'; 
+            document.querySelector('div.congratsTimer').textContent = "in " + timer.textContent + ' seconds';
             openCongratsModalPopup();
         }
     }, 1500);

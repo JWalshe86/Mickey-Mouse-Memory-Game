@@ -524,7 +524,7 @@ span.counter {
 }
 
 .congratsModal-popup {
-    width: 33vw;
+    width: 35vw;
     background: white;
     border-radius: 6px;
     position: absolute;
@@ -544,8 +544,6 @@ span.counter {
     transform: translate(-50%, -50%) scale(1.1);
     position: fixed;
     bottom: -17vh;
-    
-
 }
 
 .congratsModal-popup img {
@@ -566,6 +564,10 @@ span.counter {
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 
+}
+
+.congratsCounter {
+    padding-top: 2vh;
 }
 
 .wrapper{
