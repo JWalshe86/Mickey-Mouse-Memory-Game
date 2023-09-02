@@ -525,6 +525,7 @@ span.counter {
 
 .congratsModal-popup {
     width: 30vw;
+    height: auto;
     background: white;
     border-radius: 6px;
     position: absolute;

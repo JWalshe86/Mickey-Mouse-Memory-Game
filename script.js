@@ -1,3 +1,4 @@
+
 let cardsMatched = [];
 let allCards = document.getElementsByTagName('img');
 let cardsback = document.getElementsByClassName('card-back');
@@ -279,6 +280,7 @@ function moveCounter() {
 
 */
 function resetGame() {
+   
     window.location.reload();
 }
 // get reference to button
