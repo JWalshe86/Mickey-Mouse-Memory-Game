@@ -542,8 +542,8 @@ span.counter {
     visibility: visible;
     transform: translate(-50%, -50%) scale(1.1);
     position: fixed;
-    bottom: -17vh;
-}
+    bottom: -30vh;
+  }
 
 .congratsModal-popup img {
     width: 100%;
@@ -566,7 +566,7 @@ span.counter {
 }
 
 .congratsCounter {
-    padding-top: 2vh;
+    padding-top: 4vh;
 }
 
 .wrapper{
@@ -626,5 +626,18 @@ span.counter {
         }
       }
 
+      /* stars code adapted from Susan Chen */
+.info-container .stars{
+    margin: 0 1.25rem 0 0;
+    padding: 0;
+    display: inline-block;
+    color: #f1c40f;
+}
 
+.info-container .stars li{
+    /* remove bullet points */
+   list-style: none;
+   /* put the stars in even row */
+   display: inline-block;
+}
 

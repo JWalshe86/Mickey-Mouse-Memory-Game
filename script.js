@@ -3,6 +3,18 @@ let allCards = document.getElementsByTagName('img');
 let cardsback = document.getElementsByClassName('card-back');
 let cardsFront = document.getElementsByClassName('card-front');
 
+let tryCounter = 0;
+let moveCounter = 0;
+starRating = 3;
+
+
+// Grab the deck div element from the HTML
+let deck = document.getElementsByClassName(`deck`);
+
+// Grab the 'moves' from the HTML and change the text to 0
+let moves1 = document.getElementsByClassName(`moves1`);
+moves1[0].innerHTML = 0;
+
 // cardsFrontAgain()
 
 // adds and removes whether images display
@@ -53,7 +65,7 @@ let counter = document.querySelector(".counter"); // MOVES COUNTER
 function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
     startClock();
-    moveCounter();
+    moveC();
 
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
@@ -146,12 +158,21 @@ function checkForMatch() {
         firstCardFrontAfterMatch[1].classList.add('front1');
         secondCardFrontAfterMatch[1].classList.add('front1');
 
-
-
         match++;
+
+        // Reset the failed match count back to 0
+        tryCounter = 0;
+    } else {
+         // Lower the stars if user has viewed 8 cards, and the 4 recent clicks are failed matches
+                // Do not lower the star rating if the rating is 1
+                if ((moveCounter >= 8) && (tryCounter >= 4) && (starRating > 1)){
+                    lowerStars();
+                }
+                // count no. of clicks that don't result in a match
+                tryCounter++;
+                incrementCounter();
     }
 
-   
     // The settimeout function is used here so the final card can show before the you won message appears
     setTimeout(() => {
         if (match === 6) {
@@ -267,7 +288,7 @@ const startClock = startTimer();
 // moves counter
 /** 1 added to counter variable each time a move is made */
 
-function moveCounter() {
+function moveC() {
     moves++;
     counter.innerHTML = moves;
 
@@ -284,6 +305,7 @@ function moveCounter() {
 function resetGame() {
    
     window.location.reload();
+    resetStars()
 }
 // get reference to button
 let reset = document.getElementById("reset");
@@ -439,6 +461,35 @@ function closeCongratsModalPopup() {
 }
 
 let congratsCounter = document.getElementsByClassName('congratsCounter')
+
+// script for stars adapted from Susan Chen 
+// Lower the star rating by one, and hide the last star by adding the class 'dimmed'
+function lowerStars() {
+    starRating--;
+    tryCounter = 0;
+    const stars = document.getElementsByClassName(`fa-star`);
+    stars[starRating].className = `fa fa-star dimmed`;
+}
+
+// Reset the rating to 3 and show all stars by removing the class 'dimmed'
+function resetStars() {
+    starRating = 3;
+    const stars = document.getElementsByClassName(`fa-star`);
+    for (let i=0; i<3; i++){
+        stars[i].className = `fa fa-star`;
+    }
+}
+
+// Increase the click(move) count by 1 and update the HTML text to the current value
+function incrementCounter() {
+    moveCounter++;
+    moves1[0].innerHTML = moveCounter;
+}
+
+// Reset the click(move) to 0 and update the HTML text to the current value
+function resetCounter() {
+    moves1[0].innerHTML = moveCounter = 0;
+}
 
 
 

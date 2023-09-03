@@ -98,7 +98,8 @@ View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/);
 
 # Technologies Used
 
-- Images compressed on [TinyPNG](https://tinypng.com/).
+- Images compressed on [TinyPNG](https://tinypng.com/)
+- Stars from [Font Awesome]("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
 
 
 
@@ -240,7 +241,7 @@ The site was deployed on github pages.
 - idea for lives & dynamic card movement effect from [developedbyed](https://www.youtube.com/watch?v=-tlb4tv4mC4)
 - styling of play & how to play buttons code adapted from [GreatStack](https://youtu.be/Odr24UQs3uY?feature=shared)
 - code to delay anchor tag for play button until balloons pop taken from [nattik Gur-Arie](https://stackoverflow.com/questions/14434604/i-want-to-delay-a-link-for-a-period-of-500-with-javascript#:~:text=To%20delay%20a%20link%20with,it%20is%20inside%20the%20'%20'%20.)
-- Code for cards shake when matched adapted from [Susan Chen](https://susanschen.github.io/Memory-Game/ and the shake cards css was taken from [Animate.css](https://animate.style/)
+- Code for cards shake when matched  & stars adapted from [Susan Chen](https://susanschen.github.io/Memory-Game/) and the shake cards css was taken from [Animate.css](https://animate.style/)
 )
 - bubbles converted into stars using code adapted from [coding Artist](https: //www.youtube.com/watch?v=LZx_Hyudmdw)
 - code to prompt user to flip device on smaller devices adapted from [Jarrod Whitley](https://stackoverflow.com/uestions/50766953/how-can-i-code-a-pop-up-text-box-that-only-appears-on-mobile-devices-when-the-sc)
