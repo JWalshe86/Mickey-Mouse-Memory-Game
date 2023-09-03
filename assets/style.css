@@ -340,7 +340,7 @@ body {
     display: inline-flex;
     justify-content: space-between;
     gap: 50px;
-}
+} 
 
 /* game & info stay in same screen */
 
@@ -573,3 +573,32 @@ span.counter {
     display: flex;
     flex-wrap: wrap;
 }
+
+    /* code to prompt user to flip device on smaller devices adapted from Jarrod Whitley */
+
+     /* Hides pop up when landscape */
+     @media only screen 
+     and (min-device-width : 375px) 
+     and (max-device-width : 667px) 
+     and (orientation : landscape) { 
+       .pop-up {
+       display: none;
+       }
+     }
+
+     /* Shows pop up when portrait */
+     @media only screen 
+     and (min-device-width : 375px) 
+     and (max-device-width : 667px) 
+     and (orientation : portrait) {
+       .pop-up {
+       display: unset
+       }
+     }
+
+     .pop-up{
+        background-color: blue;
+     }
+
+
+
