@@ -179,10 +179,10 @@ function checkForMatch() {
 
     // The settimeout function is used here so the final card can show before the you won message appears
     setTimeout(() => {
-        if (match === 3) {
-            document.querySelector('div.congratsCounter').textContent = "Took you " + starCounter +' moves'; 
-            document.querySelector('div.congratsCounter').textContent = "Took you " + counter.textContent +' moves'; 
-            // document.querySelector('div.congratsTimer').textContent = "in " + timer.textContent + ' seconds';
+        if (match === 6) {
+            document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML +' moves'; 
+            document.querySelector('div.congratsStars').textContent = `You got ${stars1Counter.innerHTML}`; 
+            document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
             openCongratsModalPopup();
         }
     }, 1500);
@@ -198,6 +198,7 @@ function checkForMatch() {
 
     if (match === 4 && moves <= 25 && timer.textContent <=45) {
         stars[1].classList.remove('dimmed');
+        stars[1].classList.add('fa','fa-star');
         increaseStars()
     }
 
@@ -205,6 +206,7 @@ function checkForMatch() {
 
     if (match === 6 && moves <= 30 && timer.textContent <=60) {
         stars[2].classList.remove('dimmed');
+        stars[2].classList.add('fa', 'fa-star', 'fa' ,'fa-star');
         increaseStars()
     }
 
@@ -521,5 +523,3 @@ function incrementCounter() {
 function resetCounter() {
     moves[0].innerHTML = moveCounter = 0;
 }
-
-

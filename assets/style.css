@@ -542,7 +542,7 @@ span.counter {
     visibility: visible;
     transform: translate(-50%, -50%) scale(1.1);
     position: fixed;
-    bottom: -30vh;
+    bottom: -35vh;
   }
 
 .congratsModal-popup img {
@@ -643,4 +643,11 @@ span.counter {
 
 .dimmed{
     visibility: hidden;
+}
+
+.fa-star:before {
+    color: #f1c40f;
+    float: right;
+    left: 2px;
+    position: relative;
 }
