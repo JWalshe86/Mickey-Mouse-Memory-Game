@@ -198,7 +198,6 @@ function checkForMatch() {
 
     if (match === 4 && moves <= 25 && timer.textContent <=45) {
         stars[1].classList.remove('dimmed');
-        stars[1].classList.add('fa','fa-star');
         increaseStars()
     }
 
@@ -206,7 +205,6 @@ function checkForMatch() {
 
     if (match === 6 && moves <= 30 && timer.textContent <=60) {
         stars[2].classList.remove('dimmed');
-        stars[2].classList.add('fa', 'fa-star', 'fa' ,'fa-star');
         increaseStars()
     }
 
