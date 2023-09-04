@@ -6,14 +6,14 @@ let cardsFront = document.getElementsByClassName('card-front');
 let tryCounter = 0;
 let moveCounter = 0;
 starRating = 3;
-
+let starCounter = 0;
 
 // Grab the deck div element from the HTML
 let deck = document.getElementsByClassName(`deck`);
 
-
 let moves = document.getElementsByClassName(`moves`);
 
+let stars1Counter = document.querySelector('span.starCounter')
 
 // cardsFrontAgain()
 
@@ -58,7 +58,6 @@ is stored in this. Thats because this represents the element that activated it.
 
 moves = 0;
 let counter = document.querySelector(".counter"); // MOVES COUNTER
-
 
 // Card Flip
 
@@ -180,9 +179,10 @@ function checkForMatch() {
 
     // The settimeout function is used here so the final card can show before the you won message appears
     setTimeout(() => {
-        if (match === 6) {
+        if (match === 3) {
+            document.querySelector('div.congratsCounter').textContent = "Took you " + starCounter +' moves'; 
             document.querySelector('div.congratsCounter').textContent = "Took you " + counter.textContent +' moves'; 
-            document.querySelector('div.congratsTimer').textContent = "in " + timer.textContent + ' seconds';
+            // document.querySelector('div.congratsTimer').textContent = "in " + timer.textContent + ' seconds';
             openCongratsModalPopup();
         }
     }, 1500);
@@ -191,18 +191,21 @@ function checkForMatch() {
 
     if (match === 2 && moves <= 20 && timer.textContent <=30) {
         stars[0].classList.remove('dimmed');
+        increaseStars()
     }
 
     // if you guess 4 matches in less than 25 moves you get another star
 
     if (match === 4 && moves <= 25 && timer.textContent <=45) {
         stars[1].classList.remove('dimmed');
+        increaseStars()
     }
 
     // if you guess 4 matches in less than 30 moves you get 3 stars: max score
 
     if (match === 6 && moves <= 30 && timer.textContent <=60) {
         stars[2].classList.remove('dimmed');
+        increaseStars()
     }
 
 }
@@ -315,6 +318,11 @@ function moveC() {
     moves++;
     counter.innerHTML = moves;
 
+}
+
+function increaseStars(){
+    starCounter++;
+    stars1Counter.innerHTML = starCounter;
 }
 
 // reset game feature adapted from Iris Smoks Memory Game
@@ -513,7 +521,5 @@ function incrementCounter() {
 function resetCounter() {
     moves[0].innerHTML = moveCounter = 0;
 }
-
-
 
 
