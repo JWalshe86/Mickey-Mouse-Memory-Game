@@ -11,9 +11,9 @@ starRating = 3;
 // Grab the deck div element from the HTML
 let deck = document.getElementsByClassName(`deck`);
 
-// Grab the 'moves' from the HTML and change the text to 0
-let moves1 = document.getElementsByClassName(`moves1`);
-moves1[0].innerHTML = 0;
+
+let moves = document.getElementsByClassName(`moves`);
+
 
 // cardsFrontAgain()
 
@@ -56,7 +56,7 @@ let firstCardFrontAfterMatch, secondCardFrontAfterMatch;
 is stored in this. Thats because this represents the element that activated it.
 */
 
-let moves = 0;
+moves = 0;
 let counter = document.querySelector(".counter"); // MOVES COUNTER
 
 
@@ -139,7 +139,12 @@ function checkForMatch() {
 
     isMatch ? disableCards() : unflipCards();
 
+    let stars = document.getElementsByClassName(`fa-star`);
 
+    // if(match === 1 & moves <=20){
+    //     stars[0].classList.add('dimmed');
+    // }
+    
 
     /* if there are 6 matches this means the player has won. 
     a variable for match was set to zero and when this reached
@@ -181,6 +186,24 @@ function checkForMatch() {
             openCongratsModalPopup();
         }
     }, 1500);
+
+    // if you guess 2 matches in less than 10 moves you get a star
+
+    if (match === 2 && moves <= 20 && timer.textContent <=30) {
+        stars[0].classList.remove('dimmed');
+    }
+
+    // if you guess 4 matches in less than 25 moves you get another star
+
+    if (match === 4 && moves <= 25 && timer.textContent <=45) {
+        stars[1].classList.remove('dimmed');
+    }
+
+    // if you guess 4 matches in less than 30 moves you get 3 stars: max score
+
+    if (match === 6 && moves <= 30 && timer.textContent <=60) {
+        stars[2].classList.remove('dimmed');
+    }
 
 }
 
@@ -474,7 +497,7 @@ function lowerStars() {
 // Reset the rating to 3 and show all stars by removing the class 'dimmed'
 function resetStars() {
     starRating = 3;
-    const stars = document.getElementsByClassName(`fa-star`);
+    // let stars = document.getElementsByClassName(`fa-star`);
     for (let i=0; i<3; i++){
         stars[i].className = `fa fa-star`;
     }
@@ -483,13 +506,14 @@ function resetStars() {
 // Increase the click(move) count by 1 and update the HTML text to the current value
 function incrementCounter() {
     moveCounter++;
-    moves1[0].innerHTML = moveCounter;
+    moves[0].innerHTML = moveCounter;
 }
 
 // Reset the click(move) to 0 and update the HTML text to the current value
 function resetCounter() {
-    moves1[0].innerHTML = moveCounter = 0;
+    moves[0].innerHTML = moveCounter = 0;
 }
+
 
 
 

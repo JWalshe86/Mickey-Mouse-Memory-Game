@@ -641,3 +641,6 @@ span.counter {
    display: inline-block;
 }
 
+.dimmed{
+    visibility: hidden;
+}
