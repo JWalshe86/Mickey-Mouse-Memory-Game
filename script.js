@@ -65,6 +65,10 @@ function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
     startClock();
     moveC();
+    displayStars()
+    openCongratsModalPopup()
+    addClick()
+    clickButton()
 
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
@@ -493,23 +497,6 @@ function closeCongratsModalPopup() {
 
 let congratsCounter = document.getElementsByClassName('congratsCounter')
 
-// script for stars adapted from Susan Chen 
-// Lower the star rating by one, and hide the last star by adding the class 'dimmed'
-function lowerStars() {
-    starRating--;
-    tryCounter = 0;
-    const stars = document.getElementsByClassName(`fa-star`);
-    stars[starRating].className = `fa fa-star dimmed`;
-}
-
-// Reset the rating to 3 and show all stars by removing the class 'dimmed'
-function resetStars() {
-    starRating = 3;
-    // let stars = document.getElementsByClassName(`fa-star`);
-    for (let i=0; i<3; i++){
-        stars[i].className = `fa fa-star`;
-    }
-}
 
 // Increase the click(move) count by 1 and update the HTML text to the current value
 function incrementCounter() {
@@ -521,3 +508,38 @@ function incrementCounter() {
 function resetCounter() {
     moves[0].innerHTML = moveCounter = 0;
 }
+
+
+function displayStars(){
+    let starDisplay = document.querySelector('.congratsStars');
+    let starDisplay2 = document.createElement('div');
+    // starDisplay2.className = "congratsStars fa fa-star, fa fa-star,fa fa-star";
+ let starDisplay3 = document.createElement('div');
+    starDisplay3.className = "congratsStars fa fa-star, fa fa-star, fa fa-star";
+    let congratsModal = document.querySelector('.congratsStars')
+    congratsModal.appendChild(starDisplay3)
+   
+    
+    console.log(congratsModal)
+}
+
+let clicks = 0;
+ 
+        function addClick() {
+            setTimeout(() => {
+                clicks = clicks + 1;
+                document.querySelector('.total-clicks').textContent
+                    = clicks;
+            }, 1000);
+            
+        }
+ 
+        // Simulate click function
+        function clickButton() {
+            document.querySelector('.card-back').click();
+        }
+ 
+        // Simulate a click every second
+        // setInterval(clickButton, 1000);
+
+       
