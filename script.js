@@ -462,3 +462,4 @@ function oneStarGo(){
     let congratsModal = document.querySelector('.congratsStars')
     congratsModal.appendChild(starDisplay1)
 }
+

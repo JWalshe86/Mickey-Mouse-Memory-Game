@@ -8,10 +8,21 @@
 
 }
 
+html {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+
 body {
     /* body will take 100% of available viewport space */
     height: 100vh;
     font-family: InspireTWDC, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
 }
 
 /* styling for landing page */
