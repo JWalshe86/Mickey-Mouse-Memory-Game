@@ -322,6 +322,7 @@ body {
 
 /* styling for Reset button, timer and counter */
 /* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) */
+/* styling to shape the info div like a flag adapted from Zoe Rooney: css-tricks.com */
 
 .info-container {
     
@@ -726,4 +727,9 @@ span.counter {
 
 span.starCounter{
     visibility: hidden;
+}
+
+.fa-repeat{
+    padding-left: 2vw;
+    padding-right: 1vw;
 }

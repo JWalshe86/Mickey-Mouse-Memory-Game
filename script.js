@@ -344,8 +344,8 @@ function resetGame() {
     window.location.reload();
     resetStars()
 }
-// get reference to button
-let reset = document.getElementById("reset");
+// get reference to repeat icon
+let reset = document.querySelector(".fa-repeat");
 // add event listener for the button, for action "click"
 reset.addEventListener("click", resetGame);
 
