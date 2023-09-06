@@ -8,6 +8,12 @@
 
 }
 
+body {
+    /* body will take 100% of available viewport space */
+    height: 100vh;
+    font-family: InspireTWDC, Helvetica, sans-serif;
+}
+
 /* styling for landing page */
 
 /* container for title */
@@ -285,6 +291,7 @@
         left: 50%;
     }
 }
+
 
 .play-button {
     text-decoration: none;
@@ -684,7 +691,6 @@ span.counter {
         justify-content: center;
       
 }
-
 
      }
 

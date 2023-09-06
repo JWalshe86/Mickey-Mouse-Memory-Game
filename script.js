@@ -404,7 +404,6 @@ anchor.onclick = function () {
 let playButton = document.querySelector('a');
 playButton.addEventListener('click', rubberBand);
 
-
 function rubberBand() {
     setTimeout(() => {
         let titleClick = document.getElementsByTagName('h3');
@@ -462,4 +461,15 @@ function oneStarGo(){
     let congratsModal = document.querySelector('.congratsStars')
     congratsModal.appendChild(starDisplay1)
 }
+const portrait = window. matchMedia('(orientation: portrait)')
+
+function playButtonBeforeOrientation() {
+
+   
+
+    if(window.innerWidth <380 && orientation === 0 && playHow.onclick == true){
+        console.log('testing123')
+    }
+}
+playButtonBeforeOrientation()
 
