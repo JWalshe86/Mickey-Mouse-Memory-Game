@@ -324,22 +324,54 @@ body {
 /* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) */
 
 .info-container {
+    
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: 0;
     width: 50%;
+    height: 0;
+    border-left: 55px solid transparent;
+    border-bottom: 55px solid rgba(7, 131, 247, 0.5);
+    border-top: 55px solid rgba(7, 131, 247, 0.5);
     text-align: center;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
     gap: 2vh;
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    background-color: blue;
-    position: relative;     
+    justify-content: center;
+    font-size: 1.6rem;
+  
 }
-
+   .info-container::after {
+    width: 50%;
+    position: absolute;     
+      
+      }
 @media screen and (max-width: 700px){
     .info-container{
-        width: 67.5%;
+        content: "";
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 71%;
+    height: 0;
+    border-left: 55px solid transparent;
+    border-bottom: 55px solid rgba(7, 131, 247, 0.5);
+    border-top: 55px solid rgba(7, 131, 247, 0.5);
+    text-align: center;
+    gap: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-direction: column
+
     }
+    .info-container::after {
+        width: 71%;
+        position: absolute;  
+      }
+
 }
 
 /* to keep timer & counter on same line & responsive to screen size */
@@ -347,6 +379,7 @@ body {
 .timer-counter-container {
     display: inline-flex;
     justify-content: space-between;
+    color: white;
 } 
 
 /* game & info stay in same screen */
@@ -365,7 +398,7 @@ body {
 .timer {
     float: right;
     padding-left: 3px;
-    margin-right: 12px;
+    margin-right: 5vw;
 }
 
 .counter {
