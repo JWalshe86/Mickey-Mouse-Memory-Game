@@ -347,7 +347,6 @@ body {
 .timer-counter-container {
     display: inline-flex;
     justify-content: space-between;
-    gap: 50px;
 } 
 
 /* game & info stay in same screen */
@@ -364,9 +363,9 @@ body {
 }
 
 .timer {
-    background-color: yellow;
     float: right;
     padding-left: 3px;
+    margin-right: 12px;
 }
 
 .counter {
@@ -585,19 +584,16 @@ span.counter {
     visibility: visible;
     transform: translate(-50%, -50%) scale(1.1);
     position: fixed;
-    bottom: -35vh;
+    bottom: -25vh;
   }
 
 .congratsModal-popup img {
     width: 100%;
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
 
 .congratsModal-popup button {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 15px;
     padding: 10px 0;
     background: #6fd649;
     outline: none;
