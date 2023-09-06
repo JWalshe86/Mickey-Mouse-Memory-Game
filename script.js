@@ -466,7 +466,7 @@ function oneStarGo(){
 
 function popUp(){
     let popUp = document.querySelector('.pop');
-    popUp.classList.add('pop-up')
+    popUp.classList.add('pop-up-display')
 
 }
 

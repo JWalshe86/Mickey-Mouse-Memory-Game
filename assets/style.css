@@ -665,6 +665,7 @@ span.counter {
      and (max-device-width : 667px) 
      and (orientation : portrait) {
        .pop-up {
+        display: none;
         position: absolute;
         align-content: center;
         top: 50vh;
@@ -685,12 +686,54 @@ span.counter {
         display:none;
        }
        .turnDeviceWrapper{
-        display: flex;
+        display: none;
         position: relative;
         justify-content: center;
       
 }
+     }
 
+     @media only screen 
+     and (min-device-width : 375px) 
+     and (max-device-width : 667px) 
+     and (orientation : landscape) { 
+       .pop-up-display {
+       display: none;
+       }
+     }
+
+     /* Shows pop up when portrait */
+     @media only screen 
+     and (min-device-width : 375px) 
+     and (max-device-width : 667px) 
+     and (orientation : portrait) {
+       .pop-up-display {
+        display: none;
+        position: absolute;
+        align-content: center;
+        top: 50vh;
+        z-index: 2;
+        font-size: x-large;
+       }
+       .info-game-container{
+        background-image: none;
+        background-color: lightblue;
+       }
+       .card-container{
+        display: none;
+       }
+       .info-container{
+        visibility:hidden;
+       }
+       #reset{
+        display:none;
+       }
+       .turnDeviceWrapper{
+        display: none;
+        position: relative;
+        justify-content: center;
+      
+}
      }
 
      @media (min-width: 667px) {
