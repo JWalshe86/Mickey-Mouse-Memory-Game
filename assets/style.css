@@ -53,7 +53,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    top: 100%;
+    top: 90%;
     position: absolute;
     height: 7vh;
     width: 100%;
@@ -714,8 +714,11 @@ span.counter {
    display: inline-block;
 }
 
-.dimmed{
-    visibility: hidden;
+/* hollowed out stars  */
+
+i.fa.fa-star.dimmed{
+    mix-blend-mode: color-burn;
+
 }
 
 .fa-star:before {
@@ -735,6 +738,6 @@ span.starCounter{
 }
 
 h3{
-    
+
     color: white;
 }
