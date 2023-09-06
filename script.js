@@ -65,10 +65,8 @@ function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
     startClock();
     moveC();
-    displayStars()
-    openCongratsModalPopup()
-    addClick()
-    clickButton()
+     
+   
 
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
@@ -185,7 +183,7 @@ function checkForMatch() {
     setTimeout(() => {
         if (match === 6) {
             document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML +' moves'; 
-            document.querySelector('div.congratsStars').textContent = `You got ${stars1Counter.innerHTML}`; 
+            // document.querySelector('div.congratsStars').textContent = `You got ${stars1Counter.innerHTML}`; 
             document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
             openCongratsModalPopup();
         }
@@ -196,20 +194,23 @@ function checkForMatch() {
     if (match === 2 && moves <= 20 && timer.textContent <=30) {
         stars[0].classList.remove('dimmed');
         increaseStars()
+        oneStarGo()
     }
 
     // if you guess 4 matches in less than 25 moves you get another star
 
-    if (match === 4 && moves <= 25 && timer.textContent <=45) {
+    if (match === 4 && moves <= 25 && timer.textContent <=45 && starCounter >= 1) {
         stars[1].classList.remove('dimmed');
         increaseStars()
+        secondStarGo()
     }
 
-    // if you guess 4 matches in less than 30 moves you get 3 stars: max score
+    // if you guess 6 matches in less than 30 moves you get 3 stars: max score
 
-    if (match === 6 && moves <= 30 && timer.textContent <=60) {
+    if (match === 6 && starCounter >= 2) {
         stars[2].classList.remove('dimmed');
         increaseStars()
+        thirdStarGo()
     }
 
 }
@@ -509,37 +510,25 @@ function resetCounter() {
     moves[0].innerHTML = moveCounter = 0;
 }
 
-
-function displayStars(){
-    let starDisplay = document.querySelector('.congratsStars');
-    let starDisplay2 = document.createElement('div');
-    // starDisplay2.className = "congratsStars fa fa-star, fa fa-star,fa fa-star";
- let starDisplay3 = document.createElement('div');
-    starDisplay3.className = "congratsStars fa fa-star, fa fa-star, fa fa-star";
+function thirdStarGo(){
+    let starDisplay3 = document.createElement('div');
+    starDisplay3.className = "fa fa-star";
+   let  starDisplay31 = document.createElement('div');
+    starDisplay31.className = "fa fa-star";
     let congratsModal = document.querySelector('.congratsStars')
     congratsModal.appendChild(starDisplay3)
-   
-    
-    console.log(congratsModal)
+    // congratsModal.appendChild(starDisplay31)
+}
+function secondStarGo(){
+    let starDisplay2 = document.createElement('div');
+    starDisplay2.className = "fa fa-star";
+    let congratsModal = document.querySelector('.congratsStars')
+    congratsModal.appendChild(starDisplay2)
 }
 
-let clicks = 0;
- 
-        function addClick() {
-            setTimeout(() => {
-                clicks = clicks + 1;
-                document.querySelector('.total-clicks').textContent
-                    = clicks;
-            }, 1000);
-            
-        }
- 
-        // Simulate click function
-        function clickButton() {
-            document.querySelector('.card-back').click();
-        }
- 
-        // Simulate a click every second
-        // setInterval(clickButton, 1000);
-
-       
+function oneStarGo(){
+    let starDisplay1 = document.createElement('div');
+    starDisplay1.className = "fa fa-star";
+    let congratsModal = document.querySelector('.congratsStars')
+    congratsModal.appendChild(starDisplay1)
+}
