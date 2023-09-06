@@ -514,6 +514,39 @@ span.counter {
     opacity: 1;
 }
 
+/* overlay for congrats popup */
+
+#modal-overlay.active1 {
+    pointer-events: all;
+    opacity: 1;
+    background-color: blue;
+    z-index: 1;
+}
+
+
+.congratsModal-overlay {
+    position: fixed;
+    /* so by default the modal doesn't display */
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    /* stretches overlay all over the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    /* so the open modal button works when the overlay is not active */
+    pointer-events: none;
+}
+
+/* so one can toggle between overlay being present of not */
+.congratsModal-overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+
+
 .congratsModal-container {
     background: #3c5077;
     /* all contents in this container will be displayed in the center of the webpage */
@@ -650,4 +683,8 @@ span.counter {
     float: right;
     left: 2px;
     position: relative;
+}
+
+span.starCounter{
+    visibility: hidden;
 }
