@@ -403,7 +403,6 @@ anchor.onclick = function () {
 
 let playButton = document.querySelector('a');
 playButton.addEventListener('click', rubberBand);
-playButton.addEventListener('click', popUp);
 
 
 function rubberBand() {
@@ -463,10 +462,3 @@ function oneStarGo(){
     let congratsModal = document.querySelector('.congratsStars')
     congratsModal.appendChild(starDisplay1)
 }
-
-function popUp(){
-    let popUp = document.querySelector('.pop');
-    popUp.classList.add('pop-up-display')
-
-}
-
