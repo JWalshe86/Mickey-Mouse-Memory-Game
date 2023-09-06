@@ -69,7 +69,7 @@ body {
     font-size: larger;
     font-weight: bold;
     background: #ff1876;
-    color: #fff;
+    color: yellow;
     border-radius: 40px;
     border: none;
     outline: none;
@@ -294,7 +294,6 @@ body {
 
 
 .play-button {
-    color: white;
     text-decoration: none;
 }
 
