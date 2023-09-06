@@ -334,6 +334,10 @@ body {
     align-items: center;
     background-color: blue;
     position: relative;
+
+    @media (max-width: 1250px) {
+        width: 70%;
+      }
 }
 
 /* to keep timer & counter on same line & responsive to screen size */
