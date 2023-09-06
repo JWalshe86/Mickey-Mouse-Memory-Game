@@ -324,7 +324,7 @@ body {
 /* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) */
 
 .info-container {
-    width: 100%;
+    width: 50%;
     text-align: center;
     font-size: 2rem;
     display: flex;
@@ -332,6 +332,8 @@ body {
     gap: 2vh;
     flex-direction: column;
     align-items: center;
+    background-color: blue;
+    position: relative;
 }
 
 /* to keep timer & counter on same line & responsive to screen size */
@@ -350,6 +352,9 @@ body {
     height: inherit;
     background-image:url(./images/game-background\ 1500px.png);
     background-size: contain;
+    align-items: center;
+    padding-right: 3%;
+    padding-top: 2%;
 }
 
 .timer {
@@ -359,7 +364,6 @@ body {
 }
 
 .counter {
-    background-color: pink;
     position: relative;
     display: inline-block;
     padding-left: 3px;
