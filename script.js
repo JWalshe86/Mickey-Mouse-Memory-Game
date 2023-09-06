@@ -23,12 +23,9 @@ function cardsFrontAgain() {
         allCards[i].classList.add('front1');
 
     }
-    // firstCard.classList.add('front1');
-    // secondCard.classList.add('front1');
 }
 
 let match = 0;
-
 
 /* Store all memory card elements in a cards variable. This is where the function will reach to when looking for cards to flip. The 
 querySelectorAll function returns all the elements from the memory-card document. Memory card is the class that contains all the
@@ -65,8 +62,6 @@ function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
     startClock();
     moveC();
-     
-   
 
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
@@ -78,7 +73,6 @@ function flipCard() {
     div holds the second card.*/
 
     if (this === firstCard) return;
-
 
     /* Access the class list of the memory card. Add here means if 
     the class is not there add it. */
@@ -115,10 +109,6 @@ function flipCard() {
 
     }
 }
-
-
-
-
 /**
  * A function for the matching logic. 
  * One now needs to check if the first and second cards match? 
@@ -137,23 +127,15 @@ function checkForMatch() {
     // ternary operator used here for simplicity
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
-
     isMatch ? disableCards() : unflipCards();
 
     let stars = document.getElementsByClassName(`fa-star`);
-
-    // if(match === 1 & moves <=20){
-    //     stars[0].classList.add('dimmed');
-    // }
-    
 
     /* if there are 6 matches this means the player has won. 
     a variable for match was set to zero and when this reached
     6 then the won function is activated */
 
     if (isMatch) {
-
-
 
         animateCards();
         firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
@@ -213,24 +195,18 @@ function checkForMatch() {
         increaseStars()
         thirdStarGo()
     }
-
 }
-
 
 // called if the cards match
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
-
 }
 
 function animateCards() {
     firstCard.classList.add('animate__animated', 'animate__tada');
     secondCard.classList.add('animate__animated', 'animate__tada');
 }
-
-
 
 // called if cards don't match
 function unflipCards() {
@@ -312,7 +288,6 @@ function startTimer() {
             called++;
         }
     };
-
 }
 
 const startClock = startTimer();
@@ -323,7 +298,6 @@ const startClock = startTimer();
 function moveC() {
     moves++;
     counter.innerHTML = moves;
-
 }
 
 function increaseStars(){
@@ -337,7 +311,6 @@ function increaseStars(){
 
 /** When the reset button is clicked the reset function is activated
  * and the game is reset
-
 */
 function resetGame() {
    
@@ -349,10 +322,6 @@ let reset = document.querySelector(".fa-repeat");
 // add event listener for the button, for action "click"
 reset.addEventListener("click", resetGame);
 
-// You Won Function
-//This should fire when all the cards are flipped
-
-
 // script code for modal adapted from WebDivSimplified
 // anything with the data modal target will be inside the openModal variable
 const openModalButtons = document.querySelectorAll('data-modal-target');
@@ -360,23 +329,6 @@ const openModalButtons = document.querySelectorAll('data-modal-target');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 
 const overlay = document.getElementById('modal-overlay');
-// for each button add an event listener
-
-// openModalButtons.addEventListener('click', () => {
-// using the dataset selector from the button get the data from the html #modal
-// const modal = document.querySelector(button.dataset.modalTarget);
-// once the modal is captured one wants to pass it into a function to open it
-
-
-// balloonsPop();
-// openModal(modal);
-
-
-// });
-
-
-
-
 
 // Adding eventlistener to overlay object so it closes when overlay is preessed
 overlay.addEventListener('click', () => {
@@ -395,42 +347,29 @@ closeModalButtons.forEach(button => {
     });
 });
 
-
 function openModal(modal) {
     // if (modal == null) return;
     modal.classList.add('active');
     // everytime the modal is open one also wants the overlay open    
     overlay.classList.add('active');
-
-
 }
-
-
 
 function closeModal(modal) {
     if (modal === null) return;
     modal.classList.remove('active');
     overlay.classList.remove('active');
 }
-
-
 // code for button animation adapted from GreatStack
-
-
-
 // As there are multiple spans it will be an array
 let spans = document.getElementsByTagName("span");
 let playHow = document.getElementById('howToPlay1');
 let playHowChildren = document.getElementById('howToPlay1').children;
-
-
 
 playHow.onclick = function () {
     // this will apply the css for each span
     for (let span of playHowChildren) {
         //    the class anim will be added to each span
         span.classList.add("anim");
-
     }
     setTimeout(function () {
         for (let span of playHowChildren) {
@@ -446,29 +385,20 @@ playHow.onclick = function () {
 let anchor = document.getElementById('anchor');
 let anchorChildren = anchor.children;
 
-
-
-
 anchor.onclick = function () {
     // this will apply the css for each span
     // anchorChildren used so both buttons don't fire ballons at same time
     for (let span of anchorChildren) {
         //    the class anim will be added to each span
         span.classList.add("anim");
-
     }
     setTimeout(function () {
         for (let span of spans) {
             //    the class anim will be removed from each span after .5s
             span.classList.remove("anim");
-            // model pops up once bubbles have gone
-
         }
     }, 500);
 };
-
-
-
 
 // get rubberBand to activate after start button & onto page
 
@@ -499,7 +429,6 @@ function closeCongratsModalPopup() {
 
 let congratsCounter = document.getElementsByClassName('congratsCounter')
 
-
 // Increase the click(move) count by 1 and update the HTML text to the current value
 function incrementCounter() {
     moveCounter++;
@@ -510,10 +439,14 @@ function resetCounter() {
     moves[0].innerHTML = moveCounter = 0;
 }
 
+/**Creating an element containing the class fa-star each time a star is won. This allows 3 stars to be
+ * presented in the congrats modal
+ */
+
 function thirdStarGo(){
     let starDisplay3 = document.createElement('div');
     starDisplay3.className = "fa fa-star";
-   let  starDisplay31 = document.createElement('div');
+    let starDisplay31 = document.createElement('div');
     starDisplay31.className = "fa fa-star";
     let congratsModal = document.querySelector('.congratsStars')
     congratsModal.appendChild(starDisplay3)

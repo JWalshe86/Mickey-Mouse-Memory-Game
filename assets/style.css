@@ -11,6 +11,7 @@
 body {
     /* body will take 100% of available viewport space */
     height: 100vh;
+    font-family: InspireTWDC, Helvetica, sans-serif;
 }
 
 /* styling for landing page */
@@ -64,7 +65,9 @@ body {
 .howToPlay1,
 .play-button {
     display: inline-block;
-    padding: 24px 70px;
+    padding: 1% 2%;
+    font-size: larger;
+    font-weight: bold;
     background: #ff1876;
     color: #fff;
     border-radius: 40px;
@@ -398,8 +401,7 @@ body {
 
 .timer {
     float: right;
-    padding-left: 3px;
-    margin-right: 5vw;
+    margin-right: 4vw;
 }
 
 .counter {
@@ -738,6 +740,5 @@ span.starCounter{
 }
 
 h3{
-
     color: white;
 }

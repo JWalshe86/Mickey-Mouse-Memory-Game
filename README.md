@@ -124,6 +124,7 @@ View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
 ## Typography
 
+ The font-family chosen was InspireTWDC, Helvetica, sans-serif. This was inspired by the [Disney Website](https://www.disney.co.uk/mickey-mouse)
 
 ### Imagery 
 
