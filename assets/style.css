@@ -35,7 +35,6 @@ body {
     position: relative;
     top: 20%;
     color: yellow;
-    font-size: 350%;
     text-shadow: 2px 2px 10px yellow,
         15px 15px 10px black
 }
@@ -650,17 +649,17 @@ span.counter {
     /* code to prompt user to flip device on smaller devices adapted from Jarrod Whitley */
 
      /* Hides pop up when landscape */
-     @media only screen 
+     /* @media only screen 
      and (min-device-width : 375px) 
      and (max-device-width : 667px) 
      and (orientation : landscape) { 
        .pop-up {
        display: none;
        }
-     }
+     } */
 
      /* Shows pop up when portrait */
-     @media only screen 
+     /* @media only screen 
      and (min-device-width : 375px) 
      and (max-device-width : 667px) 
      and (orientation : portrait) {
@@ -691,7 +690,7 @@ span.counter {
         justify-content: center;
       
 }
-     }
+     } */
 
      @media only screen 
      and (min-device-width : 375px) 
