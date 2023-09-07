@@ -42,7 +42,7 @@ body {
 
 /* styling for hero image title */
 .hero-image {
-    background-image: url(./images/test.jpg);
+    background-image: url();
     background-size: cover;
     background-position: center;
     justify-content: center;
