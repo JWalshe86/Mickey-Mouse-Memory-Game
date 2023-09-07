@@ -165,6 +165,7 @@ function checkForMatch() {
     setTimeout(() => {
         if (match === 6) {
             document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML +' moves'; 
+            // document.querySelector('div.congratsStars').textContent = `You got ${stars1Counter.innerHTML}`; 
             document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
             openCongratsModalPopup();
             overlay.classList.add('active1');
@@ -404,6 +405,7 @@ anchor.onclick = function () {
 let playButton = document.querySelector('a');
 playButton.addEventListener('click', rubberBand);
 
+
 function rubberBand() {
     setTimeout(() => {
         let titleClick = document.getElementsByTagName('h3');
@@ -440,6 +442,7 @@ function resetCounter() {
 /**Creating an element containing the class fa-star each time a star is won. This allows 3 stars to be
  * presented in the congrats modal
  */
+
 function thirdStarGo(){
     let starDisplay3 = document.createElement('div');
     starDisplay3.className = "fa fa-star";
@@ -447,6 +450,7 @@ function thirdStarGo(){
     starDisplay31.className = "fa fa-star";
     let congratsModal = document.querySelector('.congratsStars')
     congratsModal.appendChild(starDisplay3)
+    // congratsModal.appendChild(starDisplay31)
 }
 function secondStarGo(){
     let starDisplay2 = document.createElement('div');
@@ -461,15 +465,3 @@ function oneStarGo(){
     let congratsModal = document.querySelector('.congratsStars')
     congratsModal.appendChild(starDisplay1)
 }
-const portrait = window. matchMedia('(orientation: portrait)')
-
-function playButtonBeforeOrientation() {
-
-   
-
-    if(window.innerWidth <380 && orientation === 0 && playHow.onclick == true){
-        console.log('testing123')
-    }
-}
-playButtonBeforeOrientation()
-

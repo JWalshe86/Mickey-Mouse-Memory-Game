@@ -419,7 +419,6 @@ span.counter {
 }
 
 
-
 .memory-card {
     /* 4 cards @ 25% each for row, 3 cards @ 33% each for columns */
     /* The css calc function allows one to remove 
@@ -736,6 +735,7 @@ span.starCounter{
 .fa-repeat{
     padding-left: 2vw;
     padding-right: 1vw;
+    cursor: pointer;
 }
 
 h3{
