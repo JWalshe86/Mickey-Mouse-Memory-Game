@@ -65,7 +65,7 @@ body {
 .howToPlay1,
 .play-button {
     display: inline-block;
-    padding: 1% 2%;
+    padding: 5vw;
     font-size: larger;
     font-weight: bold;
     background: #ff1876;
@@ -503,7 +503,13 @@ span.counter {
     height: 60vh;
     max-width: 80%;
     contain: content;
+
+    /* Add scroll behaviour to modal for smaller screensizes adapted from stackoverflow */
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
 }
+
+
 
 @media screen 
      and (min-device-width : 350px) 
@@ -511,17 +517,18 @@ span.counter {
         .modal-body {
             font-size: .5rem !important;
       }
-      div.title {
-        /* font-size: 1rem; */
-        font-weight: bold;
-       position:relative;
-       display: contents;
+
+      .heroTitle {
+        font-size: 250% ;
     }
+
+        .modal{
+            width: 70vw;
+        }
      }
 
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
-
 }
 
 .modal-header {
@@ -536,7 +543,7 @@ span.counter {
 .modal-header .title {
     font-size: 1.25rem;
     font-weight: bold;
-    padding-left: 20vw;
+    padding-left: 15vw;
 }
 
 .howWin{
