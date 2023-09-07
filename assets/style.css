@@ -400,13 +400,14 @@ body {
 
 .timer {
     float: right;
-    margin-right: 4vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
 }
 
 .counter {
     position: relative;
     display: inline-block;
-    padding-left: 3px;
+    padding-left: 0;
 }
 
 span.counter {
