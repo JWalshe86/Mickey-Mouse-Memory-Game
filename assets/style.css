@@ -499,9 +499,25 @@ span.counter {
     /* want modal to draw above everything else */
     z-index: 10;
     background-color: white;
-    width: 500px;
+    width: 50vw;
+    height: 60vh;
     max-width: 80%;
+    contain: content;
 }
+
+@media screen 
+     and (min-device-width : 350px) 
+     and (max-device-width : 500px) {
+        .modal-body {
+            font-size: .5rem !important;
+      }
+      div.title {
+        /* font-size: 1rem; */
+        font-weight: bold;
+       position:relative;
+       display: contents;
+    }
+     }
 
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
@@ -514,11 +530,24 @@ span.counter {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+    background-color: #ff1876;
 }
 
 .modal-header .title {
     font-size: 1.25rem;
     font-weight: bold;
+    padding-left: 20vw;
+}
+
+.howWin{
+    background-color: #ff1876;
+    display: flex;
+    padding: inherit;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
 }
 
 .modal-header .close-button {
@@ -532,9 +561,20 @@ span.counter {
     box-shadow: none;
 }
 
-.modal-body {
+.modal-body > :not(.howWin) {
     padding: 10px 15px;
+    
 }
+
+.modal-body{
+   
+    text-align: center;
+    line-height: 2;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
 
 #modal-overlay {
     position: fixed;
