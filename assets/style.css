@@ -65,8 +65,8 @@ body {
 .howToPlay1,
 .play-button {
     display: inline-block;
-    padding: 5vw;
     font-size: larger;
+    padding: 2.5vw;
     font-weight: bold;
     background: #ff1876;
     color: yellow;
@@ -399,7 +399,6 @@ body {
 }
 
 .timer {
-    float: right;
     margin-right: 2vw;
     margin-left: 2vw;
 }
@@ -525,6 +524,15 @@ span.counter {
 
         .modal{
             width: 70vw;
+        }
+
+        .howToPlay1, .play-button{
+            padding: 5vw;
+        }
+        .timer {
+            float: right;
+            margin-right: 2vw;
+            margin-left: 2vw;
         }
      }
 
