@@ -477,6 +477,10 @@ span.counter {
     cursor: pointer;
 }
 
+.card-back{
+    border: groove;
+}
+
 .card-front {
     /* front card rotated 180 degrees so it can be seen when filpcard is activated */
     transform: rotateY(180deg);
@@ -727,9 +731,17 @@ span.counter {
      and (min-device-width : 280px) 
      and (max-device-width : 667px) 
      and (orientation : landscape) { 
+
+        .timer-counter-container {
+            font-size: smaller;
+        } 
         .modal-header .title {
             padding-left: 27vw;
         }
+        h3{
+            font-size:smaller;
+        }
+
        .pop-up {
        display: none;
        }
