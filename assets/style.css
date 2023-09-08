@@ -40,6 +40,12 @@ body {
         15px 15px 10px black
 }
 
+@media (max-width: 350px) {
+    .heroTitle {
+        font-size: 200%;
+  }
+}
+
 /* styling for hero image title */
 .hero-image {
     background-image: url(./images/test.jpg);
