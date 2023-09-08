@@ -509,17 +509,15 @@ span.counter {
     overflow-y: auto;
 }
 
-
-
 @media screen 
      and (min-device-width : 350px) 
-     and (max-device-width : 500px) {
+     and (max-device-width : 667px) {
         .modal-body {
             font-size: .5rem !important;
       }
       
       .opencongratsModal-popup {
-        bottom: -35vh;
+        bottom: -33vh !important;
       }
       
       .heroTitle {
@@ -748,10 +746,13 @@ span.counter {
         display: flex;
         position: relative;
         justify-content: center;
-      
 }
 
-     }
+     @media (min-width: 667px) {
+        .openModal-popup{ 
+            bottom: -10vh;
+        }
+      }
 
      @media (min-width: 667px) {
         .turnDeviceWrapper{

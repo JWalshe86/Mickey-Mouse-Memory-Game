@@ -186,8 +186,6 @@ View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
 Script tested using [beautifytools](https://beautifytools.com/javascript-validator.php) validator. [Result1](./assets/images/readme-images/js-errors1.png), [results2](./assets/images/readme-images/js-errors2.png,) [results3](./assets/images/readme-images/js-errors3.png). Lots of missed semi-colons and some functions and variables that were no longer in use but had not been deleted. After addressing the errors found [two-remained](./assets/images/readme-images/remaining-errors.png), The first one related to a destructuring assingment which was viewed as an expression. However this appears to work well with the code. The other one was modal not being defined. However, modal was being used as an argument here, and in the context a definition wasn't required. 
 
-
-
 --------------
 
 ## Validator Testing
