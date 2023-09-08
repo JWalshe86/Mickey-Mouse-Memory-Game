@@ -4,13 +4,15 @@ repeatedly showed 'memory game'. I was able to envision my daughter enjoying pla
 <!-- Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
 # Micky-Mouse-Memory-Game
 
-Memory game is a simple grid based game where the player has to flip over two
+View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
+
+![Responsiveness](./assets/images/readme-images/responsiveness.png)
+
+The Mickey Mouse Memory game is a simple grid based game where the player has to flip over two
 cards. If both cards match, then the player receives a score of one. These cards
 are then removed from the game, leaving the player with the remainder of the cards
 to flip over. The game is over when all the cards have been matched and there's no 
 remaining cards to flip over.
-
-View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
 <!-- Inspiration for rules of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
 ## Rules of Memory Game
@@ -20,6 +22,9 @@ View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 - These cards then disappear from the game
 - If the next card you pick doesn't match, the cards flip back and remain in the game.
 - The game continues until all the cards have been matched and have been removed.
+- If you get 2 matches within 30 seconds you get 1 star 
+- If you get 4 matches within 45 seconds you get 2 stars 
+- If you get 6 matches within 60 seconds you get 3 stars & win the game!
 
 ## Contents
 
