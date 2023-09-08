@@ -559,7 +559,7 @@ span.counter {
 .modal-header .title {
     font-size: 1.25rem;
     font-weight: bold;
-    padding-left: 15vw;
+    padding-left: 33vw;
 }
 
 .howWin{
@@ -595,7 +595,7 @@ span.counter {
     line-height: 2;
     text-transform: capitalize;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 
@@ -716,6 +716,10 @@ span.counter {
      and (min-device-width : 375px) 
      and (max-device-width : 667px) 
      and (orientation : landscape) { 
+        .modal-header .title {
+         
+            padding-left: 27vw;
+        }
        .pop-up {
        display: none;
        }
