@@ -515,6 +515,7 @@ span.counter {
 @media screen 
      and (min-device-width : 350px) 
      and (max-device-width : 500px) {
+
         .modal-header .title {
          
             padding-left: 15vw !important;
@@ -721,7 +722,6 @@ span.counter {
      and (max-device-width : 667px) 
      and (orientation : landscape) { 
         .modal-header .title {
-         
             padding-left: 27vw;
         }
        .pop-up {
@@ -732,6 +732,8 @@ span.counter {
        }
        .modal-body {
         font-size: 12px !important;
+     }
+
      }
 
      /* Shows pop up when portrait */
@@ -815,4 +817,3 @@ span.starCounter{
 h3{
     color: white;
 }
-     }
