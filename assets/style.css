@@ -666,12 +666,11 @@ span.counter {
     background: #3c5077;
     /* all contents in this container will be displayed in the center of the webpage */
     display: flex;
-    align-items: center;
-    justify-content: center;
+ 
 }
 
 .congratsModal-popup {
-    width: 35vw;
+    width: 60%;
     background: white;
     border-radius: 6px;
     position: absolute;
