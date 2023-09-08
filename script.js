@@ -47,7 +47,12 @@ let counter = document.querySelector(".counter"); // MOVES COUNTER
 function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
     startClock();
-    moveC();
+
+    // if the same card is clicked twice the moves counter doesn't increase
+    if(this != firstCard){
+        moveC();
+    }
+   
 
     // if lockBoard is true the rest of the function won't get executed
     if (lockBoard) return;
@@ -59,6 +64,7 @@ function flipCard() {
     div holds the second card.*/
 
     if (this === firstCard) return;
+
 
     /* Access the class list of the memory card. Add here means if 
     the class is not there add it. */
@@ -135,7 +141,10 @@ function checkForMatch() {
     } else {
         unflipCards();
                 // count no. of clicks that don't result in a match
-                tryCounter++;
+                
+                    tryCounter++;
+                
+                
                 incrementCounter();
     }
 
@@ -274,7 +283,9 @@ const startClock = startTimer();
 /** 1 added to counter variable each time a move is made */
 
 function moveC() {
-    moves++;
+    
+        moves++;    
+    
     counter.innerHTML = moves;
 }
 
