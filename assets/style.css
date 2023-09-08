@@ -383,7 +383,6 @@ body {
     display: flex;
     justify-content: center;
     color: white;
-    flex-wrap: wrap;
 } 
 
 /* game & info stay in same screen */
@@ -800,6 +799,7 @@ span.starCounter{
 
 .fa-repeat{
     cursor: pointer;
+    padding-right: 1rem;
 }
 
 h3{
