@@ -531,7 +531,7 @@ span.counter {
       }.opencongratsModal-popup {
         visibility: visible;
         transform: translate(-50%, -50%) scale(1.1);
-        position: fixed;
+        position: relative;
         bottom: -30vh;
       }
       
@@ -690,7 +690,7 @@ span.counter {
 .opencongratsModal-popup {
     visibility: visible;
     transform: translate(-50%, -50%) scale(1.1);
-    position: fixed;
+    position: relative;
     bottom: -30vh;
   }
 
