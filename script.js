@@ -1,31 +1,15 @@
 /*jshint esversion: 6 */
 
 let cardsMatched = [];
-let allCards = document.getElementsByTagName('img');
-let cardsback = document.getElementsByClassName('card-back');
-let cardsFront = document.getElementsByClassName('card-front');
-
 let tryCounter = 0;
 let moveCounter = 0;
-starRating = 3;
 let starCounter = 0;
-
-// Grab the deck div element from the HTML
-let deck = document.getElementsByClassName('deck');
 
 let moves = document.getElementsByClassName('moves');
 
 let stars1Counter = document.querySelector('span.starCounter');
 
-// cardsFrontAgain()
-
-// adds and removes whether images display
-function cardsFrontAgain() {
-    for (let i = 0; i < allCards.length; i++) {
-        allCards[i].classList.add('front1');
-
-    }
-}
+let stars = document.getElementsByClassName('fa-star');
 
 let match = 0;
 
@@ -129,16 +113,12 @@ function checkForMatch() {
     // ternary operator used here for simplicity
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
-    isMatch ? disableCards() : unflipCards();
-
-    let stars = document.getElementsByClassName('fa-star');
-
     /* if there are 6 matches this means the player has won. 
     a variable for match was set to zero and when this reached
     6 then the won function is activated */
 
     if (isMatch) {
-
+        disableCards();
         animateCards();
         firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
         secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
@@ -153,11 +133,7 @@ function checkForMatch() {
         // Reset the failed match count back to 0
         tryCounter = 0;
     } else {
-         // Lower the stars if user has viewed 8 cards, and the 4 recent clicks are failed matches
-                // Do not lower the star rating if the rating is 1
-                if ((moveCounter >= 8) && (tryCounter >= 4) && (starRating > 1)){
-                    lowerStars();
-                }
+        unflipCards();
                 // count no. of clicks that don't result in a match
                 tryCounter++;
                 incrementCounter();
@@ -178,24 +154,24 @@ function checkForMatch() {
 
     if (match === 2 && moves <= 20 && timer.textContent <=30) {
         stars[0].classList.remove('dimmed');
-        increaseStars()
-        oneStarGo()
+        increaseStars();
+        oneStarGo();
     }
 
     // if you guess 4 matches in less than 25 moves you get another star
 
     if (match === 4 && moves <= 25 && timer.textContent <=45 && starCounter >= 1) {
         stars[1].classList.remove('dimmed');
-        increaseStars()
-        secondStarGo()
+        increaseStars();
+        secondStarGo();
     }
 
     // if you guess 6 matches in less than 30 moves you get 3 stars: max score
 
     if (match === 6 && starCounter >= 2) {
         stars[2].classList.remove('dimmed');
-        increaseStars()
-        thirdStarGo()
+        increaseStars();
+        thirdStarGo();
     }
 }
 
@@ -317,7 +293,7 @@ function increaseStars(){
 function resetGame() {
    
     window.location.reload();
-    resetStars()
+
 }
 // get reference to repeat icon
 let reset = document.querySelector(".fa-repeat");
@@ -326,7 +302,6 @@ reset.addEventListener("click", resetGame);
 
 // script code for modal adapted from WebDivSimplified
 // anything with the data modal target will be inside the openModal variable
-const openModalButtons = document.querySelectorAll('data-modal-target');
 
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 
@@ -343,14 +318,13 @@ overlay.addEventListener('click', () => {
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         // gets the closest parent element with the class modal
-        const modal = button.closest('.modal');
+        let modal = button.closest('.modal');
         // once the modal is captured one wants to pass it into a function to open it
         closeModal(modal);
     });
 });
 
 function openModal(modal) {
-    // if (modal == null) return;
     modal.classList.add('active');
     // everytime the modal is open one also wants the overlay open    
     overlay.classList.add('active');
@@ -425,20 +399,19 @@ function openCongratsModalPopup() {
     congratsPopup.classList.add("opencongratsModal-popup");
 }
 
-function closeCongratsModalPopup() {
-    congratsPopup.classList.remove("opencongratsModal-popup");
-}
+document.querySelector('.congratsButton').addEventListener("click", closeCongratsModalPopup);
 
-let congratsCounter = document.getElementsByClassName('congratsCounter')
+function closeCongratsModalPopup() {
+    
+    congratsPopup.classList.remove("opencongratsModal-popup");
+    resetGame();
+
+}
 
 // Increase the click(move) count by 1 and update the HTML text to the current value
 function incrementCounter() {
     moveCounter++;
     moves[0].innerHTML = moveCounter;
-}
-// Reset the click(move) to 0 and update the HTML text to the current value
-function resetCounter() {
-    moves[0].innerHTML = moveCounter = 0;
 }
 
 /**Creating an element containing the class fa-star each time a star is won. This allows 3 stars to be
@@ -450,20 +423,20 @@ function thirdStarGo(){
     starDisplay3.className = "fa fa-star";
     let starDisplay31 = document.createElement('div');
     starDisplay31.className = "fa fa-star";
-    let congratsModal = document.querySelector('.congratsStars')
-    congratsModal.appendChild(starDisplay3)
+    let congratsModal = document.querySelector('.congratsStars');
+    congratsModal.appendChild(starDisplay3);
     // congratsModal.appendChild(starDisplay31)
 }
 function secondStarGo(){
     let starDisplay2 = document.createElement('div');
     starDisplay2.className = "fa fa-star";
-    let congratsModal = document.querySelector('.congratsStars')
-    congratsModal.appendChild(starDisplay2)
+    let congratsModal = document.querySelector('.congratsStars');
+    congratsModal.appendChild(starDisplay2);
 }
 
 function oneStarGo(){
     let starDisplay1 = document.createElement('div');
     starDisplay1.className = "fa fa-star";
-    let congratsModal = document.querySelector('.congratsStars')
-    congratsModal.appendChild(starDisplay1)
+    let congratsModal = document.querySelector('.congratsStars');
+    congratsModal.appendChild(starDisplay1);
 }
