@@ -321,11 +321,10 @@ body {
     display: flex;
     /* introduce rows  */
     flex-wrap: wrap;
-    /* to keep container in center */
-    margin: auto;
     /* For 3D effect when card flipped.Perspective property gives depth to elements
      */
     perspective: 1000px;
+    padding-top: 1%;
 }
 
 /* styling for Reset button, timer and counter */
@@ -364,9 +363,9 @@ body {
     bottom: 0;
     width: 75%;
     height: 0;
-    border-left: 55px solid transparent;
-    border-bottom: 55px solid rgba(7, 131, 247, 0.5);
-    border-top: 55px solid rgba(7, 131, 247, 0.5);
+    border-left: 10vh solid transparent;
+    border-bottom: 9vh solid rgba(7, 131, 247, 0.5);
+    border-top: 9vh solid rgba(7, 131, 247, 0.5);
     text-align: center;
     gap: 2vh;
     display: flex;
