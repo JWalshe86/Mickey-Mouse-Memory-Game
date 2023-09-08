@@ -722,6 +722,8 @@ span.counter {
        .opencongratsModal-popup{
         bottom: -33vh;
        }
+       .modal-body {
+        font-size: .5rem !important;
      }
 
      /* Shows pop up when portrait */
