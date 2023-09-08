@@ -100,6 +100,8 @@ View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
 - Images compressed on [TinyPNG](https://tinypng.com/)
 - Stars from [Font Awesome]("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+- Javascript validator [beautifytools](https://beautifytools.com/javascript-validator.php)
+
 
 
 
@@ -179,6 +181,10 @@ View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
 
 # Testing
+
+##Javascript
+
+Script tested using [beautifytools](https://beautifytools.com/javascript-validator.php) validator. [Result1](./assets/images/readme-images/js-errors1.png), [results2](./assets/images/readme-images/js-errors2.png,) [results3](./assets/images/readme-images/js-errors3.png)
 
 
 

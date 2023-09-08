@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 let cardsMatched = [];
 let allCards = document.getElementsByTagName('img');
 let cardsback = document.getElementsByClassName('card-back');
@@ -9,11 +11,11 @@ starRating = 3;
 let starCounter = 0;
 
 // Grab the deck div element from the HTML
-let deck = document.getElementsByClassName(`deck`);
+let deck = document.getElementsByClassName('deck');
 
-let moves = document.getElementsByClassName(`moves`);
+let moves = document.getElementsByClassName('moves');
 
-let stars1Counter = document.querySelector('span.starCounter')
+let stars1Counter = document.querySelector('span.starCounter');
 
 // cardsFrontAgain()
 
@@ -129,7 +131,7 @@ function checkForMatch() {
 
     isMatch ? disableCards() : unflipCards();
 
-    let stars = document.getElementsByClassName(`fa-star`);
+    let stars = document.getElementsByClassName('fa-star');
 
     /* if there are 6 matches this means the player has won. 
     a variable for match was set to zero and when this reached
