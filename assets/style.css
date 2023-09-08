@@ -515,8 +515,12 @@ span.counter {
 @media screen 
      and (min-device-width : 350px) 
      and (max-device-width : 500px) {
+        .modal-header .title {
+         
+            padding-left: 15vw !important;
+        }
         .modal-body {
-            font-size: .5rem !important;
+            font-size: 12px !important;
       }.opencongratsModal-popup {
         visibility: visible;
         transform: translate(-50%, -50%) scale(1.1);
@@ -727,7 +731,7 @@ span.counter {
         bottom: -33vh;
        }
        .modal-body {
-        font-size: 1rem !important;
+        font-size: 12px !important;
      }
 
      /* Shows pop up when portrait */
