@@ -500,7 +500,7 @@ span.counter {
     /* want modal to draw above everything else */
     z-index: 10;
     background-color: white;
-    width: 50vw;
+    width: 80vw;
     height: 60vh;
     max-width: 80%;
     contain: content;
@@ -723,7 +723,7 @@ span.counter {
         bottom: -33vh;
        }
        .modal-body {
-        font-size: .5rem !important;
+        font-size: 1rem !important;
      }
 
      /* Shows pop up when portrait */
@@ -807,3 +807,4 @@ span.starCounter{
 h3{
     color: white;
 }
+     }
