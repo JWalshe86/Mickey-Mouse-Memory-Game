@@ -511,7 +511,6 @@ span.counter {
     background-color: white;
     width: 80vw;
     height: 60vh;
-    max-width: 80%;
     contain: content;
 
     /* Add scroll behaviour to modal for smaller screensizes adapted from stackoverflow */
@@ -543,7 +542,7 @@ span.counter {
     }
 
         .modal{
-            width: 70vw;
+            width: 95vw;
         }
 
         .howToPlay1, .play-button{
