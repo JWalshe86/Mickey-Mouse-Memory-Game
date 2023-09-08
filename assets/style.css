@@ -509,20 +509,23 @@ span.counter {
     overflow-y: auto;
 }
 
+
+
 @media screen 
      and (min-device-width : 350px) 
-     and (max-device-width : 667px) {
+     and (max-device-width : 500px) {
         .modal-body {
             font-size: .5rem !important;
-      }
-      
-      .opencongratsModal-popup {
-        bottom: -33vh !important;
+      }.opencongratsModal-popup {
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1.1);
+        position: fixed;
+        bottom: -30vh;
       }
       
       .heroTitle {
         font-size: 250% ;
-        }
+    }
 
         .modal{
             width: 70vw;
@@ -676,7 +679,7 @@ span.counter {
     visibility: visible;
     transform: translate(-50%, -50%) scale(1.1);
     position: fixed;
-    bottom: -28vh;
+    bottom: -30vh;
   }
 
 .congratsModal-popup img {
@@ -715,6 +718,9 @@ span.counter {
        .pop-up {
        display: none;
        }
+       .opencongratsModal-popup{
+        bottom: -33vh;
+       }
      }
 
      /* Shows pop up when portrait */
@@ -746,13 +752,10 @@ span.counter {
         display: flex;
         position: relative;
         justify-content: center;
+      
 }
 
-     @media (min-width: 667px) {
-        .openModal-popup{ 
-            bottom: -10vh;
-        }
-      }
+     }
 
      @media (min-width: 667px) {
         .turnDeviceWrapper{
