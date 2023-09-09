@@ -431,7 +431,7 @@ span.counter {
     the width of the margin from the width & height so that the cards fit into the container again 
     and the 3*4 structure is maintained */
     width: calc(25% - 10px);
-    height: calc(33%-10px);
+    height: calc(33% - 10px);
     /* gives the cards a position which the front and back cards can position themselves from */
     position: relative;
     margin: 5px;
@@ -518,8 +518,8 @@ span.counter {
 
 
 @media screen 
-     and (min-device-width : 350px) 
-     and (max-device-width : 500px) {
+     and (min-width : 350px) 
+     and (max-width : 500px) {
 
         .modal-header .title {
          
@@ -718,8 +718,8 @@ span.counter {
 
      /* Hides pop up when landscape */
      @media only screen 
-     and (min-device-width : 280px) 
-     and (max-device-width : 667px) 
+     and (min-width : 280px) 
+     and (max-width : 667px) 
      and (orientation : landscape) { 
 
         .timer-counter-container {
@@ -746,8 +746,8 @@ span.counter {
 
      /* Shows pop up when portrait */
      @media only screen 
-     and (min-device-width : 250px) 
-     and (max-device-width : 667px) 
+     and (min--width : 250px) 
+     and (max-width : 667px) 
      and (orientation : portrait) {
        .pop-up {
         position: absolute;
