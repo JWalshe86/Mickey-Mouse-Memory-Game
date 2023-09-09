@@ -737,7 +737,7 @@ span.counter {
        display: none;
        }
        .opencongratsModal-popup{
-        bottom: -18vh;        
+        bottom: -.5vh;        
        }
        .modal-body {
         font-size: 12px !important;
