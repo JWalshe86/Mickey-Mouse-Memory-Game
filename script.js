@@ -48,7 +48,7 @@ function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
     startClock();
     openCongratsModalPopup();
-
+   
     // if the same card is clicked twice the moves counter doesn't increase
     if(this != firstCard){
         moveC();
@@ -156,7 +156,6 @@ function checkForMatch() {
             // document.querySelector('div.congratsStars').textContent = `You got ${stars1Counter.innerHTML}`; 
             document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
             openCongratsModalPopup();
-            overlay.classList.add('active1');
         }
     }, 1500);
 
@@ -409,6 +408,7 @@ let congratsPopup = document.getElementById("congratsModal-popup");
 
 function openCongratsModalPopup() {
     congratsPopup.classList.add("opencongratsModal-popup");
+    overlay.classList.add('active1');
 }
 
 let ok = document.querySelector('.congratsButton');
