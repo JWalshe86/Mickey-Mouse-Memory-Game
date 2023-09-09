@@ -639,7 +639,6 @@ span.counter {
     z-index: 1;
 }
 
-
 .congratsModal-overlay {
     position: fixed;
     /* so by default the modal doesn't display */
@@ -659,8 +658,6 @@ span.counter {
     pointer-events: all;
     opacity: 1;
 }
-
-
 
 .congratsModal-container {
     position: relative;
@@ -740,8 +737,7 @@ span.counter {
        display: none;
        }
        .opencongratsModal-popup{
-        bottom: -33vh;
-        
+        bottom: -18vh;        
        }
        .modal-body {
         font-size: 12px !important;
