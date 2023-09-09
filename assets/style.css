@@ -768,6 +768,9 @@ span.counter {
        .info-container{
         visibility:hidden;
        }
+       .modal-header .title {
+        padding-left: 28vw !important;
+    }
        #reset{
         display:none;
        }
