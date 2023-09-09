@@ -531,7 +531,7 @@ span.counter {
         visibility: visible;
         transform: translate(-50%, -50%) scale(1.1);
         position: relative;
-        bottom: -30vh;
+        bottom: -70%;
       }
       
       .heroTitle {
@@ -663,14 +663,14 @@ span.counter {
 
 
 .congratsModal-container {
-    background: #3c5077;
-    /* all contents in this container will be displayed in the center of the webpage */
+    position: relative;
     display: flex;
- 
+    width: 100vw;
+    bottom: -35%;
 }
 
 .congratsModal-popup {
-    width: 60%;
+    width: 30%;
     background: white;
     border-radius: 6px;
     position: absolute;
@@ -741,6 +741,7 @@ span.counter {
        }
        .opencongratsModal-popup{
         bottom: -33vh;
+        
        }
        .modal-body {
         font-size: 12px !important;
@@ -786,6 +787,9 @@ span.counter {
      @media (min-width: 667px) {
         .turnDeviceWrapper{
             display: none;
+        }
+        .congratsModal-popup{
+            width: 40%;
         }
       }
 

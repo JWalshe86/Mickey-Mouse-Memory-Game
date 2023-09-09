@@ -47,6 +47,7 @@ let counter = document.querySelector(".counter"); // MOVES COUNTER
 function flipCard() {
     // startTimer function adapted so it only runs once to stop time speeding up on every card click
     startClock();
+    openCongratsModalPopup();
 
     // if the same card is clicked twice the moves counter doesn't increase
     if(this != firstCard){
