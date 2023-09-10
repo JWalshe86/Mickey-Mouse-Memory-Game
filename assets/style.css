@@ -337,7 +337,7 @@ body {
     position: relative;
     left: 0;
     bottom: 0;
-    width: 50%;
+    width: 72%;
     height: 0;
     border-left: 10vh solid transparent;
     border-bottom: 7vh solid rgba(7, 131, 247, 0.5);
@@ -395,7 +395,8 @@ body {
     flex-direction: column;
     height: inherit;
     background-image:url(./images/game-background\ 1500px.png);
-    background-size: contain;
+    /* advice from W3Schools on using background size 100% 100% to keep background img stable  */
+    background-size: 100% 100%;
     align-items: center;
     padding-right: 3%;
     padding-top: 2%;
