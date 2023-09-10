@@ -388,6 +388,7 @@ body {
     display: flex;
     justify-content: center;
     color: white;
+    font-size: 1.5vw;
 } 
 
 /* game & info stay in same screen */
@@ -746,7 +747,7 @@ span.counter {
 
      /* Shows pop up when portrait */
      @media only screen 
-     and (min--width : 250px) 
+     and (min-width : 250px) 
      and (max-width : 667px) 
      and (orientation : portrait) {
        .pop-up {
@@ -777,9 +778,7 @@ span.counter {
         display: flex;
         position: relative;
         justify-content: center;
-      
 }
-
      }
 
      @media (min-width: 667px) {
@@ -831,4 +830,5 @@ span.starCounter{
 
 h3{
     color: white;
+    font-size: 1.5vw;
 }
