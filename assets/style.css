@@ -50,6 +50,7 @@ body {
 @media (max-width: 350px) {
     .heroTitle {
         font-size: 200%;
+        background-color: rgb(0, 0, 0, 0.8);
   }
   .congratsModal-popup {
     font-size: medium;
@@ -578,6 +579,7 @@ span.counter {
       .heroTitle {
         font-size: 4vh;
         top: 8vh;
+        background: rgb(0, 0, 0, 0.8);
     }
 
         .modal{
@@ -601,6 +603,7 @@ span.counter {
          .heroTitle {
         font-size: 4vh;
         top: 5vh;
+        background: rgb(0, 0, 0, 0.8)
     }
         }
 
