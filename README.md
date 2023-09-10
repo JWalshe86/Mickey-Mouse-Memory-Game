@@ -86,6 +86,7 @@ remaining cards to flip over.
 
 ## As a returning visitor
 
+I want to be able to measure my progress and try to beat my previous score. I'd like to see if I'm getting better at the game.
 
 # Design UXD
 
@@ -159,6 +160,12 @@ Upon pressing the 'How Play' button a modal pops up which tells the player how t
 
 ![How-Play?](./assets/images/readme-images/howPlay-Modal.png)
 
+## Buttons Hover
+
+The buttons change color when hovered over. This adds to the sense of interactivity with the page & shows the user they are in the correct place to click. 
+
+![Hover-Button](./assets/images/readme-images/hover-button.png)
+
 ## Cards shake when matched
 
  This feature was imported from [Animate.css](https://animate.style/). This is to add to the sense of fun while playing the game. This was deemed particulary important as the game was targeted at young children.
@@ -223,7 +230,6 @@ Script tested using [beautifytools](https://beautifytools.com/javascript-validat
 ## Validator Testing
 
 
-
 # User-Experience-Testing
 
 ## As a new visitor
@@ -231,9 +237,6 @@ Script tested using [beautifytools](https://beautifytools.com/javascript-validat
 
 
 ## As a returning visitor
-
-
-
 
 
 ## Bugs

@@ -86,6 +86,13 @@ body {
     min-width: fit-content;
 }
 
+.howToPlay1:hover,
+.play-button:hover {
+    background-color: yellow; /* change to your desired color */
+    color: #ff1876; /* change to your desired color */
+    box-shadow: 0 20px 100px;
+}
+
 /* creates 'bubbles' */
 /* bubbles converted into stars using code adapted from [coding Artist](https: //www.youtube.com/watch?v=LZx_Hyudmdw) */
 .howToPlay1 span,
