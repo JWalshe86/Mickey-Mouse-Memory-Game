@@ -109,9 +109,7 @@ I want to be able to measure my progress and try to beat my previous score. I'd 
 - Javascript validator [beautifytools](https://beautifytools.com/javascript-validator.php)
 - Responsiveness check [Am-I-Responsive?](https://ui.dev/amiresponsive?)
 - Lighthouse check on google chrome
-
-
-
+- Hero Title from Google Fonts
 
 ## Languages Used
 
@@ -140,6 +138,8 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 - Hero image was taken from [wallpapercave.com](https://wallpapercave.com/free-disney-backgrounds#google_vignette)
 
 ### Iconography
+
+The Mouse Memoirs font was chosen as the name fit with the theme and the comic style font suited the fun theme of the game.
 
 ### Accessability
 
