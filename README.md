@@ -147,29 +147,58 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 
 # Features
 
-## Cards shake when matched
-
-- This feature was imported from [Animate.css](https://animate.style/). This is to add to the sense of fun while playing the game. This was deemed particulary important as the game was targeted at young children.
-
-
-
 ## Hero Image
 
-- The Disney themed hero image was used to capture the fun and excitement of Disney. The aim was to get the viewer to further explore the page and play the game. 
+The Disney themed hero image was used to capture the fun and excitement of Disney. The aim was to get the viewer to further explore the page and play the game. 
   
   ![Hero-Image](./assets/images/test.jpg)
 
-## Bubbles when button pressed
+## How play modal
 
-- This again added to the element of fun, while playing. The code was adapted from [GreatStack](https://youtu.be/Odr24UQs3uY?feature=shared)
+Upon pressing the 'How Play' button a modal pops up which tells the player how to play the game. A black overlay is also used to focus the users attention to the pop up.
 
-## Reviews
+![How-Play?](./assets/images/readme-images/howPlay-Modal.png)
 
+## Cards shake when matched
 
+ This feature was imported from [Animate.css](https://animate.style/). This is to add to the sense of fun while playing the game. This was deemed particulary important as the game was targeted at young children.
 
-## Video
+## Stars when button pressed
 
+- This again added to the element of fun, while playing. The code was adapted from [GreatStack](https://youtu.be/Odr24UQs3uY?feature=shared). Stars pop out of both the play and play how buttons when pressed. 
+![Stars-Explode](./assets/images/readme-images/Stars-explode.png)
 
+## Text Bounce
+
+Using css.animates the click any card to begin text 'bounces' when the screen opens. This is to grab the viewers attention to this prompt when the game screen is loaded.
+
+## Game Feedback
+
+### Stars Scoring
+
+- If a user gets two matches before 30s it gets one star, if it gets 6 matches before 45s it gets 2 stars & 3 stars before 60s gets 3 stars which is the top score. The stars on the screen are dimmed but if a user gains a star, a dimmed star lights up. 
+
+![Stars-Scoring](./assets/images/readme-images/stars-scoring.png)
+
+### Timer
+
+- The time starts at the beginning of the game and players can aim to get more stars in less time.
+
+### Moves
+
+The moves counter increases whenever a player tries another card. Getting 3 stars with the least amount of moves is another sign of progress. 
+
+### Reset
+
+The reset game button is displayed as a repeat icon. This looks pleasant and is easily accessible.
+
+![Game-Feedback](./assets/images/readme-images/scoring.png)
+
+### Congrats Modal
+
+When the game is completed a modal pops up congratulating the user. It also tells the user it's socre re stars, time and moves. A blue overlay is also present to focus the users attention on the pop up.
+
+![Congrats-Modal](./assets/images/readme-images/congrats-modal.png)
 
 # Testing
 

@@ -115,10 +115,6 @@ body {
     top: 7px;
     left: -13px;
     z-index: -1;
-
-    /* so the bubbles will be invisible */
-    /* transform: scale(0); */
-
 }
 
 .play-button span:nth-child(1),
@@ -685,6 +681,7 @@ span.counter {
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
     z-index: 2;
+    font-size: xx-large;
 }
 
 .opencongratsModal-popup {
