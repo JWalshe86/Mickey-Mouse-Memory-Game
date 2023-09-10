@@ -401,6 +401,10 @@ body {
     padding-top: 2%;
 }
 
+.info-game-container-hideCards > :not(.opencongratsModal-popup) {
+    /* visibility: hidden; */
+}
+
 .timer {
     margin-right: 2vw;
     margin-left: 1vw;

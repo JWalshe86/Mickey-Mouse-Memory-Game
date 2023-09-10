@@ -402,10 +402,12 @@ anchor.addEventListener('click', rubberBand, false);
 // script for congratulations you won
 
 let congratsPopup = document.getElementById("congratsModal-popup");
+let cardsShowBackground = document.querySelector('info-game-container');
 
 function openCongratsModalPopup() {
     congratsPopup.classList.add("opencongratsModal-popup");
     overlay.classList.add('active1');
+    cardsShowBackground.classList.add('info-game-container-hideCards');
 }
 
 let ok = document.querySelector('.congratsButton');
