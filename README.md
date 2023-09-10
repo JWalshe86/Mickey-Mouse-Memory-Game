@@ -141,10 +141,7 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 
 ### Iconography
 
-
 ### Accessability
-
-
 
 # Features
 

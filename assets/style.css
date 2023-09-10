@@ -44,6 +44,10 @@ body {
     .heroTitle {
         font-size: 200%;
   }
+  .congratsModal-popup {
+    font-size: medium;
+}
+
 }
 
 /* styling for hero image title */
@@ -688,7 +692,6 @@ span.counter {
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
     z-index: 2;
-    font-size: xx-large;
 }
 
 .opencongratsModal-popup {
@@ -731,6 +734,7 @@ span.counter {
      and (max-width : 667px) 
      and (orientation : landscape) { 
 
+        
         .timer-counter-container {
             font-size: smaller;
         } 
