@@ -143,6 +143,7 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 
 ### Accessability
 
+The WAVE accessabilty tool found ![6-contrast-errors](./assets/images/readme-images/WAVE-results.png)
 # Features
 
 ## Hero Image
@@ -150,6 +151,12 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 The Disney themed hero image was used to capture the fun and excitement of Disney. The aim was to get the viewer to further explore the page and play the game. 
   
   ![Hero-Image](./assets/images/test.jpg)
+
+## Orientation Change Prompt
+
+For smaller screensizes the user is prompted to turn the device from portrait to landscape
+
+![Orientation-change](./assets/images/readme-images/orientation-change-prompt.png)
 
 ## How play modal
 
