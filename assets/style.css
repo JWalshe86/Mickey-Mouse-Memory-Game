@@ -37,13 +37,13 @@ body {
 .heroTitle {
     /* centers the top of the text to the middle */
     position: relative;
-    background-color: rgb(0, 0, 0, .7);
     top: 20%;
-    color: yellow;
+    color: #f7f7a2;
     font-size: 3vw;
     padding: 1vw;
-    text-shadow: 2px 2px 10px yellow,
-        7px 7px 4px #ff1876;
+    font-family: cursive;
+    text-shadow: 2px 2px 10px #a34c06,
+        7px 7px 4px black;
 }
 
 @media (max-width: 350px) {
@@ -67,22 +67,19 @@ body {
         font-size: 5vh;
   }
 
-}
+  .hero-image{
+ background-position: center;
 
-@media (max-width: 500px) {
-    .heroTitle {
-        font-size: 2vh;
   }
 }
 
 /* styling for hero image title */
 .hero-image {
     background-image: url(./images/test.jpg);
-    background-position: center;
     justify-content: center;
     height: 100vh;
     display: flex;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 .buttons-container {
@@ -100,6 +97,7 @@ body {
 .howToPlay1,
 .play-button {
     display: inline-block;
+    font-family: cursive;
     font-size: larger;
     padding: 2vw;
     font-weight: bold;
@@ -367,6 +365,7 @@ body {
     
     content: "";
     position: relative;
+    font-family: cursive;
     left: 0;
     bottom: 0;
     width: 72%;
@@ -559,28 +558,6 @@ span.counter {
     }
 
 
-     @media screen 
-     and (min-width : 200px) 
-     and (max-width : 600px){
-        .hero-image{
-            background-image: url(./images/MM-alone.png);      
-     }
-
-
-     @media screen 
-     and (min-width : 350px) 
-     and (max-width : 600px){
-        .hero-image{
-            background-image: url(./images/MM-alone.png);
-          }
-        }
-        .title-container{
-          top: 5vh;
-        }
-
-      
-     }
-
 @media screen 
      and (min-width : 350px) 
      and (max-width : 500px) {
@@ -600,8 +577,9 @@ span.counter {
       
       .heroTitle {
         font-size: 4vh;
-        top: -5vh;
+        top: 5vh;
     }
+
         .modal{
             width: 95vw;
         }
@@ -616,6 +594,15 @@ span.counter {
         }
         
      }
+
+      @media screen 
+     and (min-width : 240px) 
+     and (max-width : 350px){
+         .heroTitle {
+        font-size: 4vh;
+        top: 5vh;
+    }
+        }
 
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
@@ -786,7 +773,6 @@ span.counter {
      and (max-width : 667px) 
      and (orientation : landscape) { 
 
-        
         .timer-counter-container {
             font-size: smaller;
         } 
