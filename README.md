@@ -8,6 +8,17 @@ View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
 ![Responsiveness](./assets/images/readme-images/responsiveness2.png)
 
+![Static Badge](https://img.shields.io/badge/Last_commit-Sept_2023-blue)
+
+![Static Badge](https://img.shields.io/badge/contributors-1-blue)
+
+![Static Badge](https://img.shields.io/badge/languages-6-blue)
+
+![Static Badge](https://img.shields.io/badge/javaScript-32.4%25-blue)
+
+![Static Badge](https://img.shields.io/badge/w3c-validated-blue)
+
+
 The Mickey Mouse Memory game is a simple grid based game where the player has to flip over two
 cards. If both cards match, then the player receives a score of one. These cards
 are then removed from the game, leaving the player with the remainder of the cards
