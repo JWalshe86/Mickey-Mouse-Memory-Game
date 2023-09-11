@@ -6,7 +6,7 @@ repeatedly showed 'memory game'. I was able to envision my daughter enjoying pla
 
 View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
-![Responsiveness](./assets/images/readme-images/responsiveness.png)
+![Responsiveness](./assets/images/readme-images/responsiveness2.png)
 
 The Mickey Mouse Memory game is a simple grid based game where the player has to flip over two
 cards. If both cards match, then the player receives a score of one. These cards
@@ -128,9 +128,9 @@ When the player completes the game a congrats pop up is shown with the viewers s
 
 ## Frameworks, Libraries & Programs Used
 
-
-
 ## Skeleton
+
+The premise was very simple a landing page and then the game page. The aim was to keep it simple as the target audience was young children. The use of a modal helped keep the layout clear.
 
 ## Surface
 
@@ -140,7 +140,7 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 
 ## Typography
 
- The font-family chosen was InspireTWDC, Helvetica, sans-serif. This was inspired by the [Disney Website](https://www.disney.co.uk/mickey-mouse)
+The Mouse Memoirs font was chosen as the name fit with the theme and the comic style font suited the fun theme of the game. 
 
 ### Imagery 
 
@@ -152,11 +152,11 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 
 ### Iconography
 
-The Mouse Memoirs font was chosen as the name fit with the theme and the comic style font suited the fun theme of the game. The Mickey Mouse favicon in the browser text was taken from [icons8](https://icons8.com/icons/set/mickey-mouse)
+The Mickey Mouse favicon in the browser text was taken from [icons8](https://icons8.com/icons/set/mickey-mouse)
 
 ### Accessability
 
-The WAVE accessabilty tool found ![6-contrast-errors](./assets/images/readme-images/WAVE-results.png). However, the test here appears to be picking up previous versions of the game. A check of contrast using google dev tools found the contrasts were fine. There was one contrast issue with the green 'ok' button on the congrats modal. Chaning the background of the button here to black and the text to white addressed this. All the 'cards' have an alt text attribute. 4
+The WAVE accessabilty tool found [6-contrast-errors](./assets/images/readme-images/WAVE-results.png). However, the test here appears to be picking up previous versions of the game. A check of contrast using google dev tools found the contrasts were fine. There was one contrast issue with the green 'ok' button on the congrats modal. Chaning the background of the button here to black and the text to white addressed this. All the 'cards' have an alt text attribute. 4
 
 # Features
 
@@ -227,35 +227,39 @@ When the game is completed a modal pops up congratulating the user. It also tell
 
 # Testing
 
-## Javascript
+## Validator Testing
+
+### Javascript
 
 Script tested using [beautifytools](https://beautifytools.com/javascript-validator.php) validator. [Result1](./assets/images/readme-images/js-errors1.png), [results2](./assets/images/readme-images/js-errors2.png,) [results3](./assets/images/readme-images/js-errors3.png). Several missed semi-colons and some functions and variables that were no longer in use but had not been deleted. After addressing the errors found [two-remained](./assets/images/readme-images/remaining-errors.png), The first one related to a destructuring assingment which was viewed as an expression. However this appears to work well with the code. The other one was modal not being defined. However, modal was being used as a keyword here not a variable, and in the context a definition wasn't required. 
 
-## HTML
+### HTML
 
 [HTML-W3C-Validator-Results](./HTML-W3C-Initial-Validator-Results.pdf) found 31 errors. The majority of the errors were having a /> where the / wasn't necessary. There were also two stray div's. Once these errors were addressed, a re-run of the validator found no errors. 
 
-## CSS
+### CSS
 
 ![CSS-W3C-Validator-Results](./assets/images/readme-images/W3C-CSS-Validator-Results.png) 
 
-## Page Performance
+### Page Performance
 
 [Original-lighthouse-scores-for-load-page](./assets/images/readme-images/Original-lighthouse-loadpage.png). Two SEO issues 1. Document does not have a meta description. 2. Document doesn't use legible font sizes 20.5% legible text. [Lighthouse-scores-post-edits](./assets/images/readme-images/lighthouse-score-post-edits.png) were all nearly 100% once the font size in places was increased and the meta tag given more detail.
 
 --------------
 
-## Validator Testing
-
-
 # User-Experience-Testing
 
 ## As a new visitor
 
+- As a child I want to have fun. Achieved. My 3 year old daughter and 4 year old niece eagerly played the game and said it was very enjoyable. 
 
+- To have fun while also learning something valuable. Achieved. Both children were able to show that they remembered where previous characters were and were subsequently able to complete the game. 
+
+- I want to experience the magic of Disney. Achieved. Both children were able to name all the Disney characters and understood the concept presented.
 
 ## As a returning visitor
 
+- I want to be able to measure my progress and try to beat my previous score. I'd like to see if I'm getting better at the game. Achieved. Viewers were eager to play the game again to beat their previous score and get 3 stars.
 
 ## Bugs
 
@@ -269,9 +273,7 @@ someone mentioned ensuring both js files and html files were in the same documen
 - The anchor tag for the play button would not wait until the bubble animation had finished. To delay the anchor link activating I found a solution on stackoverflow. This involved wrapping a setTimeout() around the {window.location = '#click-card'}
 - After the 'tada' animation was introduced for when cards matched, the cards wouldn't stay unflipped. The solution involved creating an array to store the unflipped cards. Then targeting the elements in this array and adding a 'front1' class. Once this class was added the cards remained unflipped. Inspiration for this solution came from Susan Chen. However, how she designed her memory game was very different so I had to figure out a way to adapt her concept to my project.
 - 3 font icon stars would not align in a row on the congrats display. The issue was you can't have the same names for a class in the one class element. To get around this one had to create a new class. However for the 3 stars the 3rd star only popped up when the card was clicked. So I had to add a card click, after the new class was created.
-
-
-# Unfixed bugs
+- Feedback from a colleague on slack Kera Cudmore highlighted how if one pressed the same card twice the counter increased. I was able to fix this by putting an if statement on the counter - ie the counter only increased if the same card was not pressed twice. 
 
 # Deployment
 
@@ -301,7 +303,7 @@ One clicked on settings within the Mickey Mouse Memory Game github repository. O
 
 - Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git)
 - Code for memory card game adapted from [Marina-Ferria](https://www.youtube.com/watch?v=ZniVgo8U7ek);
-- Code for timer and counter adapted from [Moira Hartigan](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game.git) &[Iris Smok](https://github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html)
+- Code for timer and counter adapted from [Moira Hartigan](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game.git) & [Iris Smok](https://github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html)
 - Getting the startTimer function to onlyrun once was taken from [Ankit Saxena](https://www.google.com/search?sca_esv=559732191&q=how+get+function+to+only+run+once+js&tbm=vid&source=lnms&sa=X&ved=2ahUKEwi0kKHpzfWAAxUlQEEAHVuqBH4Q0pQJegQIChAB&biw=1024&bih=493&dpr=1.88#fpstate=ive&vld=cid:29cb1a4c,vid:qZfK7Z75yUk)
  - Code adapted from [Cathy Dutton](https://codepen.io/cathydutton/pen/avYKeM) for timer presentation
 - Code for how to play pop up modal adapted from [WebDevSimplified](https://youtu.be/MBaw_6cPmAw?feature=shared)
@@ -316,14 +318,7 @@ One clicked on settings within the Mickey Mouse Memory Game github repository. O
 - feedback from mentor Anthony on first meet up to change overlay of congrats message to lighter colour & style the how to play modal: make it bigger
 -     Add scroll behaviour to modal for smaller screensizes adapted from [stackoverflow](https://stackoverflow.com/questions/10476632/how-to-scroll-the-page-when-a-modal-dialog-is-longer-than-the-screen)
 - Kera Cudmore for giving me feedback on the slack peer review channel.
-
-
-
-
-## Content
-
-
-## Media
+- Allen Gleeson on Slack for prompting me to use a hover effect on the buttons.
 
 
 
