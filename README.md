@@ -139,11 +139,12 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 
 ### Iconography
 
-The Mouse Memoirs font was chosen as the name fit with the theme and the comic style font suited the fun theme of the game.
+The Mouse Memoirs font was chosen as the name fit with the theme and the comic style font suited the fun theme of the game. The Mickey Mouse favicon in the browser text was taken from [icons8](https://icons8.com/icons/set/mickey-mouse)
 
 ### Accessability
 
-The WAVE accessabilty tool found ![6-contrast-errors](./assets/images/readme-images/WAVE-results.png)
+The WAVE accessabilty tool found ![6-contrast-errors](./assets/images/readme-images/WAVE-results.png). However, the test here appears to be picking up previous versions of the game. A check of contrast using google dev tools found the contrasts were fine. There was one contrast issue with the green 'ok' button on the congrats modal. Chaning the background of the button here to black and the text to white addressed this. All the 'cards' have an alt text attribute. 4
+
 # Features
 
 ## Hero Image
@@ -261,8 +262,9 @@ someone mentioned ensuring both js files and html files were in the same documen
 
 # Deployment
 
-The site was deployed on github pages. 
+The site was deployed on github pages from the outset.[Live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
+One clicked on settings within the Mickey Mouse Memory Game github repository. One pressed settings and went into the pages section. Under 'Build & Deployment' the source was branch. The branch was main and folder root. 
 
 # Final Product 
 

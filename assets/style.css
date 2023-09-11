@@ -39,7 +39,7 @@ body {
 .heroTitle {
     /* centers the top of the text to the middle */
     position: relative;
-    top: 20%;
+    top: 30%;
     color: #eeee00;
     font-size: 3vw;
     padding: 1vw;
@@ -50,7 +50,6 @@ body {
 @media (max-width: 350px) {
     .heroTitle {
         font-size: 200%;
-        background-color: rgb(0, 0, 0, 0.8);
   }
   .congratsModal-popup {
     font-size: medium;
@@ -62,6 +61,9 @@ body {
     .heroTitle {
         font-size: 7vh;
   }
+  .hero-image{
+    background-size: cover !important;
+     }
 
 }
 @media (max-width: 1200px) {
@@ -71,7 +73,6 @@ body {
 
   .hero-image{
  background-position: center;
-
   }
 }
 
@@ -81,7 +82,7 @@ body {
     justify-content: center;
     height: 100vh;
     display: flex;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .buttons-container {
@@ -602,7 +603,6 @@ span.counter {
          .heroTitle {
         font-size: 4vh;
         top: 5vh;
-        background: rgb(0, 0, 0, 0.8)
     }
         }
 
@@ -749,7 +749,9 @@ span.counter {
     width: 100%;
     margin-top: 15px;
     padding: 10px 0;
-    background: #6fd649;
+    background: 
+    black;
+    color: white;
     outline: none;
     font-size: 18px;
     border-radius: 4px;
