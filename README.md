@@ -4,20 +4,19 @@ repeatedly showed 'memory game'. I was able to envision my daughter enjoying pla
 <!-- Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
 # Micky-Mouse-Memory-Game
 
-View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
-
-![Responsiveness](./assets/images/readme-images/responsiveness2.png)
-
-![Static Badge](https://img.shields.io/badge/Last_commit-Sept_2023-blue)
-
-![Static Badge](https://img.shields.io/badge/contributors-1-blue)
-
-![Static Badge](https://img.shields.io/badge/languages-6-blue)
-
-![Static Badge](https://img.shields.io/badge/javaScript-32.4%25-blue)
-
-![Static Badge](https://img.shields.io/badge/w3c-validated-blue)
-
+View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/
+)
+![Responsiveness](./assets/images/readme-images/responsiveness2.png
+)
+![GitHub last Commit](https://img.shields.io/badge/Last_commit-Sept_2023-blue
+)
+![GitHub contributors](https://img.shields.io/badge/contributors-1-blue
+)
+![Languages](https://img.shields.io/badge/languages-6-blue
+)
+![JavaScript](https://img.shields.io/badge/javaScript-32.4%25-blue
+)
+![Validation](https://img.shields.io/badge/w3c-validated-blue)
 
 The Mickey Mouse Memory game is a simple grid based game where the player has to flip over two
 cards. If both cards match, then the player receives a score of one. These cards
@@ -134,6 +133,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - Responsiveness check [Am-I-Responsive?](https://ui.dev/amiresponsive?)
 - Lighthouse check on google chrome
 - Hero Title from Google Fonts
+- [Code Beautify](https://codebeautify.org/) was used to clean up the code alignment 
 
 ## Languages Used
 

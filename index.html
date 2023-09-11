@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,240 +8,194 @@
     <meta name="keywords" content="Mickey Mouse, Card Matching, Memory Game">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Open+Sans:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Open+Sans:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
     <title class="main-title">Mickey Mouse Memory Game</title>
     <link rel="mickey mouse icon" type="image/png" href="./icons8-mickey-mouse-16.png">
-    <a target="_blank" href="https://icons8.com/icon/6869/animation"></a><a target="_blank" href="https://icons8.com"></a>
+    <a target="_blank" href="https://icons8.com/icon/6869/animation"></a>
+    <a target="_blank" href="https://icons8.com"></a>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"></head>
-
-<body>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  </head>
+  <body>
     <!-- Hero Image -->
-
     <div class="hero-image">
-        <div class="title-container">
-            <h1 class="heroTitle">Mickey Mouse Memory Game</h1>
-
-        </div>
-        <div class="buttons-container">
-
-            <!-- code adapted from nattik Gur-Arie, stackoverflow -->
-            <!-- code to delay anchor tag for play button until balloons pop -->
-            <a href="javascript:setTimeout(()=>{window.location = '#card-click' },700)" class="play-button"
-                id="anchor">Play
-                <!-- Each span represents a star when the button is pressed -->
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-
-            <!-- <div class="play-howToPlay-buttons-container"> -->
-            <!-- code for modal adapted from WebDevSimplified -->
-            <!-- <button data-modal-target="#modal">How to play -->
-            <button class="howToPlay1" id="howToPlay1">How play?
-                  <!-- Each span represents a star when the button is pressed -->
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <!-- modal container which as model identifier
+      <div class="title-container">
+        <h1 class="heroTitle">Mickey Mouse Memory Game</h1>
+      </div>
+      <div class="buttons-container">
+        <!-- code adapted from nattik Gur-Arie, stackoverflow -->
+        <!-- code to delay anchor tag for play button until balloons pop -->
+        <a href="javascript:setTimeout(()=>{window.location = '#card-click' },700)" class="play-button" id="anchor">Play
+          <!-- Each span represents a star when the button is pressed -->
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <!-- <div class="play-howToPlay-buttons-container"> -->
+        <!-- code for modal adapted from WebDevSimplified -->
+        <!-- <button data-modal-target="#modal">How to play -->
+        <button class="howToPlay1" id="howToPlay1">How play?
+          <!-- Each span represents a star when the button is pressed -->
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- modal container which as model identifier
                active class for when modal is present -->
-            <div class="modal" id="modal">
-                <!-- &times is easier to center than text  -->
-                <div class="modal-header">
-                    <div class="title">How to play</div>
-                    <button data-close-button class="close-button">&times;</button>
-                </div>
-
-                <div class="modal-body"> <br>
-                    One card is flipped to start the game <br>
-                    If the next card is identical, then you get +1 score <br>
-                    These cards then disappear from the game <br>
-                    If the next card you pick doesn't match, the cards flip back and remain in the game <br>
-                    The game continues until all the cards have been matched and have been removed <br><br>
-                    <span class="howWin">How to win</span> <br>
-                    If you get 2 matches within 30 seconds you get 1 star <br>
-                    If you get 4 matches within 45 seconds you get 2 stars <br>
-                    If you get 6 matches within 60 seconds you get 3 stars & win the game!
-                </div>
-            </div>
+        <div class="modal" id="modal">
+          <!-- &times is easier to center than text  -->
+          <div class="modal-header">
+            <div class="title">How to play</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <br> One card is flipped to start the game <br> If the next card is identical, then you get +1 score <br> These cards then disappear from the game <br> If the next card you pick doesn't match, the cards flip back and remain in the game <br> The game continues until all the cards have been matched and have been removed <br>
+            <br>
+            <span class="howWin">How to win</span>
+            <br> If you get 2 matches within 30 seconds you get 1 star <br> If you get 4 matches within 45 seconds you get 2 stars <br> If you get 6 matches within 60 seconds you get 3 stars & win the game!
+          </div>
         </div>
-        <!-- to create darker background when modal pops up -->
-        <div id="modal-overlay" class="congratsModal-overlay"></div>
+      </div>
+      <!-- to create darker background when modal pops up -->
+      <div id="modal-overlay" class="congratsModal-overlay"></div>
     </div>
-
     <div class="turnDeviceWrapper">
-        <div class="pop-up">Turn your device horizontally</div>
+      <div class="pop-up">Turn your device horizontally</div>
     </div>
-
-
     <div class="info-game-container">
-        <!-- timer & counter -->
-        <!-- Code adapted from [Iris Smok](https://github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) -->
-        <!-- container so flex can be used -->
-        <div class="info-container">
-            <h3 id="card-click" class="clickCard">Click any card to begin</h3>
-            <div class="timer-counter-container">
-                <ul class="stars">
-                <li>
-                    <i class="fa fa-star dimmed"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star dimmed"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star dimmed"></i>
-                </li>
-
-                </ul>
-                <div>
-                    Timer:
-                    <span class="timer">0</span>
-                </div>
-
-                <div>
-                    Moves:
-                    <span class="counter moves">0</span>
-                    <span class="starCounter"></span>
-                </div>
-                <div class="restart">
-                    <i class="fa fa-repeat"></i>
-                </div>
-            </div>
+      <!-- timer & counter -->
+      <!-- Code adapted from [Iris Smok](https://github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/index.html) -->
+      <!-- container so flex can be used -->
+      <div class="info-container">
+        <h3 id="card-click" class="clickCard">Click any card to begin</h3>
+        <div class="timer-counter-container">
+          <ul class="stars">
+            <li>
+              <i class="fa fa-star dimmed"></i>
+            </li>
+            <li>
+              <i class="fa fa-star dimmed"></i>
+            </li>
+            <li>
+              <i class="fa fa-star dimmed"></i>
+            </li>
+          </ul>
+          <div> Timer: <span class="timer">0</span>
+          </div>
+          <div> Moves: <span class="counter moves">0</span>
+            <span class="starCounter"></span>
+          </div>
+          <div class="restart">
+            <i class="fa fa-repeat"></i>
+          </div>
         </div>
-        <!-- pop up for when player wins -->
-
-            <div class="wrapper">
-                <div class="congratsModal-container">
-                    <div class="congratsModal-popup" id="congratsModal-popup">
-                        <img src="./assets/images/congrats-img.gif" alt="mickey-mouse-celebrating">
-                        <div class="congratsCounter">&times;</div>
-                        <div class="congratsTimer">&times;</div>
-                        <div id="congratsStars" class="congratsStars"></div>
-                        <button type="button" class="congratsButton">OK</button>
-                        </div>
-                    </div>
-                </div>
-        
-        
-                <div class="card-container">
-                    <div class="memory-card" data-framework="daisy-duck">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front " src="./assets/images/daisy-duck-bkground-removed.png" alt="daisy-duck">
-        
-                    </div>
-                    <div class="memory-card" data-framework="daisy-duck">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front" src="./assets/images/daisy-duck-bkground-removed.png" alt="daisy-duck">
-        
-                    </div>
-                    <div class="memory-card" data-framework="micky-mouse">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/mickey-mouse-removebg-preview.png"
-                            alt="micky-mouse">
-        
-                    </div>
-                    <div class="memory-card" data-framework="micky-mouse">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/mickey-mouse-removebg-preview.png"
-                            alt="micky-mouse">
-        
-                    </div>
-                    <div class="memory-card" data-framework="minnie-mouse">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/minnie-mouse-removebg-preview.png"
-                            alt="minnie-mouse">
-        
-                    </div>
-                    <div class="memory-card" data-framework="minnie-mouse">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/minnie-mouse-removebg-preview.png"
-                            alt="minnie-mouse">
-        
-                    </div>
-        
-                    <div class="memory-card" data-framework="pluto">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/pluto-removebg-preview.png" alt="pluto">
-        
-                    </div>
-                    <div class="memory-card" data-framework="pluto">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/pluto-removebg-preview.png" alt="pluto">
-        
-                    </div>
-                    <div class="memory-card" data-framework="pete">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/pete-removebg-preview.png" alt="pete">
-        
-                    </div>
-                    <div class="memory-card" data-framework="pete">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/pete-removebg-preview.png" alt="pete">
-        
-                    </div>
-                    <div class="memory-card" data-framework="donald-duck">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/donald-duck-removebg-preview.png"
-                            alt="donald-duck">
-        
-                    </div>
-                    <div class="memory-card" data-framework="donald-duck">
-                        <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
-                        <img class="card-front front" src="./assets/images/donald-duck-removebg-preview.png"
-                            alt="donald-duck">
-        
-                    </div>
-                </div>
-        
-            </div>
-
-    <script src="script.js">
-
-    </script>
-</body>
-
+      </div>
+      <!-- pop up for when player wins -->
+      <div class="wrapper">
+        <div class="congratsModal-container">
+          <div class="congratsModal-popup" id="congratsModal-popup">
+            <img src="./assets/images/congrats-img.gif" alt="mickey-mouse-celebrating">
+            <div class="congratsCounter">&times;</div>
+            <div class="congratsTimer">&times;</div>
+            <div id="congratsStars" class="congratsStars"></div>
+            <button type="button" class="congratsButton">OK</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="memory-card" data-framework="daisy-duck">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front " src="./assets/images/daisy-duck-bkground-removed.png" alt="daisy-duck">
+        </div>
+        <div class="memory-card" data-framework="daisy-duck">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front" src="./assets/images/daisy-duck-bkground-removed.png" alt="daisy-duck">
+        </div>
+        <div class="memory-card" data-framework="micky-mouse">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/mickey-mouse-removebg-preview.png" alt="micky-mouse">
+        </div>
+        <div class="memory-card" data-framework="micky-mouse">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/mickey-mouse-removebg-preview.png" alt="micky-mouse">
+        </div>
+        <div class="memory-card" data-framework="minnie-mouse">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/minnie-mouse-removebg-preview.png" alt="minnie-mouse">
+        </div>
+        <div class="memory-card" data-framework="minnie-mouse">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/minnie-mouse-removebg-preview.png" alt="minnie-mouse">
+        </div>
+        <div class="memory-card" data-framework="pluto">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/pluto-removebg-preview.png" alt="pluto">
+        </div>
+        <div class="memory-card" data-framework="pluto">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/pluto-removebg-preview.png" alt="pluto">
+        </div>
+        <div class="memory-card" data-framework="pete">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/pete-removebg-preview.png" alt="pete">
+        </div>
+        <div class="memory-card" data-framework="pete">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/pete-removebg-preview.png" alt="pete">
+        </div>
+        <div class="memory-card" data-framework="donald-duck">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/donald-duck-removebg-preview.png" alt="donald-duck">
+        </div>
+        <div class="memory-card" data-framework="donald-duck">
+          <img class="card-back" src="./assets/images/mickey-mouse-background-remove-3.png" alt="disney logo with micky mouse">
+          <img class="card-front front" src="./assets/images/donald-duck-removebg-preview.png" alt="donald-duck">
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
