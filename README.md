@@ -126,7 +126,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 
 ## Languages Used
 
-## Frameworks, Libraries & Programs Used
+Javascript, CSS & HTML.
 
 ## Skeleton
 
