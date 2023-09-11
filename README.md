@@ -92,15 +92,28 @@ I want to be able to measure my progress and try to beat my previous score. I'd 
 
 ## Strategy
 
-
+Playing memory games may help with a child's cognitive development. Having fun is a positive incentive for children to learn. Mickey Mouse has a long history of entertainment when it comes to children. The aim was to use fun and the magic of disney to motivate children to play a memory game. 
 
 ## Scope
 
-
+The scope covered the needs of 3+ year old children and their need for fun and memory development. The site is simple in it's layout - so it can be easily used by children. Customers can easily navigate the page and a pop up provides information on how to play the game. The main constraint was that only CSS, HTML and Javascript languages were used. 
 
 ## Structure
 
+### Landing Page
 
+- Hero Image with disney characters
+- Left button which brings viewer to the game
+- Right button which creates a pop up which explains how to play the game to the viewer
+
+### Game Page
+
+- Title prompt to explain to viewer all they need to do is click a card to start the game
+- Information about how the viewer is doing regarding the game is held in a 'flag' above the game. This information covers the time, moves taken, stars gained and a reset icon.
+
+### Congrats Popup
+
+When the player completes the game a congrats pop up is shown with the viewers scores.
 
 # Technologies Used
 
