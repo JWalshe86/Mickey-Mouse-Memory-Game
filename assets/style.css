@@ -70,9 +70,6 @@ body {
         font-size: 2vh !important;
          }
 
-         .timer-counter-container {
-            font-size: 2vw !important;
-
 }
 @media (max-width: 1200px) {
     .heroTitle {
@@ -786,9 +783,6 @@ span.counter {
      and (max-width : 667px) 
      and (orientation : landscape) { 
 
-        .timer-counter-container {
-            font-size: smaller;
-        } 
         .modal-header .title {
             padding-left: 27vw;
         }
@@ -823,7 +817,7 @@ span.counter {
        }
        .info-game-container{
         background-image: none;
-        background-color: lightblue;
+        background-color: rgba(7, 131, 247, 0.5);
        }
        .card-container{
         display: none;
