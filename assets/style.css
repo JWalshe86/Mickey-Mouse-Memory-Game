@@ -63,12 +63,21 @@ body {
   }
   .hero-image{
     background-size: cover !important;
+    background-position: center;
      }
+
+     h3{
+        font-size: 2vh !important;
+         }
+
+         .timer-counter-container {
+            font-size: 2vw !important;
 
 }
 @media (max-width: 1200px) {
     .heroTitle {
         font-size: 5vh;
+        top: 20%;
   }
 
   .hero-image{

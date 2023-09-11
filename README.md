@@ -270,11 +270,19 @@ One clicked on settings within the Mickey Mouse Memory Game github repository. O
 
 ## Laptop view
 
+![Hero-Image-Laptop](./assets/images/readme-images/laptop-hero-img.png)
+![Card-Container-Laptop](./assets/images/readme-images/laptop-cardContainer.png)
 
 ## Ipad view
 
+![Hero-Image-Ipad](./assets/images/readme-images/Ipad-hero.png)
+![Card-Container-Ipad](./assets/images/readme-images/ipad-card.png)
 
 ## Mobile View
+
+![Hero-Image-mobile](./assets/images/readme-images/hero-mobile.png)
+![Orientation-mobile](./assets/images/readme-images/orientation-mobile.png)
+![Card-Container-Mobile](./assets/images/readme-images/card-container-mobile.png)
 
 # Credits
 
