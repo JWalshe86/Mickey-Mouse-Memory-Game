@@ -1,4 +1,4 @@
-<!-- Original inspiration from my 3 year old daughter loving Micky Mouse. A google search of first JavaScript projects
+<!-- Original inspiration from my 3 year old daughter who loves Micky Mouse. A google search of first JavaScript projects
 repeatedly showed 'memory game'. I was able to envision my daughter enjoying playing a memory game with Micky Mouse characters  -->
 
 <!-- Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
@@ -288,7 +288,7 @@ someone mentioned ensuring both js files and html files were in the same documen
 
 # Deployment
 
-The site was deployed on github pages from the outset.[Live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
+The site was deployed on github pages from the outset. [Live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
 One clicked on settings within the Mickey Mouse Memory Game github repository. One pressed settings and went into the pages section. Under 'Build & Deployment' the source was branch. The branch was main and folder root. 
 
