@@ -371,8 +371,8 @@ body {
   width: 72%;
   height: 0;
   border-left: 10vh solid transparent;
-  border-bottom: 7vh solid rgba(7, 131, 247, 0.5);
-  border-top: 7vh solid rgba(7, 131, 247, 0.5);
+  border-bottom: 7vh solid rgba(255, 240, 0, 0.8);
+  border-top: 7vh solid rgba(255, 240, 0, 0.8);
   text-align: center;
   gap: 2vh;
   display: flex;
