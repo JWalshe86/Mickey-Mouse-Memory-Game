@@ -906,3 +906,7 @@ span {
   font-size: 1rem;
   display: inline-block;
 }
+
+.card-front.horizontal-shake {
+  animation: horizontal-shaking 0.35s infinite;
+}
