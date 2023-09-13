@@ -507,7 +507,7 @@ span.counter {
 
 .card-front {
   /* front card rotated 180 degrees so it can be seen when filpcard is activated */
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
 }
 
 .card-front.front1 {
