@@ -128,6 +128,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 # Technologies Used
 
 - Images compressed on [TinyPNG](https://tinypng.com/)
+- Background image color changed using [remove.bg](https://www.remove.bg/t/change-background)
 - Stars from [Font Awesome]("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
 - Javascript validator [beautifytools](https://beautifytools.com/javascript-validator.php)
 - Responsiveness check [Am-I-Responsive?](https://ui.dev/amiresponsive?)
@@ -147,7 +148,7 @@ The premise was very simple a landing page and then the game page. The aim was t
 
 ### Colour Palette
 
-The hero image was chosen due to it containing many of the colorful Mickey Mouse characters which would be used in the game. The blue with the stars in the background is visually appealing. Night turns into day as the game is activated. The tropical trees and castle gives a feel of warmth and magic. The light blue in the flag matches the castle roof color here and creates a light atmosphere.
+The hero image was chosen due to it containing many of the colorful Mickey Mouse characters which would be used in the game. The blue with the stars in the background is visually appealing. The background image of the game background was changed to match the hero image background color. Google Dev tools was used to find the background Hex number and applied to the background of the background image on the game page.
 
 ## Typography
 

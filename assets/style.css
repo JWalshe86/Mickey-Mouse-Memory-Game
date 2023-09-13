@@ -421,7 +421,7 @@ body {
   display: flex;
   flex-direction: column;
   height: inherit;
-  background-image: url(./images/game-background\ 1500px.png);
+  background-image: url(./images/readme-images/game-background\ 1500px-removebg-preview-dark.jpg);
   /* advice from W3Schools on using background size 100% 100% to keep background img stable  */
   background-size: 100% 100%;
   align-items: center;
