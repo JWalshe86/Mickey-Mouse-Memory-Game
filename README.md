@@ -206,7 +206,8 @@ The buttons change color when hovered over. This adds to the sense of interactiv
 
 ## Text Bounce
 
-Using css.animates the click any card to begin text 'bounces' when the screen opens. This is to grab the viewers attention to this prompt when the game screen is loaded.
+The click card title 'bounces' up and down to prompt the users attention. Once the first card is clicked this text
+no longer bounces
 
 ## Game Feedback
 

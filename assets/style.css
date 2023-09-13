@@ -915,11 +915,3 @@ h3 {
 h3.cardShake {
   animation: jump-shaking 0.83s infinite;
 }
-
-span {
-  background: #48abe0;
-  color: white;
-  padding: 1.5rem;
-  font-size: 1rem;
-  display: inline-block;
-}
