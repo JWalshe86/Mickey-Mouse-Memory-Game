@@ -33,6 +33,7 @@ let lockBoard = false;
 // variables below store whether card has been flipped or not
 let firstCard, secondCard;
 
+// front of cards after a match
 let firstCardFrontAfterMatch, secondCardFrontAfterMatch;
 
 /* The this keyword in the flipCard function represents the memory-card class. Memory card 
@@ -47,6 +48,7 @@ let counter = document.querySelector(".counter"); // MOVES COUNTER
 function flipCard() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 	startClock();
+
 
 	// if the same card is clicked twice the moves counter doesn't increase
 	if (this != firstCard) {
@@ -188,8 +190,7 @@ function disableCards() {
 }
 
 function animateCards() {
-	firstCard.classList.add('horizontal-shake');
-	secondCard.classList.add('horizontal-shake');
+	
 }
 
 // called if cards don't match
