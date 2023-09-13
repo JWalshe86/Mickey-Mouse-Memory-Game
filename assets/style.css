@@ -510,6 +510,10 @@ span.counter {
   transform: rotateY(180deg);
 }
 
+.card-back{
+  background-color: #ffeb3c;
+}
+
 .card-front.front1 {
   transform: inherit;
 }
