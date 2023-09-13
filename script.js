@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 
 let cardsMatched = [];
+let cardsMatched2 = [];
 let tryCounter = 0;
 let moveCounter = 0;
 let starCounter = 0;
@@ -131,8 +132,8 @@ function checkForMatch() {
 		//push 1st & 2nd matched card into an array so they can be manipulated
 		cardsMatched.push(firstCardFrontAfterMatch, secondCardFrontAfterMatch);
 		//    cards now remain flipped after animation
-		firstCardFrontAfterMatch[1].classList.add('horizontal-shake');
-		secondCardFrontAfterMatch[1].classList.add('horizontal-shake');
+		firstCardFrontAfterMatch[1].classList.add('front1');
+		secondCardFrontAfterMatch[1].classList.add('front1');
 
 		match++;
 
@@ -187,6 +188,10 @@ function checkForMatch() {
 function disableCards() {
 	firstCard.removeEventListener('click', flipCard);
 	secondCard.removeEventListener('click', flipCard);
+	firstCard.children[1].classList.add('horizontal-shake');
+	secondCard.children[1].classList.add('horizontal-shake');
+	firstCard.classList.remove('flip');
+	secondCard.classList.remove('flip');
 }
 
 function animateCards() {
