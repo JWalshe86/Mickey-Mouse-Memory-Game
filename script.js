@@ -400,7 +400,7 @@ function rubberBand() {
 	setTimeout(() => {
 		let titleClick = document.getElementsByTagName('h3');
 
-		titleClick[0].classList.add('animate__animated', 'animate__rubberBand');
+		titleClick[0].classList.add('');
 	}, 1000);
 }
 anchor.addEventListener('click', rubberBand, false);
