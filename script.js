@@ -192,6 +192,10 @@ function disableCards() {
 	secondCard.children[1].classList.add('horizontal-shake');
 	firstCard.classList.remove('flip');
 	secondCard.classList.remove('flip');
+	setTimeout(() =>{
+	firstCard.children[1].classList.remove('horizontal-shake');
+	secondCard.children[1].classList.remove('horizontal-shake');
+	},1500);
 }
 
 function animateCards() {
