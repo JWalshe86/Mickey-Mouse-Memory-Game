@@ -197,7 +197,7 @@ The buttons change color when hovered over. This adds to the sense of interactiv
 
 ## Cards shake when matched
 
- This feature was imported from [Animate.css](https://animate.style/). This is to add to the sense of fun while playing the game. This was deemed particulary important as the game was targeted at young children.
+ Code from this feature was adapted from [unused-css.com](https://unused-css.com/blog/css-shake-animation/). This is to add to the sense of fun while playing the game. This was deemed particulary important as the game was targeted at young children.
 
 ## Stars when button pressed
 
@@ -286,6 +286,7 @@ someone mentioned ensuring both js files and html files were in the same documen
 - 3 font icon stars would not align in a row on the congrats display. The issue was you can't have the same names for a class in the one class element. To get around this one had to create a new class. However for the 3 stars the 3rd star only popped up when the card was clicked. So I had to add a card click, after the new class was created.
 - Feedback from a colleague on slack Kera Cudmore highlighted how if one pressed the same card twice the counter increased. I was able to fix this by putting an if statement on the counter - ie the counter only increased if the same card was not pressed twice. 
 - My custom error page didn't appear to show on the website despite following all the github instructions. I contacted Code Institute Tutor support and was informed that I was testing the error page incorrectly. To test the error page you put in an incorrect page name after the full website address - I was putting in an incorrect page name to early in the website domain name and was subsequently getting the github default error page.
+- During a Slack meeting I realised we couldn't use 3rd party libraries for this project. I then had to create the card shake animation from scratch using css, html and javascript. 
 
 # Deployment
 
@@ -323,7 +324,7 @@ One clicked on settings within the Mickey Mouse Memory Game github repository. O
 - idea for lives & dynamic card movement effect from [developedbyed](https://www.youtube.com/watch?v=-tlb4tv4mC4)
 - styling of play & how to play buttons code adapted from [GreatStack](https://youtu.be/Odr24UQs3uY?feature=shared)
 - code to delay anchor tag for play button until balloons pop taken from [nattik Gur-Arie](https://stackoverflow.com/questions/14434604/i-want-to-delay-a-link-for-a-period-of-500-with-javascript#:~:text=To%20delay%20a%20link%20with,it%20is%20inside%20the%20'%20'%20.)
-- Code for cards shake when matched & stars & reset button adapted from [Susan Chen](https://susanschen.github.io/Memory-Game/) and the shake cards css was taken from [Animate.css](https://animate.style/)
+- Code for cards shake when matched & stars & reset button adapted from [Susan Chen](https://susanschen.github.io/Memory-Game/)
 - bubbles converted into stars using code adapted from [coding Artist](https: //www.youtube.com/watch?v=LZx_Hyudmdw)
 - code to prompt user to flip device on smaller devices adapted from [Jarrod Whitley](https://stackoverflow.com/uestions/50766953/how-can-i-code-a-pop-up-text-box-that-only-appears-on-mobile-devices-when-the-sc)
 - /* styling to shape the info div like a flag adapted from [Zoe Rooney](https://css-tricks.com/the-shapes-of-css/#Flag)
@@ -332,6 +333,7 @@ One clicked on settings within the Mickey Mouse Memory Game github repository. O
 - Kera Cudmore for giving me feedback on the slack peer review channel.
 - Allen Gleeson on Slack for prompting me to use a hover effect on the buttons.
 - [draft.dev](https://draft.dev/learn/github-pages-404) for 404 error page template
+- Code for card shake from [unused-css](https://unused-css.com/blog/css-shake-animation/)
 
 
 

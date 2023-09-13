@@ -198,10 +198,6 @@ function disableCards() {
 	},1500);
 }
 
-function animateCards() {
-	
-}
-
 // called if cards don't match
 function unflipCards() {
 	lockBoard = true;
