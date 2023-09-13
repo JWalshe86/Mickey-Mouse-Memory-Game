@@ -883,3 +883,25 @@ h3 {
   display: flex;
   justify-content: center;
 }
+
+/* card shake style */
+
+span.horizontal-shake {
+  animation: horizontal-shaking 0.35s infinite;
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+span {
+  background: #48abe0;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1rem;
+  display: inline-block;
+}

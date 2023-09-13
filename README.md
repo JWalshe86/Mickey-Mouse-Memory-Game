@@ -331,6 +331,7 @@ One clicked on settings within the Mickey Mouse Memory Game github repository. O
 -     Add scroll behaviour to modal for smaller screensizes adapted from [stackoverflow](https://stackoverflow.com/questions/10476632/how-to-scroll-the-page-when-a-modal-dialog-is-longer-than-the-screen)
 - Kera Cudmore for giving me feedback on the slack peer review channel.
 - Allen Gleeson on Slack for prompting me to use a hover effect on the buttons.
+- [draft.dev](https://draft.dev/learn/github-pages-404) for 404 error page template
 
 
 
