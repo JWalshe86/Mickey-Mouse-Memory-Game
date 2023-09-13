@@ -188,8 +188,8 @@ function disableCards() {
 }
 
 function animateCards() {
-	firstCard.classList.add('animate__animated', 'animate__tada');
-	secondCard.classList.add('animate__animated', 'animate__tada');
+	firstCard.classList.add('horizontal-shake');
+	secondCard.classList.add('horizontal-shake');
 }
 
 // called if cards don't match

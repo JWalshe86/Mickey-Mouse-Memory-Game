@@ -507,7 +507,7 @@ span.counter {
 
 .card-front {
   /* front card rotated 180 degrees so it can be seen when filpcard is activated */
-  /* transform: rotateY(180deg); */
+  transform: rotateY(180deg);
 }
 
 .card-front.front1 {
@@ -886,10 +886,6 @@ h3 {
 
 /* card shake style */
 
-span.horizontal-shake {
-  /* animate transitions from one css style to another */
-  animation: horizontal-shaking 0.35s infinite;
-}
 /* Each keyframe is activated within .35s interval */
 @keyframes horizontal-shaking {
   0% { transform: translateX(0) }
