@@ -44,12 +44,15 @@ is stored in this. Thats because this represents the element that activated it.
 moves = 0;
 let counter = document.querySelector(".counter"); // MOVES COUNTER
 
+let clickCard = document.getElementsByTagName('h3');
+
 // Card Flip
 
 function flipCard() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 	startClock();
-
+	
+	clickCard[0].classList.remove('cardShake')
 
 	// if the same card is clicked twice the moves counter doesn't increase
 	if (this != firstCard) {

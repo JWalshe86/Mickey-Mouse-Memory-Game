@@ -912,7 +912,7 @@ h3 {
   100% { transform: translateY(0) rotate(0) }
 }
 
-h3 {
+h3.cardShake {
   animation: jump-shaking 0.83s infinite;
 }
 
