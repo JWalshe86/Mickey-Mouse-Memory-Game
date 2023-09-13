@@ -131,8 +131,8 @@ function checkForMatch() {
 		//push 1st & 2nd matched card into an array so they can be manipulated
 		cardsMatched.push(firstCardFrontAfterMatch, secondCardFrontAfterMatch);
 		//    cards now remain flipped after animation
-		firstCardFrontAfterMatch[1].classList.add('front1');
-		secondCardFrontAfterMatch[1].classList.add('front1');
+		firstCardFrontAfterMatch[1].classList.add('horizontal-shake');
+		secondCardFrontAfterMatch[1].classList.add('horizontal-shake');
 
 		match++;
 
