@@ -129,7 +129,6 @@ function checkForMatch() {
 
 	if (isMatch) {
 		disableCards();
-		animateCards();
 		firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
 		secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
 		//push 1st & 2nd matched card into an array so they can be manipulated
@@ -393,20 +392,6 @@ anchor.onclick = function() {
 	}, 500);
 };
 
-// get rubberBand to activate after start button & onto page
-
-let playButton = document.querySelector('a');
-playButton.addEventListener('click', rubberBand);
-
-
-function rubberBand() {
-	setTimeout(() => {
-		let titleClick = document.getElementsByTagName('h3');
-
-		titleClick[0].classList.add('');
-	}, 1000);
-}
-anchor.addEventListener('click', rubberBand, false);
 
 // script for congratulations you won
 

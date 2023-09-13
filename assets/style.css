@@ -411,7 +411,7 @@ body {
 .timer-counter-container {
   display: flex;
   justify-content: center;
-  color: white;
+  color: darkblue;
   font-size: 1.5vw;
 }
 
@@ -829,11 +829,11 @@ span.counter {
 /* hollowed out stars  */
 
 i.fa.fa-star.dimmed {
-  mix-blend-mode: color-burn;
+  mix-blend-mode: overlay;
 }
 
 .fa-star:before {
-  color: #f1c40f;
+  color: darkblue;
   float: right;
   left: 2px;
   position: relative;
@@ -849,7 +849,7 @@ span.starCounter {
 }
 
 h3 {
-  color: white;
+  color: darkblue;
   font-size: 1.5vw;
 }
 
