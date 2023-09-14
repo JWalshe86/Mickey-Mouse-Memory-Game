@@ -41,7 +41,7 @@ remaining cards to flip over.
 - [Micky-Mouse-Memory-Game](#micky-mouse-memory-game)
   - [Rules of Memory Game](#rules-of-memory-game)
   - [Contents](#contents)
-- [User-Experience](#user-experience)
+- [User-Stories](#user-stories)
   - [As a new visitor](#as-a-new-visitor)
   - [As a returning visitor](#as-a-returning-visitor)
 - [Design UXD](#design-uxd)
@@ -86,17 +86,24 @@ remaining cards to flip over.
   - [Media](#media)
 
 
-# User-Experience
+# User-Stories
 
-## As a new visitor
-- As a child I want to have fun. 
-- To have fun while also learning something valuable.
+Based on my daughter and several of my friends children's interest in Mickey Mouse, I felt the Mickey Mouse theme and the 
+spirit of fun was important. The visuals appeared as important to the children as the gameplay.
+
+## As a new user
+- As a child I want to have fun
+- To have fun while also learning something valuable
 - I want to experience the magic of Disney
+- I want the game to be easy to play
+- I want it to be very visual with lots of animation
 
 
 ## As a returning visitor
 
-I want to be able to measure my progress and try to beat my previous score. I'd like to see if I'm getting better at the game.
+- I want to be able to measure my progress and try to beat my previous score
+- I'd like to see if I'm getting better at the game
+- I want to see if I can get 3 stars
 
 # Design UXD
 
