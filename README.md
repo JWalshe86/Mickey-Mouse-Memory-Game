@@ -327,6 +327,18 @@ The site was deployed on github pages from the outset. [Live site here](https://
 
 One clicked on settings within the Mickey Mouse Memory Game github repository. One pressed settings and went into the pages section. Under 'Build & Deployment' the source was branch. The branch was main and folder root. 
 
+### Cloning the GitHub Repository
+
+You can clone the repository to use locally by following these steps:
+1. Navigate to the GitHub Repository you want to clone
+2. Click on the code drop down button
+3. Click on HTTPS
+4. Copy the repository link to the clipboard
+5. Open your IDE of choice (git must be installed for the next steps)
+6. Type git clone copied-git-url into the IDE terminal
+
+The project will now be cloned locally for you to use.
+
 # Final Product 
 
 ## Laptop view
