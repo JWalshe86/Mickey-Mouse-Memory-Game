@@ -31,7 +31,6 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
-  text-align: center;
   width: inherit;
 }
 
@@ -373,7 +372,6 @@ body {
   border-left: 10vh solid transparent;
   border-bottom: 7vh solid rgba(247, 101, 72, 0.8);
   border-top: 7vh solid rgba(247, 101, 72, 0.8);
-  text-align: center;
   gap: 2vh;
   display: flex;
   align-items: center;
@@ -392,7 +390,6 @@ body {
     bottom: 0;
     width: 75%;
     height: 0;
-    text-align: center;
     gap: 2vh;
     display: flex;
     align-items: center;
@@ -451,7 +448,6 @@ span.counter {
 
 #reset-container {
   width: 100%;
-  text-align: center;
 }
 
 .memory-card {
@@ -639,11 +635,12 @@ span.counter {
 }
 
 .modal-body {
-  text-align: center;
   line-height: 2;
   text-transform: capitalize;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 2vw;
+  padding-top: 0;
+  padding: 1.5vw;
 }
 
 #modal-overlay {
@@ -711,7 +708,6 @@ span.counter {
   left: 50%;
   /* to add zoom out effect */
   transform: translate(-50%, -50%) scale(0.1);
-  text-align: center;
   padding: 0 30px 30px;
   color: #333;
   visibility: hidden;
