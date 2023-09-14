@@ -51,6 +51,9 @@ body {
   .congratsModal-popup {
     font-size: medium;
   }
+  .title-container{
+    padding-left:15vw;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -586,6 +589,7 @@ span.counter {
   .heroTitle {
     font-size: 4vh;
     top: 5vh;
+    padding-left: 10vw;
   }
 }
 
