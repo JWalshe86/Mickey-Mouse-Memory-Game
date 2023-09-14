@@ -901,7 +901,7 @@ h3 {
 
 
 .card-front.horizontal-shake {
-  animation: horizontal-shaking 0.35s infinite;
+  animation: horizontal-shaking .35s 0s 5;
 }
 
 /* Shaking for click any card to begin */

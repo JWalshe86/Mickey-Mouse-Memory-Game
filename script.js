@@ -190,10 +190,6 @@ function checkForMatch() {
 function disableCards() {
 	firstCard.removeEventListener('click', flipCard);
 	secondCard.removeEventListener('click', flipCard);
-	HorizontalShake()
-}
-
-function HorizontalShake(){
 	firstCard.children[1].classList.add('horizontal-shake');
 	secondCard.children[1].classList.add('horizontal-shake');
 	firstCard.classList.remove('flip');
@@ -421,7 +417,7 @@ function closeCongratsModalPopup() {
 // Increase the click(move) count by 1 and update the HTML text to the current value
 function incrementCounter() {
 	moveCounter++;
-	moves[0].innerHTML = moveCounter;
+	moves.innerHTML = moveCounter;
 }
 
 /**Creating an element containing the class fa-star each time a star is won. This allows 3 stars to be
