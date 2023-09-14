@@ -289,6 +289,12 @@ someone mentioned ensuring both js files and html files were in the same documen
 - Feedback from a colleague on slack Kera Cudmore highlighted how if one pressed the same card twice the counter increased. I was able to fix this by putting an if statement on the counter - ie the counter only increased if the same card was not pressed twice. 
 - My custom error page didn't appear to show on the website despite following all the github instructions. I contacted Code Institute Tutor support and was informed that I was testing the error page incorrectly. To test the error page you put in an incorrect page name after the full website address - I was putting in an incorrect page name to early in the website domain name and was subsequently getting the github default error page.
 - During a Slack meeting I realised we couldn't use 3rd party libraries for this project. I then had to create the card shake animation from scratch using css, html and javascript. 
+Fix: Cards don't shake indefinitely
+- By changing the animation ireration count to 5 directly on the 
+animation css for the horizontal shake, even if the next is quickly
+pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
+  animation: horizontal-shaking .35s 0s 5;
+}
 
 # Deployment
 
