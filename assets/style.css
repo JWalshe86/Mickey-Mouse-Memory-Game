@@ -862,6 +862,10 @@ h3 {
   font-size: 1.5vw;
 }
 
+.after{
+  display:none;
+}
+
 /* styling for 404 error page */
 
 .ErrorBody{
