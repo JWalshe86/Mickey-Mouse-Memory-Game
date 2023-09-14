@@ -60,6 +60,9 @@ body {
   .heroTitle {
     font-size: 7vh;
   }
+  .congratsCounter, .congratsTimer, .congratsStars {
+    font-size: 4vh !important;
+  }
   .hero-image {
     background-size: cover !important;
     background-position: center;
