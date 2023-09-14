@@ -135,6 +135,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - Lighthouse check on google chrome
 - Hero Title from Google Fonts
 - [Code Beautify](https://codebeautify.org/) was used to clean up the code alignment 
+- Balsamiq Wireframes
 
 ## Languages Used
 
@@ -341,7 +342,7 @@ One clicked on settings within the Mickey Mouse Memory Game github repository. O
 - styling of play & how to play buttons code adapted from [GreatStack](https://youtu.be/Odr24UQs3uY?feature=shared)
 - code to delay anchor tag for play button until balloons pop taken from [nattik Gur-Arie](https://stackoverflow.com/questions/14434604/i-want-to-delay-a-link-for-a-period-of-500-with-javascript#:~:text=To%20delay%20a%20link%20with,it%20is%20inside%20the%20'%20'%20.)
 - Code for cards shake when matched & stars & reset button adapted from [Susan Chen](https://susanschen.github.io/Memory-Game/)
-- bubbles converted into stars using code adapted from [coding Artist](https: //www.youtube.com/watch?v=LZx_Hyudmdw)
+- bubbles converted into stars using code adapted from [coding-Artist](https: //www.youtube.com/watch?v=LZx_Hyudmdw)
 - code to prompt user to flip device on smaller devices adapted from [Jarrod Whitley](https://stackoverflow.com/uestions/50766953/how-can-i-code-a-pop-up-text-box-that-only-appears-on-mobile-devices-when-the-sc)
 - /* styling to shape the info div like a flag adapted from [Zoe Rooney](https://css-tricks.com/the-shapes-of-css/#Flag)
 - feedback from mentor Anthony on first meet up to change overlay of congrats message to lighter colour & style the how to play modal: make it bigger
@@ -350,6 +351,7 @@ One clicked on settings within the Mickey Mouse Memory Game github repository. O
 - Allen Gleeson on Slack for prompting me to use a hover effect on the buttons.
 - [draft.dev](https://draft.dev/learn/github-pages-404) for 404 error page template
 - Code for card shake from [unused-css](https://unused-css.com/blog/css-shake-animation/)
+- Inspiration for readme layout [Emma-Hewson](https://github.com/emmahewson/mp2_travel_quiz/tree/main)
 
 
 
