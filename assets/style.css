@@ -409,6 +409,7 @@ body {
     width: 71%;
     position: absolute;
   }
+ 
 }
 
 /* to keep timer & counter on same line & responsive to screen size */
@@ -554,6 +555,7 @@ span.counter {
 .title-container {
   top: -3vh;
 }
+
 
 @media screen and (min-width: 350px) and (max-width: 500px) {
   .modal-header .title {
@@ -754,7 +756,7 @@ span.counter {
 
 .congratsCounter, .congratsTimer, .congratsStars {
   font-size: 2.5vh;
-  padding-left: 14vw;
+  text-align: center;
 }
 
 .wrapper {
