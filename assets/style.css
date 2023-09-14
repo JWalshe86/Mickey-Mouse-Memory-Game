@@ -899,7 +899,6 @@ h3 {
   100% { transform: translateX(0) }
 }
 
-
 .card-front.horizontal-shake {
   animation: horizontal-shaking .35s 0s 5;
 }
