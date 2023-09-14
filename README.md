@@ -142,7 +142,15 @@ Javascript, CSS & HTML.
 
 ## Skeleton
 
-The premise was very simple a landing page and then the game page. The aim was to keep it simple as the target audience was young children. The use of a modal helped keep the layout clear.
+The premise was very simple a landing page and then the game page. The aim was to keep it simple as the target audience was young children. The use of a modal helped keep the layout clear. Wireframes were created with the an initial blueprint of the project for desktop, ipad and mobile.
+
+[Wireframe-Desktop-View-LandingPage](./assets/images/readme-images/Desktop-HeroImage-Wireframe.png)
+[Wireframe-Desktop-View-GameContainer](./assets/images/readme-images/Desktop-gameContainer-Wireframe.png)
+[Wireframe-Ipad-View-LandingPage](./assets/images/readme-images/Ipad-Hero-Img-Wireframe.png)
+[Wireframe-Ipad-View-GameContainer](./assets/images/readme-images/Ipad-GameContainer-Wireframe.png)
+[Wireframe-Iphone-View-LandingPage](./assets/images/readme-images/Mobile-Hero-Image.png)
+[Wireframe-Iphone-View-OrientationPrompt](./assets/images/readme-images/Mobile-orientationPrompt-Wireframe.png)
+[Wireframe-Iphone-View-GameContainer](./assets/images/readme-images/Mobile-GameContainer-Wireframe.png)
 
 ## Surface
 
