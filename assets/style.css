@@ -789,7 +789,7 @@ span.counter {
   }
   .info-game-container {
     background-image: none;
-    background-color: rgba(92, 48, 255, 0.5);
+    background-color: rgba(255 , 235, 61, 0.7)
   }
   .card-container {
     display: none;
