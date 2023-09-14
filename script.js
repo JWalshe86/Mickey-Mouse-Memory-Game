@@ -46,14 +46,17 @@ let counter = document.querySelector(".counter"); // MOVES COUNTER
 
 let clickCard = document.getElementsByTagName('h3');
 
+let increaseFontAfterClick = document.querySelector('div.info-container');
+
 // Card Flip
 
 function flipCard() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 	startClock();
 	
-	clickCard[0].classList.remove('cardShake')
-	clickCard[0].classList.add('after')
+	clickCard[0].classList.remove('cardShake');
+	clickCard[0].classList.add('after');
+	increaseFontAfterClick.classList.add('infoContainerAfterClick');
 
 
 	// if the same card is clicked twice the moves counter doesn't increase
