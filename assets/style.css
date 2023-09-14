@@ -604,7 +604,7 @@ span.counter {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
-  background-color: #30FFAE;
+  background-color: #F76548;
 }
 
 .modal-header .title {
@@ -614,7 +614,7 @@ span.counter {
 }
 
 .howWin {
-  background-color: #30FFAE;
+  background-color: #F76548;
   display: flex;
   padding: inherit;
   justify-content: center;
