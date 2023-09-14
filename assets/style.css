@@ -744,6 +744,7 @@ span.counter {
 
 .congratsCounter, .congratsTimer, .congratsStars {
   font-size: 2.5vh;
+  padding-left: 14vw;
 }
 
 .wrapper {
@@ -781,7 +782,6 @@ span.counter {
     top: 50vh;
     z-index: 2;
     font-size: x-large;
-    text-align: -webkit-center;
   }
   .info-game-container {
     background-image: none;
@@ -878,9 +878,6 @@ h3 {
 .header404{
   font-family: 'Chango', cursive;
   font-size: 15vh;
-}
-.content404{
-  text-align: center;
 }
 
 .ErrorBody a {
