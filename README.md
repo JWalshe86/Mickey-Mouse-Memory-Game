@@ -127,6 +127,12 @@ When the player completes the game a congrats pop up is shown with the viewers s
 
 # Technologies Used
 
+ [Git](https://git-scm.com/)
+    * Used for version control via GitPod by using the terminal to Git and Push to GitHub
+* [GitHub](https://github.com/)
+    * Used to store the project code after being created in GitPod / Git
+* [Gitpod](https://www.gitpod.io/)
+    * Used to create, edit & preview the project's code
 - Images compressed on [TinyPNG](https://tinypng.com/)
 - Background image color changed using [remove.bg](https://www.remove.bg/t/change-background)
 - Icon on back of cards change using [lunapic](https://www9.lunapic.com/editor/)
