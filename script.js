@@ -55,7 +55,7 @@ function flipCard() {
 	clickCard[0].classList.remove('cardShake')
 
 	// if the same card is clicked twice the moves counter doesn't increase
-	if (this != firstCard) {
+	if (this != firstCard && this !=secondCard) {
 		moveC();
 	}
 
