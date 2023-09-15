@@ -344,9 +344,9 @@ when hovered over by the cursor.
 
 ### Congrats Modal appears 
 
-- Expected: A congrats modal to appear when all cards are flipped. This should have an image of Mickey saying congrats. It should also display the users moves, time and star scores. Modal to disappear when ok button clicked.
+- Expected: A congrats modal to appear when all cards are flipped. This should have an image of Mickey saying congrats. It should also display the users moves, time and star scores. Modal to disappear when ok button clicked. Modal to also disappear and game reset when overlay is clicked anywhere.
 - Test: Play game to completion.
-- Result: Modal displaying correctly with correct scoring for moves, seconds and stars. When the ok button is clicked the game resets as expected. 
+- Result: Modal displaying correctly with correct scoring for moves, seconds and stars. When the ok button is clicked the game resets as expected. Modal closes and game resets when overlay is clicked.
           
 ## Validator Testing
 
