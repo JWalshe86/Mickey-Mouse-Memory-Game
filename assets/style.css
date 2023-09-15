@@ -429,7 +429,7 @@ body {
 .timer-counter-container {
   display: flex;
   justify-content: center;
-  color: #5E30FF;
+  color: blue;
 }
 
 /* game & info stay in same screen */
@@ -859,7 +859,7 @@ i.fa.fa-star.dimmed {
 }
 
 .fa-star:before {
-  color: #FFEB3D;
+  color: blue;
   float: right;
   left: 2px;
   position: relative;
