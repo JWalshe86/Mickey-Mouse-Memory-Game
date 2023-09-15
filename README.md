@@ -285,7 +285,7 @@ when hovered over by the cursor.
 - Expected: A text box to pop up explaining how to play the game. This modal should also close by pressing the x in the top right or pressing anywhere outside the modal. A transparent yellow overlay is also expected to pop up. Both should leave when the modal is closed.
 - Test: Press how play button once. Press x to exit. Then press how play button again and press outside modal to exit.
 - Result. As expected the modal popped up when pressed. Unexpectedly, the padding between the top of the text and the modal title appears too wide. Also the title and x button appear to small. As expected pressing the x button closes the modal. As expected pressing anywhere on the overlay closes the modal too. 
- Fix: By reducing the line height to 1.3 the gap between the title and text was reduced. The text was also aligned to the center by using padding left and right. Both heading and title rem was increased to 4rem.
+ Fix: By reducing the line height to 1.3 the gap between the title and text was reduced. The text was also aligned to the center by using padding left and right. Both heading and title rem was increased to 4rem. The modal text also had to be re-sized at different screen sizes. A final check found text in the how play is responsive at all screen sizes.
 
 ## Validator Testing
 
