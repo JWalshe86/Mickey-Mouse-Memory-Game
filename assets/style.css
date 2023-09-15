@@ -941,3 +941,9 @@ h3 {
 h3.cardShake {
   animation: jump-shaking 0.83s infinite;
 }
+
+/* To hide cards in background when they match & shake */
+
+.visibilityHidden {
+    visibility: hidden; 
+}

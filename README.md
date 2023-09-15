@@ -333,6 +333,14 @@ when hovered over by the cursor.
         - As expected when 6 matches were made under 60s and within 30 moves a third star popped up. Unexpectedly 4 stars displayed on the congrats modal instead of three.
 - Fix: 
         - Stars are continually being added to the star counter after the first match. Once one star has been added the function here needs to stop. A variable named increaseStar1 was set to true. If 2 cards match AND this is true then a star is added to the counter. When this happens the increaseStar1 is set to false, so no more stars are added. Using the same logic when 4 card matches addresses this issue there. Using this logic on all matches creates the correct result in the counter.
+
+### Card 'shake' when matched
+
+- Expected: Cards to shake briefly when matched. Cards then to stop shaking and remain front facing.
+- Test: Play game until a match is made. 
+- Result: As expected the cards shake briefly when matched. They then remain flipped. However, the yellow back card is 
+  taking away from the front card shake. It would be better if this was removed completely when cards matched, so it isn't visible in the background. 
+- Fix: Using javascript a visibility hidden style is added to the back card when there's a match; so it no longer interferes when the front card is shaking. 
           
 ## Validator Testing
 

@@ -217,10 +217,12 @@ function checkForMatch() {
 function disableCards() {
 	firstCard.removeEventListener('click', flipCard);
 	secondCard.removeEventListener('click', flipCard);
-	firstCard.children[1].classList.add('horizontal-shake');
-	secondCard.children[1].classList.add('horizontal-shake');
 	firstCard.classList.remove('flip');
 	secondCard.classList.remove('flip');
+	firstCard.children[1].classList.add('horizontal-shake');
+	secondCard.children[1].classList.add('horizontal-shake');
+	firstCard.children[0].classList.add('visibilityHidden');
+	secondCard.children[0].classList.add('visibilityHidden');
 	setTimeout(() =>{
 	firstCard.children[1].classList.remove('horizontal-shake');
 	secondCard.children[1].classList.remove('horizontal-shake');
