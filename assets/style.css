@@ -547,7 +547,7 @@ span.counter {
   z-index: 10;
   background-color: white;
   width: 80vw;
-  height: 60vh;
+  height: 50vh;
   contain: content;
 
   /* Add scroll behaviour to modal for smaller screensizes adapted from stackoverflow */
@@ -564,7 +564,7 @@ span.counter {
 
 @media screen and (min-width: 350px) and (max-width: 500px) {
   .modal-header .title {
-    padding-left: 15vw !important;
+    padding-left: 38vw !important;
   }
   .modal-body {
     font-size: 12px !important;
@@ -611,7 +611,6 @@ span.counter {
 }
 
 .modal-header {
-  padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -620,17 +619,18 @@ span.counter {
 }
 
 .modal-header .title {
-  /* rem always references the root font size rather than some unknown parents element font size */
-  font-size: 4rem;
+/* use of vw instead of rem, as it makes size responsive */
+  font-size: 3vw;
   font-weight: bold;
-  padding-left: 33vw;
+  /* extra padding on left to account for x */
+  padding: 0 24vw 0 27vw;
 }
 
 .howWin {
   display: flex;
   padding: inherit;
   justify-content: center;
-  font-size: 4rem;
+  font-size: 3vw;
   font-weight: bold;
 }
 
@@ -643,10 +643,7 @@ span.counter {
   font-weight: bold;
   color: black;
   box-shadow: none;
-}
-
-.modal-body > :not(.howWin) {
-  padding: 10px 15px;
+  padding-right: 2vw;
 }
 
 .modal-body {
@@ -769,9 +766,7 @@ span.counter {
 
 /* Hides pop up when landscape */
 @media only screen and (min-width: 280px) and (max-width: 667px) and (orientation: landscape) {
-  .modal-header .title {
-    padding-left: 27vw;
-  }
+  
   h3 {
     font-size: smaller;
   }
@@ -785,6 +780,7 @@ span.counter {
   .modal-body {
     font-size: 12px !important;
   }
+  
 }
 
 /* Shows pop up when portrait */
@@ -806,9 +802,7 @@ span.counter {
   .info-container {
     visibility: hidden;
   }
-  .modal-header .title {
-    padding-left: 28vw !important;
-  }
+ 
   #reset {
     display: none;
   }
@@ -825,6 +819,14 @@ span.counter {
   }
   .congratsModal-popup {
     width: 40%;
+  }
+}
+
+@media (max-width: 667px) {
+
+  .modal-header .title {
+    padding: 0 20vw 0 27vw;
+    font-size: 4vw;
   }
 }
 
