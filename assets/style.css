@@ -608,6 +608,7 @@ span.counter {
 
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
+  padding: 0 2vw 0 2vw;
 }
 
 .modal-header {
@@ -620,7 +621,8 @@ span.counter {
 }
 
 .modal-header .title {
-  font-size: 1.25rem;
+  /* rem always references the root font size rather than some unknown parents element font size */
+  font-size: 4rem;
   font-weight: bold;
   padding-left: 33vw;
 }
@@ -641,7 +643,7 @@ span.counter {
   border: none;
   outline: none;
   background: none;
-  font-size: 1.25rem;
+  font-size: 4rem;
   font-weight: bold;
   color: black;
   box-shadow: none;
@@ -655,8 +657,8 @@ span.counter {
   line-height: 2;
   text-transform: capitalize;
   font-size: 2vw;
-  padding-top: 0;
-  padding: 1.5vw;
+  /* reduces gap between text and title */
+  display: contents;
 }
 
 #modal-overlay {
