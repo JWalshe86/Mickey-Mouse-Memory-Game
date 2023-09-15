@@ -6,6 +6,8 @@ let tryCounter = 0;
 let moveCounter = 0;
 let starCounter = 0;
 
+let increaseStar1 = true;
+
 let moves = document.getElementsByClassName('moves');
 
 let stars1Counter = document.querySelector('span.starCounter');
@@ -170,24 +172,44 @@ function checkForMatch() {
 
 	if (match === 2 && moves <= 20 && timer.textContent <= 30) {
 		stars[0].classList.remove('dimmed');
-		increaseStars();
-		oneStarGo();
+		if(increaseStar1){
+			increaseStars();
+			oneStarGo();
+			increaseStar1 = false;
+		}
+		
+		
 	}
 
 	// if you guess 4 matches in less than 25 moves you get another star
 
-	if (match === 4 && moves <= 25 && timer.textContent <= 45 && starCounter >= 1) {
+	if (match === 4 && moves <= 25 && timer.textContent <= 45 && starCounter === 1) {
 		stars[1].classList.remove('dimmed');
-		increaseStars();
 		secondStarGo();
+		if(!(starCounter = 2)){
+			increaseStar1 = true;
+			
+		}
+		if(increaseStar1){
+			increaseStars();
+		
+			increaseStar1 = false;
+		}
+		
 	}
 
 	// if you guess 6 matches in less than 30 moves you get 3 stars: max score
 
-	if (match === 6 && starCounter >= 2) {
+	if (match === 6 && moves <= 30 && timer.textContent <= 60 && starCounter === 2) {
 		stars[2].classList.remove('dimmed');
-		increaseStars();
 		thirdStarGo();
+		increaseStar1 = true;
+		if(increaseStar1){
+			increaseStars();
+			
+			increaseStar1 = false;
+		}
+		
 	}
 }
 
@@ -401,12 +423,10 @@ anchor.onclick = function() {
 // script for congratulations you won
 
 let congratsPopup = document.getElementById("congratsModal-popup");
-let cardsShowBackground = document.querySelector('info-game-container');
 
 function openCongratsModalPopup() {
 	congratsPopup.classList.add("opencongratsModal-popup");
 	overlay.classList.add('active1');
-	cardsShowBackground.classList.add('info-game-container-hideCards');
 }
 
 let ok = document.querySelector('.congratsButton');

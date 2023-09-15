@@ -317,6 +317,23 @@ when hovered over by the cursor.
  - Test: Activate game. Get one star. Then press reset icon. 
  - Result: As expected all items returned to their default values.
 
+ ### Stars Scoring
+
+ - Expected: If you get 2 matches within 30 seconds and under 20 moves you get 1 star 
+             If you get 4 matches within 45 seconds and under 25 moves you get 2 stars
+             If you get 6 matches within 60 seconds and under 30 moves you get 3 stars 
+             A pop up will then show up showing the no. of stars you got
+- Tests:
+         - Play game and check if 2 matches under 30 seconds and 20 moves pops up a star. 
+         - Play game and check if 4 matches under 45 seconds and 25 moves 2 stars show.
+         - Play game and check if 6 matches under 60 seconds and 30 moves 3 stars show.
+- Result: 
+        - As expected one star displayed when 2 matches were made under 30s and within 20 moves. 
+        - As expected when 4 matches were made under 45s and within 25 moves a second star popped up. 
+        - As expected when 6 matches were made under 60s and within 30 moves a third star popped up. Unexpectedly 4 stars displayed on the congrats modal instead of three.
+- Fix: 
+        - Stars are continually being added to the star counter after the first match. Once one star has been added the function here needs to stop. A variable named increaseStar1 was set to true. If 2 cards match AND this is true then a star is added to the counter. When this happens the increaseStar1 is set to false, so no more stars are added. Using the same logic when 4 card matches addresses this issue there. Using this logic on all matches creates the correct result in the counter.
+          
 ## Validator Testing
 
 ### Javascript
