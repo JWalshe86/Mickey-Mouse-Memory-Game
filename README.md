@@ -265,6 +265,28 @@ When the game is completed a modal pops up congratulating the user. It also tell
 
 # Testing
 
+## Manual Testing
+
+### Change in color of play/how play buttons when hovered over by cursor
+
+- Expected: Play/How play buttons background to change from orange to yellow; and text to change from yellow to orange
+when hovered over by the cursor.
+- Test: Hovered over both buttons once.
+- Result: As expected, both buttons background changed from orange to yellow and the text changed from yellow to orange when the cursor hovered over them.
+
+### Stars Pop from play/how play Button
+
+- Expected: Play/How play buttons ared expected to release yellow stars in an upwards fashion when pressed. 
+- Test: Tested the play/how play buttons by pressing on them once.
+- Result: The play/how play buttons responded as expected and yellow stars rose up left and right of both buttons.
+
+### How play Modal 
+
+- Expected: A text box to pop up explaining how to play the game. This modal should also close by pressing the x in the top right or pressing anywhere outside the modal. A transparent yellow overlay is also expected to pop up. Both should leave when the modal is closed.
+- Test: Press how play button once. Press x to exit. Then press how play button again and press outside modal to exit.
+- Result. As expected the modal popped up when pressed. Unexpectedly, the padding between the top of the text and the modal title appears too wide. Also the title and x button appear to small. As expected pressing the x button closes the modal. As expected pressing anywhere on the overlay closes the modal too. 
+- Fix: 
+
 ## Validator Testing
 
 ### Javascript
