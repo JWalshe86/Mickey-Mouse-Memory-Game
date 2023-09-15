@@ -153,8 +153,6 @@ function checkForMatch() {
 		// count no. of clicks that don't result in a match
 
 		tryCounter++;
-
-
 		incrementCounter();
 	}
 
@@ -162,7 +160,6 @@ function checkForMatch() {
 	setTimeout(() => {
 		if (match === 6) {
 			document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
-			// document.querySelector('div.congratsStars').textContent = `You got ${stars1Counter.innerHTML}`; 
 			document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
 			openCongratsModalPopup();
 		}
@@ -177,7 +174,6 @@ function checkForMatch() {
 			oneStarGo();
 			increaseStar1 = false;
 		}
-		
 		
 	}
 
@@ -350,6 +346,7 @@ reset.addEventListener("click", resetGame);
 
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 
+
 const overlay = document.getElementById('modal-overlay');
 
 // Adding eventlistener to overlay object so it closes when overlay is preessed
@@ -357,6 +354,7 @@ overlay.addEventListener('click', () => {
 	const modals = document.querySelectorAll('.modal.active');
 	modals.forEach(modal => {
 		closeModal(modal);
+	
 	});
 });
 
@@ -430,6 +428,9 @@ function openCongratsModalPopup() {
 	congratsPopup.classList.add("opencongratsModal-popup");
 	overlay.classList.add('active1');
 }
+
+let congratsModalOverlay = document.querySelector('div.congratsModal-overlay');
+congratsModalOverlay.addEventListener("click", closeCongratsModalPopup);
 
 let ok = document.querySelector('.congratsButton');
 ok.addEventListener("click", closeCongratsModalPopup);

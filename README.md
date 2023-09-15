@@ -341,6 +341,12 @@ when hovered over by the cursor.
 - Result: As expected the cards shake briefly when matched. They then remain flipped. However, the yellow back card is 
   taking away from the front card shake. It would be better if this was removed completely when cards matched, so it isn't visible in the background. 
 - Fix: Using javascript a visibility hidden style is added to the back card when there's a match; so it no longer interferes when the front card is shaking. 
+
+### Congrats Modal appears 
+
+- Expected: A congrats modal to appear when all cards are flipped. This should have an image of Mickey saying congrats. It should also display the users moves, time and star scores. Modal to disappear when ok button clicked.
+- Test: Play game to completion.
+- Result: Modal displaying correctly with correct scoring for moves, seconds and stars. When the ok button is clicked the game resets as expected. 
           
 ## Validator Testing
 
