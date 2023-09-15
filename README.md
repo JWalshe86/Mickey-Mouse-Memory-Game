@@ -298,6 +298,24 @@ when hovered over by the cursor.
  - Expected: Click card text to bounce when user is directed to game page from play button. Click card text to disappear when user has clicked any card. Timer and mover text to then increase in size.
  - Test: click start button & then click any card
  - Result: As expected click any card to play text 'bounces' when user lands on game page. As expected when the user clicks a card this text disappears and the Timer And Moves font size increases. Unexpectedly, the Timer & Mover font size isn't responsive and overflows it's background as the screensize reduces. 
+ Fix: Changing the font size type from rem to vw made the text responsive.
+
+ ### Timer
+ - Expected: Timer to start when first card clicked & reset to zero when game over. 
+ - Test: Click first card & 'ok' button on congrats pop up to end game.
+ - Result: As expected the timer activated when the first card was clicked and then reset to zero upon a new game.
+
+ ### Moves
+
+ - Expected: Move counter to increase with each new move. Move counter not to increase when same card pressed twice.
+ - Test: Click 5 card. Click 5th card twice.
+ - Result: As expected the moves went up on each card click. When the 5th card was clicked twice the moves counter remained the same. 
+
+ ### Reset icon
+
+ - Expected: Clicking on the icon resets the cards, timer, moves and stars to default.
+ - Test: Activate game. Get one star. Then press reset icon. 
+ - Result: As expected all items returned to their default values.
 
 ## Validator Testing
 
