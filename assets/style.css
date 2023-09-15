@@ -48,6 +48,9 @@ body {
   .heroTitle {
     font-size: 200%;
   }
+  .modal-body{
+    font-size: 3.5vw !important;
+  }
   .congratsModal-popup {
     font-size: medium;
   }
