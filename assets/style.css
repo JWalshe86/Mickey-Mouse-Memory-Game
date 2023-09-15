@@ -608,7 +608,6 @@ span.counter {
 
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
-  padding: 0 2vw 0 2vw;
 }
 
 .modal-header {
@@ -628,14 +627,11 @@ span.counter {
 }
 
 .howWin {
-  background-color: #F76548;
   display: flex;
   padding: inherit;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 4rem;
   font-weight: bold;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
 }
 
 .modal-header .close-button {
@@ -654,11 +650,10 @@ span.counter {
 }
 
 .modal-body {
-  line-height: 2;
+  line-height: 1.3;
   text-transform: capitalize;
   font-size: 2vw;
-  /* reduces gap between text and title */
-  display: contents;
+  padding:0 8vw 0 8vw;
 }
 
 #modal-overlay {
