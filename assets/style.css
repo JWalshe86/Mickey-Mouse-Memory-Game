@@ -54,6 +54,10 @@ body {
   .title-container{
     padding-left:15vw;
   }
+  .modal-header .title {
+    padding: 0 10vw 0 17vw;
+    font-size: 4vw;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -639,7 +643,7 @@ span.counter {
   border: none;
   outline: none;
   background: none;
-  font-size: 4rem;
+  font-size: 4vw;
   font-weight: bold;
   color: black;
   box-shadow: none;
