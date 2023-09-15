@@ -397,7 +397,7 @@ body {
 }
 
 .infoContainerAfterClick{
-  font-size: 4rem;
+  font-size: 3vw;
 }
 
 @media screen and (max-width: 800px) {

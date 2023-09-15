@@ -287,6 +287,18 @@ when hovered over by the cursor.
 - Result. As expected the modal popped up when pressed. Unexpectedly, the padding between the top of the text and the modal title appears too wide. Also the title and x button appear to small. As expected pressing the x button closes the modal. As expected pressing anywhere on the overlay closes the modal too. 
  Fix: By reducing the line height to 1.3 the gap between the title and text was reduced. The text was also aligned to the center by using padding left and right. Both heading and title rem was increased to 4rem. The modal text also had to be re-sized at different screen sizes. A final check found text in the how play is responsive at all screen sizes.
 
+ ### Play button anchor
+
+ - Expected: Clicking on the play button to bring user to game page.
+ - Test: Click on play button.
+ - Result: As expected, user is brought to the game page
+
+ ### Click Card to begin text
+
+ - Expected: Click card text to bounce when user is directed to game page from play button. Click card text to disappear when user has clicked any card. Timer and mover text to then increase in size.
+ - Test: click start button & then click any card
+ - Result: As expected click any card to play text 'bounces' when user lands on game page. As expected when the user clicks a card this text disappears and the Timer And Moves font size increases. Unexpectedly, the Timer & Mover font size isn't responsive and overflows it's background as the screensize reduces. 
+
 ## Validator Testing
 
 ### Javascript
