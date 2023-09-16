@@ -176,7 +176,6 @@ function checkForMatch() {
 			// increase star is set to false so a star is only added once to the counter until 4 matches are made
 			increaseStar1 = false;
 		}
-		
 	}
 
 	// if you guess 4 matches in less than 25 moves you get another star

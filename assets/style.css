@@ -898,7 +898,9 @@ h3.cardShake {
 @media (max-width: 350px) {
   .heroTitle {
     font-size: 3.5vh !important;
+    top: 40%;
   }
+
   .modal-body{
     font-size: 3.5vw !important;
   }
@@ -914,18 +916,24 @@ h3.cardShake {
   }
 }
 
+@media screen and (min-width: 350px) and (max-width: 650px) {
+  .heroTitle {
+    top: 5vh;
+  }
+}
+
 @media screen and (min-width: 650px) and (max-width: 800px) and (min-height: 800px) and (max-height: 1030px) {
   .heroTitle {
     font-size: 4vh;
-    top: 5vh;
+    top: 4vh;
     text-align: center;
   }
 
   h3{
-    font-size: 2vw !important;
+    font-size: 1vh !important;
   }
   .timer-counter-container{
-    font-size: 4vh ;
+    font-size: 3vh ;
   }
 
 }
@@ -958,7 +966,6 @@ h3.cardShake {
 @media (max-width: 1200px) {
   .heroTitle {
     font-size: 5vh;
-    top: 20%;
   }
 
   .hero-image {
