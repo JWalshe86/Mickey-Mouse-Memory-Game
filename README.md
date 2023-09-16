@@ -355,6 +355,12 @@ prompt to orientate their device horizontally. When they orientate the device it
 - Test: Press the play button on a iphone 5 and orientate the device when prompted.
 - Result: As expected, upon pressing the play button in portrait mode, a prompt saying to turn the device horizontally is presented. Upon turning the phone horizontally the game presents. Unexpectedly, although pressing the play button brings the user to the text prompt, some of the hero image is still displaying at the top and this may take away from the users experience. 
 - Fix: Create a div element and put it at the bottom of the screen. Asigning the play button anchor tag to here removes this issue. The element is then given visibility none. 
+
+### 404 Error Page
+
+- Expected: With incorrect website address entry a page not found page to present. It should say 404 and the link here should redirect the viewer back to the game main page.
+- Test: Enter incorrect address and press on link.
+- Result: As expected, the error page popped up and when the link was clicked it redirected the viewer back to the game main page. 
           
 ## Validator Testing
 

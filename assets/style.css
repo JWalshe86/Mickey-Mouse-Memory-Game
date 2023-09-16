@@ -904,6 +904,7 @@ h3 {
 .header404{
   font-family: 'Chango', cursive;
   font-size: 15vh;
+  text-align: center;
 }
 
 .ErrorBody a {
@@ -951,4 +952,5 @@ h3.cardShake {
 #anchor1{
   bottom: 77px;
   visibility: hidden;
+  background-color:transparent;
 }
