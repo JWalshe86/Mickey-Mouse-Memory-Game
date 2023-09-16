@@ -604,11 +604,23 @@ span.counter {
   }
 }
 
+@media screen and (min-width: 650px) and (max-width: 800px) {
+  .heroTitle {
+    font-size: 4vh;
+    top: 5vh;
+    text-align: center;
+    padding-right: 11vw;
+  }
+
+  
+}
+
 @media screen and (min-width: 240px) and (max-width: 350px) {
   .heroTitle {
     font-size: 4vh;
     top: 5vh;
-    padding-left: 10vw;
+    text-align: center;
+    padding-right: 11vw;
   }
 }
 
@@ -931,10 +943,10 @@ h3 {
 @keyframes jump-shaking {
   0% { transform: translateX(0) }
   25% { transform: translateY(-9px) }
-  35% { transform: translateY(-9px) rotate(17deg) }
-  55% { transform: translateY(-9px) rotate(-17deg) }
-  65% { transform: translateY(-9px) rotate(17deg) }
-  75% { transform: translateY(-9px) rotate(-17deg) }
+  35% { transform: translateY(-9px) rotate(7deg) }
+  55% { transform: translateY(-9px) rotate(-7deg) }
+  65% { transform: translateY(-9px) rotate(7deg) }
+  75% { transform: translateY(-9px) rotate(-7deg) }
   100% { transform: translateY(0) rotate(0) }
 }
 
