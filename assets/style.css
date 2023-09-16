@@ -44,51 +44,9 @@ body {
   text-shadow: 2px 2px 10px black, 7px 7px 4px #a34c06;
 }
 
-@media (max-width: 350px) {
-  .heroTitle {
-    font-size: 200%;
-  }
-  .modal-body{
-    font-size: 3.5vw !important;
-  }
-  .congratsModal-popup {
-    font-size: medium;
-  }
-  .title-container{
-    padding-left:15vw;
-  }
-  .modal-header .title {
-    padding: 0 10vw 0 17vw;
-    font-size: 4vw;
-  }
-}
 
-@media (max-width: 1500px) {
-  .heroTitle {
-    font-size: 7vh;
-  }
-  .congratsCounter, .congratsTimer, .congratsStars {
-    font-size: 4vh !important;
-  }
-  .hero-image {
-    background-size: cover !important;
-    background-position: center;
-  }
 
-  h3 {
-    font-size: 4vh !important;
-  }
-}
-@media (max-width: 1200px) {
-  .heroTitle {
-    font-size: 5vh;
-    top: 20%;
-  }
 
-  .hero-image {
-    background-position: center;
-  }
-}
 
 /* styling for hero image title */
 .hero-image {
@@ -400,30 +358,7 @@ body {
   font-size: 3vw;
 }
 
-@media screen and (max-width: 800px) {
-  .info-container {
-    content: "";
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 75%;
-    height: 0;
-    gap: 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    flex-direction: column;
-  }
-  .info-container::after {
-    width: 71%;
-    position: absolute;
-  }
- 
-  .congratsCounter, .congratsTimer, .congratsStars {
-    font-size: 2vh !important;
-  }
-  }
+
 
 /* to keep timer & counter on same line & responsive to screen size */
 
@@ -560,74 +495,6 @@ span.counter {
   /* Add scroll behaviour to modal for smaller screensizes adapted from stackoverflow */
   max-height: calc(100vh - 210px);
   overflow-y: auto;
-}
-
-@media screen and (min-width: 500px) and (max-width: 600px) {
-}
-.title-container {
-  top: -3vh;
-}
-
-
-@media screen and (min-width: 350px) and (max-width: 500px) {
-  .modal-header .title {
-    padding-left: 38vw !important;
-  }
-  .modal-body {
-    font-size: 12px !important;
-  }
-  .opencongratsModal-popup {
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1.1);
-    position: relative;
-    bottom: -70%;
-  }
-
-  .heroTitle {
-    font-size: 4vh;
-    top: 12vh;
-    padding-left: 8.5vw;
-    text-align: center;
-  }
-
-  .modal {
-    width: 95vw;
-  }
-
-  .howToPlay1,
-  .play-button {
-    padding: 5vw;
-  }
-  .timer {
-    float: right;
-    margin-right: 2vw;
-    margin-left: 2vw;
-  }
-}
-
-@media screen and (min-width: 650px) and (max-width: 800px) {
-  .heroTitle {
-    font-size: 4vh;
-    top: 5vh;
-    text-align: center;
-  }
-
-  h3{
-    font-size: 2vw !important;
-  }
-  .timer-counter-container{
-    font-size: 4vh ;
-  }
-
-}
-
-@media screen and (min-width: 240px) and (max-width: 350px) {
-  .heroTitle {
-    font-size: 4vh;
-    top: 5vh;
-    text-align: center;
-    padding-right: 11vw;
-  }
 }
 
 .modal.active {
@@ -786,56 +653,46 @@ span.counter {
   flex-wrap: wrap;
 }
 
-/* code to prompt user to flip device on smaller devices adapted from Jarrod Whitley */
-
-/* Hides pop up when landscape */
-@media only screen and (min-width: 280px) and (max-width: 667px) and (orientation: landscape) {
-  
-  h3 {
-    font-size: smaller;
-  }
-
-  .pop-up {
-    display: none;
-  }
-  .opencongratsModal-popup {
-    bottom: -0.5vh;
+@media screen and (min-width: 350px) and (max-width: 500px) {
+  .modal-header .title {
+    padding-left: 38vw !important;
   }
   .modal-body {
     font-size: 12px !important;
   }
-  
-}
+  .opencongratsModal-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1.1);
+    position: relative;
+    bottom: -70%;
+  }
 
-/* Shows pop up when portrait */
-@media only screen and (min-width: 250px) and (max-width: 667px) and (orientation: portrait) {
-  .pop-up {
-    position: absolute;
-    align-content: center;
-    top: 50vh;
-    z-index: 2;
-    font-size: x-large;
+  .heroTitle {
+    font-size: 4vh;
+    top: 12vh;
+    padding-left: 8.5vw;
     text-align: center;
   }
-  .info-game-container {
-    background-image: none;
-    background-color: rgba(255 , 235, 61, 0.7);
+
+  .modal {
+    width: 95vw;
   }
-  .card-container {
-    display: none;
+
+  .howToPlay1,
+  .play-button {
+    padding: 5vw;
   }
-  .info-container {
-    visibility: hidden;
+  .timer {
+    float: right;
+    margin-right: 2vw;
+    margin-left: 2vw;
   }
- 
-  #reset {
-    display: none;
-  }
-  .turnDeviceWrapper {
-    display: flex;
-    position: relative;
-    justify-content: center;
-  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+}
+.title-container {
+  top: -3vh;
 }
 
 @media (min-width: 667px) {
@@ -966,9 +823,162 @@ h3.cardShake {
 .visibilityHidden {
     visibility: hidden; 
 }
-
+/* to push viewer to bottom of game page when play button pressed */
 #anchor1{
   bottom: 77px;
   visibility: hidden;
   background-color:transparent;
+}
+
+/* @Media queries */
+
+
+/* Shows pop up when portrait */
+
+@media screen and (min-width: 240px) and (max-width: 350px) {
+  .heroTitle {
+    font-size: 4vh;
+    top: 5vh;
+    text-align: center;
+    padding-right: 11vw;
+  }
+}
+
+/* code to prompt user to flip device on smaller devices adapted from Jarrod Whitley */
+
+/* Hides pop up when landscape */
+@media only screen and (min-width: 280px) and (max-width: 667px) and (orientation: landscape) {
+  
+  h3 {
+    font-size: smaller;
+  }
+
+  .pop-up {
+    display: none;
+  }
+  .opencongratsModal-popup {
+    bottom: -0.5vh;
+  }
+  .modal-body {
+    font-size: 12px !important;
+  }
+  
+}
+
+@media only screen and (min-width: 250px) and (max-width: 667px) and (orientation: portrait) {
+  .pop-up {
+    position: absolute;
+    align-content: center;
+    top: 50vh;
+    z-index: 2;
+    font-size: x-large;
+    text-align: center;
+  }
+  .info-game-container {
+    background-image: none;
+    background-color: rgba(255 , 235, 61, 0.7);
+  }
+  .card-container {
+    display: none;
+  }
+  .info-container {
+    visibility: hidden;
+  }
+ 
+  #reset {
+    display: none;
+  }
+  .turnDeviceWrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .heroTitle {
+    font-size: 200%;
+  }
+  .modal-body{
+    font-size: 3.5vw !important;
+  }
+  .congratsModal-popup {
+    font-size: medium;
+  }
+  .title-container{
+    padding-left:15vw;
+  }
+  .modal-header .title {
+    padding: 0 10vw 0 17vw;
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 800px) {
+  .heroTitle {
+    font-size: 4vh;
+    top: 5vh;
+    text-align: center;
+  }
+
+  h3{
+    font-size: 2vw !important;
+  }
+  .timer-counter-container{
+    font-size: 4vh ;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .info-container {
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 75%;
+    height: 0;
+    gap: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-direction: column;
+  }
+  .info-container::after {
+    width: 71%;
+    position: absolute;
+  }
+ 
+  .congratsCounter, .congratsTimer, .congratsStars {
+    font-size: 2vh !important;
+  }
+  }
+
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 5vh;
+    top: 20%;
+  }
+
+  .hero-image {
+    background-position: center;
+  }
+}
+
+@media (max-width: 1500px) {
+  .heroTitle {
+    font-size: 7vh;
+  }
+  .congratsCounter, .congratsTimer, .congratsStars {
+    font-size: 4vh !important;
+  }
+  .hero-image {
+    background-size: cover !important;
+    background-position: center;
+  }
+
+  h3 {
+    font-size: 4vh !important;
+  }
 }
