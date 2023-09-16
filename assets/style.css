@@ -518,7 +518,6 @@ span.counter {
   /* so image is sharp */
   object-fit: contain;
   cursor: pointer;
-  border: groove;
 }
 
 .card-front {
