@@ -801,7 +801,7 @@ span.counter {
   }
   .info-game-container {
     background-image: none;
-    background-color: rgba(255 , 235, 61, 0.7)
+    background-color: rgba(255 , 235, 61, 0.7);
   }
   .card-container {
     display: none;
@@ -946,4 +946,9 @@ h3.cardShake {
 
 .visibilityHidden {
     visibility: hidden; 
+}
+
+#anchor1{
+  bottom: 77px;
+  visibility: hidden;
 }

@@ -347,6 +347,14 @@ when hovered over by the cursor.
 - Expected: A congrats modal to appear when all cards are flipped. This should have an image of Mickey saying congrats. It should also display the users moves, time and star scores. Modal to disappear when ok button clicked. Modal to also disappear and game reset when overlay is clicked anywhere.
 - Test: Play game to completion.
 - Result: Modal displaying correctly with correct scoring for moves, seconds and stars. When the ok button is clicked the game resets as expected. Modal closes and game resets when overlay is clicked.
+
+### Orientate small screen prompt
+
+- Expected: When the play button is pressed for devices with a screen width less than 667px the viewer will be met with a 
+prompt to orientate their device horizontally. When they orientate the device it will bring the user to the game.
+- Test: Press the play button on a iphone 5 and orientate the device when prompted.
+- Result: As expected, upon pressing the play button in portrait mode, a prompt saying to turn the device horizontally is presented. Upon turning the phone horizontally the game presents. Unexpectedly, although pressing the play button brings the user to the text prompt, some of the hero image is still displaying at the top and this may take away from the users experience. 
+- Fix: Create a div element and put it at the bottom of the screen. Asigning the play button anchor tag to here removes this issue. The element is then given visibility none. 
           
 ## Validator Testing
 
