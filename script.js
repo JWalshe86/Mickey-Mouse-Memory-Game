@@ -168,10 +168,12 @@ function checkForMatch() {
 	// if you guess 2 matches in less than 10 moves you get a star
 
 	if (match === 2 && moves <= 20 && timer.textContent <= 30) {
+		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
 		if(increaseStar1){
 			increaseStars();
 			oneStarGo();
+			// increase star is set to false so a star is only added once to the counter until 4 matches are made
 			increaseStar1 = false;
 		}
 		
@@ -211,14 +213,19 @@ function checkForMatch() {
 
 // called if the cards match
 function disableCards() {
+	// cards no longer reactive to clicks
 	firstCard.removeEventListener('click', flipCard);
 	secondCard.removeEventListener('click', flipCard);
+	// cards remain unflipped
 	firstCard.classList.remove('flip');
 	secondCard.classList.remove('flip');
+	// cards start to shake
 	firstCard.children[1].classList.add('horizontal-shake');
 	secondCard.children[1].classList.add('horizontal-shake');
+	// The backcard is hidden while the cards shake
 	firstCard.children[0].classList.add('visibilityHidden');
 	secondCard.children[0].classList.add('visibilityHidden');
+	// The shaking is stopped after 1.5s
 	setTimeout(() =>{
 	firstCard.children[1].classList.remove('horizontal-shake');
 	secondCard.children[1].classList.remove('horizontal-shake');
