@@ -809,6 +809,7 @@ span.counter {
     top: 50vh;
     z-index: 2;
     font-size: x-large;
+    text-align: center;
   }
   .info-game-container {
     background-image: none;
@@ -886,7 +887,7 @@ span.starCounter {
 }
 
 h3 {
-  color: #5C30FF;
+  color: blue;
   font-size: 1.5vw;
 }
 
