@@ -609,10 +609,8 @@ span.counter {
     font-size: 4vh;
     top: 5vh;
     text-align: center;
-    padding-right: 11vw;
   }
 
-  
 }
 
 @media screen and (min-width: 240px) and (max-width: 350px) {
