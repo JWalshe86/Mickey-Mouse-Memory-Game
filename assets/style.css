@@ -419,8 +419,9 @@ body {
     width: 71%;
     position: absolute;
   }
-  .timer-counter-container {
-    font-size: 4vh;
+ 
+  .congratsCounter, .congratsTimer, .congratsStars {
+    font-size: 2vh !important;
   }
   }
 
@@ -612,10 +613,10 @@ span.counter {
   }
 
   h3{
-    font-size: 4vw !important;
+    font-size: 2vw !important;
   }
   .timer-counter-container{
-    font-size: 3vh ;
+    font-size: 4vh ;
   }
 
 }
