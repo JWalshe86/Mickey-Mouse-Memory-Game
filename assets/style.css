@@ -611,6 +611,13 @@ span.counter {
     text-align: center;
   }
 
+  h3{
+    font-size: 4vw !important;
+  }
+  .timer-counter-container{
+    font-size: 3vh ;
+  }
+
 }
 
 @media screen and (min-width: 240px) and (max-width: 350px) {
