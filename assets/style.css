@@ -918,7 +918,7 @@ h3.cardShake {
 
 @media screen and (min-width: 350px) and (max-width: 650px) {
   .heroTitle {
-    top: 5vh;
+    top: 12vh;
   }
 }
 
@@ -930,7 +930,7 @@ h3.cardShake {
   }
 
   h3{
-    font-size: 1vh !important;
+    font-size: 3vh !important;
   }
   .timer-counter-container{
     font-size: 3vh ;
@@ -985,6 +985,6 @@ h3.cardShake {
   }
 
   h3 {
-    font-size: 4vh !important;
+    font-size: 4vh;
   }
 }
