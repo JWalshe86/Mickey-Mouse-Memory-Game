@@ -439,7 +439,10 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
 
 The site was deployed on github pages from the outset. [Live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
 
-One clicked on settings within the Mickey Mouse Memory Game github repository. One pressed settings and went into the pages section. Under 'Build & Deployment' the source was branch. The branch was main and folder root. 
+1. One clicked on settings within the Mickey Mouse Memory Game github repository.
+2. One pressed settings and went into the pages section. 
+3. Under 'Build & Deployment' the source was branch. 
+4. The branch was main and folder root. 
 
 ### Cloning the GitHub Repository
 
