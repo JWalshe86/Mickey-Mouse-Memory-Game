@@ -460,12 +460,12 @@ The project will now be cloned locally for you to use.
 
 ## Ipad view
 
-![Hero-Image-Ipad](./assets/images/readme-images2/ipadheroimg.png)
+![Hero-Image-Ipad](./assets/images/readme-images2/ipadhero2.png)
 ![Card-Container-Ipad](./assets/images/readme-images2/ipadgamecontainer.png)
 
 ## Mobile View
 
-![Hero-Image-mobile](./assets/images/readme-images2/mobileheroimg.png)
+![Hero-Image-mobile](./assets/images/readme-images2/iphonehero2.png)
 ![Orientation-mobile](./assets/images/readme-images2/TurnDevicePrompt.png)
 ![Card-Container-Mobile](./assets/images/readme-images2/mobilegamecontainer.png)
 
