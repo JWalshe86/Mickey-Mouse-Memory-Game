@@ -276,7 +276,7 @@ When the game is completed a modal pops up congratulating the user. It also tell
 
 Error page displayed when wrong address is entered. It offers a link to the games main page
 
-![404](./assets/images/readme-images2/errorpage.png)
+![404](./assets/images/readme-images2/404images.png)
 
 # Testing
 
