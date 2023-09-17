@@ -389,7 +389,9 @@ Script tested using [beautifytools](https://beautifytools.com/javascript-validat
 
 ### CSS
 
-![CSS-W3C-Validator-Results](./assets/images/readme-images/W3C-CSS-Validator-Results.png) 
+<details><summary>Wireframe Desktop View</summary>
+<img src="./assets/images/readme-images/W3C-CSS-Validator-Results.png">
+</details>
 
 ### Page Performance
 
