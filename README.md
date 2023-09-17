@@ -220,7 +220,7 @@ Upon pressing the 'How Play' button a modal pops up which tells the player how t
 
 The buttons change color from yellow to orange when hovered over. This adds to the sense of interactivity with the page & shows the user they are in the correct place to click. 
 
-![Hover-Button](./assets/images/readme-images2/HoverEffect.png)
+![Hover-Button](./assets/images/readme-images2/hoverbuttoneffectgif.gif)
 
 ## Cards shake when matched
 
