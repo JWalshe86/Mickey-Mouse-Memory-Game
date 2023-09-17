@@ -37,7 +37,7 @@ body {
 .heroTitle {
   /* centers the top of the text to the middle */
   position: relative;
-  top: 30%;
+  top: 20%;
   color: #FFEC3D;
   font-size: 3vw;
   padding: 1vw;
@@ -898,7 +898,6 @@ h3.cardShake {
 @media (max-width: 350px) {
   .heroTitle {
     font-size: 3.5vh !important;
-    top: 40%;
   }
 
   .modal-body{

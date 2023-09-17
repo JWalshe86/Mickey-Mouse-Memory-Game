@@ -174,7 +174,9 @@ The hero image was chosen due to it containing many of the colorful Mickey Mouse
 
 A colour palette was created using [color-adobe](https://color.adobe.com/create/color-wheel)
 
-![color-palette](./assets/images/readme-images/AdobeColor-MyTheme.jpeg)
+<details><summary>Used Color Palette</summary>
+<img src="./assets/images/readme-images/AdobeColor-MyTheme.jpeg">
+</details>
 
 ## Typography
 
