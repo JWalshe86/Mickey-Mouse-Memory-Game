@@ -267,7 +267,7 @@ The reset game button is displayed as a repeat icon. This looks pleasant and is 
 
 When the game is completed a modal pops up congratulating the user. It also tells the user it's socre re stars, time and moves. A blue overlay is also present to focus the users attention on the pop up.
 
-![Congrats-Modal](./assets/images/readme-images/congrats-modal.png)
+![Congrats-Modal](./assets/images/readme-images2/congratsModalPopup.png)
 
 # Testing
 

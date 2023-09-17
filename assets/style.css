@@ -450,7 +450,7 @@ span.counter {
   /*Every HTML element has a mirrored image of itself. The property backface-visibility 
      defaults to visible so one needs to put this to hidden before the front of the cards 
      can be shown when flipped*/
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
   /* so image is sharp */
   object-fit: contain;
   cursor: pointer;
@@ -606,7 +606,7 @@ span.counter {
   background: white;
   border-radius: 6px;
   position: absolute;
-  left: 50%;
+  left: 52vw;
   /* to add zoom out effect */
   transform: translate(-50%, -50%) scale(0.1);
   padding: 0 30px 30px;
