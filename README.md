@@ -440,19 +440,19 @@ The project will now be cloned locally for you to use.
 
 ## Laptop view
 
-![Hero-Image-Laptop](./assets/images/readme-images/laptop-hero-img.png)
-![Card-Container-Laptop](./assets/images/readme-images/laptop-cardContainer.png)
+![Hero-Image-Laptop](./assets/images/readme-images2/desktopheroImage.png)
+![Card-Container-Laptop](./assets/images/readme-images2/desktopcardscontainer.png)
 
 ## Ipad view
 
-![Hero-Image-Ipad](./assets/images/readme-images/Ipad-hero.png)
-![Card-Container-Ipad](./assets/images/readme-images/ipad-card.png)
+![Hero-Image-Ipad](./assets/images/readme-images2/ipadheroimg.png)
+![Card-Container-Ipad](./assets/images/readme-images2/ipadgamecontainer.png)
 
 ## Mobile View
 
-![Hero-Image-mobile](./assets/images/readme-images/hero-mobile.png)
-![Orientation-mobile](./assets/images/readme-images/orientation-mobile.png)
-![Card-Container-Mobile](./assets/images/readme-images/card-container-mobile.png)
+![Hero-Image-mobile](./assets/images/readme-images2/mobileheroimg.png)
+![Orientation-mobile](./assets/images/readme-images2/TurnDevicePrompt.png)
+![Card-Container-Mobile](./assets/images/readme-images2/mobilegamecontainer.png)
 
 # Credits
 
