@@ -958,7 +958,7 @@ h3.cardShake {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 6vh;
     flex-direction: column;
   }
   .info-container::after {
