@@ -653,64 +653,6 @@ span.counter {
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 350px) and (max-width: 500px) {
-  .modal-header .title {
-    padding-left: 38vw !important;
-  }
-  .modal-body {
-    font-size: 12px !important;
-  }
-  .opencongratsModal-popup {
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1.1);
-    position: relative;
-    bottom: -70%;
-  }
-
-  .heroTitle {
-    font-size: 4vh;
-    top: 12vh;
-    padding-left: 8.5vw;
-    text-align: center;
-  }
-
-  .modal {
-    width: 95vw;
-  }
-
-  .howToPlay1,
-  .play-button {
-    padding: 5vw;
-  }
-  .timer {
-    float: right;
-    margin-right: 2vw;
-    margin-left: 2vw;
-  }
-}
-
-@media screen and (min-width: 500px) and (max-width: 600px) {
-}
-.title-container {
-  top: -3vh;
-}
-
-@media (min-width: 667px) {
-  .turnDeviceWrapper {
-    display: none;
-  }
-  .congratsModal-popup {
-    width: 40%;
-  }
-}
-
-@media (max-width: 667px) {
-
-  .modal-header .title {
-    padding: 0 20vw 0 27vw;
-    font-size: 4vw;
-  }
-}
 
 /* stars code adapted from Susan Chen */
 .info-container .stars {
@@ -831,6 +773,66 @@ h3.cardShake {
 }
 
 /* @Media queries */
+
+
+@media screen and (min-width: 350px) and (max-width: 500px) {
+  .modal-header .title {
+    padding-left: 38vw !important;
+  }
+  .modal-body {
+    font-size: 12px !important;
+  }
+  .opencongratsModal-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1.1);
+    position: relative;
+    bottom: -70%;
+  }
+
+  .heroTitle {
+    font-size: 4vh;
+    top: 12vh;
+    padding-left: 8.5vw;
+    text-align: center;
+  }
+
+  .modal {
+    width: 95vw;
+  }
+
+  .howToPlay1,
+  .play-button {
+    padding: 5vw;
+  }
+  .timer {
+    float: right;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+}
+.title-container {
+  top: -3vh;
+}
+
+@media (min-width: 667px) {
+  .turnDeviceWrapper {
+    display: none;
+  }
+  .congratsModal-popup {
+    width: 40%;
+  }
+}
+
+@media (max-width: 667px) {
+
+  .modal-header .title {
+    padding: 0 20vw 0 27vw;
+    font-size: 4vw;
+  }
+}
 
 
 /* Shows pop up when portrait */

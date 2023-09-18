@@ -88,6 +88,7 @@ function flipCard() {
 		hasFlippedCard = true;
 		//   The element that has activated the event is the memory-card(this)
 		firstCard = this;
+		console.log(this)
 		/*A test with  console.log({ hasFlippedCard, firstCard }); now gives 
 		{hasFlippedCard: true, firstCard: div.memory-card.flip} this shows when card
 		is clicked hasFlippedCard is now true & the element that the card has flipped is stored in firstCard.
@@ -155,6 +156,15 @@ function checkForMatch() {
 		tryCounter++;
 		incrementCounter();
 	}
+
+	// script for sounds
+
+	if(isMatch && firstCard.dataset.framework === 'micky-mouse'){
+		console.log('mickey mouse');
+	}
+
+
+
 
 	// The settimeout function is used here so the final card can show before the you won message appears
 	setTimeout(() => {
