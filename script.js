@@ -120,6 +120,10 @@ function flipCard() {
         one uses the dataset object. console.log(firstCard.dataset.framework); logs the name
         of the first card now selected. The same goes for the second card.
  */
+
+
+
+
 function checkForMatch() {
 	/*  If the first and second cards are the same then the eventListener will be removed
   from these cards to prevent them from being clicked again. If they're not the same
@@ -127,12 +131,27 @@ function checkForMatch() {
         flip class is removed. As this occurs so quickly a setTimeout function is used
         so one can see the second card before it flips back */
 
-	// ternary operator used here for simplicity
-	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+	// Creation of a custom event for when two cards match. The event is named cardsHaveMatched, an eventlistener is 
+	// assigned to when this occurs. The cardsHaveMatched is fired when the firstCard dataset matches the second card 
+	// dataset
+	
+	const cardsMatchedEvent = new Event("cardsHaveMatched");
+ 
+	document.addEventListener('cardsHaveMatched', ()=>{
+ 	 console.log("CardsHaveMatched");
+	 //The ovent object is returned when cardsMatchedEvent is logged. This provides lots of information which may be
+	//  manipulated.
+	 console.log(cardsMatchedEvent);
+	});
+ // ternary operator used here for simplicity
+ 	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+	if(isMatch){
+  	document.dispatchEvent(cardsMatchedEvent);
+	}
 
-	/* if there are 6 matches this means the player has won. 
-	a variable for match was set to zero and when this reached
-	6 then the won function is activated */
+// /	 if there are 6 matches this means the player has won. 
+	// a variable for match was set to zero and when this reached
+	// 6 then the won function is activated */
 
 	if (isMatch) {
 		disableCards();
@@ -206,13 +225,12 @@ function checkForMatch() {
 			
 			increaseStar1 = false;
 		}
-		
 	}
 }
 
 // called if the cards match
 function disableCards() {
-	// cards no longer reactive to clicks
+		// cards no longer reactive to clicks
 	firstCard.removeEventListener('click', flipCard);
 	secondCard.removeEventListener('click', flipCard);
 	// cards remain unflipped
@@ -425,7 +443,6 @@ anchor.onclick = function() {
 	}, 500);
 };
 
-
 // script for congratulations you won
 
 let congratsPopup = document.getElementById("congratsModal-popup");
@@ -481,3 +498,4 @@ function oneStarGo() {
 	let congratsModal = document.querySelector('.congratsStars');
 	congratsModal.appendChild(starDisplay1);
 }
+
