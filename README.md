@@ -198,8 +198,6 @@ The Mickey Mouse favicon in the browser text was taken from [icons8](https://ico
 
 ### Sounds 
 
-
-
 - Mickey Mouse, Goofy and Daisy Duck sound clips courtesy of [Mallerie's Sonic Boom The Series](https://www.youtube.com/watch?v=NYttHXAszkk),(https://www.youtube.com/watch?v=elmbWaAKM1E)
 - Donald Duck sound clip courtesty of [Disney-Junior](https://www.youtube.com/watch?v=XOnHtStmbCI)
 - Pete sound clip courtesty of [Dave-Lee-Down-Under](https://www.youtube.com/watch?v=7MXj2F6zLqk)
@@ -245,38 +243,14 @@ The buttons change color from yellow to orange when hovered over. This adds to t
 
  When a specific characters cards match a sound specific to that character is produced. 
 
- Daisy Duck Sound 
-
-<audio src="./audio/daisySound.mp3" controls alt="daisySound"></audio>
-
-Donald Duck Sound 
-
-<audio src="./audio/donaldDuckSound.mp3" controls title="Title"></audio>
-
-Goofy Sound
-
-<audio src="./audio/goofySoundClip.mp3" controls title="Title"></audio>
-
-Pete Sound
-
-<audio src="./audio/peteSoundClip.mp3" controls title="Title"></audio>
-
-Mickey Mouse Sound
-
-<audio src="./audio/MickeyMouseCongrats.mp3" controls title="Title"></audio>
-
-Minnie Mouse Sound
-
-<audio src="./audio/minnieMouseSoundClip.mp3" controls title="Title"></audio>
+ 
 
 ## Stars when button pressed
 
 - This again added to the element of fun, while playing. The code was adapted from [GreatStack](https://youtu.be/Odr24UQs3uY?feature=shared). Stars pop out of both the play and play how buttons when pressed. 
 ![Stars-Explode](./assets/images/readme-images2/starspopgif.gif)
 
-When the stars pop a glistening sound activates
-
-<audio src="audio/Sparkle-sound-effect.mp3" controls title="Title"></audio>
+When the stars pop a glistening sound activates.
 
 ## Text Bounce
 
@@ -297,8 +271,6 @@ Once the first card is clicked this text no longer bounces and is removed from t
 ![Stars-Scoring](./assets/images/readme-images2/starscoregif.gif)
 
 When a star is scored a ping noise activates
-
-<audio src="audio/dingSoundEffect.mp3" controls title="Title"></audio>
 
 ### Timer
 
