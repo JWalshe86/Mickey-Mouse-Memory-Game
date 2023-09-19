@@ -181,8 +181,55 @@ function checkForMatch() {
 			}
 			myPlayDonald();
 		}
-	
 
+			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
+			if(isMatch && firstCard.dataset.framework === 'daisy-duck'){
+				// code for myplay function adapted from computeshorts
+				function myPlayDaisy(){
+					
+				let audio = document.getElementsByClassName('daisyDuckSound')[0];
+					
+					audio.play();
+				}
+				myPlayDaisy();
+			}
+
+				// Pete Sound Clip Plays when two Pete Cards Match
+				if(isMatch && firstCard.dataset.framework === 'pete'){
+					// code for myplay function adapted from computeshorts
+					function myPlayPete(){
+						
+					let audio = document.getElementsByClassName('peteSound')[0];
+						
+						audio.play();
+					}
+					myPlayPete();
+				}
+
+				// Goofy Sound Clip Plays when two Goofy Cards Match
+				if(isMatch && firstCard.dataset.framework === 'pluto'){
+					// code for myplay function adapted from computeshorts
+					function myPlayGoofy(){
+						
+					let audio = document.getElementsByClassName('goofySound')[0];
+						
+						audio.play();
+					}
+					myPlayGoofy();
+				}
+	
+				
+				// Minnie Sound Clip Plays when two Minnie Cards Match
+				if(isMatch && firstCard.dataset.framework === 'minnie-mouse'){
+					// code for myplay function adapted from computeshorts
+					function myPlayMinnie(){
+						
+					let audio = document.getElementsByClassName('minnieSound')[0];
+						
+						audio.play();
+					}
+					myPlayMinnie();
+				}
 
 
 
