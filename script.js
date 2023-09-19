@@ -232,6 +232,16 @@ function checkForMatch() {
 				}
 
 
+					// Sparkle sound affect to play when play button clicked
+					function myPlaySparkle(){
+						
+					let audio = document.getElementsByClassName('sparkleSound')[0];
+						
+						audio.play();
+					}
+					myPlaySparkle();
+				
+
 
 	// The settimeout function is used here so the final card can show before the you won message appears
 	setTimeout(() => {
@@ -488,6 +498,13 @@ let anchor = document.getElementById('anchor');
 let anchorChildren = anchor.children;
 
 anchor.onclick = function() {
+	function myPlaySparkle(){
+						
+		let audio = document.getElementsByClassName('sparkleSound')[0];
+			
+			audio.play();
+		}
+	myPlaySparkle();
 	// this will apply the css for each span
 	// anchorChildren used so both buttons don't fire ballons at same time
 	for (let span of anchorChildren) {
@@ -499,7 +516,7 @@ anchor.onclick = function() {
 			//    the class anim will be removed from each span after .5s
 			span.classList.remove("anim");
 		}
-	}, 500);
+	}, 2000);
 };
 
 

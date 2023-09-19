@@ -201,6 +201,7 @@ The Mickey Mouse favicon in the browser text was taken from [icons8](https://ico
 - Mickey Mouse, Goofy and Daisy Duck sound clips courtesy of [Mallerie's Sonic Boom The Series](https://www.youtube.com/watch?v=NYttHXAszkk),(https://www.youtube.com/watch?v=elmbWaAKM1E)
 - Donald Duck sound clip courtesty of [Disney-Junior](https://www.youtube.com/watch?v=XOnHtStmbCI)
 - Pete sound clip courtesty of [Dave-Lee-Down-Under](https://www.youtube.com/watch?v=7MXj2F6zLqk)
+- Sparkle sound effect from [orangefreesounds](https://orangefreesounds.com/sparkle-sound-effect/#google_vignette)
 
 ### Accessability
 
