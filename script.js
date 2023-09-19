@@ -239,13 +239,15 @@ function checkForMatch() {
 		if (match === 6) {
 			document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
 			document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
-			openCongratsModalPopup();
+			setTimeout(() => {
+				openCongratsModalPopup()
+				myPlayMickeyCongrats();
+			}), 3000;
 			// Mickey Mouse Congratulations
 			function myPlayMickeyCongrats(){
 				let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
 					audio.play();
 				}
-				myPlayMickeyCongrats();
 		}
 	}, 2500);
 
