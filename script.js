@@ -8,8 +8,6 @@ let starCounter = 0;
 
 let increaseStar1 = true;
 
-let playSound = true;
-
 let moves = document.getElementsByClassName('moves');
 
 let stars1Counter = document.querySelector('span.starCounter');
@@ -161,82 +159,63 @@ function checkForMatch() {
 	// script for sounds
 
 		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
-	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && playSound === true){
-		playSound = false;
+	if(isMatch && firstCard.dataset.framework === 'micky-mouse'){
+
 		// code for myplay function adapted from computeshorts
 		function myPlayMickey(){
 			
 		let audio = document.getElementsByClassName('mickeyMouseSound')[0];
 			
 			audio.play();
-
-			setTimeout(() =>{
-				playSound = true;
-				},6000);
 		}
 		myPlayMickey();
 	}
 
 		// Donald Duck Sound Clip Plays when two Donald Duck Cards Match
-		if(isMatch && firstCard.dataset.framework === 'donald-duck'){
-			playSound = false;
+		if(isMatch && firstCard.dataset.framework === 'donald-duck' ){
 			// code for myplay function adapted from computeshorts
 			function myPlayDonald(){
 				
 			let audio = document.getElementsByClassName('donaldDuckSound')[0];
-				
+
 				audio.play();
-				setTimeout(() =>{
-					playSound = true;
-					},6000);
+
 			}
 			myPlayDonald();
 		}
 
 			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
 			if(isMatch && firstCard.dataset.framework === 'daisy-duck'){
-				playSound = false;
 				// code for myplay function adapted from computeshorts
 				function myPlayDaisy(){
 					
 				let audio = document.getElementsByClassName('daisyDuckSound')[0];
-					
-					audio.play();
-					setTimeout(() =>{
-						playSound = true;
-						},6000);
+				audio.play();
 				}
 				myPlayDaisy();
 			}
 
 				// Pete Sound Clip Plays when two Pete Cards Match
 				if(isMatch && firstCard.dataset.framework === 'pete'){
-					playSound = false;
 					// code for myplay function adapted from computeshorts
 					function myPlayPete(){
 						
 					let audio = document.getElementsByClassName('peteSound')[0];
-						
-						audio.play();
-						setTimeout(() =>{
-							playSound = true;
-							},6000);
+					audio.play();			
 					}
 					myPlayPete();
 				}
 
 				// Goofy Sound Clip Plays when two Goofy Cards Match
 				if(isMatch && firstCard.dataset.framework === 'pluto'){
+
+
 					// code for myplay function adapted from computeshorts
 					function myPlayGoofy(){
-						playSound = false;
 						
 					let audio = document.getElementsByClassName('goofySound')[0];
+					audio.play();
 						
-						audio.play();
-						setTimeout(() =>{
-							playSound = true;
-							},6000);
 					}
 					myPlayGoofy();
 				}
@@ -244,16 +223,13 @@ function checkForMatch() {
 				
 				// Minnie Sound Clip Plays when two Minnie Cards Match
 				if(isMatch && firstCard.dataset.framework === 'minnie-mouse'){
-					playSound = false;
 					// code for myplay function adapted from computeshorts
 					function myPlayMinnie(){
 						
 					let audio = document.getElementsByClassName('minnieSound')[0];
 						
 						audio.play();
-						setTimeout(() =>{
-							playSound = true;
-							},6000);
+						
 					}
 					myPlayMinnie();
 				}
