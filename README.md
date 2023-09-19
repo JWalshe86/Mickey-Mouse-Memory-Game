@@ -247,27 +247,27 @@ The buttons change color from yellow to orange when hovered over. This adds to t
 
  Daisy Duck Sound 
 
-<audio src="audio/daisySound.mp3" controls alt="daisySound"></audio>
+<audio src="./audio/daisySound.mp3" controls alt="daisySound"></audio>
 
 Donald Duck Sound 
 
-<audio src="audio/donaldDuckSound.mp3" controls title="Title"></audio>
+<audio src="./audio/donaldDuckSound.mp3" controls title="Title"></audio>
 
 Goofy Sound
 
-<audio src="audio/goofySoundClip.mp3" controls title="Title"></audio>
+<audio src="./audio/goofySoundClip.mp3" controls title="Title"></audio>
 
 Pete Sound
 
-<audio src="audio/peteSoundClip.mp3" controls title="Title"></audio>
+<audio src="./audio/peteSoundClip.mp3" controls title="Title"></audio>
 
 Mickey Mouse Sound
 
-<audio src="audio/MickeyMouseCongrats.mp3" controls title="Title"></audio>
+<audio src="./audio/MickeyMouseCongrats.mp3" controls title="Title"></audio>
 
 Minnie Mouse Sound
 
-<audio src="audio/minnieMouseSoundClip.mp3" controls title="Title"></audio>
+<audio src="./audio/minnieMouseSoundClip.mp3" controls title="Title"></audio>
 
 ## Stars when button pressed
 
