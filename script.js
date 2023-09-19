@@ -254,6 +254,13 @@ function checkForMatch() {
 		if(increaseStar1){
 			increaseStars();
 			oneStarGo();
+			function myPlayDing(){
+			
+				let audio = document.getElementsByClassName('dingSound')[0];
+					
+					audio.play();
+				}
+				myPlayDing();
 			// increase star is set to false so a star is only added once to the counter until 4 matches are made
 			increaseStar1 = false;
 		}
@@ -273,7 +280,13 @@ function checkForMatch() {
 		
 			increaseStar1 = false;
 		}
-		
+		function myPlayDing(){
+			
+			let audio = document.getElementsByClassName('dingSound')[0];
+				
+				audio.play();
+			}
+			myPlayDing();
 	}
 
 	// if you guess 6 matches in less than 30 moves you get 3 stars: max score
@@ -281,6 +294,13 @@ function checkForMatch() {
 	if (match === 6 && moves <= 30 && timer.textContent <= 60 && starCounter === 2) {
 		stars[2].classList.remove('dimmed');
 		thirdStarGo();
+		function myPlayDing(){
+			
+			let audio = document.getElementsByClassName('dingSound')[0];
+				
+				audio.play();
+			}
+			myPlayDing();
 		increaseStar1 = true;
 		if(increaseStar1){
 			increaseStars();

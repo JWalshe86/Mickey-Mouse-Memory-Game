@@ -202,7 +202,7 @@ The Mickey Mouse favicon in the browser text was taken from [icons8](https://ico
 - Donald Duck sound clip courtesty of [Disney-Junior](https://www.youtube.com/watch?v=XOnHtStmbCI)
 - Pete sound clip courtesty of [Dave-Lee-Down-Under](https://www.youtube.com/watch?v=7MXj2F6zLqk)
 - Sparkle sound effect from [orangefreesounds](https://orangefreesounds.com/sparkle-sound-effect/#google_vignette)
-- Mickey Mouse congratulations sound effect [101soundboards.com](https://www.101soundboards.com/sounds/1342530-gosh-what-a-great-place-congratulations-pal)
+- Mickey Mouse congratulations and ding sound sound effects from [101soundboards.com](https://www.101soundboards.com/sounds/1342530-gosh-what-a-great-place-congratulations-pal)
 
 ### Accessability
 
