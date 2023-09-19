@@ -143,6 +143,8 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - Balsamiq Wireframes
 - A colour palette was created using [color-adobe](https://color.adobe.com/create/color-wheel)
 - Gifs created using [EZGIF.COM](https://ezgif.com/)
+- Iphone 7 to record sound clips
+- [veed.io](https://www.veed.io/) to convert sound clips to mp3 which is vscode compatible
 
 ## Languages Used
 
@@ -193,6 +195,10 @@ The Mouse Memoirs font was chosen as the name fit with the theme and the comic s
 ### Iconography
 
 The Mickey Mouse favicon in the browser text was taken from [icons8](https://icons8.com/icons/set/mickey-mouse)
+
+### Sounds 
+
+- Mickey Mouse sound clip courtesy of [Mallerie's Sonic Boom The Series](https://www.youtube.com/watch?v=NYttHXAszkk)
 
 ### Accessability
 
@@ -497,6 +503,7 @@ The project will now be cloned locally for you to use.
 - [draft.dev](https://draft.dev/learn/github-pages-404) for 404 error page template
 - Code for card shake from [unused-css](https://unused-css.com/blog/css-shake-animation/)
 - Inspiration for readme layout [Emma-Hewson](https://github.com/emmahewson/mp2_travel_quiz/tree/main)
+- Code for how to play sound clips on a click event adapted from [Computeshorts](https://stackoverflow.com/questions/51572489/playing-sound-on-click-event-with-pure-javascript)
 
 
 

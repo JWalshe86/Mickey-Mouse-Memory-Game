@@ -159,9 +159,20 @@ function checkForMatch() {
 
 	// script for sounds
 
+		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
 	if(isMatch && firstCard.dataset.framework === 'micky-mouse'){
 		console.log('mickey mouse');
+		
+		function myPlay(){
+			
+	let audio = document.getElementsByClassName('mickeyMouseSound')[0];
+			
+			audio.play();
+		}
+		myPlay();
 	}
+
+	
 
 
 
@@ -491,3 +502,4 @@ function oneStarGo() {
 	let congratsModal = document.querySelector('.congratsStars');
 	congratsModal.appendChild(starDisplay1);
 }
+
