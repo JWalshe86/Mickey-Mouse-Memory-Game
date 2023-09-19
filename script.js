@@ -240,14 +240,8 @@ function checkForMatch() {
 			document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
 			document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
 			setTimeout(() => {
-				openCongratsModalPopup()
-				myPlayMickeyCongrats();
+				openCongratsModalPopup();
 			}), 3000;
-			// Mickey Mouse Congratulations
-			function myPlayMickeyCongrats(){
-				let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
-					audio.play();
-				}
 		}
 	}, 2500);
 
@@ -545,6 +539,16 @@ let congratsPopup = document.getElementById("congratsModal-popup");
 function openCongratsModalPopup() {
 	congratsPopup.classList.add("opencongratsModal-popup");
 	overlay.classList.add('active1');
+
+	setTimeout(() => {
+		myPlayMickeyCongrats();
+	}), 5000;
+
+	// Mickey Mouse Congratulations
+	function myPlayMickeyCongrats(){
+		let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
+			audio.play();
+		}
 }
 
 let congratsModalOverlay = document.querySelector('div.congratsModal-overlay');
