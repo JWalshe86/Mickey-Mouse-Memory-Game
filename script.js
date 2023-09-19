@@ -231,26 +231,20 @@ function checkForMatch() {
 					myPlayMinnie();
 				}
 
-
-					// Sparkle sound affect to play when play button clicked
-					function myPlaySparkle(){
-						
-					let audio = document.getElementsByClassName('sparkleSound')[0];
-						
-						audio.play();
-					}
-					myPlaySparkle();
-				
-
-
 	// The settimeout function is used here so the final card can show before the you won message appears
 	setTimeout(() => {
 		if (match === 6) {
 			document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
 			document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
 			openCongratsModalPopup();
+			// Mickey Mouse Congratulations
+			function myPlayMickeyCongrats(){
+				let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
+					audio.play();
+				}
+				myPlayMickeyCongrats();
 		}
-	}, 1500);
+	}, 2500);
 
 	// if you guess 2 matches in less than 10 moves you get a star
 
