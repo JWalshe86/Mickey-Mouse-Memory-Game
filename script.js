@@ -88,7 +88,6 @@ function flipCard() {
 		hasFlippedCard = true;
 		//   The element that has activated the event is the memory-card(this)
 		firstCard = this;
-		console.log(this)
 		/*A test with  console.log({ hasFlippedCard, firstCard }); now gives 
 		{hasFlippedCard: true, firstCard: div.memory-card.flip} this shows when card
 		is clicked hasFlippedCard is now true & the element that the card has flipped is stored in firstCard.
@@ -161,17 +160,27 @@ function checkForMatch() {
 
 		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
 	if(isMatch && firstCard.dataset.framework === 'micky-mouse'){
-		console.log('mickey mouse');
-		
-		function myPlay(){
+		// code for myplay function adapted from computeshorts
+		function myPlayMickey(){
 			
-	let audio = document.getElementsByClassName('mickeyMouseSound')[0];
+		let audio = document.getElementsByClassName('mickeyMouseSound')[0];
 			
 			audio.play();
 		}
-		myPlay();
+		myPlayMickey();
 	}
 
+		// Donald Duck Sound Clip Plays when two Donald Duck Cards Match
+		if(isMatch && firstCard.dataset.framework === 'donald-duck'){
+			// code for myplay function adapted from computeshorts
+			function myPlayDonald(){
+				
+			let audio = document.getElementsByClassName('donaldDuckSound')[0];
+				
+				audio.play();
+			}
+			myPlayDonald();
+		}
 	
 
 
