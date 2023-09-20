@@ -157,7 +157,7 @@ function checkForMatch() {
 	}
 
 	// script for sounds
-				console.log(lockBoard);
+				
 		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
 	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && !lockBoard){
 
@@ -169,15 +169,15 @@ function checkForMatch() {
 		let audio = document.getElementsByClassName('mickeyMouseSound')[0];
 			
 			audio.play();
-
-		
+			setTimeout(() =>{
+				lockBoard = false;
+					},3000);
 		}
 		myPlayMickey();
-		lockBoard = false;
 	}
 
 		// Donald Duck Sound Clip Plays when two Donald Duck Cards Match
-		if(isMatch && firstCard.dataset.framework === 'donald-duck' && lockBoard === false ){
+		if(isMatch && firstCard.dataset.framework === 'donald-duck' && !lockBoard){
 			// code for myplay function adapted from computeshorts
 			function myPlayDonald(){
 
@@ -187,10 +187,12 @@ function checkForMatch() {
 			let audio = document.getElementsByClassName('donaldDuckSound')[0];
 
 				audio.play();
+				setTimeout(() =>{
+					lockBoard = false;
+						},2000);
 
 			}
 			myPlayDonald();
-			lockBoard = false;
 		}
 
 			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
@@ -202,24 +204,29 @@ function checkForMatch() {
 					
 				let audio = document.getElementsByClassName('daisyDuckSound')[0];
 				audio.play();
+				setTimeout(() =>{
+					lockBoard = false;
+						},1000);
 				}
 				myPlayDaisy();
-				lockBoard = false;
 			}
 
 				// Pete Sound Clip Plays when two Pete Cards Match
-				if(isMatch && firstCard.dataset.framework === 'pete'){
+				if(isMatch && firstCard.dataset.framework === 'pete' && !lockBoard){
 					// code for myplay function adapted from computeshorts
 					function myPlayPete(){
 						
 					let audio = document.getElementsByClassName('peteSound')[0];
-					audio.play();			
+					audio.play();	
+					setTimeout(() =>{
+						lockBoard = false;
+							},1000);		
 					}
 					myPlayPete();
 				}
 
 				// Goofy Sound Clip Plays when two Goofy Cards Match
-				if(isMatch && firstCard.dataset.framework === 'pluto'){
+				if(isMatch && firstCard.dataset.framework === 'pluto' && !lockBoard){
 
 
 					// code for myplay function adapted from computeshorts
@@ -227,14 +234,16 @@ function checkForMatch() {
 						
 					let audio = document.getElementsByClassName('goofySound')[0];
 					audio.play();
-						
+					setTimeout(() =>{
+						lockBoard = false;
+							},1000);
 					}
 					myPlayGoofy();
 				}
 	
 				
 				// Minnie Sound Clip Plays when two Minnie Cards Match
-				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && lockBoard === false){
+				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && !lockBoard){
 					// code for myplay function adapted from computeshorts
 					function myPlayMinnie(){
 
@@ -252,7 +261,7 @@ function checkForMatch() {
 
 	// The settimeout function is used here so the final card can show before the you won message appears
 	setTimeout(() => {
-		if (match === 6) {
+		if (match === 1) {
 			document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
 			document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
 			setTimeout(() => {
@@ -555,10 +564,11 @@ let congratsPopup = document.getElementById("congratsModal-popup");
 function openCongratsModalPopup() {
 	congratsPopup.classList.add("opencongratsModal-popup");
 	overlay.classList.add('active1');
-
-	setTimeout(() => {
-		myPlayMickeyCongrats();
-	}), 5000;
+	
+		setTimeout(function() {
+			myPlayMickeyCongrats();
+		}, 1000);
+	
 
 	// Mickey Mouse Congratulations
 	function myPlayMickeyCongrats(){
@@ -597,7 +607,6 @@ function thirdStarGo() {
 	starDisplay31.className = "fa fa-star";
 	let congratsModal = document.querySelector('.congratsStars');
 	congratsModal.appendChild(starDisplay3);
-	// congratsModal.appendChild(starDisplay31)
 }
 
 function secondStarGo() {
