@@ -628,8 +628,14 @@ function oneStarGo() {
 // into the function and muted & pause methods are added to all audios
 
 // code adapted from Knowledge Base YouTube
+let volume = false;
+
 	function muteMe(sound){
 		sound.muted=true;	
+	}
+
+	function UnmuteMe(sound){
+		sound.muted=false;	
 	}
 
 	function muteSounds() {
@@ -637,7 +643,29 @@ function oneStarGo() {
 		let sounds = document.querySelectorAll('audio');
 		// for each sound add mute me to it
 		[].forEach.call(sounds, function(sound){muteMe(sound);});
+		volume = true;
 	}
 	
+	function UnmuteSounds() {
+		// returns node list of all sounds
+		let sounds = document.querySelectorAll('audio');
+		// for each sound add mute me to it
+		[].forEach.call(sounds, function(sound){UnmuteMe(sound);;});
+		volume = false;
+	}
+
 	let muteIcon = document.querySelector('#muteIcon');
-	muteIcon.addEventListener('click', muteSounds);
+	muteIcon.addEventListener('click', toggleVolume);
+
+
+//toggle between volume/no volume
+// mute is always false and unmute is always true so when the function below
+// asks if one is either true of false it will always be switching between the two
+	function toggleVolume() {
+		volume? UnmuteSounds() : muteSounds();
+	}
+
+
+
+
+
