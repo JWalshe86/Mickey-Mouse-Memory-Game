@@ -261,7 +261,7 @@ function checkForMatch() {
 
 	// The settimeout function is used here so the final card can show before the you won message appears
 	setTimeout(() => {
-		if (match === 1) {
+		if (match === 6) {
 			document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
 			document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
 			setTimeout(() => {
@@ -567,7 +567,7 @@ function openCongratsModalPopup() {
 	
 		setTimeout(function() {
 			myPlayMickeyCongrats();
-		}, 1000);
+		}, 2000);
 	
 
 	// Mickey Mouse Congratulations
