@@ -8,7 +8,6 @@
     <meta name="keywords" content="Mickey Mouse, Card Matching, Memory Game">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://kit.fontawesome.com/ba48ac2667.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Open+Sans:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
     <title class="main-title">Mickey Mouse Memory Game</title>
@@ -17,6 +16,8 @@
     <a target="_blank" href="https://icons8.com"></a>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
   </head>
   <body>
     <!-- Hero Image -->
@@ -57,11 +58,13 @@
         <!-- <div class="play-howToPlay-buttons-container"> -->
         <!-- code for modal adapted from WebDevSimplified -->
         <!-- <button data-modal-target="#modal">How to play -->
-            <div id="muteIcon">
-                  <i class="fa-solid fa-volume-xmark"></i>
-                  <i class="fa-solid fa-volume-high"></i>
-            </div>        
-          <button class="howToPlay1" id="howToPlay1">How play?
+
+          <button class="mute-button">
+            <span class="hidden"><i class="fa-solid fa-volume-xmark"></i> Muted</span>
+            <span><i class="fa-solid fa-volume-off"></i> Mute</span>
+          </button>
+          
+        <button class="howToPlay1" id="howToPlay1">How play?
           <!-- Each span represents a star when the button is pressed -->
           <span></span>
           <span></span>

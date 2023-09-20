@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 
+
 let cardsMatched = [];
 let cardsMatched2 = [];
 let tryCounter = 0;
@@ -627,29 +628,24 @@ function oneStarGo() {
 // sound here refers to all the audio elements. It is then passed
 // into the function and muted & pause methods are added to all audios
 
-// code adapted from Knowledge Base YouTube
+// code adapted from Knowledge Base YouTube & isherwood stackoverflow
 let volume = false;
-let muteIcon = document.querySelector('#muteIcon');
-muteIcon.addEventListener('click', toggleVolume);
 
 	function muteMe(sound){
 		sound.muted=true;	
 	}
-
+	let unMuteMe = document.getElementById('UnMuteIcon');
 	function UnmuteMe(sound){
 		sound.muted=false;	
 	}
 
 	function muteSounds() {
-		// returns node list of all sounds
+	// 	// returns node list of all sounds
 		let sounds = document.querySelectorAll('audio');
-		// for each sound add mute me to it
+	// 	// for each sound add mute me to it
 		[].forEach.call(sounds, function(sound){muteMe(sound);});
 		volume = true;
-		muteIcon.children[1].classList.add("volumeOn");
-		muteIcon.children[0].classList.remove("volumeOn");
-	
-	}
+	}	
 	
 	function UnmuteSounds() {
 		// returns node list of all sounds
@@ -657,20 +653,22 @@ muteIcon.addEventListener('click', toggleVolume);
 		// for each sound add mute me to it
 		[].forEach.call(sounds, function(sound){UnmuteMe(sound);;});
 		volume = false;
-		muteIcon.children[0].classList.add("volumeOn");
-		muteIcon.children[1].classList.remove("volumeOn");
-	}
+			}
 
-
-
-//toggle between volume/no volume
+// toggle between volume/no volume
 // mute is always false and unmute is always true so when the function below
 // asks if one is either true of false it will always be switching between the two
 	function toggleVolume() {
 		volume? UnmuteSounds() : muteSounds();
 	}
 
+	const muteBtn = document.querySelector('.mute-button');
 
-
+muteBtn.addEventListener('click', () => {
+	toggleVolume();
+  muteBtn.querySelectorAll('span').forEach(el => {
+    el.classList.toggle('hidden');
+  });
+});
 
 

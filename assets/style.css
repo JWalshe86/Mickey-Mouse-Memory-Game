@@ -999,12 +999,6 @@ h3.cardShake {
   }
 }
 
-i.fa-solid.fa-volume-xmark, i.fa-solid.fa-volume-high{
-  cursor: pointer;
-  font-size: 4vh;
-}
-
-.volumeOn{
+.hidden {
   display: none;
-  background-color: transparent;
 }
