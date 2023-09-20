@@ -70,7 +70,7 @@ body {
 /* styling of play & how to play buttons code adapted from GreatStack */
 
 .howToPlay1,
-.play-button {
+.play-button, .mute-button {
   display: inline-block;
   font-size: 4vh;
   padding: 2vw;
@@ -1002,3 +1002,4 @@ h3.cardShake {
 .hidden {
   display: none;
 }
+

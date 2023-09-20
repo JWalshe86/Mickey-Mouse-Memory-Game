@@ -668,6 +668,7 @@ muteBtn.addEventListener('click', () => {
 	toggleVolume();
   muteBtn.querySelectorAll('span').forEach(el => {
     el.classList.toggle('hidden');
+	console.log(el);
   });
 });
 
