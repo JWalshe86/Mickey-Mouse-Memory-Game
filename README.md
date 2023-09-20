@@ -117,6 +117,10 @@ The scope covered the needs of 3+ year old children and their need for fun and m
 - Left button which brings viewer to the game
 - Right button which creates a pop up which explains how to play the game to the viewer
 
+###
+
+- I felt a header wasn't required and would have added to the complexity of the landing page which I hoped to avoid. 
+
 ### Game Page
 
 - Title prompt to explain to viewer all they need to do is click a card to start the game

@@ -638,6 +638,6 @@ function oneStarGo() {
 		// for each sound add mute me to it
 		[].forEach.call(sounds, function(sound){muteMe(sound);});
 	}
-
-	muteSounds();
 	
+	let muteIcon = document.querySelector('#muteIcon');
+	muteIcon.addEventListener('click', muteSounds);
