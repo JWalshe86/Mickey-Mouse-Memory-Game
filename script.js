@@ -629,6 +629,8 @@ function oneStarGo() {
 
 // code adapted from Knowledge Base YouTube
 let volume = false;
+let muteIcon = document.querySelector('#muteIcon');
+muteIcon.addEventListener('click', toggleVolume);
 
 	function muteMe(sound){
 		sound.muted=true;	
@@ -644,6 +646,9 @@ let volume = false;
 		// for each sound add mute me to it
 		[].forEach.call(sounds, function(sound){muteMe(sound);});
 		volume = true;
+		muteIcon.children[1].classList.add("volumeOn");
+		muteIcon.children[0].classList.remove("volumeOn");
+	
 	}
 	
 	function UnmuteSounds() {
@@ -652,10 +657,10 @@ let volume = false;
 		// for each sound add mute me to it
 		[].forEach.call(sounds, function(sound){UnmuteMe(sound);;});
 		volume = false;
+		muteIcon.children[0].classList.add("volumeOn");
+		muteIcon.children[1].classList.remove("volumeOn");
 	}
 
-	let muteIcon = document.querySelector('#muteIcon');
-	muteIcon.addEventListener('click', toggleVolume);
 
 
 //toggle between volume/no volume

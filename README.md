@@ -138,7 +138,8 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - Images compressed on [TinyPNG](https://tinypng.com/)
 - Background image color changed using [remove.bg](https://www.remove.bg/t/change-background)
 - Icon on back of cards change using [lunapic](https://www9.lunapic.com/editor/)
-- Stars & reset icon from [Font Awesome]("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+- Stars & reset icon from [cdnjs.com](https://cdnjs.com/libraries/animate.css)
+- Volume icons from [Font-Awesome](https://fontawesome.com/)
 - Javascript validator [beautifytools](https://beautifytools.com/javascript-validator.php)
 - Responsiveness check [Am-I-Responsive?](https://ui.dev/amiresponsive?)
 - Lighthouse check on google chrome
