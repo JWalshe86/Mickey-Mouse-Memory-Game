@@ -70,7 +70,7 @@ function flipCard() {
 	if (lockBoard) return;
 
 	/*If the first card is clicked twice then the eventlistener is removed
-	and the card will remain unflipped, as if it was correctly matched. It it's
+	and the card will remain unflipped, as if it was correctly matched. If it's
 	the first card click the this variable holds the first card but the condition
 	is unset so it's going to move to false. If it is the second click then the second
 	div holds the second card.*/
@@ -157,24 +157,32 @@ function checkForMatch() {
 	}
 
 	// script for sounds
-
+				console.log(lockBoard);
 		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
-	if(isMatch && firstCard.dataset.framework === 'micky-mouse'){
+	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && !lockBoard){
 
 		// code for myplay function adapted from computeshorts
 		function myPlayMickey(){
+		
+		lockBoard = true;
 			
 		let audio = document.getElementsByClassName('mickeyMouseSound')[0];
 			
 			audio.play();
+
+		
 		}
 		myPlayMickey();
+		lockBoard = false;
 	}
 
 		// Donald Duck Sound Clip Plays when two Donald Duck Cards Match
-		if(isMatch && firstCard.dataset.framework === 'donald-duck' ){
+		if(isMatch && firstCard.dataset.framework === 'donald-duck' && lockBoard === false ){
 			// code for myplay function adapted from computeshorts
 			function myPlayDonald(){
+
+				lockBoard = true;
+			
 				
 			let audio = document.getElementsByClassName('donaldDuckSound')[0];
 
@@ -182,17 +190,21 @@ function checkForMatch() {
 
 			}
 			myPlayDonald();
+			lockBoard = false;
 		}
 
 			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
-			if(isMatch && firstCard.dataset.framework === 'daisy-duck'){
+			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && !lockBoard){
 				// code for myplay function adapted from computeshorts
 				function myPlayDaisy(){
+
+					lockBoard = true;
 					
 				let audio = document.getElementsByClassName('daisyDuckSound')[0];
 				audio.play();
 				}
 				myPlayDaisy();
+				lockBoard = false;
 			}
 
 				// Pete Sound Clip Plays when two Pete Cards Match
@@ -222,16 +234,20 @@ function checkForMatch() {
 	
 				
 				// Minnie Sound Clip Plays when two Minnie Cards Match
-				if(isMatch && firstCard.dataset.framework === 'minnie-mouse'){
+				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && lockBoard === false){
 					// code for myplay function adapted from computeshorts
 					function myPlayMinnie(){
+
+						lockBoard = true;
 						
 					let audio = document.getElementsByClassName('minnieSound')[0];
-						
-						audio.play();
-						
+					audio.play();
+						setTimeout(() =>{
+						lockBoard = false;
+							},3000);
 					}
 					myPlayMinnie();
+					
 				}
 
 	// The settimeout function is used here so the final card can show before the you won message appears

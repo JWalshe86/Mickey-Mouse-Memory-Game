@@ -450,7 +450,7 @@ span.counter {
   /*Every HTML element has a mirrored image of itself. The property backface-visibility 
      defaults to visible so one needs to put this to hidden before the front of the cards 
      can be shown when flipped*/
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
   /* so image is sharp */
   object-fit: contain;
   cursor: pointer;
