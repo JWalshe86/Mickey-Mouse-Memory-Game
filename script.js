@@ -623,3 +623,21 @@ function oneStarGo() {
 	congratsModal.appendChild(starDisplay1);
 }
 
+//Mute sound script
+// sound here refers to all the audio elements. It is then passed
+// into the function and muted & pause methods are added to all audios
+
+// code adapted from Knowledge Base YouTube
+	function muteMe(sound){
+		sound.muted=true;	
+	}
+
+	function muteSounds() {
+		// returns node list of all sounds
+		let sounds = document.querySelectorAll('audio');
+		// for each sound add mute me to it
+		[].forEach.call(sounds, function(sound){muteMe(sound);});
+	}
+
+	muteSounds();
+	

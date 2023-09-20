@@ -134,7 +134,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - Images compressed on [TinyPNG](https://tinypng.com/)
 - Background image color changed using [remove.bg](https://www.remove.bg/t/change-background)
 - Icon on back of cards change using [lunapic](https://www9.lunapic.com/editor/)
-- Stars from [Font Awesome]("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+- Stars & reset icon from [Font Awesome]("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
 - Javascript validator [beautifytools](https://beautifytools.com/javascript-validator.php)
 - Responsiveness check [Am-I-Responsive?](https://ui.dev/amiresponsive?)
 - Lighthouse check on google chrome
@@ -145,6 +145,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - Gifs created using [EZGIF.COM](https://ezgif.com/)
 - Iphone 7 to record sound clips
 - [veed.io](https://www.veed.io/) to convert sound clips to mp3 which is vscode compatible
+- To convert youtube mickey mouse sound clips to mp3 [OnlyMP3](https://en.onlymp3.to/TCH/)
 
 ## Languages Used
 
@@ -518,7 +519,8 @@ The project will now be cloned locally for you to use.
 - Code for card shake from [unused-css](https://unused-css.com/blog/css-shake-animation/)
 - Inspiration for readme layout [Emma-Hewson](https://github.com/emmahewson/mp2_travel_quiz/tree/main)
 - Code for how to play sound clips on a click event adapted from [Computeshorts](https://stackoverflow.com/questions/51572489/playing-sound-on-click-event-with-pure-javascript)
-
+- Feedback from Slack Standup 20/09/23:  Footer add with contact & why no header add to readme & Turn sounds off option && youtube to mp3 converter search && limited user tries && image not excellent quality for game container && clear any warnings w3 validators
+- Mute Sounds code adapted from [Knowledge-Base](https://www.youtube.com/watch?v=5RFpouDGTug);
 
 
 
