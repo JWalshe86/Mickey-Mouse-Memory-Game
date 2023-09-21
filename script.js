@@ -75,6 +75,10 @@ function flipCard() {
 	if (this != firstCard && this !=secondCard) {
 		moveC();
 	}
+	// Alternative option for hard mode
+	if (this != firstCard && this !=secondCard && !startMoves) {
+		startMovesCountdown();
+	}
 
 	// if lockBoard is true the rest of the function won't get executed
 	if (lockBoard) return;
@@ -477,14 +481,40 @@ function startCountdownTimer() {
 
 }
 
+// Code for Moves Countdown
+let startMoves = true;
+let movesPlus1 = true;
+function startMovesCountdown(){
+
+	if (moves == 0 &&  movesPlus1){
+		movesPlus1 = true;
+		moves = 3;
+		movesPlus1 = false;
+	}	
+
+	if(!startMoves){
+		moves--;
+	}
+	// the delay of a second is mitigated by the settime out here
+
+
+		if(moves == 0){
+			console.log('test');
+			}		
+	
+			
+
+}
+
 // moves counter
 /** 1 added to counter variable each time a move is made */
 
 function moveC() {
 
-	moves++;
-
-	counter.innerHTML = moves;
+	if(startMoves){
+		moves++;	
+	}
+		counter.innerHTML = moves;
 }
 
 function increaseStars() {
@@ -721,13 +751,14 @@ function leftClick(){
 // 110 px is the width of either button and this function moves the 
 	// button 110px when it's activated. 
 function rightClick(){
+	startMoves = false;
+	startMovesCountdown()
 	btn.style.left = '8.5vw';
 	timerActivate = false;
 	var timer = document.querySelector(".timer");
 	timer.innerHTML = "60 secs";
 	clearInterval(interval);
-
-
+	counter.innerHTML = 30;
 	startCountdownTimer();
 }
 
