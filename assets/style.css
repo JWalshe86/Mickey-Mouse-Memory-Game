@@ -781,11 +781,13 @@ footer {
 	text-align: center;
 	background-color: #FFEC3D;
 	color: blue;
+  display: flex;
+  justify-content: center;
 }
 
 footer div {
 	padding-top: 10px;
-	display: inline;
+	display: flex;
 	position: relative;
 }
 
@@ -794,6 +796,10 @@ footer i {
 	color: blue;
 	margin: 0.5% 5%;
 	padding: 1% 0.5%;
+}
+
+div.social.links{
+  column-gap: 2vw;
 }
 
 .social-media a {
