@@ -53,11 +53,15 @@ let clickCard = document.getElementsByTagName('h3');
 
 let increaseFontAfterClick = document.querySelector('div.info-container');
 
+let startCounter = false;
+
 // Card Flip
 
 function flipCard() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 	
+	startCounter = true;
+
 	if(timerActivate){
 		startClock();
 	}
@@ -458,17 +462,20 @@ function startCountdownTimer() {
       second = 60;
     }
 	timer.innerHTML = second + " secs";
-		// so the countdown begins only after the first card click
-	if(hasFlippedCard){
-		second--;
+
+		// so the countdown begins only after the very first card click
+	if(startCounter){
+		
+			second--;
 	}
+	
+	
 	// game resets if countdown reaches 0s
 	if(second == 0){
 		resetGame()
 		}
     
   }, 1000);
-
 
 }
 
