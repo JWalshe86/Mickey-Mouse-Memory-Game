@@ -374,7 +374,7 @@ body {
   display: flex;
   flex-direction: column;
   height: inherit;
-  background-image: url(./images/readme-images/game-background\ 1500px-removebg-preview-dark.jpg);
+  background-image: url(./images/game-background\ 1500px.png);
   /* advice from W3Schools on using background size 100% 100% to keep background img stable  */
   background-size: 100% 100%;
   align-items: center;
@@ -779,7 +779,7 @@ footer {
 	width: 100%;
 	text-align: center;
 	background-color: #FFEC3D;
-	color: blue;
+	color: black;
   display: flex;
   justify-content:space-evenly;
 }
@@ -793,7 +793,7 @@ footer div {
 
 footer i {
 	font-size: 180%;
-	color: blue;
+	color: black;
 	margin: 0.5% 5%;
 	padding: 1% 0.5%;
 }
@@ -813,7 +813,7 @@ a.fab.fa-{
     position: relative;
     font-family: "Mouse Memoirs", sans-serif;
     font-size: 180%;
-    color: blue;
+    color: black;
     margin: 0.5% 5%;
 }
 
