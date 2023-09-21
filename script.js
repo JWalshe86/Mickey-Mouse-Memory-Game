@@ -684,7 +684,7 @@ function leftClick(){
 // 110 px is the width of either button and this function moves the 
 	// button 110px when it's activated. 
 function rightClick(){
-	btn.style.left = '110px';
+	btn.style.left = '8.5vw';
 }
 
 

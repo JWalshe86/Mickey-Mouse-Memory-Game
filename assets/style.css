@@ -1062,8 +1062,9 @@ a.fab.fa-{
 /* Toggle button styling */
 
 .button-box {
-  width: 220px;
-  margin: 35px auto;
+  width: 17vw;
+  height: 7vh;
+  margin: 2vh auto;
   position: relative;
   border-radius: 30px;
   background: rgb(255, 236, 61, 0.2);
@@ -1072,20 +1073,21 @@ a.fab.fa-{
 }
 
 .toggle-btn{
-  padding: 10px 40px;
+  padding: 0.5vh 2vw;
   cursor: pointer;
   background: transparent;
   border: 0;
   outline: none;
   position: relative;
   text-align: center;
+  font-size: 2vw;
 }
 
 #btn{
   left:0;
   top:0;
   position: absolute;
-  width: 110px;
+  width: 8.5vw;
   height: 100%;
   background: yellow;
   border-radius: 30px;
