@@ -1069,25 +1069,27 @@ a.fab.fa-{
   border-radius: 30px;
   background: rgb(255, 236, 61, 0.2);
   display: flex;
-  
+  border: solid;
 }
 
 .toggle-btn{
-  padding: 0.5vh 2vw;
+  padding: 0.5vh 2.5vw;
   cursor: pointer;
   background: transparent;
   border: 0;
   outline: none;
   position: relative;
   text-align: center;
-  font-size: 2vw;
+  font-size: 2.2vw;
+  font-weight:bolder;
+  font-family: "Mouse Memoirs", sans-serif;
 }
 
 #btn{
   left:0;
   top:0;
   position: absolute;
-  width: 8.5vw;
+  width: 7.7vw;
   height: 100%;
   background: yellow;
   border-radius: 30px;

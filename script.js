@@ -431,14 +431,47 @@ function startTimer() {
 				timer.innerHTML = second;
 				second++;
 
-
 			}, 1000);
 			called++;
+
+			
 		}
 	};
 }
 
 const startClock = startTimer();
+
+// Code for countdown timer adapted from Riddhijain stackoverflow
+
+// var second = 60;
+// var timer = document.querySelector(".timer");
+// var interval;
+
+// function startTimer() {
+//   interval = setInterval(function() {
+//     timer.innerHTML = second + " secs";
+//     if (second == 0) {
+
+      
+//       minute--;
+//       second = 60
+//     }
+
+//     second--;
+//   }, 1000);
+// }
+
+// //reset timer
+// second = 60;
+// var timer = document.querySelector(".timer");
+// timer.innerHTML = "60 secs";
+// clearInterval(interval);
+// startTimer()
+
+
+
+
+
 
 // moves counter
 /** 1 added to counter variable each time a move is made */
