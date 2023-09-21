@@ -9,6 +9,8 @@ let starCounter = 0;
 
 let increaseStar1 = true;
 
+let timerActivate = true;
+
 let moves = document.getElementsByClassName('moves');
 
 let stars1Counter = document.querySelector('span.starCounter');
@@ -55,7 +57,10 @@ let increaseFontAfterClick = document.querySelector('div.info-container');
 
 function flipCard() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
-	startClock();
+	
+	if(timerActivate){
+		startClock();
+	}
 	
 	clickCard[0].classList.remove('cardShake');
 	clickCard[0].classList.add('after');
@@ -403,7 +408,6 @@ By wrapping the function in parentheses means it will be immediately invoked aft
  this click event occurs a function named cardflip will activate  */
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-
 // js for timer 
 /* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/assets/js/script.js) */
 
@@ -443,35 +447,28 @@ const startClock = startTimer();
 
 // Code for countdown timer adapted from Riddhijain stackoverflow
 
-// var second = 60;
-// var timer = document.querySelector(".timer");
-// var interval;
 
-// function startTimer() {
-//   interval = setInterval(function() {
-//     timer.innerHTML = second + " secs";
-//     if (second == 0) {
+var timer = document.querySelector(".timer");
+var interval;
 
-      
-//       minute--;
-//       second = 60
-//     }
+function startCountdownTimer() {
+  interval = setInterval(function() {
+    timer.innerHTML = second + " secs";
+    if (second == 0) {
 
-//     second--;
-//   }, 1000);
-// }
+      second = 60
+    }
+		// so the countdown begins only after the first card click
+	if(hasFlippedCard){
+		second--;
+	}
+    
 
-// //reset timer
-// second = 60;
-// var timer = document.querySelector(".timer");
-// timer.innerHTML = "60 secs";
-// clearInterval(interval);
-// startTimer()
+  }, 1000);
 
+  //reset timer
 
-
-
-
+}
 
 // moves counter
 /** 1 added to counter variable each time a move is made */
@@ -718,6 +715,16 @@ function leftClick(){
 	// button 110px when it's activated. 
 function rightClick(){
 	btn.style.left = '8.5vw';
+	var second = 60;
+	timerActivate = false;
+
+	second = 60;
+	var timer = document.querySelector(".timer");
+	timer.innerHTML = "60 secs";
+	clearInterval(interval);
+
+
+	startCountdownTimer();
 }
 
 
