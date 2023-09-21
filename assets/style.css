@@ -932,6 +932,10 @@ a.fab.fa-{
   .info-container {
     visibility: hidden;
   }
+
+  footer{
+    display: none;
+  }
  
   #reset {
     display: none;
