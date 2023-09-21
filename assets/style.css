@@ -778,11 +778,9 @@ h3.cardShake {
 footer {
 	float: left;
 	width: 100%;
-	height: 90px;
 	text-align: center;
-	background-color: #a9bedb;
-	color: #3c444c;
-	margin-top: 30px;
+	background-color: #FFEC3D;
+	color: blue;
 }
 
 footer div {
@@ -793,7 +791,7 @@ footer div {
 
 footer i {
 	font-size: 180%;
-	color: #47525c;
+	color: blue;
 	margin: 0.5% 5%;
 	padding: 1% 0.5%;
 }
