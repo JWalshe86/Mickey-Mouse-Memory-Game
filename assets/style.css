@@ -347,7 +347,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 2vw;
 }
 .info-container::after {
   width: 50%;
@@ -378,7 +378,6 @@ body {
   /* advice from W3Schools on using background size 100% 100% to keep background img stable  */
   background-size: 100% 100%;
   align-items: center;
-  padding-right: 3%;
   padding-top: 2%;
 }
 
@@ -782,13 +781,14 @@ footer {
 	background-color: #FFEC3D;
 	color: blue;
   display: flex;
-  justify-content: center;
+  justify-content:space-evenly;
 }
 
 footer div {
-	padding-top: 10px;
+	padding: 4vh;
 	display: flex;
 	position: relative;
+  font-size:2vw;
 }
 
 footer i {
@@ -800,20 +800,22 @@ footer i {
 
 div.social.links{
   column-gap: 2vw;
+  padding-right: 6vw;
 }
 
 .social-media a {
 	margin-left: 2%;
 }
 
-.fa-envelope {
-	margin-right: 0;
+a.fab.fa-{
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 180%;
+    color: blue;
+    margin: 0.5% 5%;
 }
-
-.envelope-icon {
-	padding-right: 100px;
-}
-
 
 
 /* @Media queries */
