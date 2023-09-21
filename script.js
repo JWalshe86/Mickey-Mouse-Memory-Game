@@ -672,4 +672,32 @@ muteBtn.addEventListener('click', () => {
   });
 });
 
+// code adapted from Tuat Tran Anh
+// script for easy/hard toggle button
+
+let btn = document.getElementById('btn');
+
+function leftClick(){
+	
+	btn.style.left = '0';
+}
+// 110 px is the width of either button and this function moves the 
+	// button 110px when it's activated. 
+function rightClick(){
+	btn.style.left = '110px';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

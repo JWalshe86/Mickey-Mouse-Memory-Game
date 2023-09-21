@@ -539,6 +539,7 @@ The project will now be cloned locally for you to use.
 - Feedback from Slack Standup 20/09/23:  Footer add with contact & why no header add to readme & Turn sounds off option && youtube to mp3 converter search && limited user tries && image not excellent quality for game container && clear any warnings w3 validators
 - Mute Sounds code adapted from [Knowledge-Base](https://www.youtube.com/watch?v=5RFpouDGTug);
 - How to toggle audio icon (isherwood)[https://stackoverflow.com/questions/73749217/how-can-i-make-my-button-toggle-a-mute-and-unmuted-symbol-as-well-as-unmute-and]
+- Easy/Hard toggle button code adapted from [Tuat Tran Anh Youtube](https://www.youtube.com/watch?v=vfFSoTvJsV4)
 
 
 

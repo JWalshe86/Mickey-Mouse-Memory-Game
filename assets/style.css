@@ -1059,3 +1059,39 @@ a.fab.fa-{
   display: none;
 }
 
+/* Toggle button styling */
+
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+  background: rgb(255, 236, 61, 0.2);
+  display: flex;
+  
+}
+
+.toggle-btn{
+  padding: 10px 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  text-align: center;
+}
+
+#btn{
+  left:0;
+  top:0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: yellow;
+  border-radius: 30px;
+  transition: .5s;
+}
+
+
+
+
