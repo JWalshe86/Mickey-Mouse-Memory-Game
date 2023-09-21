@@ -454,6 +454,8 @@ span.counter {
   /* so image is sharp */
   object-fit: contain;
   cursor: pointer;
+  border-color: black;
+  border: outset;
 }
 
 .card-front {
