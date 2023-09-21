@@ -447,26 +447,28 @@ const startClock = startTimer();
 
 // Code for countdown timer adapted from Riddhijain stackoverflow
 
-
 var timer = document.querySelector(".timer");
 var interval;
 
 function startCountdownTimer() {
   interval = setInterval(function() {
-    timer.innerHTML = second + " secs";
+    
     if (second == 0) {
 
-      second = 60
+      second = 60;
     }
+	timer.innerHTML = second + " secs";
 		// so the countdown begins only after the first card click
 	if(hasFlippedCard){
 		second--;
 	}
+	// game resets if countdown reaches 0s
+	if(second == 0){
+		resetGame()
+		}
     
-
   }, 1000);
 
-  //reset timer
 
 }
 
@@ -715,10 +717,7 @@ function leftClick(){
 	// button 110px when it's activated. 
 function rightClick(){
 	btn.style.left = '8.5vw';
-	var second = 60;
 	timerActivate = false;
-
-	second = 60;
 	var timer = document.querySelector(".timer");
 	timer.innerHTML = "60 secs";
 	clearInterval(interval);
