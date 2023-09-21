@@ -28,7 +28,7 @@
       <div class="buttons-container">
         <!-- code adapted from nattik Gur-Arie, stackoverflow. -->
         <!-- code to delay anchor tag for play button until balloons pop -->
-        <a href="javascript:setTimeout(()=>{window.location = '#anchor1' },4500)" class="play-button" id="anchor">Play
+        <a href="javascript:setTimeout(()=>{window.location = '#anchor1' },4500)" class="play-button" id="anchor">Play Now!
           <!-- Each span represents a star when the button is pressed -->
           <span></span>
           <span></span>
@@ -60,11 +60,11 @@
         <!-- <button data-modal-target="#modal">How to play -->
 
           <button class="mute-button">
-            <span class="hidden"><i class="fa-solid fa-volume-xmark"></i></span>
-            <span><i class="fa-solid fa-volume-off"></i></span>
+            <span class="hidden"><i class="fa-solid fa-volume-off"></i></span>
+            <span><i class="fa-solid fa-volume-xmark"></i></span>
           </button>
           
-        <button class="howToPlay1" id="howToPlay1">How play?
+        <button class="howToPlay1" id="howToPlay1">Play How?
           <!-- Each span represents a star when the button is pressed -->
           <span></span>
           <span></span>
@@ -212,6 +212,7 @@
       </div>
     </div>
     <div id="anchor1"></div>
+
     <!-- audio section -->
           <audio class="mickeyMouseSound" src="./audio/mickey-mouse-audio.mp3"></audio>
           <audio class="donaldDuckSound" src="./audio/donaldDuckSound.mp3"></audio>
@@ -222,6 +223,18 @@
           <audio class="sparkleSound" src="./audio/Sparkle-sound-effect.mp3"></audio>
           <audio class="mickeyMouseCongrats" src="./audio/MickeyMouseCongrats.mp3"></audio>
           <audio class="dingSound" src="./audio/dingSoundEffect.mp3"></audio>
+
+              <!--FOOTER section-->
+              <!-- code adapted from Iris Smok -->
+      <footer>
+        <div class="envelope-icon"><i class="fas fa-envelope"></i> mickymousememorygame@gmail.com</div>
+        <div class="social links">
+           <a href="https://instagram.com/" rel="noopener" target="_blank" 
+              aria-label="Visit our Instagram page (opens in a new tab)" ><i class="fab fa-instagram"></i></a>
+           <a href="https://www.facebook.com/" rel="noopener" target="_blank" 
+              aria-label="Visit our Facebook page (opens in a new tab)" ><i class="fab fa-facebook"></i></a>
+        </div>
+     </footer>
 
     <script src="script.js"></script>
   </body>
