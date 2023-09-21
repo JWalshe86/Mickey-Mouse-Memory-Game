@@ -228,6 +228,12 @@ For smaller screensizes the user is prompted to turn the device from portrait to
 
 ![Orientation-change](./assets/images/readme-images2/TurnDevicePrompt.png)
 
+## Sound On/Off button
+
+Pressing the volume icon toggles between having sound or not. This adds to the users sense of control and improves their experience.
+
+![Sound-toggle-button](./assets/images/readme-images/audio-button.gif)
+
 ## How play modal
 
 Upon pressing the 'How Play' button a modal pops up which tells the player how to play the game. A yellow overlay is also used to focus the users attention to the pop up.
@@ -291,6 +297,12 @@ The moves counter increases whenever a player tries another card. Getting 3 star
 The reset game button is displayed as a repeat icon. This looks pleasant and is easily accessible.
 
 ![Game-Feedback](./assets/images/readme-images2/ResetGame.png)
+
+### Footer
+
+The footer contains an email address for the user to contact. There are also 3 social media links: Disney Website, Mickey Mouse Facebook and Mickey Mouse Instagram
+
+![Footer](./assets/images/readme-images/footer.png)
 
 ### Congrats Modal
 

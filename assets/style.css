@@ -341,8 +341,8 @@ body {
   width: 72%;
   height: 0;
   border-left: 10vh solid transparent;
-  border-bottom: 7vh solid rgba(247, 101, 72, 0.8);
-  border-top: 7vh solid rgba(247, 101, 72, 0.8);
+  border-bottom: 7vh solid rgba(72, 98, 247, 0.8);
+  border-top: 7vh solid rgba(72, 98, 247, 0.8);
   gap: 2vh;
   display: flex;
   align-items: center;
@@ -366,7 +366,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: blue;
+  color: yellow;
+  text-shadow: 2px 2px 2px black;
 }
 
 /* game & info stay in same screen */
@@ -635,10 +636,11 @@ span.counter {
   background: black;
   color: white;
   outline: none;
-  font-size: 18px;
+  font-size: 7vh;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Mouse Memoirs", sans-serif;
 }
 
 .congratsCounter {
@@ -662,6 +664,7 @@ span.counter {
   padding: 1vw;
   display: inline-block;
   color: #FFEB3D;
+  text-shadow: 2px 2px 2px black;
 }
 
 .info-container .stars li {
@@ -678,7 +681,7 @@ i.fa.fa-star.dimmed {
 }
 
 .fa-star:before {
-  color: blue;
+  color: yellow;
   float: right;
   left: 2px;
   position: relative;
@@ -694,8 +697,9 @@ span.starCounter {
 }
 
 h3 {
-  color: blue;
+  color: yellow;
   font-size: 1.5vw;
+  text-shadow: 2px 2px 2px black;
 }
 
 .after{
