@@ -748,13 +748,14 @@ muteBtn.addEventListener('click', () => {
 
 let btn = document.getElementById('btn');
 
-function leftClick(){
-	
+let leftClick = function(){
 	btn.style.left = '0';
+	resetGame();
 }
+
 // 110 px is the width of either button and this function moves the 
 	// button 110px when it's activated. 
-function rightClick(){
+let rightClick = function(){
 	startMoves = false;
 	startMovesCountdown();
 	btn.style.left = '8.5vw';
@@ -763,9 +764,8 @@ function rightClick(){
 	timer.innerHTML = "60 secs";
 	clearInterval(interval);
 	counter.innerHTML = 30;
-	startCountdownTimer();
+	startCountdownTimer()
 }
-
 
 
 

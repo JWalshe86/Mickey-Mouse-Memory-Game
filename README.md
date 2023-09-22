@@ -495,10 +495,8 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
 
 ## Unsolved bugs
 
-- if switch from easy to hard or vice versa while 'in game' nothing changes
 - outer cards spinning too wide on click
 - congrats voice not showing up on mobile device
-- play game anchor landing too low
 
 # Deployment
 
