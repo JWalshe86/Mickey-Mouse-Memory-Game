@@ -55,12 +55,16 @@ let increaseFontAfterClick = document.querySelector('div.info-container');
 
 let startCounter = false;
 
+let movesCounter = false;
+
 // Card Flip
 
 function flipCard() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 	
 	startCounter = true;
+
+	movesCounter = true;
 
 	if(timerActivate){
 		startClock();
@@ -484,23 +488,26 @@ function startCountdownTimer() {
 // Code for Moves Countdown
 let startMoves = true;
 let movesPlus1 = true;
+
 function startMovesCountdown(){
 
 	if (moves == 0 &&  movesPlus1){
-		movesPlus1 = true;
-		moves = 3;
+		moves = 3
 		movesPlus1 = false;
+
+		
+		
 	}	
 
 	if(!startMoves){
 		moves--;
 	}
-	// the delay of a second is mitigated by the settime out here
-
-
-		if(moves == 0){
-			console.log('test');
-			}		
+	// // the delay of a second in the moves counter is factored in by 
+	// having the if statement for when to reset game set to -1 here
+	if(moves == -1 && !movesPlus1){
+		console.log('test');
+		}
+		
 	
 			
 
