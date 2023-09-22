@@ -92,7 +92,6 @@ spirit of fun was important. The visuals appeared as important to the children a
 - I want the game to be easy to play
 - I want it to be very visual with lots of animation
 
-
 ## As a returning visitor
 
 - I want to be able to measure my progress and try to beat my previous score
