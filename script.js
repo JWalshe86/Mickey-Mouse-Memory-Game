@@ -186,7 +186,7 @@ function checkForMatch() {
 			setTimeout(() =>{
 				lockBoard = false;
 					},3000);
-		}
+		};
 				
 		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
 	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && !lockBoard){
@@ -197,11 +197,10 @@ function checkForMatch() {
 	}
 
 		// Donald Duck Sound Clip Plays when two Donald Duck Cards Match
-		if(isMatch && firstCard.dataset.framework === 'donald-duck' && !lockBoard){
-			// code for myplay function adapted from computeshorts
-			function myPlayDonald(){
 
-				lockBoard = true;
+		let myPlayDonald = function(){
+			
+			lockBoard = true;
 			
 				
 			let audio = document.getElementsByClassName('donaldDuckSound')[0];
@@ -211,8 +210,11 @@ function checkForMatch() {
 					lockBoard = false;
 						},2000);
 
-			}
-			myPlayDonald();
+		}
+
+		if(isMatch && firstCard.dataset.framework === 'donald-duck' && !lockBoard){
+			// code for myplay function adapted from computeshort
+				myPlayDonald();
 		}
 
 			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
