@@ -175,12 +175,8 @@ function checkForMatch() {
 	}
 
 	// script for sounds
-				
-		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
-	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && !lockBoard){
 
-		// code for myplay function adapted from computeshorts
-		function myPlayMickey(){
+	let myPlayMickey = function(){
 		
 		lockBoard = true;
 			
@@ -191,6 +187,12 @@ function checkForMatch() {
 				lockBoard = false;
 					},3000);
 		}
+				
+		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
+	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && !lockBoard){
+
+		// code for myplay function adapted from computeshorts
+		
 		myPlayMickey();
 	}
 
