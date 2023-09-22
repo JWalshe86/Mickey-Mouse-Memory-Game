@@ -434,6 +434,10 @@ prompt to orientate their device horizontally. When they orientate the device it
 
 Script tested using [beautifytools](https://beautifytools.com/javascript-validator.php) validator. [Result1](./assets/images/readme-images/js-errors1.png), [results2](./assets/images/readme-images/js-errors2.png,) [results3](./assets/images/readme-images/js-errors3.png). Several missed semi-colons and some functions and variables that were no longer in use but had not been deleted. After addressing the errors found [two-remained](./assets/images/readme-images/remaining-errors.png), The first one related to a destructuring assingment which was viewed as an expression. However this appears to work well with the code. The other one was modal not being defined. However, modal was being used as a keyword here not a variable, and in the context a definition wasn't required. 
 
+Script tested using jshint jscript command
+
+18 errors were found: [jshintErrors](./jshint%20%20js%20review%20220923.pdf)
+
 ### HTML
 
 [HTML-W3C-Validator-Results](./HTML-W3C-Initial-Validator-Results.pdf) found 31 errors. The majority of the errors were having a /> where the / wasn't necessary. There were also two stray div's. Once these errors were addressed, a re-run of the validator found no errors. 
@@ -489,7 +493,7 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
 
 ## Unsolved bugs
 
-- On hard mode the counter continues to deplete if the same card is clicked twice.
+- While my wife tested the game on hard mode the counter continued to deplete if the same card is clicked twice.
 
 # Deployment
 

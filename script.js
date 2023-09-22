@@ -1,6 +1,5 @@
 /*jshint esversion: 6 */
 
-
 let cardsMatched = [];
 let cardsMatched2 = [];
 let tryCounter = 0;
@@ -18,6 +17,7 @@ let stars1Counter = document.querySelector('span.starCounter');
 let stars = document.getElementsByClassName('fa-star');
 
 let match = 0;
+
 
 /* Store all memory card elements in a cards variable. This is where the function will reach to when looking for cards to flip. The 
 querySelectorAll function returns all the elements from the memory-card document. Memory card is the class that contains all the
@@ -484,6 +484,7 @@ function startCountdownTimer() {
   }, 1000);
 
 }
+
 
 // Code for Moves Countdown
 let startMoves = true;
