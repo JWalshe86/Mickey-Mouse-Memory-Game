@@ -218,67 +218,63 @@ function checkForMatch() {
 		}
 
 			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
-			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && !lockBoard){
-				// code for myplay function adapted from computeshorts
-				function myPlayDaisy(){
 
-					lockBoard = true;
+			let myPlayDaisy = function(){
+				lockBoard = true;
 					
 				let audio = document.getElementsByClassName('daisyDuckSound')[0];
 				audio.play();
 				setTimeout(() =>{
 					lockBoard = false;
 						},1000);
-				}
-				myPlayDaisy();
 			}
 
-				// Pete Sound Clip Plays when two Pete Cards Match
-				if(isMatch && firstCard.dataset.framework === 'pete' && !lockBoard){
-					// code for myplay function adapted from computeshorts
-					function myPlayPete(){
-						
+			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && !lockBoard){
+				// code for myplay function adapted from computeshorts
+				myPlayDaisy()
+			}
+
+				let myPlayPete = function(){
 					let audio = document.getElementsByClassName('peteSound')[0];
 					audio.play();	
 					setTimeout(() =>{
 						lockBoard = false;
-							},1000);		
-					}
+							},1000);	
+				}
+
+				// Pete Sound Clip Plays when two Pete Cards Match
+				if(isMatch && firstCard.dataset.framework === 'pete' && !lockBoard){
+					// code for myplay function adapted from computeshorts
 					myPlayPete();
 				}
 
 				// Goofy Sound Clip Plays when two Goofy Cards Match
-				if(isMatch && firstCard.dataset.framework === 'pluto' && !lockBoard){
-
-
-					// code for myplay function adapted from computeshorts
-					function myPlayGoofy(){
-						
+				let myPlayGoofy = function(){
 					let audio = document.getElementsByClassName('goofySound')[0];
 					audio.play();
 					setTimeout(() =>{
 						lockBoard = false;
 							},1000);
-					}
+				}
+
+				if(isMatch && firstCard.dataset.framework === 'pluto' && !lockBoard){
+					// code for myplay function adapted from computeshorts
 					myPlayGoofy();
 				}
 	
-				
-				// Minnie Sound Clip Plays when two Minnie Cards Match
-				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && !lockBoard){
-					// code for myplay function adapted from computeshorts
-					function myPlayMinnie(){
-
-						lockBoard = true;
+				let myPlayMinnie = function(){
+					lockBoard = true;
 						
 					let audio = document.getElementsByClassName('minnieSound')[0];
 					audio.play();
 						setTimeout(() =>{
 						lockBoard = false;
 							},3000);
-					}
+				}
+				// Minnie Sound Clip Plays when two Minnie Cards Match
+				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && !lockBoard){
+					// code for myplay function adapted from computeshorts
 					myPlayMinnie();
-					
 				}
 
 	// The settimeout function is used here so the final card can show before the you won message appears
