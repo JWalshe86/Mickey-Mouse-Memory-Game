@@ -98,6 +98,7 @@ spirit of fun was important. The visuals appeared as important to the children a
 - I want to be able to measure my progress and try to beat my previous score
 - I'd like to see if I'm getting better at the game
 - I want to see if I can get 3 stars
+- - As my skills develop I would like to challenge myself more by playing at a more challenging level.
 
 # Design UXD
 
@@ -255,8 +256,6 @@ The buttons change color from yellow to orange when hovered over. This adds to t
 
  When a specific characters cards match a sound specific to that character is produced. 
 
- 
-
 ## Stars when button pressed
 
 - This again added to the element of fun, while playing. The code was adapted from [GreatStack](https://youtu.be/Odr24UQs3uY?feature=shared). Stars pop out of both the play and play how buttons when pressed. 
@@ -298,11 +297,26 @@ The reset game button is displayed as a repeat icon. This looks pleasant and is 
 
 ![Game-Feedback](./assets/images/readme-images2/ResetGame.png)
 
+## Game level toggle
+
+A toggle button is display under the cards so the user can choose between easy and hard. This also adds to the users ability to interact with the game.
+
+![Game-level-toggle](./assets/images/readme-images2/game-toggle.gif)
+
+On 'Easy' the timer just continues to increment with no deadline. The moves also increment. If a player gets a certain number of matches within a certain time/moves they receive a star. 
+
+On 'hard' the timer default start setting changes to 60 seconds, and the moves counter now starts at 30 moves. 
+
+![TimerCounterToggle](./assets/images/readme-images2/timer-counter-toggle.gif)
+
+The user now has to complete the game within 60 seconds or 30 moves. 
+
 ### Footer
 
 The footer contains an email address for the user to contact. There are also 3 social media links: Disney Website, Mickey Mouse Facebook and Mickey Mouse Instagram
 
 ![Footer](./assets/images/readme-images/footer.png)
+
 
 ### Congrats Modal
 
@@ -450,6 +464,7 @@ Script tested using [beautifytools](https://beautifytools.com/javascript-validat
 ## As a returning visitor
 
 - I want to be able to measure my progress and try to beat my previous score. I'd like to see if I'm getting better at the game. Achieved. Viewers were eager to play the game again to beat their previous score and get 3 stars.
+- As my skills develop I would like to challenge myself more by playing at a more challenging level. Achieved.
 
 ## Bugs
 

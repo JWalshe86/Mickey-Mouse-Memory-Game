@@ -492,11 +492,8 @@ let movesPlus1 = true;
 function startMovesCountdown(){
 
 	if (moves == 0 &&  movesPlus1){
-		moves = 3
-		movesPlus1 = false;
-
-		
-		
+		moves = 30;
+		movesPlus1 = false;	
 	}	
 
 	if(!startMoves){
@@ -505,11 +502,8 @@ function startMovesCountdown(){
 	// // the delay of a second in the moves counter is factored in by 
 	// having the if statement for when to reset game set to -1 here
 	if(moves == -1 && !movesPlus1){
-		console.log('test');
-		}
-		
-	
-			
+		resetGame()
+		}		
 
 }
 
