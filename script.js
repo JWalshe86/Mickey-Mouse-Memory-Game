@@ -210,7 +210,7 @@ function checkForMatch() {
 					lockBoard = false;
 						},2000);
 
-		}
+		};
 
 		if(isMatch && firstCard.dataset.framework === 'donald-duck' && !lockBoard){
 			// code for myplay function adapted from computeshort
@@ -227,11 +227,11 @@ function checkForMatch() {
 				setTimeout(() =>{
 					lockBoard = false;
 						},1000);
-			}
+			};
 
 			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && !lockBoard){
 				// code for myplay function adapted from computeshorts
-				myPlayDaisy()
+				myPlayDaisy();
 			}
 
 				let myPlayPete = function(){
@@ -240,7 +240,7 @@ function checkForMatch() {
 					setTimeout(() =>{
 						lockBoard = false;
 							},1000);	
-				}
+				};
 
 				// Pete Sound Clip Plays when two Pete Cards Match
 				if(isMatch && firstCard.dataset.framework === 'pete' && !lockBoard){
@@ -255,7 +255,7 @@ function checkForMatch() {
 					setTimeout(() =>{
 						lockBoard = false;
 							},1000);
-				}
+				};
 
 				if(isMatch && firstCard.dataset.framework === 'pluto' && !lockBoard){
 					// code for myplay function adapted from computeshorts
@@ -270,7 +270,7 @@ function checkForMatch() {
 						setTimeout(() =>{
 						lockBoard = false;
 							},3000);
-				}
+				};
 				// Minnie Sound Clip Plays when two Minnie Cards Match
 				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && !lockBoard){
 					// code for myplay function adapted from computeshorts
@@ -279,14 +279,18 @@ function checkForMatch() {
 
 	// The settimeout function is used here so the final card can show before the you won message appears
 	setTimeout(() => {
+		
 		if (match === 6) {
 			document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
 			document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
-			setTimeout(() => {
-				openCongratsModalPopup();
-			}), 3000;
-		}
-	}, 2500);
+			
+				  setTimeout(() => {
+
+										openCongratsModalPopup();
+
+									},3000);
+						}
+					}, 2500);
 
 	// if you guess 2 matches in less than 10 moves you get a star
 
@@ -296,12 +300,13 @@ function checkForMatch() {
 		if(increaseStar1){
 			increaseStars();
 			oneStarGo();
-			function myPlayDing(){
-			
+
+			let myPlayDing = function(){
 				let audio = document.getElementsByClassName('dingSound')[0];
 					
-					audio.play();
-				}
+				audio.play();
+			};
+
 				myPlayDing();
 			// increase star is set to false so a star is only added once to the counter until 4 matches are made
 			increaseStar1 = false;
@@ -322,12 +327,8 @@ function checkForMatch() {
 		
 			increaseStar1 = false;
 		}
-		function myPlayDing(){
-			
-			let audio = document.getElementsByClassName('dingSound')[0];
-				
-				audio.play();
-			}
+		
+		
 			myPlayDing();
 	}
 
@@ -336,12 +337,7 @@ function checkForMatch() {
 	if (match === 6 && moves <= 30 && timer.textContent <= 60 && starCounter === 2) {
 		stars[2].classList.remove('dimmed');
 		thirdStarGo();
-		function myPlayDing(){
-			
-			let audio = document.getElementsByClassName('dingSound')[0];
-				
-				audio.play();
-			}
+		
 			myPlayDing();
 		increaseStar1 = true;
 		if(increaseStar1){
@@ -391,11 +387,13 @@ function unflipCards() {
 
 
 /**  In order for the function to work after each round the first card and second card 
-need to be reset to null. The destructuring assignment is used. */
+need to be reset to null */
 
 function resetBoard() {
-	[hasFlippedCard, lockBoard] = [false, false],
-	[firstCard, secondCard] = [null, null];
+	hasFlippedCard = false;
+	lockBoard = false;
+	firstCard = null;
+	secondCard = null;
 }
 
 /** The flexbox property order will be used to shuffle the cards. 
@@ -478,7 +476,7 @@ function startCountdownTimer() {
 	
 	// game resets if countdown reaches 0s
 	if(second == 0){
-		resetGame()
+		resetGame();
 		}
     
   }, 1000);
@@ -503,7 +501,7 @@ function startMovesCountdown(){
 	// // the delay of a second in the moves counter is factored in by 
 	// having the if statement for when to reset game set to -1 here
 	if(moves == -1 && !movesPlus1){
-		resetGame()
+		resetGame();
 		}		
 
 }
@@ -720,7 +718,7 @@ let volume = false;
 		// returns node list of all sounds
 		let sounds = document.querySelectorAll('audio');
 		// for each sound add mute me to it
-		[].forEach.call(sounds, function(sound){UnmuteMe(sound);;});
+		[].forEach.call(sounds, function(sound){UnmuteMe(sound);});
 		volume = false;
 			}
 
@@ -728,7 +726,11 @@ let volume = false;
 // mute is always false and unmute is always true so when the function below
 // asks if one is either true of false it will always be switching between the two
 	function toggleVolume() {
-		volume? UnmuteSounds() : muteSounds();
+		if(volume){
+			UnmuteSounds();
+		}else{
+			muteSounds();
+		}
 	}
 
 	const muteBtn = document.querySelector('.mute-button');
@@ -754,7 +756,7 @@ function leftClick(){
 	// button 110px when it's activated. 
 function rightClick(){
 	startMoves = false;
-	startMovesCountdown()
+	startMovesCountdown();
 	btn.style.left = '8.5vw';
 	timerActivate = false;
 	var timer = document.querySelector(".timer");

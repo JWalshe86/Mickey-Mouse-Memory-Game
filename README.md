@@ -135,6 +135,8 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - [Git](https://git-scm.com/) was used for version control via GitPod by using the terminal to Git and Push to GitHub
 - [GitHub](https://github.com/) was used to store the project code after being created in GitPod / Git
 - [Gitpod](https://www.gitpod.io/) was used to create, edit & preview the project's code
+- [Node](https://nodejs.org/en) was used to support Jshint
+- [Jshint](https://jshint.com/) used to find coding errors
 - Images compressed on [TinyPNG](https://tinypng.com/)
 - Background image color changed using [remove.bg](https://www.remove.bg/t/change-background)
 - Icon on back of cards change using [lunapic](https://www9.lunapic.com/editor/)
@@ -436,7 +438,7 @@ Script tested using [beautifytools](https://beautifytools.com/javascript-validat
 
 Script tested using jshint jscript command
 
-18 errors were found: [jshintErrors](./jshint%20%20js%20review%20220923.pdf)
+18 errors were found: [jshintErrors](./jshint%20%20js%20review%20220923.pdf). All errors were subsequently addressed. Changing many of the functions to function expressions instead of function declarations helped address issues with declared functions being hoisted incorrectly. 
 
 ### HTML
 
