@@ -487,6 +487,10 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
   animation: horizontal-shaking .35s 0s 5;
 }
 
+## Unsolved bugs
+
+- On hard mode the counter continues to deplete if the same card is clicked twice.
+
 # Deployment
 
 The site was deployed on github pages from the outset. [Live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/)
