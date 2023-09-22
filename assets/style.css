@@ -327,6 +327,7 @@ body {
      */
   perspective: 1000px;
   padding-top: 1%;
+  contain:content;
 }
 
 /* styling for Reset button, timer and counter */
