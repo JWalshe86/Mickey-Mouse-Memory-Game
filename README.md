@@ -495,7 +495,10 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
 
 ## Unsolved bugs
 
-- While my wife tested the game on hard mode the counter continued to deplete if the same card is clicked twice.
+- if switch from easy to hard or vice versa while 'in game' nothing changes
+- outer cards spinning too wide on click
+- congrats voice not showing up on mobile device
+- play game anchor landing too low
 
 # Deployment
 
