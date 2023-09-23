@@ -433,7 +433,6 @@ reset.addEventListener("click", resetGame);
 
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 
-
 const overlay = document.getElementById('modal-overlay');
 
 // Adding eventlistener to overlay object so it closes when overlay is preessed
