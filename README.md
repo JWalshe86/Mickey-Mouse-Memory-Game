@@ -2,7 +2,7 @@
 repeatedly showed 'memory game'. I was able to envision my daughter enjoying playing a memory game with Micky Mouse characters  -->
 
 <!-- Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
-# Micky-Mouse-Memory-Game
+# Micky-Mouse-Memory-Game 🧠
 
 View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/
 )
@@ -25,7 +25,7 @@ to flip over. The game is over when all the cards have been matched and there's 
 remaining cards to flip over.
 
 <!-- Inspiration for rules of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
-## Rules of Memory Game
+## Rules of Memory Game 📑
 
 - One card is flipped to start the game
 - If the next card is identical, then you get +1 score
@@ -36,7 +36,7 @@ remaining cards to flip over.
 - If you get 4 matches within 45 seconds you get 2 stars 
 - If you get 6 matches within 60 seconds you get 3 stars & win the game!
 
-## Contents
+## Contents 📖
 
 - [Micky-Mouse-Memory-Game](#micky-mouse-memory-game)
   - [Rules of Memory Game](#rules-of-memory-game)
@@ -152,6 +152,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - Gifs created using [EZGIF.COM](https://ezgif.com/)
 - [ytmp3](https://ytmp3.nu/dijp/) to convert youtube to mp3
 - [veed.io](https://www.veed.io/) to cut mp3 clips to ideal size
+- [webfx.com](https://www.webfx.com/tools/emoji-cheat-sheet/) for emoji's
 
 ## Languages Used
 
@@ -472,7 +473,7 @@ Script tested using jshint jscript command
 
 ## Bugs
 
-# Solved bugs
+# Solved bugs 🐛
 
 - One was able to select the div surrounding the span elements for the bubble but it would not store
 in the variable 'howPlay'. When howPlay was logged it kept reading 'null'. When one tried the JS in
@@ -492,7 +493,7 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
   animation: horizontal-shaking .35s 0s 5;
 }
 
-## Unsolved bugs
+## Unsolved bugs 
 
 - congrats voice not showing up on mobile device
 - sound quality poor for some characters
