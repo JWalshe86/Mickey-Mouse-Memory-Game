@@ -943,6 +943,9 @@ a.fab.fa-{
   .info-container {
     visibility: hidden;
   }
+  .form-box{
+    display:none;
+  }
 
   footer{
     display: none;
