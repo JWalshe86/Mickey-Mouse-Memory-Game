@@ -521,9 +521,9 @@ span.counter {
   padding: 0 24vw 0 27vw;
 }
 
-.howWin {
+.howWin, .hardMode {
   display: flex;
-  padding: inherit;
+  padding: 1.5vh;
   justify-content: center;
   font-size: 3vw;
   font-weight: bold;
@@ -542,7 +542,7 @@ span.counter {
 }
 
 .modal-body {
-  line-height: 1.3;
+  line-height: 2;
   text-transform: capitalize;
   font-size: 2vw;
   padding:0 8vw 0 8vw;
