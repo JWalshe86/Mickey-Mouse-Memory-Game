@@ -496,6 +496,8 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
 
 - congrats voice not showing up on mobile device
 - sound quality poor for some characters
+- If playing easy mode & switch to hard mode the hard mode counter is starting on whatever was set in easy
+mode instead of starting at 60s & 30 moves
 
 # Deployment
 

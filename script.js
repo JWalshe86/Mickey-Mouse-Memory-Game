@@ -147,15 +147,11 @@ function checkForMatch() {
 
 	// ternary operator used here for simplicity
 	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-
-	// count no. of clicks that don't result in a mat
-	tryCounter++;
-	incrementCounter();
-
+	
 	/* if there are 6 matches this means the player has won. 
 	a variable for match was set to zero and when this reached
 	6 then the won function is activated */
-
+	
 	if (isMatch) {
 		disableCards();
 		firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
@@ -171,6 +167,10 @@ function checkForMatch() {
 		// Reset the failed match count back to 0
 		tryCounter = 0;
 	} else {
+		
+		// count no. of clicks that don't result in a mat
+		tryCounter++;
+		incrementCounter();
 		unflipCards();
 	}
 	
@@ -201,7 +201,6 @@ function checkForMatch() {
 		let myPlayDonald = function(){
 			
 			lockBoard = true;
-			
 				
 			let audio = document.getElementsByClassName('donaldDuckSound')[0];
 
@@ -374,7 +373,7 @@ function disableCards() {
 }
 
 // called if cards don't match
-function unflipCards() {
+let unflipCards = function(){
 	lockBoard = true;
 	/* If the cards don't match they will be locked 
 	and will only be unlocked once they've been flipped */
@@ -388,6 +387,8 @@ function unflipCards() {
 		resetBoard();
 	}, 1500);
 }
+
+
 
 
 /**  In order for the function to work after each round the first card and second card 
@@ -639,14 +640,13 @@ function openCongratsModalPopup() {
 	
 	// Mickey Mouse Congratulations
 
-		// let myPlayMickeyCongrats = function(){
-		// 	let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
-		// 	audio.play();
-		// }
-		// setTimeout(function() {
-		// 	myPlayMickeyCongrats();
-		// }, 2000);
-
+		let myPlayMickeyCongrats = function(){
+			let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
+			audio.play();
+		}
+		setTimeout(function() {
+			myPlayMickeyCongrats();
+		}, 2000);
 
 }
 
@@ -703,15 +703,15 @@ function oneStarGo() {
 // code adapted from Knowledge Base YouTube & isherwood stackoverflow
 let volume = false;
 
-	function muteMe(sound){
+	let muteMe = function(sound){
 		sound.muted=true;	
 	}
 	let unMuteMe = document.getElementById('UnMuteIcon');
-	function UnmuteMe(sound){
+	let UnmuteMeFunction = function(sound){
 		sound.muted=false;	
 	}
 
-	function muteSounds() {
+	let muteSounds = function() {
 	// 	// returns node list of all sounds
 		let sounds = document.querySelectorAll('audio');
 	// 	// for each sound add mute me to it
@@ -719,11 +719,11 @@ let volume = false;
 		volume = true;
 	}	
 	
-	function UnmuteSounds() {
+	let UnmuteSounds = function() {
 		// returns node list of all sounds
 		let sounds = document.querySelectorAll('audio');
 		// for each sound add mute me to it
-		[].forEach.call(sounds, function(sound){UnmuteMe(sound);});
+		[].forEach.call(sounds, function(sound){UnmuteMeFunction(sound);});
 		volume = false;
 			}
 
@@ -753,14 +753,14 @@ muteBtn.addEventListener('click', () => {
 
 let btn = document.getElementById('btn');
 
-let leftClick = function(){
+let easyMode = function(){
 	btn.style.left = '0';
 	resetGame();
 }
 
 // 110 px is the width of either button and this function moves the 
 	// button 110px when it's activated. 
-let rightClick = function(){
+let hardMode = function(){
 	startMoves = false;
 	startMovesCountdown();
 	btn.style.left = '8.5vw';
@@ -771,7 +771,7 @@ let rightClick = function(){
 	counter.innerHTML = 30;
 	startCountdownTimer()
 }
-
+	
 
 
 
