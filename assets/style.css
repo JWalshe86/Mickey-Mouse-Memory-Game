@@ -510,7 +510,7 @@ span.counter {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
-  background-color: #F76548;
+  background-color: yellow;
 }
 
 .modal-header .title {
@@ -546,6 +546,9 @@ span.counter {
   text-transform: capitalize;
   font-size: 2vw;
   padding:0 8vw 0 8vw;
+  color: yellow;
+  text-shadow: 3px 3px 3px black;
+  background-color: midnightblue;
 }
 
 #modal-overlay {
