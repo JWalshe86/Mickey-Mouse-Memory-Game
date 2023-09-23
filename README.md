@@ -150,9 +150,8 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - Balsamiq Wireframes
 - A colour palette was created using [color-adobe](https://color.adobe.com/create/color-wheel)
 - Gifs created using [EZGIF.COM](https://ezgif.com/)
-- Iphone 7 to record sound clips
-- [veed.io](https://www.veed.io/) to convert sound clips to mp3 which is vscode compatible
-- To convert youtube mickey mouse sound clips to mp3 [OnlyMP3](https://en.onlymp3.to/TCH/)
+- [ytmp3](https://ytmp3.nu/dijp/) to convert youtube to mp3
+- [veed.io](https://www.veed.io/) to cut mp3 clips to ideal size
 
 ## Languages Used
 
@@ -207,7 +206,7 @@ The Mickey Mouse favicon in the browser text was taken from [icons8](https://ico
 ### Sounds 
 
 - Mickey Mouse, Goofy and Daisy Duck sound clips courtesy of [Mallerie's Sonic Boom The Series](https://www.youtube.com/watch?v=NYttHXAszkk),(https://www.youtube.com/watch?v=elmbWaAKM1E)
-- Donald Duck sound clip courtesty of [Disney-Junior](https://www.youtube.com/watch?v=XOnHtStmbCI)
+- Donald Duck sound clip courtesty of [Minnie-Mouse](https://www.youtube.com/watch?v=xB2S7qmebUk)
 - Pete sound clip courtesty of [Dave-Lee-Down-Under](https://www.youtube.com/watch?v=7MXj2F6zLqk)
 - Sparkle sound effect from [orangefreesounds](https://orangefreesounds.com/sparkle-sound-effect/#google_vignette)
 - Mickey Mouse congratulations and ding sound sound effects from [101soundboards.com](https://www.101soundboards.com/sounds/1342530-gosh-what-a-great-place-congratulations-pal)
