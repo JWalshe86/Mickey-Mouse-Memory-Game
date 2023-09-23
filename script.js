@@ -762,6 +762,8 @@ let easyMode = function(){
 	// button 110px when it's activated. 
 let hardMode = function(){
 	startMoves = false;
+	moves = 30;
+	timer = 60;
 	startMovesCountdown();
 	btn.style.left = '8.5vw';
 	timerActivate = false;
@@ -769,7 +771,8 @@ let hardMode = function(){
 	timer.innerHTML = "60 secs";
 	clearInterval(interval);
 	counter.innerHTML = 30;
-	startCountdownTimer()
+	startCountdownTimer();
+	console.log(timer);
 }
 	
 
