@@ -90,7 +90,7 @@ body {
 }
 
 .howToPlay1:hover,
-.play-button:hover {
+.play-button:hover, .mute-button:hover {
   background-color: #FFEC3D; /* change to your desired color */
   color: #FF3C14; /* change to your desired color */
   box-shadow: 0 20px 100px;
