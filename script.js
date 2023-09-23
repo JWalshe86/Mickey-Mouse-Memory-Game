@@ -281,16 +281,20 @@ function checkForMatch() {
 	setTimeout(() => {
 		
 		if (match === 6) {
-			document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
-			document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
-			
-				  setTimeout(() => {
+		
+				document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
+				document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
+				openCongratsModalPopup();
+				// Mickey Mouse Congratulations
+				function myPlayMickeyCongrats(){
+					let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
+						audio.play();
+					}
+					myPlayMickeyCongrats();
+			}
+		}, 2500);
 
-										openCongratsModalPopup();
-
-									},3000);
-						}
-					}, 2500);
+	
 
 	// if you guess 2 matches in less than 10 moves you get a star
 
@@ -633,16 +637,17 @@ function openCongratsModalPopup() {
 	congratsPopup.classList.add("opencongratsModal-popup");
 	overlay.classList.add('active1');
 	
-		setTimeout(function() {
-			myPlayMickeyCongrats();
-		}, 2000);
-	
-
 	// Mickey Mouse Congratulations
-	function myPlayMickeyCongrats(){
-		let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
-			audio.play();
-		}
+
+		// let myPlayMickeyCongrats = function(){
+		// 	let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
+		// 	audio.play();
+		// }
+		// setTimeout(function() {
+		// 	myPlayMickeyCongrats();
+		// }, 2000);
+
+
 }
 
 let congratsModalOverlay = document.querySelector('div.congratsModal-overlay');
