@@ -497,8 +497,13 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
 
 - congrats voice not showing up on mobile device
 - sound quality poor for some characters
-- if click back other card before cards have flipped back
-the counter goes up 
+- if click back other card before cards have flipped back the counter goes up 
+
+## Cleaning 🛁
+
+- According to [ryanmcdermott](https://github.com/ryanmcdermott/clean-code-javascript) by far the most important
+rule in software engineering is that functions do only one thing; as it makes them easier to test, work with, reason about & makes code much cleaner. As of 240923 the code in this project had large amounts of code with several actions attributed to them. I then set myself the taks of giving every function one task. It was also important the name of the function directly reflected this one task.
+
 
 # Deployment
 

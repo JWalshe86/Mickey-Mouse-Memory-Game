@@ -758,21 +758,31 @@ let easyMode = function(){
 	resetGame();
 }
 
+
+/**tells the game what values to display
+ * when hardMode is activated initially
+ */
+let hardModeMovesResetValues = function(){
+	startMoves = false;
+	moves = 30;
+}
+
+
+
 // 110 px is the width of either button and this function moves the 
 	// button 110px when it's activated. 
 let hardMode = function(){
-	startMoves = false;
-	moves = 30;
-	timer = 60;
+	hardModeResetValues();
 	startMovesCountdown();
 	btn.style.left = '8.5vw';
 	timerActivate = false;
 	var timer = document.querySelector(".timer");
+	timer = 60;
 	timer.innerHTML = "60 secs";
+	
 	clearInterval(interval);
-	counter.innerHTML = 30;
+	
 	startCountdownTimer();
-	console.log(timer);
 }
 	
 
