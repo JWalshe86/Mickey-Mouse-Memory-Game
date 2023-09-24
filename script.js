@@ -458,69 +458,7 @@ function startTimer() {
 
 const startClock = startTimer();
 
-// Code for countdown timer adapted from Riddhijain stackoverflow
 
-var timer = document.querySelector(".timer");
-var interval;
-
-function startCountdownTimer() {
-  interval = setInterval(function() {
-    
-    if (second == 0) {
-
-      second = 60;
-    }
-	timer.innerHTML = second + " secs";
-
-		// so the countdown begins only after the very first card click
-	if(startCounter){
-		
-			second--;
-	}
-	
-	
-	// game resets if countdown reaches 0s
-	if(second == 0){
-		resetGame();
-		}
-    
-  }, 1000);
-
-}
-
-
-// Code for Moves Countdown
-let startMoves = true;
-let movesPlus1 = true;
-
-function startMovesCountdown(){
-
-	if (moves == 0 &&  movesPlus1){
-		moves = 30;
-		movesPlus1 = false;	
-	}	
-
-	if(!startMoves){
-		moves--;
-	}
-	// // the delay of a second in the moves counter is factored in by 
-	// having the if statement for when to reset game set to -1 here
-	if(moves == -1 && !movesPlus1){
-		resetGame();
-		}		
-
-}
-
-// moves counter
-/** 1 added to counter variable each time a move is made */
-
-function moveC() {
-
-	if(startMoves){
-		moves++;	
-	}
-		counter.innerHTML = moves;
-}
 
 function increaseStars() {
 	starCounter++;
@@ -748,6 +686,71 @@ muteBtn.addEventListener('click', () => {
   });
 });
 
+
+// Code for countdown timer adapted from Riddhijain stackoverflow
+
+var timer = document.querySelector(".timer");
+var interval;
+
+let startCountdownTimer = function() {
+	interval = setInterval(function() {
+    
+		if (second == 0) {
+	
+		  second = 60;
+		}
+		timer.innerHTML = second + " secs";
+	
+			// so the countdown begins only after the very first card click
+		if(startCounter){
+			
+				second--;
+		}
+		
+		
+		// game resets if countdown reaches 0s
+		if(second == 0){
+			resetGame();
+			}
+		
+	  }, 1000);
+
+}
+
+
+// Code for Moves Countdown
+let startMoves = true;
+let movesPlus1 = true;
+
+function startMovesCountdown(){
+
+	if (moves == 0 &&  movesPlus1){
+		moves = 30;
+		movesPlus1 = false;	
+	}	
+
+	if(!startMoves){
+		moves--;
+	}
+	// // the delay of a second in the moves counter is factored in by 
+	// having the if statement for when to reset game set to -1 here
+	if(moves == -1 && !movesPlus1){
+		resetGame();
+		}		
+
+}
+
+// moves counter
+/** 1 added to counter variable each time a move is made */
+
+function moveC() {
+
+	if(startMoves){
+		moves++;	
+	}
+		counter.innerHTML = moves;
+}
+
 // code adapted from Tuat Tran Anh
 // script for easy/hard toggle button
 
@@ -766,6 +769,7 @@ let hardModeMovesResetValues = function(){
 	
 	moves = 30;
 	counter.innerHTML = "30";
+	startMovesCountdown();	
 }
 
 
@@ -777,22 +781,26 @@ let hardModeTimerResetValues = function(){
 	var timer = document.querySelector(".timer");
 	timer.textContent = 60;
 	second = 60;
+	// clears the setinterval that's set to 1s
+	clearInterval(interval);
 }
 
-
-// 110 px is the width of either button and this function moves the 
-	// button 110px when it's activated. 
-let hardMode = function(){
-	hardModeMovesResetValues();
-	hardModeTimerResetValues(); 
-	startMovesCountdown();
+// how the computer can tell it's in hardmode
+let howKnowInHardMode = function(){
 	btn.style.left = '8.5vw';
 	timerActivate = false;
 	startMoves = false;
-	clearInterval(interval);	
-	startCountdownTimer();
-	
+}
+// sets both hard modes timer and moves default values
+let hardModeResetValues = function(){
+	hardModeMovesResetValues();
+	hardModeTimerResetValues(); 
+}
 
+let hardMode = function(){
+	hardModeResetValues();
+	howKnowInHardMode();
+	startCountdownTimer();	
 }
 	
 
