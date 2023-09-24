@@ -19,8 +19,10 @@ let stars = document.getElementsByClassName('fa-star');
 let match = 0;
 
 
-/* Store all memory card elements in a cards variable. This is where the function will reach to when looking for cards to flip. The 
-querySelectorAll function returns all the elements from the memory-card document. Memory card is the class that contains all the
+/* Store all memory card elements in a cards variable. 
+This is where the function will reach to when looking for cards to flip. The 
+querySelectorAll function returns all the elements from the memory-card document.
+ Memory card is the class that contains all the
 card elements here*/
 
 const cards = document.querySelectorAll('.memory-card');
@@ -74,7 +76,6 @@ function flipCard() {
 	clickCard[0].classList.add('after');
 	increaseFontAfterClick.classList.add('infoContainerAfterClick');
 
-
 	// if the same card is clicked twice the moves counter doesn't increase
 	if (this != firstCard && this !=secondCard) {
 		moveC();
@@ -101,7 +102,7 @@ function flipCard() {
 
 	if (!hasFlippedCard) {
 		/*if hasFlippedCard is false this means its the first time this card has been clicked
-		so then one can proceed to put has flippedcard to true, as the card had bo be
+		so then one can proceed to put has flippedcard to true, as the card had to be
 		false first before one can state it's now true*/
 		hasFlippedCard = true;
 		//   The element that has activated the event is the memory-card(this)
@@ -699,7 +700,7 @@ let startCountdownTimer = function() {
 	
 		  second = 60;
 		}
-		timer.innerHTML = second + " secs";
+		timer.innerHTML = second;
 	
 			// so the countdown begins only after the very first card click
 		if(startCounter){
@@ -754,6 +755,17 @@ function moveC() {
 // code adapted from Tuat Tran Anh
 // script for easy/hard toggle button
 
+let EasyModeElement = document.querySelectorAll('.toggle-btn')[0];
+let HardModeElement = document.querySelectorAll('.toggle-btn')[1];
+
+EasyModeElement.onclick = function(){
+	easyMode();
+}
+
+HardModeElement.onclick = function(){
+	hardMode();
+}
+
 let btn = document.getElementById('btn');
 
 let easyMode = function(){
@@ -770,6 +782,7 @@ let hardModeMovesResetValues = function(){
 	moves = 30;
 	counter.innerHTML = "30";
 	startMovesCountdown();	
+	// cards remain unflipped
 }
 
 
@@ -800,10 +813,11 @@ let hardModeResetValues = function(){
 let hardMode = function(){
 	hardModeResetValues();
 	howKnowInHardMode();
-	startCountdownTimer();	
+	startCountdownTimer();
 }
-	
 
+
+	
 
 
 
