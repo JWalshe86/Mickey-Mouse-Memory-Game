@@ -154,7 +154,7 @@ function checkForMatch() {
 	6 then the won function is activated */
 	
 	if (isMatch) {
-		disableCards();
+		unflipCards();
 		firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
 		secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
 		//push 1st & 2nd matched card into an array so they can be manipulated
@@ -167,7 +167,8 @@ function checkForMatch() {
 
 		// Reset the failed match count back to 0
 		tryCounter = 0;
-	} else {
+
+		} else {
 		
 		// count no. of clicks that don't result in a mat
 		tryCounter++;
@@ -475,6 +476,7 @@ function increaseStars() {
  */
 function resetGame() {
 
+
 	window.location.reload();
 
 }
@@ -759,16 +761,20 @@ let HardModeElement = document.querySelectorAll('.toggle-btn')[1];
 
 EasyModeElement.onclick = function(){
 	easyMode();
-}
-HardModeElement.onclick = function(){
-	
+
 	startCounter = false;
 	clickCard[0].classList.remove('after')
 	clickCard[0].classList.add('cardShake');
 	
 	increaseFontAfterClick.classList.add('infoContainerAfterClick');
-	hardMode();	
+
 }
+HardModeElement.onclick = function(){
+	hardMode();
+	firstCardFrontAfterMatch[1].classList.remove('front1');
+	secondCardFrontAfterMatch[1].classList.remove('front1');
+}
+
 
 let btn = document.getElementById('btn');
 
