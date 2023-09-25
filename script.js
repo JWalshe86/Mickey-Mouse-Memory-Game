@@ -770,11 +770,16 @@ EasyModeElement.onclick = function(){
 
 }
 HardModeElement.onclick = function(){
-	hardMode();
-	firstCardFrontAfterMatch[1].classList.remove('front1');
-	secondCardFrontAfterMatch[1].classList.remove('front1');
+	hardMode()
+		cardsMatched[0][0].classList.remove('front1')
+		cardsMatched[0][1].classList.remove('front1')
+		cardsMatched[1][0].classList.remove('front1')
+		cardsMatched[1][1].classList.remove('front1')
+		cardsMatched[2][0].classList.remove('front1')
+		cardsMatched[2][1].classList.remove('front1')
+		cardsMatched[3][0].classList.remove('front1')
+		cardsMatched[3][1].classList.remove('front1')
 }
-
 
 let btn = document.getElementById('btn');
 
@@ -782,7 +787,6 @@ let easyMode = function(){
 	btn.style.left = '0';
 	resetGame();
 }
-
 
 /**tells the game what moves values to display
  * when hardMode is activated initially
