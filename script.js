@@ -769,17 +769,77 @@ EasyModeElement.onclick = function(){
 	increaseFontAfterClick.classList.add('infoContainerAfterClick');
 
 }
-HardModeElement.onclick = function(){
+// let testing;
+
+// let removeFront1 = function(arr) {
+			
+// 	let product = 1;
+	
+// 	for (let i = 0; i < arr.length; i++) {
+// 	  for (let j = 0; j < arr[i].length; j++) {
+// 		product *= arr[i][j];
+// 		testing = `cardsMatched[${arr[i][j]}][${j}].classList.remove('front1') `;
+// 		return testing;
+// 	  }
+// 	  console.log(testing)
+// 	}
+	
+// 	return testing;
+	
+//   }
+let text;
+ HardModeElement.onclick = function(){
 	hardMode()
-		cardsMatched[0][0].classList.remove('front1')
-		cardsMatched[0][1].classList.remove('front1')
-		cardsMatched[1][0].classList.remove('front1')
-		cardsMatched[1][1].classList.remove('front1')
-		cardsMatched[2][0].classList.remove('front1')
-		cardsMatched[2][1].classList.remove('front1')
-		cardsMatched[3][0].classList.remove('front1')
-		cardsMatched[3][1].classList.remove('front1')
-}
+		// cardsMatched[0][0].classList.remove('front1')
+		// cardsMatched[0][1].classList.remove('front1')
+		// cardsMatched[1][0].classList.remove('front1')
+		// cardsMatched[1][1].classList.remove('front1')
+		// cardsMatched[2][0].classList.remove('front1')
+		// cardsMatched[2][1].classList.remove('front1')
+		// cardsMatched[3][0].classList.remove('front1')
+		// cardsMatched[3][1].classList.remove('front1')
+
+		// nested for loop code adapted from freeCodeCamp
+	
+		const clickHandler = () => {
+			document.querySelector('.front1')?.classList.remove('front1');
+		  }
+		  clickHandler()
+		  setTimeout(() =>{
+			clickHandler()
+				},3000);
+				setTimeout(() =>{
+					clickHandler()
+						},5000);
+						setTimeout(() =>{
+							clickHandler()
+								},6000);
+		
+		// let d = document.getElementById("howToPlay1");
+		let tester = document.querySelector(".front1");
+		let tester2 = document.querySelectorAll(".front1", "front1");
+		let tester3 = document.querySelectorAll("front1");
+		let testThis = true;
+		// for (let i = 0; i < 4; i++) {
+		// 	for (let j = 0; j < 2; j++) {
+			if(tester && testThis){
+				// tester.classList.add('test1');
+				console.log(tester, tester2[0], tester2[1]);
+				testThis = false;
+			}
+			if(tester && !testThis){
+				// tester.classList.add('test1');
+				console.log(tester, tester3[0], tester3[1]);	
+			}
+				
+			};
+			
+		
+		  
+
+
+
+		  
 
 let btn = document.getElementById('btn');
 
