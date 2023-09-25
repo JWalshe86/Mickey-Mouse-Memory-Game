@@ -738,7 +738,6 @@ function startMovesCountdown(){
 	if(moves == -1 && !movesPlus1){
 		resetGame();
 		}		
-
 }
 
 // moves counter
@@ -761,9 +760,14 @@ let HardModeElement = document.querySelectorAll('.toggle-btn')[1];
 EasyModeElement.onclick = function(){
 	easyMode();
 }
-
 HardModeElement.onclick = function(){
-	hardMode();
+	
+	startCounter = false;
+	clickCard[0].classList.remove('after')
+	clickCard[0].classList.add('cardShake');
+	
+	increaseFontAfterClick.classList.add('infoContainerAfterClick');
+	hardMode();	
 }
 
 let btn = document.getElementById('btn');
@@ -818,7 +822,6 @@ let hardMode = function(){
 
 
 	
-
 
 
 
