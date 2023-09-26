@@ -179,7 +179,7 @@ function checkForMatch() {
 	6 then the won function is activated */
 	
 	if (isMatch) {
-		unFlipCards();
+		disableCards();
 		firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
 		secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
 		//push 1st & 2nd matched card into an array so they can be manipulated
@@ -214,19 +214,9 @@ function checkForMatch() {
 				lockBoard = false;
 					},3000);
 		};
-		if(isMatch){
-			console.log('isMatch')
-		}
-		
-		if(firstCard.dataset.framework === 'micky-mouse'){
-			console.log('framew')
-		}
-		if(!lockBoard){
-			console.log('lockboard false')
-		}	
+	
 		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
-	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && lockBoard){
-		console.log('all good')
+	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && !lockBoard){
 		// code for myplay function adapted from computeshorts
 		
 		myPlayMickey();
@@ -247,7 +237,7 @@ function checkForMatch() {
 
 		};
 
-		if(isMatch && firstCard.dataset.framework === 'donald-duck' && lockBoard){
+		if(isMatch && firstCard.dataset.framework === 'donald-duck' && !lockBoard){
 			// code for myplay function adapted from computeshort
 				myPlayDonald();
 		}
@@ -264,7 +254,7 @@ function checkForMatch() {
 						},1000);
 			};
 
-			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && lockBoard){
+			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && !lockBoard){
 				// code for myplay function adapted from computeshorts
 				myPlayDaisy();
 			}
@@ -278,7 +268,7 @@ function checkForMatch() {
 				};
 
 				// Pete Sound Clip Plays when two Pete Cards Match
-				if(isMatch && firstCard.dataset.framework === 'pete' && lockBoard){
+				if(isMatch && firstCard.dataset.framework === 'pete' && !lockBoard){
 					// code for myplay function adapted from computeshorts
 					myPlayPete();
 				}
@@ -292,7 +282,7 @@ function checkForMatch() {
 							},1000);
 				};
 
-				if(isMatch && firstCard.dataset.framework === 'pluto' && lockBoard){
+				if(isMatch && firstCard.dataset.framework === 'pluto' && !lockBoard){
 					// code for myplay function adapted from computeshorts
 					myPlayGoofy();
 				}
@@ -379,20 +369,37 @@ function checkForMatch() {
 	}
 }
 
+let removeCardsFlip = function(){
+	firstCard.classList.remove('flip');
+	secondCard.classList.remove('flip');
+}
+
+let makeBackOfCardsInvisible = function(){
+	firstCard.children[0].classList.add('visibilityHidden');
+	secondCard.children[0].classList.add('visibilityHidden');
+}
+
 // called if the cards match
 function disableCards() {
 	// cards no longer reactive to clicks
+	/**When moving from easy to hard having the firstCardFlip
+	 * function occur on flip makes the cards disappear
+	 */
 	firstCard.removeEventListener('click', firstCardFlip);
 	secondCard.removeEventListener('click', firstCardFlip);
-	// cards remain unflipped
-	firstCard.classList.remove('flip');
-	secondCard.classList.remove('flip');
+	
 	// cards start to shake
 	firstCard.children[1].classList.add('horizontal-shake');
 	secondCard.children[1].classList.add('horizontal-shake');
 	// The backcard is hidden while the cards shake
-	firstCard.children[0].classList.add('visibilityHidden');
-	secondCard.children[0].classList.add('visibilityHidden');
+
+	// cards remain unflipped
+	/**When moving from easy to hard having the flip class removed
+	 * makes the cards disappear
+	 */
+	removeCardsFlip();
+	
+	makeBackOfCardsInvisible();
 	// The shaking is stopped after 1.5s
 	setTimeout(() =>{
 	firstCard.children[1].classList.remove('horizontal-shake');
@@ -824,7 +831,6 @@ let text;
 	iKnowImInHardModeAndFirstCardHasBeenClickedWhen();
 	
 	if(moves < 30){
-		console.log('first card click')
 	}
 	/**moves counter is set to go down when startMoves is true */
 
