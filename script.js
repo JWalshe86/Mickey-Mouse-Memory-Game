@@ -43,7 +43,7 @@ let firstCard, secondCard;
 // front of cards after a match
 let firstCardFrontAfterMatch, secondCardFrontAfterMatch;
 
-/* The this keyword in the flipCard function represents the memory-card class. Memory card 
+/* The this keyword in the firstCardFlip function represents the memory-card class. Memory card 
 is stored in this. Thats because this represents the element that activated it.
 */
 
@@ -56,15 +56,29 @@ let increaseFontAfterClick = document.querySelector('div.info-container');
 
 let startTimerCounter = false;
 
-let movesCounter = false;
+let movesCounter;
 
 // Card Flip
 
-function flipCard() {
+// Need to deactive cards unflipping when first card clicked in hardmode.
+	/** When first card is clicked startTimerCounter is true &
+	 * movesCounter is true
+	 * startTimerCounter = true;
+	/**startMoves needs to be false for hardmode counter to decline */
+
+let hardModeFirstCardFlip = function(){
+	if(startMoves && !startTimerCounter && moves == 30){
+	}
+}
+
+function firstCardFlip() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
+
+	hardModeFirstCardFlip();
 	
 	startTimerCounter = true;
-
+	/**startMoves needs to be false for hardmode counter to decline */
+	startMoves = false;
 	movesCounter = true;
 
 	if(timerActivate){
@@ -153,7 +167,7 @@ function checkForMatch() {
 	6 then the won function is activated */
 	
 	if (isMatch) {
-		unflipCards();
+		unFlipCards();
 		firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
 		secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
 		//push 1st & 2nd matched card into an array so they can be manipulated
@@ -172,7 +186,7 @@ function checkForMatch() {
 		// count no. of clicks that don't result in a mat
 		tryCounter++;
 		incrementCounter();
-		unflipCards();
+		unFlipCards();
 	}
 	
 	// script for sounds
@@ -355,8 +369,8 @@ function checkForMatch() {
 // called if the cards match
 function disableCards() {
 	// cards no longer reactive to clicks
-	firstCard.removeEventListener('click', flipCard);
-	secondCard.removeEventListener('click', flipCard);
+	firstCard.removeEventListener('click', firstCardFlip);
+	secondCard.removeEventListener('click', firstCardFlip);
 	// cards remain unflipped
 	firstCard.classList.remove('flip');
 	secondCard.classList.remove('flip');
@@ -374,7 +388,7 @@ function disableCards() {
 }
 
 // called if cards don't match
-let unflipCards = function(){
+let unFlipCards = function(){
 	lockBoard = true;
 	/* If the cards don't match they will be locked 
 	and will only be unlocked once they've been flipped */
@@ -423,7 +437,7 @@ By wrapping the function in parentheses means it will be immediately invoked aft
  attach an eventlistener to each that listens for a click event. Whenever 
  this click event occurs a function named cardflip will activate  */
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+cards.forEach(card => card.addEventListener('click', firstCardFlip));
 // js for timer 
 /* Code adapted from [Iris Smok](https: //github.com/Iris-Smok/Kids-Memory-Game_PP2/blob/main/assets/js/script.js) */
 
@@ -719,7 +733,6 @@ let startCountdownTimer = function() {
 
 }
 
-
 // Code for Moves Countdown
 let startMoves = true;
 let movesPlus1 = true;
@@ -768,13 +781,30 @@ EasyModeElement.onclick = function(){
 	increaseFontAfterClick.classList.add('infoContainerAfterClick');
 
 }
+let setIntervalTimerID;
 
-let unflipCardsFunction = function(){
-	const unflipCardsHard = () => {
+let stopCardsUnflipping = function(){
+	clearInterval(setIntervalTimerID);
+}
+
+let iKnowImInHardModeAndFirstCardHasBeenClickedWhen = function(){
+
+if(!timerActivate && btn.style.left == '8.5vw' && !startMoves && !startTimerCounter && moves < 30){
+	unFlipCardsFunction();
+	setTimeout(() =>{
+		stopCardsUnflipping();
+			},500);
+	
+};
+
+};
+
+let unFlipCardsFunction = function(){
+	const unFlipCardsHard = () => {
 		document.querySelector('.front1')?.classList.remove('front1');
 	  }
-	  setInterval(() =>{
-		unflipCardsHard()
+	  setIntervalTimerID = setInterval(() =>{
+		unFlipCardsHard()
 			},50,);
 }
 
@@ -782,8 +812,42 @@ let text;
 
  HardModeElement.onclick = function(){
 	hardMode();
-	if(startMoves){
-		unflipCardsFunction();
+	iKnowImInHardModeAndFirstCardHasBeenClickedWhen();
+
+	/**moves counter is set to go down when startMoves is true */
+
+	// Cards remain unflipped when going from easy to hardmode. So need
+	// to have cards flip in this instance.
+	if(timerActivate && HardModeElement.onclick){
+		unFlipCardsFunction();	
+		timerActivate = true;
+	}
+
+	
+	// startmoves is true globally, when hardMode is clicked
+	// it is set to false. 
+
+	// with startmoves being false & hard mode clicked again 
+	// reset startmoves to true so any flipped cards will unflip
+	if(!startMoves && HardModeElement.onclick){
+		startMoves = true;
+	}
+	// This needs NOT to run when hard mode is clicked to start a game. 
+	// It sets to true when hard mode is clicked. By having a clause whereby the cards only unflip
+	// while the movesCounter is false this prevents the cards unflipping during the game.
+
+	if(!movesCounter && startTimerCounter){
+		alert('movesC false')
+		unFlipCardsFunction();
+	}
+
+	/**If on hardmode and hardmode is clicked again movesCounter is still true
+	 * so the cards won't unflip. MovesCounter needs to revert back to
+	 * false when playing hardmode and hardmode is clicked. If the startTimerCounter is false
+	 * it means hardmode has been clicked again. 
+	 */
+	if(!startTimerCounter && HardModeElement.onclick){
+		movesCounter = false;
 	}
  }
 			
@@ -793,7 +857,7 @@ let easyMode = function(){
 	btn.style.left = '0';
 	resetGame();
 	if(!startMoves){
-		unflipCardsFunction();
+		unFlipCardsFunction();
 	}
 }
 
