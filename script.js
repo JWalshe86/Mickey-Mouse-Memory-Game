@@ -67,7 +67,11 @@ let movesCounter;
 	/**startMoves needs to be false for hardmode counter to decline */
 
 let hardModeFirstCardFlip = function(){
+	/**startMoves needs to be false for hardmode counter to decline */
+	
 	if(startMoves && !startTimerCounter && moves == 30){
+
+		startMoves = false;
 	}
 }
 
@@ -75,10 +79,11 @@ function firstCardFlip() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 
 	hardModeFirstCardFlip();
+
+	
 	
 	startTimerCounter = true;
-	/**startMoves needs to be false for hardmode counter to decline */
-	startMoves = false;
+	
 	movesCounter = true;
 
 	if(timerActivate){
@@ -144,6 +149,12 @@ function firstCardFlip() {
 
 	}
 }
+let audio = document.getElementsByClassName('dingSound')[0];
+let myPlayDing = function(){
+			
+	audio.play();
+};
+
 /**
  * A function for the matching logic. 
  * One now needs to check if the first and second cards match? 
@@ -308,22 +319,17 @@ function checkForMatch() {
 			}
 		}, 2500);
 
-	
-
 	// if you guess 2 matches in less than 10 moves you get a star
 
 	if (match === 2 && moves <= 20 && timer.textContent <= 30) {
+			
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
 		if(increaseStar1){
 			increaseStars();
 			oneStarGo();
 
-			let myPlayDing = function(){
-				let audio = document.getElementsByClassName('dingSound')[0];
-					
-				audio.play();
-			};
+			
 
 				myPlayDing();
 			// increase star is set to false so a star is only added once to the counter until 4 matches are made
@@ -333,12 +339,11 @@ function checkForMatch() {
 
 	// if you guess 4 matches in less than 25 moves you get another star
 
-	if (match === 4 && moves <= 25 && timer.textContent <= 45 && starCounter === 1) {
+	if (match === 4 && moves <= 30 && timer.textContent <= 45 && starCounter === 1) {
 		stars[1].classList.remove('dimmed');
 		secondStarGo();
 		if(!(starCounter = 2)){
 			increaseStar1 = true;
-			
 		}
 		if(increaseStar1){
 			increaseStars();
@@ -698,7 +703,6 @@ muteBtn.addEventListener('click', () => {
 	toggleVolume();
   muteBtn.querySelectorAll('span').forEach(el => {
     el.classList.toggle('hidden');
-	console.log(el);
   });
 });
 
@@ -790,11 +794,8 @@ let stopCardsUnflipping = function(){
 let iKnowImInHardModeAndFirstCardHasBeenClickedWhen = function(){
 
 if(!timerActivate && btn.style.left == '8.5vw' && !startMoves && !startTimerCounter && moves < 30){
-	unFlipCardsFunction();
-	setTimeout(() =>{
-		stopCardsUnflipping();
-			},500);
-	
+	alert('hardmod')
+	clearInterval(setIntervalTimerID);
 };
 
 };
@@ -813,16 +814,23 @@ let text;
  HardModeElement.onclick = function(){
 	hardMode();
 	iKnowImInHardModeAndFirstCardHasBeenClickedWhen();
-
+	
+	if(moves < 30){
+		console.log('first card click')
+	}
 	/**moves counter is set to go down when startMoves is true */
 
 	// Cards remain unflipped when going from easy to hardmode. So need
-	// to have cards flip in this instance.
-	if(timerActivate && HardModeElement.onclick){
-		unFlipCardsFunction();	
-		timerActivate = true;
+	// to have cards flip in this instance. 
+	/** if the button styling is 8.5vw easy has moved into hard */
+	if(btn.style.left == '8.5vw'){
+		setTimeout(() =>{
+				unFlipCardsFunction();
+				},30);
+				setTimeout(() =>{
+					clearInterval(setIntervalTimerID);
+									},2000);									
 	}
-
 	
 	// startmoves is true globally, when hardMode is clicked
 	// it is set to false. 
@@ -837,7 +845,6 @@ let text;
 	// while the movesCounter is false this prevents the cards unflipping during the game.
 
 	if(!movesCounter && startTimerCounter){
-		alert('movesC false')
 		unFlipCardsFunction();
 	}
 
@@ -852,6 +859,8 @@ let text;
  }
 			
 let btn = document.getElementById('btn');
+
+let easyBtn = document.querySelector('#easyBtn');
 
 let easyMode = function(){
 	btn.style.left = '0';
