@@ -782,7 +782,9 @@ let unflipCardsFunction = function(){
 let text;
  HardModeElement.onclick = function(){
 	hardMode();
-	unflipCardsFunction();
+	if(startMoves){
+		unflipCardsFunction();
+	}
  }
 			
 let btn = document.getElementById('btn');
@@ -790,6 +792,9 @@ let btn = document.getElementById('btn');
 let easyMode = function(){
 	btn.style.left = '0';
 	resetGame();
+	if(!startMoves){
+		unflipCardsFunction();
+	}
 }
 
 /**tells the game what moves values to display
