@@ -164,6 +164,7 @@ let myPlayDing = function(){
         of the first card now selected. The same goes for the second card.
  */
 function checkForMatch() {
+	
 	/*  If the first and second cards are the same then the eventListener will be removed
   from these cards to prevent them from being clicked again. If they're not the same
   then the cards will be unflipped back to their original state.  /*If the cards don't match then they need to be unflipped. To do this the 
@@ -213,10 +214,19 @@ function checkForMatch() {
 				lockBoard = false;
 					},3000);
 		};
-				
+		if(isMatch){
+			console.log('isMatch')
+		}
+		
+		if(firstCard.dataset.framework === 'micky-mouse'){
+			console.log('framew')
+		}
+		if(!lockBoard){
+			console.log('lockboard false')
+		}	
 		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
-	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && !lockBoard){
-
+	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && lockBoard){
+		console.log('all good')
 		// code for myplay function adapted from computeshorts
 		
 		myPlayMickey();
@@ -237,7 +247,7 @@ function checkForMatch() {
 
 		};
 
-		if(isMatch && firstCard.dataset.framework === 'donald-duck' && !lockBoard){
+		if(isMatch && firstCard.dataset.framework === 'donald-duck' && lockBoard){
 			// code for myplay function adapted from computeshort
 				myPlayDonald();
 		}
@@ -254,7 +264,7 @@ function checkForMatch() {
 						},1000);
 			};
 
-			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && !lockBoard){
+			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && lockBoard){
 				// code for myplay function adapted from computeshorts
 				myPlayDaisy();
 			}
@@ -268,7 +278,7 @@ function checkForMatch() {
 				};
 
 				// Pete Sound Clip Plays when two Pete Cards Match
-				if(isMatch && firstCard.dataset.framework === 'pete' && !lockBoard){
+				if(isMatch && firstCard.dataset.framework === 'pete' && lockBoard){
 					// code for myplay function adapted from computeshorts
 					myPlayPete();
 				}
@@ -282,7 +292,7 @@ function checkForMatch() {
 							},1000);
 				};
 
-				if(isMatch && firstCard.dataset.framework === 'pluto' && !lockBoard){
+				if(isMatch && firstCard.dataset.framework === 'pluto' && lockBoard){
 					// code for myplay function adapted from computeshorts
 					myPlayGoofy();
 				}
@@ -297,7 +307,7 @@ function checkForMatch() {
 							},3000);
 				};
 				// Minnie Sound Clip Plays when two Minnie Cards Match
-				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && !lockBoard){
+				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && lockBoard){
 					// code for myplay function adapted from computeshorts
 					myPlayMinnie();
 				}
@@ -328,8 +338,6 @@ function checkForMatch() {
 		if(increaseStar1){
 			increaseStars();
 			oneStarGo();
-
-			
 
 				myPlayDing();
 			// increase star is set to false so a star is only added once to the counter until 4 matches are made
