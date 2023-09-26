@@ -18,7 +18,6 @@ let stars = document.getElementsByClassName('fa-star');
 
 let match = 0;
 
-
 /* Store all memory card elements in a cards variable. 
 This is where the function will reach to when looking for cards to flip. The 
 querySelectorAll function returns all the elements from the memory-card document.
@@ -55,7 +54,7 @@ let clickCard = document.getElementsByTagName('h3');
 
 let increaseFontAfterClick = document.querySelector('div.info-container');
 
-let startCounter = false;
+let startTimerCounter = false;
 
 let movesCounter = false;
 
@@ -64,7 +63,7 @@ let movesCounter = false;
 function flipCard() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 	
-	startCounter = true;
+	startTimerCounter = true;
 
 	movesCounter = true;
 
@@ -705,7 +704,7 @@ let startCountdownTimer = function() {
 		timer.innerHTML = second;
 	
 			// so the countdown begins only after the very first card click
-		if(startCounter){
+		if(startTimerCounter){
 			
 				second--;
 		}
@@ -762,7 +761,7 @@ let HardModeElement = document.querySelectorAll('.toggle-btn')[1];
 EasyModeElement.onclick = function(){
 	easyMode();
 
-	startCounter = false;
+	startTimerCounter = false;
 	clickCard[0].classList.remove('after')
 	clickCard[0].classList.add('cardShake');
 	
@@ -780,6 +779,7 @@ let unflipCardsFunction = function(){
 }
 
 let text;
+
  HardModeElement.onclick = function(){
 	hardMode();
 	if(startMoves){
@@ -804,7 +804,9 @@ let hardModeMovesResetValues = function(){
 	
 	moves = 30;
 	counter.innerHTML = "30";
-	startMovesCountdown();	
+	startMovesCountdown();
+	// so counter timer not start until first click
+	startTimerCounter = false;
 }
 
 /**tells the game what timer valuestartMoves = false;s to display
