@@ -321,12 +321,6 @@ function checkForMatch() {
 				document.querySelector('div.congratsCounter').textContent = "Took you " + counter.innerHTML + ' moves';
 				document.querySelector('div.congratsTimer').textContent = " " + timer.textContent + ' seconds';
 				openCongratsModalPopup();
-				// Mickey Mouse Congratulations
-				function myPlayMickeyCongrats(){
-					let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
-						audio.play();
-					}
-					myPlayMickeyCongrats();
 			}
 		}, 2500);
 
@@ -380,8 +374,6 @@ function checkForMatch() {
 	}
 }
 
-
-
 let cardsStopReactingToClicks = function(){
 	
 	firstCard.removeEventListener('click', firstCardFlip);
@@ -389,8 +381,16 @@ let cardsStopReactingToClicks = function(){
 }
 
 let removeCardsFlip = function(){
+	
 	firstCard.classList.remove('flip');
 	secondCard.classList.remove('flip');
+}
+
+let removeCardsFlipAndBackFace = function(){
+	removeBackFace();
+	// cards remain unflipped
+	
+	removeCardsFlip();
 }
 
 let makeBackOfCardsInvisible = function(){
@@ -409,41 +409,37 @@ let cardShakeRemove = function(){
 	},1500);
 }
 
+let removeBackFace = function(){
+	firstCard.children[1].classList.add('backFaceVisibility');
+	secondCard.children[1].classList.add('backFaceVisibility');
+}
+
 // called if the cards match
 function disableCards() {
-	// cards remain unflipped
-	/**When moving from easy to hard having the flip class removed
-	 * makes the cards disappear
-	 */
-	removeCardsFlip();
+
+	removeCardsFlipAndBackFace()
 	
 	// The backcard is hidden while the cards shake
 	makeBackOfCardsInvisible();	
 	
-	// cardShakeActions();
-
 	// cards no longer reactive to clicks
 	/**When moving from easy to hard having the firstCardFlip
 	 * function occur on flip makes the cards disappear
-	 */
-	cardsStopReactingToClicks();	
+	 * */
 }
-
-let cardShakeActions = function(){
-	// cards start to shake
-	cardsStartToShake();
-	// The shaking is stopped after 1.5s
-	cardShakeRemove();
-}
+	
 
 // called if cards don't match
 let unFlipCards = function(){
+	/* If the cards don't match they will be locked  */
 	lockBoard = true;
-	/* If the cards don't match they will be locked 
-	and will only be unlocked once they've been flipped */
+	
+	// and will only be unlocked once they've been flipped 
 	setTimeout(() => {
+
 		firstCard.classList.remove('flip');
 		secondCard.classList.remove('flip');
+
 		// lockBoard turns false once the cards have been flipped
 
 		lockBoard = false;
@@ -451,9 +447,6 @@ let unFlipCards = function(){
 		resetBoard();
 	}, 1500);
 }
-
-
-
 
 /**  In order for the function to work after each round the first card and second card 
 need to be reset to null */
