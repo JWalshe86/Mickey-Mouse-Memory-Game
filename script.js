@@ -398,6 +398,11 @@ let makeBackOfCardsInvisible = function(){
 	secondCard.children[0].classList.add('visibilityHidden');
 }
 
+let makeBackOfCardsVisible = function(){
+	firstCard.children[0].classList.remove('visibilityHidden');
+	secondCard.children[0].classList.remove('visibilityHidden');
+}
+
 let cardsStartToShake = function(){
 	firstCard.children[1].classList.add('horizontal-shake');
 	secondCard.children[1].classList.add('horizontal-shake');	
@@ -420,12 +425,11 @@ function disableCards() {
 	removeCardsFlipAndBackFace()
 	
 	// The backcard is hidden while the cards shake
-	makeBackOfCardsInvisible();	
+	// if statement here allows back of card to return when hard mode re clicked
+	if(btn.style.left == '8.5vw'){
+		makeBackOfCardsInvisible();	
+	}
 	
-	// cards no longer reactive to clicks
-	/**When moving from easy to hard having the firstCardFlip
-	 * function occur on flip makes the cards disappear
-	 * */
 }
 	
 
@@ -833,6 +837,7 @@ let iKnowImInHardModeAndFirstCardHasBeenClickedWhen = function(){
 if(!timerActivate && btn.style.left == '8.5vw' && !startMoves && !startTimerCounter && moves < 30){
 	alert('hardmod')
 	clearInterval(setIntervalTimerID);
+	makeBackOfCardsVisible();
 };
 
 };
