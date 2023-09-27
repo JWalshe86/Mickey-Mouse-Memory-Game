@@ -177,6 +177,11 @@ function checkForMatch() {
 	/* if there are 6 matches this means the player has won. 
 	a variable for match was set to zero and when this reached
 	6 then the won function is activated */
+
+	let cardsRemainUnflipped = function(){
+		firstCardFrontAfterMatch[1].classList.add('front1');
+		secondCardFrontAfterMatch[1].classList.add('front1');
+	}
 	
 	if (isMatch) {
 		disableCards();
@@ -184,9 +189,11 @@ function checkForMatch() {
 		secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
 		//push 1st & 2nd matched card into an array so they can be manipulated
 		cardsMatched.push(firstCardFrontAfterMatch, secondCardFrontAfterMatch);
-		//    cards now remain flipped after animation
-		firstCardFrontAfterMatch[1].classList.add('front1');
-		secondCardFrontAfterMatch[1].classList.add('front1');
+		setTimeout(function() {
+			//    cards now remain flipped after animation
+		cardsRemainUnflipped();
+			
+		}, 2000);
 
 		match++;
 
@@ -387,19 +394,28 @@ let makeBackOfCardsInvisible = function(){
 
 let cardsStartToShake = function(){
 	firstCard.children[1].classList.add('horizontal-shake');
-	secondCard.children[1].classList.add('horizontal-shake');
+	secondCard.children[1].classList.add('horizontal-shake');	
 }
 
 let cardShakeRemove = function(){
 	setTimeout(() =>{
-	firstCard.children[1].classList.remove('horizontal-shake');
-	secondCard.children[1].classList.remove('horizontal-shake');
+		clearTimeout(cardsStartToShake);
 	},1500);
 }
 
 // called if the cards match
 function disableCards() {
-	
+	// cards remain unflipped
+	/**When moving from easy to hard having the flip class removed
+	 * makes the cards disappear
+	 */
+	removeCardsFlip();
+
+	setTimeout(function() {
+		//    cards now remain flipped after animation
+	cardsRemainUnflipped();
+		
+	}, 2000);
 	
 	// cards start to shake
 	cardsStartToShake();
@@ -411,17 +427,12 @@ function disableCards() {
 	 * function occur on flip makes the cards disappear
 	 */
 	cardsStopReactingToClicks();
-
-	// cards remain unflipped
-	/**When moving from easy to hard having the flip class removed
-	 * makes the cards disappear
-	 */
-	removeCardsFlip();
 	
-	makeBackOfCardsInvisible();
+	// makeBackOfCardsInvisible();
 
 	// The shaking is stopped after 1.5s
 	cardShakeRemove();
+
 }
 
 // called if cards don't match
