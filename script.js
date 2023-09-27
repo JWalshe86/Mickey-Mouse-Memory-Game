@@ -110,6 +110,7 @@ function firstCardFlip() {
 	/* Access the class list of the memory card. Add here means if 
 	the class is not there add it. */
 	this.classList.add('flip');
+	
 
 	if (!hasFlippedCard) {
 		/*if hasFlippedCard is false this means its the first time this card has been clicked
@@ -548,7 +549,8 @@ function startTimer() {
 		thus the function isn't called again */
 		if (called === 0) {
 			// the setInterval sets the timing interval to 1 second
-			interval = setInterval(function() {
+			interval = 
+			setInterval(function() {
 				timer.innerHTML = second;
 				second++;
 
@@ -595,6 +597,7 @@ const overlay = document.getElementById('modal-overlay');
 
 // Adding eventlistener to overlay object so it closes when overlay is preessed
 overlay.addEventListener('click', () => {
+
 	const modals = document.querySelectorAll('.modal.active');
 	modals.forEach(modal => {
 		closeModal(modal);
@@ -698,8 +701,8 @@ let ok = document.querySelector('.congratsButton');
 ok.addEventListener("click", closeCongratsModalPopup);
 
 function closeCongratsModalPopup() {
-
-	congratsPopup.classList.remove("opencongratsModal-popup");
+	
+	this.classList.remove("opencongratsModal-popup");
 	resetGame();
 
 }
@@ -713,6 +716,18 @@ function incrementCounter() {
 /**Creating an element containing the class fa-star each time a star is won. This allows 3 stars to be
  * presented in the congrats modal
  */
+let oneStarGo = function() {
+	let starDisplay1 = document.createElement('div');
+	starDisplay1.className = "fa fa-star";
+	let congratsModal = document.querySelector('.congratsStars');
+	congratsModal.appendChild(starDisplay1);
+}
+	function secondStarGo() {
+		let starDisplay2 = document.createElement('div');
+		starDisplay2.className = "fa fa-star";
+		let congratsModal = document.querySelector('.congratsStars');
+		congratsModal.appendChild(starDisplay2);
+	}
 
 function thirdStarGo() {
 	let starDisplay3 = document.createElement('div');
@@ -721,20 +736,6 @@ function thirdStarGo() {
 	starDisplay31.className = "fa fa-star";
 	let congratsModal = document.querySelector('.congratsStars');
 	congratsModal.appendChild(starDisplay3);
-}
-
-function secondStarGo() {
-	let starDisplay2 = document.createElement('div');
-	starDisplay2.className = "fa fa-star";
-	let congratsModal = document.querySelector('.congratsStars');
-	congratsModal.appendChild(starDisplay2);
-}
-
-function oneStarGo() {
-	let starDisplay1 = document.createElement('div');
-	starDisplay1.className = "fa fa-star";
-	let congratsModal = document.querySelector('.congratsStars');
-	congratsModal.appendChild(starDisplay1);
 }
 
 //Mute sound script
@@ -994,7 +995,8 @@ let hardMode = function(){
 }
 
 
-	
+
+
 
 
 
