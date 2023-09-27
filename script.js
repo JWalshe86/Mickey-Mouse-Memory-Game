@@ -369,6 +369,12 @@ function checkForMatch() {
 	}
 }
 
+let cardsStopReactingToClicks = function(){
+	
+	firstCard.removeEventListener('click', firstCardFlip);
+	secondCard.removeEventListener('click', firstCardFlip);
+}
+
 let removeCardsFlip = function(){
 	firstCard.classList.remove('flip');
 	secondCard.classList.remove('flip');
@@ -379,19 +385,32 @@ let makeBackOfCardsInvisible = function(){
 	secondCard.children[0].classList.add('visibilityHidden');
 }
 
+let cardsStartToShake = function(){
+	firstCard.children[1].classList.add('horizontal-shake');
+	secondCard.children[1].classList.add('horizontal-shake');
+}
+
+let cardShakeRemove = function(){
+	setTimeout(() =>{
+	firstCard.children[1].classList.remove('horizontal-shake');
+	secondCard.children[1].classList.remove('horizontal-shake');
+	},1500);
+}
+
 // called if the cards match
 function disableCards() {
+	
+	
+	// cards start to shake
+	cardsStartToShake();
+	
+	// The backcard is hidden while the cards shake
+
 	// cards no longer reactive to clicks
 	/**When moving from easy to hard having the firstCardFlip
 	 * function occur on flip makes the cards disappear
 	 */
-	firstCard.removeEventListener('click', firstCardFlip);
-	secondCard.removeEventListener('click', firstCardFlip);
-	
-	// cards start to shake
-	firstCard.children[1].classList.add('horizontal-shake');
-	secondCard.children[1].classList.add('horizontal-shake');
-	// The backcard is hidden while the cards shake
+	cardsStopReactingToClicks();
 
 	// cards remain unflipped
 	/**When moving from easy to hard having the flip class removed
@@ -400,11 +419,9 @@ function disableCards() {
 	removeCardsFlip();
 	
 	makeBackOfCardsInvisible();
+
 	// The shaking is stopped after 1.5s
-	setTimeout(() =>{
-	firstCard.children[1].classList.remove('horizontal-shake');
-	secondCard.children[1].classList.remove('horizontal-shake');
-	},1500);
+	cardShakeRemove();
 }
 
 // called if cards don't match
