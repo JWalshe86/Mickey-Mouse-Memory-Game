@@ -60,11 +60,6 @@ let movesCounter;
 
 // Card Flip
 
-// Need to deactive cards unflipping when first card clicked in hardmode.
-	/** When first card is clicked startTimerCounter is true &
-	 * movesCounter is true
-	 * startTimerCounter = true;
-	/**startMoves needs to be false for hardmode counter to decline */
 
 let hardModeFirstCardFlip = function(){
 	/**startMoves needs to be false for hardmode counter to decline */
@@ -79,8 +74,6 @@ function firstCardFlip() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 
 	hardModeFirstCardFlip();
-
-	
 	
 	startTimerCounter = true;
 	
@@ -183,18 +176,18 @@ function checkForMatch() {
 		secondCardFrontAfterMatch[1].classList.add('front1');
 	}
 	
+	firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
+	secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
+
 	if (isMatch) {
 		disableCards();
-		firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
-		secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
+		
 		//push 1st & 2nd matched card into an array so they can be manipulated
 		cardsMatched.push(firstCardFrontAfterMatch, secondCardFrontAfterMatch);
-		setTimeout(function() {
+		
 			//    cards now remain flipped after animation
-		cardsRemainUnflipped();
+			cardsRemainUnflipped();
 			
-		}, 2000);
-
 		match++;
 
 		// Reset the failed match count back to 0
@@ -227,6 +220,7 @@ function checkForMatch() {
 		// code for myplay function adapted from computeshorts
 		
 		myPlayMickey();
+		cardsStartToShake();
 	}
 
 		// Donald Duck Sound Clip Plays when two Donald Duck Cards Match
@@ -237,16 +231,21 @@ function checkForMatch() {
 				
 			let audio = document.getElementsByClassName('donaldDuckSound')[0];
 
+			
+
 				audio.play();
 				setTimeout(() =>{
 					lockBoard = false;
 						},2000);
+
+						
 
 		};
 
 		if(isMatch && firstCard.dataset.framework === 'donald-duck' && !lockBoard){
 			// code for myplay function adapted from computeshort
 				myPlayDonald();
+				cardsStartToShake();
 		}
 
 			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
@@ -264,6 +263,7 @@ function checkForMatch() {
 			if(isMatch && firstCard.dataset.framework === 'daisy-duck' && !lockBoard){
 				// code for myplay function adapted from computeshorts
 				myPlayDaisy();
+				cardsStartToShake();
 			}
 
 				let myPlayPete = function(){
@@ -278,6 +278,7 @@ function checkForMatch() {
 				if(isMatch && firstCard.dataset.framework === 'pete' && !lockBoard){
 					// code for myplay function adapted from computeshorts
 					myPlayPete();
+					cardsStartToShake();
 				}
 
 				// Goofy Sound Clip Plays when two Goofy Cards Match
@@ -292,21 +293,24 @@ function checkForMatch() {
 				if(isMatch && firstCard.dataset.framework === 'pluto' && !lockBoard){
 					// code for myplay function adapted from computeshorts
 					myPlayGoofy();
+					cardsStartToShake();
 				}
 	
 				let myPlayMinnie = function(){
 					lockBoard = true;
 						
 					let audio = document.getElementsByClassName('minnieSound')[0];
+					
 					audio.play();
 						setTimeout(() =>{
 						lockBoard = false;
 							},3000);
 				};
 				// Minnie Sound Clip Plays when two Minnie Cards Match
-				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && lockBoard){
+				if(isMatch && firstCard.dataset.framework === 'minnie-mouse' && !lockBoard){
 					// code for myplay function adapted from computeshorts
 					myPlayMinnie();
+					cardsStartToShake();
 				}
 
 	// The settimeout function is used here so the final card can show before the you won message appears
@@ -376,6 +380,8 @@ function checkForMatch() {
 	}
 }
 
+
+
 let cardsStopReactingToClicks = function(){
 	
 	firstCard.removeEventListener('click', firstCardFlip);
@@ -414,14 +420,13 @@ function disableCards() {
 	// The backcard is hidden while the cards shake
 	makeBackOfCardsInvisible();	
 	
-	cardShakeActions();
+	// cardShakeActions();
 
 	// cards no longer reactive to clicks
 	/**When moving from easy to hard having the firstCardFlip
 	 * function occur on flip makes the cards disappear
 	 */
-	cardsStopReactingToClicks();
-	
+	cardsStopReactingToClicks();	
 }
 
 let cardShakeActions = function(){
