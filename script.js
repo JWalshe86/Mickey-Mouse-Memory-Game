@@ -231,14 +231,10 @@ function checkForMatch() {
 				
 			let audio = document.getElementsByClassName('donaldDuckSound')[0];
 
-			
-
 				audio.play();
 				setTimeout(() =>{
 					lockBoard = false;
 						},2000);
-
-						
 
 		};
 
@@ -340,6 +336,21 @@ function checkForMatch() {
 		}
 	}
 
+	//for hard mode
+	if (btn.style.left == '8.5vw' && match === 2 && moves <= 20 && timer.textContent > 30) {
+			
+		// removing the 'dimmed' star introduces the 'lit-up' star
+		stars[0].classList.remove('dimmed');
+		if(increaseStar1){
+			increaseStars();
+			oneStarGo();
+
+				myPlayDing();
+			// increase star is set to false so a star is only added once to the counter until 4 matches are made
+			increaseStar1 = false;
+		}
+	}
+
 	// if you guess 4 matches in less than 25 moves you get another star
 
 	if (match === 4 && moves <= 30 && timer.textContent <= 45 && starCounter === 1) {
@@ -358,6 +369,21 @@ function checkForMatch() {
 			myPlayDing();
 	}
 
+	//for hard mode
+	if (btn.style.left == '8.5vw' && match === 4 && moves <= 20 && timer.textContent > 15) {
+			
+		// removing the 'dimmed' star introduces the 'lit-up' star
+		stars[0].classList.remove('dimmed');
+		if(increaseStar1){
+			increaseStars();
+			oneStarGo();
+
+				myPlayDing();
+			// increase star is set to false so a star is only added once to the counter until 4 matches are made
+			increaseStar1 = false;
+		}
+	}
+
 	// if you guess 6 matches in less than 30 moves you get 3 stars: max score
 
 	if (match === 6 && moves <= 30 && timer.textContent <= 60 && starCounter === 2) {
@@ -369,6 +395,21 @@ function checkForMatch() {
 		if(increaseStar1){
 			increaseStars();
 			
+			increaseStar1 = false;
+		}
+	}
+
+	//for hard mode
+	if (btn.style.left == '8.5vw' && match === 6 && moves <= 20 && timer.textContent > 0) {
+			
+		// removing the 'dimmed' star introduces the 'lit-up' star
+		stars[0].classList.remove('dimmed');
+		if(increaseStar1){
+			increaseStars();
+			oneStarGo();
+
+				myPlayDing();
+			// increase star is set to false so a star is only added once to the counter until 4 matches are made
 			increaseStar1 = false;
 		}
 	}
@@ -824,7 +865,6 @@ EasyModeElement.onclick = function(){
 	clickCard[0].classList.add('cardShake');
 	
 	increaseFontAfterClick.classList.add('infoContainerAfterClick');
-
 }
 let setIntervalTimerID;
 
