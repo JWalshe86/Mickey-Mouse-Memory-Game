@@ -410,17 +410,11 @@ function disableCards() {
 	 * makes the cards disappear
 	 */
 	removeCardsFlip();
-
-	setTimeout(function() {
-		//    cards now remain flipped after animation
-	cardsRemainUnflipped();
-		
-	}, 2000);
-	
-	// cards start to shake
-	cardsStartToShake();
 	
 	// The backcard is hidden while the cards shake
+	makeBackOfCardsInvisible();	
+	
+	cardShakeActions();
 
 	// cards no longer reactive to clicks
 	/**When moving from easy to hard having the firstCardFlip
@@ -428,11 +422,13 @@ function disableCards() {
 	 */
 	cardsStopReactingToClicks();
 	
-	// makeBackOfCardsInvisible();
+}
 
+let cardShakeActions = function(){
+	// cards start to shake
+	cardsStartToShake();
 	// The shaking is stopped after 1.5s
 	cardShakeRemove();
-
 }
 
 // called if cards don't match
