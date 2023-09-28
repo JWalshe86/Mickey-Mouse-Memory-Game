@@ -89,6 +89,7 @@ function firstCardFlip() {
 	// if the same card is clicked twice the moves counter doesn't increase
 	if (this != firstCard && this !=secondCard) {
 		moveC();
+		console.log(this);
 	}
 	// Alternative option for hard mode
 	if (this != firstCard && this !=secondCard && !startMoves) {
@@ -96,7 +97,7 @@ function firstCardFlip() {
 	}
 
 	// if lockBoard is true the rest of the function won't get executed
-	if (lockBoard) return;
+	if (lockBoard) return;	
 
 	/*If the first card is clicked twice then the eventlistener is removed
 	and the card will remain unflipped, as if it was correctly matched. If it's
@@ -105,6 +106,8 @@ function firstCardFlip() {
 	div holds the second card.*/
 
 	if (this === firstCard) return;
+
+	
 
 	/* Access the class list of the memory card. Add here means if 
 	the class is not there add it. */
@@ -340,7 +343,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left > '0' && match === 2 && moves <= 20 && timer.textContent > 30) {
+	if (btn.style.left >= '1vw' && match === 2 && moves <= 20 && timer.textContent > 30) {
 			
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
@@ -373,7 +376,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left > '0' && match === 4 && moves <= 20 && timer.textContent > 15) {
+	if (btn.style.left >= '1vw' && match === 4 && moves <= 20 && timer.textContent > 15) {
 			
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
@@ -403,7 +406,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left > '0' && match === 6 && moves <= 20 && timer.textContent > 0) {
+	if (btn.style.left >= '1vw' && match === 6 && moves <= 20 && timer.textContent > 0) {
 			
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
@@ -470,7 +473,7 @@ function disableCards() {
 	
 	// The backcard is hidden while the cards shake
 	// if statement here allows back of card to return when hard mode re clicked
-	if(btn.style.left > '0'){
+	if(btn.style.left >= '1vw'){
 		makeBackOfCardsInvisible();	
 	}
 	
@@ -877,7 +880,7 @@ let stopCardsUnflipping = function(){
 
 let iKnowImInHardModeAndFirstCardHasBeenClickedWhen = function(){
 
-if(!timerActivate && btn.style.left > '0' && !startMoves && !startTimerCounter && moves < 30){
+if(!timerActivate && btn.style.left >= '1vw' && !startMoves && !startTimerCounter && moves < 30){
 	clearInterval(setIntervalTimerID);
 };
 
@@ -892,20 +895,30 @@ let unFlipCardsFunction = function(){
 			},50,);
 }
 
-let text;
 
+
+let text;
+let flipped;
  HardModeElement.onclick = function(){
 	hardMode();
+
+
+	// if the player flips one card and goes directly into hard mode
+	// then this card will unflip
+	if (this){
+		document.querySelector('.flip')?.classList.remove('flip');
+	}
+
 	iKnowImInHardModeAndFirstCardHasBeenClickedWhen();
-	
+
 	if(moves < 30){
 	}
 	/**moves counter is set to go down when startMoves is true */
 
 	// Cards remain unflipped when going from easy to hardmode. So need
 	// to have cards flip in this instance. 
-	/** if the button styling is 0 easy has moved into hard */
-	if(btn.style.left > '0'){
+	/** if the button styling is 14.7vw easy has moved into hard */
+	if(btn.style.left >= '1vw'){
 		setTimeout(() =>{
 				unFlipCardsFunction();
 				},30);
@@ -978,10 +991,12 @@ let hardModeTimerResetValues = function(){
 
 // how the computer can tell it's in hardmode
 let howKnowInHardMode = function(){
-	btn.style.left > '0';
+	console.log(btn.style.left)
+	btn.style.left = '14.7vw';
 	timerActivate = false;
 	startMoves = false;
 }
+
 // sets both hard modes timer and moves default values
 let hardModeResetValues = function(){
 	hardModeMovesResetValues();
