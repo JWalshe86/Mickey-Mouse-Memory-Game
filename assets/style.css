@@ -369,7 +369,6 @@ body {
   align-items: center;
   color: yellow;
   text-shadow: 2px 2px 2px black;
-  padding: 2vh;
 }
 
 /* game & info stay in same screen */
@@ -707,7 +706,6 @@ span.starCounter {
 h3 {
   color: yellow;
   text-shadow: 2px 2px 2px black;
-  padding: 2vh;
 }
 
 .after{
@@ -911,9 +909,13 @@ a.fab.fa-{
 
 /* Hides pop up when landscape */
 @media only screen and (min-width: 280px) and (max-width: 667px) and (orientation: landscape) {
-  
-  h3 {
-    font-size: smaller;
+  h3{
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .toggle-btn{
+    font-size: 5vw !important;
   }
 
   .pop-up {
@@ -1011,12 +1013,13 @@ a.fab.fa-{
     font-size: 3vh !important;
     position: relative;
   }
+
   .timer-counter-container{
     font-size: 2.6vh;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 659px) {
   .info-container {
     content: "";
     position: relative;
@@ -1026,9 +1029,9 @@ a.fab.fa-{
     height: 0;
     gap: 2vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
   }
   .info-container::after {
     width: 71%;
@@ -1038,15 +1041,28 @@ a.fab.fa-{
   .congratsCounter, .congratsTimer, .congratsStars {
     font-size: 2vh !important;
   }
+
+  #btn{
+    width: 12.5vw !important;
+  }
+  .toggle-btn{
+    padding: 0.5vh 3.35vw !important;
+  }
   }
 
 @media (max-width: 1200px) {
   .heroTitle {
     font-size: 5vh;
   }
+  .info-container{
+    flex-direction: column;
+  }
 
   .hero-image {
     background-position: center;
+  }
+  h3{
+    font-size: 3vh;
   }
 }
 
@@ -1098,7 +1114,7 @@ a.fab.fa-{
   position: absolute;
   width: 17vw;
   height: 100%;
-  background: skyblue;
-  border-radius: 30px;
+  background: rgba(72, 98, 247);
+  border-radius: 26px;
   transition: .5s;
 }
