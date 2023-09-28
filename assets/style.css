@@ -908,7 +908,7 @@ a.fab.fa-{
 /* code to prompt user to flip device on smaller devices adapted from Jarrod Whitley */
 
 /* Hides pop up when landscape */
-@media only screen and (min-width: 280px) and (max-width: 667px) and (orientation: landscape) {
+@media only screen and (min-width: 280px) and (max-width: 750px) and (orientation: landscape) {
   h3{
     padding-bottom: 0;
     padding-top:5vh;
@@ -918,6 +918,7 @@ a.fab.fa-{
 
   .timer-counter-container{
     position: relative;
+    bottom: 3vh;
   }
 
   .toggle-btn{
@@ -934,13 +935,13 @@ a.fab.fa-{
   
 }
 
-@media only screen and (min-width: 250px) and (max-width: 667px) and (orientation: portrait) {
+@media only screen and (min-width: 250px) and (max-width: 750px) and (orientation: portrait) {
   .pop-up {
     position: absolute;
     align-content: center;
     top: 50vh;
     z-index: 2;
-    font-size: x-large;
+    font-size: 10vw;
     text-align: center;
   }
   .info-game-container {
