@@ -501,7 +501,7 @@ span.counter {
   contain: content;
 
   /* Add scroll behaviour to modal for smaller screensizes adapted from stackoverflow */
-  max-height: calc(100vh - 20vh);
+  max-height: 80vh;
   overflow-y: auto;
 }
 
