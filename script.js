@@ -180,7 +180,7 @@ function checkForMatch() {
 	secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
 
 	if (isMatch) {
-		makeBackOfCardsInvisible();
+		
 		disableCards();
 		
 		//push 1st & 2nd matched card into an array so they can be manipulated
@@ -218,6 +218,7 @@ function checkForMatch() {
 		
 		myPlayMickey();
 		cardsStartToShake();
+		makeBackOfCardsVisible();
 	}
 
 		// Donald Duck Sound Clip Plays when two Donald Duck Cards Match
@@ -239,6 +240,7 @@ function checkForMatch() {
 			// code for myplay function adapted from computeshort
 				myPlayDonald();
 				cardsStartToShake();
+				makeBackOfCardsVisible();
 		}
 
 			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
@@ -257,6 +259,7 @@ function checkForMatch() {
 				// code for myplay function adapted from computeshorts
 				myPlayDaisy();
 				cardsStartToShake();
+				makeBackOfCardsVisible();
 			}
 
 				let myPlayPete = function(){
@@ -272,6 +275,7 @@ function checkForMatch() {
 					// code for myplay function adapted from computeshorts
 					myPlayPete();
 					cardsStartToShake();
+					makeBackOfCardsVisible();
 				}
 
 				// Goofy Sound Clip Plays when two Goofy Cards Match
@@ -287,6 +291,7 @@ function checkForMatch() {
 					// code for myplay function adapted from computeshorts
 					myPlayGoofy();
 					cardsStartToShake();
+					makeBackOfCardsVisible();
 				}
 	
 				let myPlayMinnie = function(){
@@ -304,6 +309,7 @@ function checkForMatch() {
 					// code for myplay function adapted from computeshorts
 					myPlayMinnie();
 					cardsStartToShake();
+					makeBackOfCardsVisible();
 				}
 
 	// The settimeout function is used here so the final card can show before the you won message appears
@@ -872,9 +878,7 @@ let stopCardsUnflipping = function(){
 let iKnowImInHardModeAndFirstCardHasBeenClickedWhen = function(){
 
 if(!timerActivate && btn.style.left == '14.7vw' && !startMoves && !startTimerCounter && moves < 30){
-	alert('hardmod')
 	clearInterval(setIntervalTimerID);
-	makeBackOfCardsVisible();
 };
 
 };
