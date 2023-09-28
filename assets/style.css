@@ -608,7 +608,7 @@ span.counter {
   position: relative;
   display: flex;
   width: 100vw;
-  bottom: -35%;
+  bottom: -35vw;
 }
 
 .congratsModal-popup {
