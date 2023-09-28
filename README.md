@@ -335,6 +335,8 @@ Error page displayed when wrong address is entered. It offers a link to the game
 
 ## Manual Testing
 
+[Code-Institute-Manual-Testing-Overview](./CI-Manual-testing-overview.pdf) was used as a guide for the following.
+
 ### Change in color of play/how play buttons when hovered over by cursor
 
 - Expected: Play/How play buttons background to change from orange to yellow; and text to change from yellow to orange

@@ -2,7 +2,6 @@
 
 let cardsMatched = [];
 let cardsMatched2 = [];
-let tryCounter = 0;
 let moveCounter = 0;
 let starCounter = 0;
 
@@ -191,13 +190,9 @@ function checkForMatch() {
 			
 		match++;
 
-		// Reset the failed match count back to 0
-		tryCounter = 0;
-
 		} else {
 		
 		// count no. of clicks that don't result in a mat
-		tryCounter++;
 		incrementCounter();
 		unFlipCards();
 	}
@@ -704,18 +699,18 @@ function closeCongratsModalPopup() {
 	
 	this.classList.remove("opencongratsModal-popup");
 	resetGame();
-
 }
 
 // Increase the click(move) count by 1 and update the HTML text to the current value
 function incrementCounter() {
-	moveCounter++;
-	moves.innerHTML = moveCounter;
+	counterConfig.moveCounter++;
+	moves.innerHTML = counterConfig.moveCounter;
 }
 
 /**Creating an element containing the class fa-star each time a star is won. This allows 3 stars to be
  * presented in the congrats modal
  */
+
 let oneStarGo = function() {
 	let starDisplay1 = document.createElement('div');
 	starDisplay1.className = "fa fa-star";
