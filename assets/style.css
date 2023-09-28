@@ -1009,10 +1009,9 @@ a.fab.fa-{
   h3{
     font-size: 3vh !important;
     position: relative;
-    top: 3vh;
   }
   .timer-counter-container{
-    font-size: 3vh ;
+    font-size: 2.6vh;
   }
 }
 

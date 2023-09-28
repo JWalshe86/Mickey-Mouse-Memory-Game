@@ -500,6 +500,7 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
 - congrats voice not showing up on mobile device
 - sound quality poor for some characters
 - if click back other card before cards have flipped back the counter goes up 
+- [Easy-To-Hard-In-Game-Error](./assets/images/readme-images2/EasyToHardError.png)
 
 ## Cleaning 🛁
 

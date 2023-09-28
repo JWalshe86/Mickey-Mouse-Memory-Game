@@ -334,7 +334,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left == '8.5vw' && match === 2 && moves <= 20 && timer.textContent > 30) {
+	if (btn.style.left == '14.7vw' && match === 2 && moves <= 20 && timer.textContent > 30) {
 			
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
@@ -367,7 +367,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left == '8.5vw' && match === 4 && moves <= 20 && timer.textContent > 15) {
+	if (btn.style.left == '14.7vw' && match === 4 && moves <= 20 && timer.textContent > 15) {
 			
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
@@ -397,7 +397,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left == '8.5vw' && match === 6 && moves <= 20 && timer.textContent > 0) {
+	if (btn.style.left == '14.7vw' && match === 6 && moves <= 20 && timer.textContent > 0) {
 			
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
@@ -464,7 +464,7 @@ function disableCards() {
 	
 	// The backcard is hidden while the cards shake
 	// if statement here allows back of card to return when hard mode re clicked
-	if(btn.style.left == '8.5vw'){
+	if(btn.style.left == '14.7vw'){
 		makeBackOfCardsInvisible();	
 	}
 	
@@ -871,7 +871,7 @@ let stopCardsUnflipping = function(){
 
 let iKnowImInHardModeAndFirstCardHasBeenClickedWhen = function(){
 
-if(!timerActivate && btn.style.left == '8.5vw' && !startMoves && !startTimerCounter && moves < 30){
+if(!timerActivate && btn.style.left == '14.7vw' && !startMoves && !startTimerCounter && moves < 30){
 	alert('hardmod')
 	clearInterval(setIntervalTimerID);
 	makeBackOfCardsVisible();
@@ -900,8 +900,8 @@ let text;
 
 	// Cards remain unflipped when going from easy to hardmode. So need
 	// to have cards flip in this instance. 
-	/** if the button styling is 8.5vw easy has moved into hard */
-	if(btn.style.left == '8.5vw'){
+	/** if the button styling is 14.7vw easy has moved into hard */
+	if(btn.style.left == '14.7vw'){
 		setTimeout(() =>{
 				unFlipCardsFunction();
 				},30);
@@ -974,7 +974,7 @@ let hardModeTimerResetValues = function(){
 
 // how the computer can tell it's in hardmode
 let howKnowInHardMode = function(){
-	btn.style.left = '8.5vw';
+	btn.style.left = '14.7vw';
 	timerActivate = false;
 	startMoves = false;
 }
