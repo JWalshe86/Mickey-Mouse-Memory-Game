@@ -1074,8 +1074,6 @@ a.fab.fa-{
 /* Toggle button styling */
 
 .button-box {
-  width: 17vw;
-  height: 7vh;
   margin: 2vh auto;
   position: relative;
   border-radius: 30px;
@@ -1092,7 +1090,7 @@ a.fab.fa-{
   outline: none;
   position: relative;
   text-align: center;
-  font-size: 2.2vw;
+  font-size: 8vw;
   font-weight:bolder;
   font-family: "Mouse Memoirs", sans-serif;
 }
