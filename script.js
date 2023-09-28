@@ -68,11 +68,15 @@ let hardModeFirstCardFlip = function(){
 		startMoves = false;
 	}
 }
+let timerCounterContainer = document.getElementsByClassName('timer-counter-container');
 
 function firstCardFlip() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 
 	hardModeFirstCardFlip();
+
+	// so the info stays centered when first card clicked
+	timerCounterContainer[0].style.bottom = '0';
 	
 	startTimerCounter = true;
 	
@@ -1008,7 +1012,6 @@ let hardMode = function(){
 	howKnowInHardMode();
 	startCountdownTimer();
 }
-
 
 
 
