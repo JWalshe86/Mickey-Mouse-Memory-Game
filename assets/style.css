@@ -1077,7 +1077,7 @@ a.fab.fa-{
   margin: 2vh auto;
   position: relative;
   border-radius: 30px;
-  background: rgb(255, 236, 61, 0.2);
+  background: rgb(255, 236, 61, 0.5);
   display: flex;
   border: solid;
 }

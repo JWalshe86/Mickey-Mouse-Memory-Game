@@ -180,6 +180,7 @@ function checkForMatch() {
 	secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
 
 	if (isMatch) {
+		makeBackOfCardsInvisible();
 		disableCards();
 		
 		//push 1st & 2nd matched card into an array so they can be manipulated
@@ -703,8 +704,8 @@ function closeCongratsModalPopup() {
 
 // Increase the click(move) count by 1 and update the HTML text to the current value
 function incrementCounter() {
-	counterConfig.moveCounter++;
-	moves.innerHTML = counterConfig.moveCounter;
+	counter.moveCounter++;
+	moves.innerHTML = counter.moveCounter;
 }
 
 /**Creating an element containing the class fa-star each time a star is won. This allows 3 stars to be
