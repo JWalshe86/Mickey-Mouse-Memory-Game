@@ -494,18 +494,16 @@ animation css for the horizontal shake, even if the next is quickly
 pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
   animation: horizontal-shaking .35s 0s 5;
 }
-
+- [Easy-To-Hard-In-Game-Error](./assets/images/readme-images2/EasyToHardError.png)
 ## Unsolved bugs 
 
-- congrats voice not showing up on mobile device
-- sound quality poor for some characters
-- if click back other card before cards have flipped back the counter goes up 
-- [Easy-To-Hard-In-Game-Error](./assets/images/readme-images2/EasyToHardError.png)
+- congrats voice not showing up on iphone 7 Safari
+
+- if flip one card in easy then go into hard, the first card will flip but won't unflip unless another card is flipped. The game will go ahead as normal then.  
 
 ## Cleaning 🛁
 
-- According to [ryanmcdermott](https://github.com/ryanmcdermott/clean-code-javascript) by far the most important
-rule in software engineering is that functions do only one thing; as it makes them easier to test, work with, reason about & makes code much cleaner. As of 240923 the code in this project had large amounts of code with several actions attributed to them. I then set myself the taks of giving every function one task. It was also important the name of the function directly reflected this one task.
+- According to [ryanmcdermott](https://github.com/ryanmcdermott/clean-code-javascript) by far the most important rule in software engineering is that functions do only one thing; as it makes them easier to test, work with, reason about & makes code much cleaner. As of 240923 the code in this project had large amounts of code with several actions attributed to them. I then set myself the taks of giving every function one task. It was also important the name of the function directly reflected this one task.
 
 
 # Deployment
