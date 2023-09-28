@@ -369,6 +369,7 @@ body {
   align-items: center;
   color: yellow;
   text-shadow: 2px 2px 2px black;
+  font-size: 3vw;
 }
 
 /* game & info stay in same screen */
@@ -607,17 +608,13 @@ span.counter {
 .congratsModal-container {
   position: relative;
   display: flex;
-  width: 100vw;
-  bottom: -35vw;
 }
 
 .congratsModal-popup {
-  width: 30%;
+  width: 40vw;
   background: white;
   border-radius: 6px;
   position: absolute;
-  left: 52vw;
-  top: 30vw;
   /* to add zoom out effect */
   transform: translate(-50%, -50%) scale(0.1);
   padding: 0 30px 30px;
@@ -625,6 +622,10 @@ span.counter {
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 40vh;
 }
 
 .opencongratsModal-popup {
@@ -633,7 +634,7 @@ span.counter {
 }
 
 .congratsModal-popup img {
-  width: 100%;
+  width: 30vw;
 }
 
 .congratsModal-popup button {
@@ -880,9 +881,7 @@ a.fab.fa-{
   .turnDeviceWrapper {
     display: none;
   }
-  .congratsModal-popup {
-    width: 40%;
-  }
+  
 }
 
 @media (max-width: 667px) {
@@ -891,6 +890,7 @@ a.fab.fa-{
     padding: 0 20vw 0 27vw;
     font-size: 4vw;
   }
+
 }
 
 
@@ -911,7 +911,14 @@ a.fab.fa-{
 @media only screen and (min-width: 280px) and (max-width: 667px) and (orientation: landscape) {
   h3{
     padding-bottom: 0;
+    padding-top:5vh;
     position: relative;
+    font-size: 2.5vw !important;
+  }
+
+  .timer-counter-container{
+    position: relative;
+    top: -4vh;
   }
 
   .toggle-btn{
@@ -921,9 +928,7 @@ a.fab.fa-{
   .pop-up {
     display: none;
   }
-  .opencongratsModal-popup {
-    bottom: -0.5vh;
-  }
+
   .modal-body {
     font-size: 12px !important;
   }
@@ -1012,6 +1017,7 @@ a.fab.fa-{
   h3{
     font-size: 3vh !important;
     position: relative;
+    top: 3vh;
   }
 
   .timer-counter-container{
@@ -1020,6 +1026,7 @@ a.fab.fa-{
 }
 
 @media screen and (max-width: 659px) {
+
   .info-container {
     content: "";
     position: relative;
@@ -1053,6 +1060,9 @@ a.fab.fa-{
 @media (max-width: 1200px) {
   .heroTitle {
     font-size: 5vh;
+  }
+  .congratsModal-popup{
+    width: 60vw;
   }
   .info-container{
     flex-direction: column;
