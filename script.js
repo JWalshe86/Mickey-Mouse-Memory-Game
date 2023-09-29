@@ -928,6 +928,7 @@ let unFlipCardsFunction = function(){
 	if(btn.style.left == '10vw'){
 		setTimeout(() =>{
 				unFlipCardsFunction();
+				makeBackOfCardsVisible();
 				},30);
 				setTimeout(() =>{
 					clearInterval(setIntervalTimerID);
