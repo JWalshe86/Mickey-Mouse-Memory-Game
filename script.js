@@ -93,7 +93,7 @@ function firstCardFlip() {
 	// if the same card is clicked twice the moves counter doesn't increase
 	if (this != firstCard && this !=secondCard) {
 		moveC();
-		console.log(this);
+		//this hear is the class of the first card clicked
 	}
 	// Alternative option for hard mode
 	if (this != firstCard && this !=secondCard && !startMoves) {
@@ -225,7 +225,7 @@ function checkForMatch() {
 		
 		myPlayMickey();
 		cardsStartToShake();
-		makeBackOfCardsVisible();
+		makeBackOfCardsInvisible();
 	}
 
 		// Donald Duck Sound Clip Plays when two Donald Duck Cards Match
@@ -247,7 +247,7 @@ function checkForMatch() {
 			// code for myplay function adapted from computeshort
 				myPlayDonald();
 				cardsStartToShake();
-				makeBackOfCardsVisible();
+				makeBackOfCardsInvisible();
 		}
 
 			// Daisy Duck Sound Clip Plays when two Daisy Duck Cards Match
@@ -266,7 +266,7 @@ function checkForMatch() {
 				// code for myplay function adapted from computeshorts
 				myPlayDaisy();
 				cardsStartToShake();
-				makeBackOfCardsVisible();
+				makeBackOfCardsInvisible();
 			}
 
 				let myPlayPete = function(){
@@ -282,7 +282,7 @@ function checkForMatch() {
 					// code for myplay function adapted from computeshorts
 					myPlayPete();
 					cardsStartToShake();
-					makeBackOfCardsVisible();
+					makeBackOfCardsInvisible();
 				}
 
 				// Goofy Sound Clip Plays when two Goofy Cards Match
@@ -298,7 +298,7 @@ function checkForMatch() {
 					// code for myplay function adapted from computeshorts
 					myPlayGoofy();
 					cardsStartToShake();
-					makeBackOfCardsVisible();
+					makeBackOfCardsInvisible();
 				}
 	
 				let myPlayMinnie = function(){
@@ -316,7 +316,7 @@ function checkForMatch() {
 					// code for myplay function adapted from computeshorts
 					myPlayMinnie();
 					cardsStartToShake();
-					makeBackOfCardsVisible();
+					makeBackOfCardsInvisible();
 				}
 
 	// The settimeout function is used here so the final card can show before the you won message appears
@@ -347,8 +347,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left >= '1vw' && match === 2 && moves <= 20 && timer.textContent > 30) {
-			
+	if (btn.style.left == '10vw' && match === 2 && moves <= 20 && timer.textContent > 30) {
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
 		if(increaseStar1){
@@ -380,8 +379,8 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left >= '1vw' && match === 4 && moves <= 20 && timer.textContent > 15) {
-			
+	if (btn.style.left == '10vw' && match === 4 && moves <= 20 && timer.textContent > 15) {
+	
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
 		if(increaseStar1){
@@ -410,8 +409,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left >= '1vw' && match === 6 && moves <= 20 && timer.textContent > 0) {
-			
+	if (btn.style.left == '10vw' && match === 6 && moves <= 20 && timer.textContent > 0) {
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
 		if(increaseStar1){
@@ -477,7 +475,7 @@ function disableCards() {
 	
 	// The backcard is hidden while the cards shake
 	// if statement here allows back of card to return when hard mode re clicked
-	if(btn.style.left >= '1vw'){
+	if(btn.style.left == '10vw'){
 		makeBackOfCardsInvisible();	
 	}
 	
@@ -864,11 +862,11 @@ function moveC() {
 // code adapted from Tuat Tran Anh
 // script for easy/hard toggle button
 
-let EasyModeElement = document.querySelectorAll('.toggle-btn')[0];
+let easyBtnHasBeenClickedElement = document.querySelectorAll('.toggle-btn')[0];
 let HardModeElement = document.querySelectorAll('.toggle-btn')[1];
 
-EasyModeElement.onclick = function(){
-	easyMode();
+easyBtnHasBeenClickedElement.onclick = function(){
+	easyBtnHasBeenClicked();
 
 	startTimerCounter = false;
 	clickCard[0].classList.remove('after')
@@ -882,10 +880,12 @@ let stopCardsUnflipping = function(){
 	clearInterval(setIntervalTimerID);
 }
 
-let iKnowImInHardModeAndFirstCardHasBeenClickedWhen = function(){
+let hardModeClickedWhenInHardMode = function(){
 
-if(!timerActivate && btn.style.left >= '1vw' && !startMoves && !startTimerCounter && moves < 30){
+if(!timerActivate && btn.style.left == '10vw' && !startTimerCounter && moves < 30){
 	clearInterval(setIntervalTimerID);
+	alert(!timerActivate, btn.style.left, !startMoves, !startTimerCounter, moves)
+	makeBackOfCardsVisible();	
 };
 
 };
@@ -899,30 +899,24 @@ let unFlipCardsFunction = function(){
 			},50,);
 }
 
-
-
 let text;
-let flipped;
+
  HardModeElement.onclick = function(){
 	hardMode();
 
-
-	// if the player flips one card and goes directly into hard mode
-	// then this card will unflip
-	if (this){
-		document.querySelector('.flip')?.classList.remove('flip');
+	if(this && btn.style.left == '10vw'){
+		
+		console.log(this)
 	}
 
-	iKnowImInHardModeAndFirstCardHasBeenClickedWhen();
+	hardModeClickedWhenInHardMode();
 
-	if(moves < 30){
-	}
 	/**moves counter is set to go down when startMoves is true */
 
 	// Cards remain unflipped when going from easy to hardmode. So need
 	// to have cards flip in this instance. 
-	/** if the button styling is 14.7vw easy has moved into hard */
-	if(btn.style.left >= '1vw'){
+	/** if the button styling is > 1vw easy has moved into hard */
+	if(btn.style.left == '10vw'){
 		setTimeout(() =>{
 				unFlipCardsFunction();
 				},30);
@@ -934,11 +928,6 @@ let flipped;
 	// startmoves is true globally, when hardMode is clicked
 	// it is set to false. 
 
-	// with startmoves being false & hard mode clicked again 
-	// reset startmoves to true so any flipped cards will unflip
-	if(!startMoves && HardModeElement.onclick){
-		startMoves = true;
-	}
 	// This needs NOT to run when hard mode is clicked to start a game. 
 	// It sets to true when hard mode is clicked. By having a clause whereby the cards only unflip
 	// while the movesCounter is false this prevents the cards unflipping during the game.
@@ -961,9 +950,10 @@ let btn = document.getElementById('btn');
 
 let easyBtn = document.querySelector('#easyBtn');
 
-let easyMode = function(){
+let easyBtnHasBeenClicked = function(){
 	btn.style.left = '0';
 	resetGame();
+	console.log(startMoves)
 	if(!startMoves){
 		unFlipCardsFunction();
 	}
@@ -995,8 +985,7 @@ let hardModeTimerResetValues = function(){
 
 // how the computer can tell it's in hardmode
 let howKnowInHardMode = function(){
-	console.log(btn.style.left)
-	btn.style.left = '14.7vw';
+	btn.style.left = '10vw';
 	timerActivate = false;
 	startMoves = false;
 }

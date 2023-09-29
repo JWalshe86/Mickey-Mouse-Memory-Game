@@ -369,7 +369,7 @@ body {
   align-items: center;
   color: yellow;
   text-shadow: 2px 2px 2px black;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 /* game & info stay in same screen */
@@ -1114,7 +1114,7 @@ a.fab.fa-{
   outline: none;
   position: relative;
   text-align: center;
-  font-size: 8vw;
+  font-size: 4vw;
   font-weight:bolder;
   font-family: "Mouse Memoirs", sans-serif;
 }
@@ -1123,7 +1123,7 @@ a.fab.fa-{
   left:0;
   top:0;
   position: absolute;
-  width: 17vw;
+  width: 11vw;
   height: 100%;
   background: rgba(72, 98, 247);
   border-radius: 26px;
