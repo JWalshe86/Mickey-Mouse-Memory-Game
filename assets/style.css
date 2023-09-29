@@ -26,7 +26,6 @@ body {
   position: absolute;
   width: 100%;
   font-size: 10vh;
-  top: 20vh;
   bottom: 70vh;
   flex-wrap: wrap;
   flex-direction: column;
@@ -832,7 +831,43 @@ a.fab.fa-{
 
 
 /* @Media queries */
+@media screen and (min-width: 640px) and (max-height:360px) {
+  .heroTitle{
+    /* Galaxy S5*/
+    top:-7vh !important;
+    font-size: 5vw !important;
+  }
+  #btn{
+    left: 10vw 
+  }
+  
+}
 
+@media screen and (min-width: 360px) and (max-height:640px) and (orientation: portrait) {
+  .heroTitle{
+    /* Galaxy S5*/
+  
+    font-size: 6vw !important;
+  }
+  
+}
+
+@media screen and (min-width: 325px) and (max-height:667px) {
+.title-container{
+  /* to account diff between dev tools & actual iphone 7 */
+  bottom: 50vh;
+}
+}
+
+@media screen and (min-width: 658px) and (max-height:320px) {
+  .title-container{
+    /* for Galaxy S9+ */
+    bottom: 80vh;
+  }
+  .heroTitle{
+    font-size: 5vw !important;
+  }
+  }
 
 @media screen and (min-width: 350px) and (max-width: 500px) {
   .modal-header .title {
@@ -853,6 +888,7 @@ a.fab.fa-{
     top: 12vh;
     padding-left: 8.5vw;
     text-align: center;
+    top: 1vh !important;
   }
 
   .modal {
@@ -918,10 +954,6 @@ a.fab.fa-{
   .timer-counter-container{
     position: relative;
     bottom: 3vh;
-  }
-
-  .toggle-btn{
-    font-size: 5vw !important;
   }
 
   .pop-up {
@@ -991,7 +1023,7 @@ a.fab.fa-{
   }
 }
 
-@media screen and (min-width: 350px) and (max-width: 650px) {
+@media only screen and (max-width: 750px) and (max-height: 1334px) {
   .heroTitle {
     top: 6vh;
   }
