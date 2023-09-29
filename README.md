@@ -494,7 +494,8 @@ animation css for the horizontal shake, even if the next is quickly
 pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
   animation: horizontal-shaking .35s 0s 5;
 }
-- [Easy-To-Hard-In-Game-Error](./assets/images/readme-images2/EasyToHardError.png)
+- [Easy-To-Hard-In-Game-Error](./assets/images/readme-images2/EasyToHardError.png) 
+- Solution for back of cards disappearing adapted  from code from [Web-Dev_Simplified](https://www.youtube.com/watch?v=v7rSSy8CaYE)
 ## Unsolved bugs 
 
 - congrats voice not showing up on iphone 7 Safari

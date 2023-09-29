@@ -79,12 +79,6 @@ function firstCardFlip() {
 	cardToUnflip = document.getElementsByClassName('flip');
 	hardModeFirstCardFlip();
 	cardToUnflip = this;
-	
-	if(btn.style.left != '10vw'){
-		
-	
-		// cardToUnflip.classlist.remove('flip');
-	}
 
 	// so the info stays centered when first card clicked
 	timerCounterContainer[0].style.bottom = '0';
@@ -458,6 +452,8 @@ let makeBackOfCardsInvisible = function(){
 	secondCard.children[0].classList.add('visibilityHidden');
 }
 
+
+
 let makeBackOfCardsVisible = function(){
 	firstCard.children[0].classList.remove('visibilityHidden');
 	secondCard.children[0].classList.remove('visibilityHidden');
@@ -492,7 +488,6 @@ function disableCards() {
 	
 }
 	
-
 // called if cards don't match
 let unFlipCards = function(){
 	/* If the cards don't match they will be locked  */
@@ -890,33 +885,47 @@ let setIntervalTimerID;
 let stopCardsUnflipping = function(){
 	clearInterval(setIntervalTimerID);
 }
-
 let hardModeClickedWhenInHardMode = function(){
-
-if(!timerActivate && btn.style.left == '10vw' && !startTimerCounter && moves < 30){
+		
+if(!timerActivate && btn.style.left == '10vw' && !startTimerCounter && moves <= '30'){
 	clearInterval(setIntervalTimerID);
-	alert(!timerActivate, btn.style.left, !startMoves, !startTimerCounter, moves)
-	makeBackOfCardsVisible();	
+	alert('hardModeInHardMode');
 };
 
 };
 
 let unFlipCardsFunction = function(){
 	const unFlipCardsHard = () => {
-		document.querySelector('.front1')?.classList.remove('front1');
+		let cardsLeftToUnflip = document.querySelector('.front1');
+		cardsLeftToUnflip?.classList.remove('front1');
 	  }
 	  setIntervalTimerID = setInterval(() =>{
 		unFlipCardsHard()
 			},50,);
 }
 
+//Addresses bug whereby matched cards would not display 
+// the back of the card when moving from easy to hard mode
+//solution adapted from code from Web Dev Simplified
+// so whatever element is passed into this function
+// it's visibilityHidden class is removed. Using functions 
+// this way allow for repeatibility
+function removeVisibility(element){
+element.classList.remove('visibilityHidden');
+}
+
  HardModeElement.onclick = function(){
 	hardMode();
-
+	// this.getElementsByClassName doesn't have a forEach method but turning it into an array allows one to use forEach
+	let strayCardsToUnflipHardMode = Array.from(document.getElementsByClassName('visibilityHidden'));
+	// for each card left unflipped when moving from easy to hard mode the back of the card will now still display
+	strayCardsToUnflipHardMode.forEach(removeVisibility);
+	
 	//Addresses bug whereby if one card was open on easy mode
 	// and player switched to hard mode the firstCard remained
 	// unflipped
-	cardToUnflip.classList.remove('flip');
+	cardToUnflip?.classList.remove('flip');
+	
 
 	hardModeClickedWhenInHardMode();
 
@@ -928,7 +937,6 @@ let unFlipCardsFunction = function(){
 	if(btn.style.left == '10vw'){
 		setTimeout(() =>{
 				unFlipCardsFunction();
-				makeBackOfCardsVisible();
 				},30);
 				setTimeout(() =>{
 					clearInterval(setIntervalTimerID);
