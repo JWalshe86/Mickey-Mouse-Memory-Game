@@ -68,12 +68,23 @@ let hardModeFirstCardFlip = function(){
 		startMoves = false;
 	}
 }
+
+
+ let cardToUnflip; 
+
 let timerCounterContainer = document.getElementsByClassName('timer-counter-container');
 
 function firstCardFlip() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
-
+	cardToUnflip = document.getElementsByClassName('flip');
 	hardModeFirstCardFlip();
+	cardToUnflip = this;
+	
+	if(btn.style.left != '10vw'){
+		
+	
+		// cardToUnflip.classlist.remove('flip');
+	}
 
 	// so the info stays centered when first card clicked
 	timerCounterContainer[0].style.bottom = '0';
@@ -899,15 +910,13 @@ let unFlipCardsFunction = function(){
 			},50,);
 }
 
-let text;
-
  HardModeElement.onclick = function(){
 	hardMode();
 
-	if(this && btn.style.left == '10vw'){
-		
-		console.log(this)
-	}
+	//Addresses bug whereby if one card was open on easy mode
+	// and player switched to hard mode the firstCard remained
+	// unflipped
+	cardToUnflip.classList.remove('flip');
 
 	hardModeClickedWhenInHardMode();
 
