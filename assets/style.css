@@ -745,9 +745,9 @@ h3 {
 /* Each keyframe is activated within .35s interval */
 @keyframes horizontal-shaking {
   0% { transform: translateX(0) }
-  25% { transform: translateX(5vh) }
-  50% { transform: translateX(-5vh) }
-  75% { transform: translateX(5vh) }
+  25% { transform: translateX(1vh) }
+  50% { transform: translateX(-1vh) }
+  75% { transform: translateX(1vh) }
   100% { transform: translateX(0) }
 }
 
@@ -1079,13 +1079,7 @@ a.fab.fa-{
   .congratsCounter, .congratsTimer, .congratsStars {
     font-size: 2vh !important;
   }
-
-  #btn{
-    width: 12.5vw !important;
-  }
-  .toggle-btn{
-    padding: 0.5vh 3.35vw !important;
-  }
+ 
   }
 
 @media (max-width: 1200px) {
