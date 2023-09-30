@@ -27,6 +27,8 @@ remaining cards to flip over.
 <!-- Inspiration for rules of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git) -->
 ## Rules of Memory Game 📑
 
+### Easy Mode
+
 - One card is flipped to start the game
 - If the next card is identical, then you get +1 score
 - These cards then disappear from the game
@@ -35,6 +37,12 @@ remaining cards to flip over.
 - If you get 2 matches within 30 seconds you get 1 star 
 - If you get 4 matches within 45 seconds you get 2 stars 
 - If you get 6 matches within 60 seconds you get 3 stars & win the game!
+
+### Hard Mode
+
+- Click 'hard' on the yellow button beneath the game 
+- If you can complete the game within 60 seconds
+AND 30 moves you'll have one. Otherwise the game will reset and you can try again
 
 ## Contents 📖
 
@@ -109,7 +117,7 @@ Playing memory games may help with a child's cognitive development. Having fun i
 
 The scope covered the needs of 3+ year old children and their need for fun and memory development. The site is simple in it's layout - so it can be easily used by children. Customers can easily navigate the page and a pop up provides information on how to play the game. The main constraint was that only CSS, HTML and Javascript languages were used. 
 
-## Structure
+## Structure 
 
 ### Landing Page
 
@@ -130,7 +138,7 @@ The scope covered the needs of 3+ year old children and their need for fun and m
 
 When the player completes the game a congrats pop up is shown with the viewers scores.
 
-# Technologies Used
+# Technologies Used 🧑‍💻
 
 - [Git](https://git-scm.com/) was used for version control via GitPod by using the terminal to Git and Push to GitHub
 - [GitHub](https://github.com/) was used to store the project code after being created in GitPod / Git
@@ -158,7 +166,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 
 Javascript, CSS & HTML.
 
-## Skeleton
+## Skeleton ☠
 
 The premise was very simple a landing page and then the game page. The aim was to keep it simple as the target audience was young children. The use of a modal helped keep the layout clear. Wireframes were created with the an initial blueprint of the project for desktop, ipad and mobile.
 
@@ -178,7 +186,7 @@ The premise was very simple a landing page and then the game page. The aim was t
 
 ## Surface
 
-### Colour Palette
+### Colour Palette 🌈
 
 The hero image was chosen due to it containing many of the colorful Mickey Mouse characters which would be used in the game. The blue with the stars in the background is visually appealing. The background image of the game background was changed to match the hero image background color. Google Dev tools was used to find the background Hex number and applied to the background of the background image on the game page.
 
@@ -192,7 +200,7 @@ A colour palette was created using [color-adobe](https://color.adobe.com/create/
 
 The Mouse Memoirs font was chosen as the name fit with the theme and the comic style font suited the fun theme of the game. 
 
-### Imagery 
+### Imagery 📷
 
 - Mickey Mouse character images taken from [PNGWing](https://www.pngwing.com/).
 - Images compressed on [TinyPNG](https://tinypng.com/).
@@ -204,7 +212,7 @@ The Mouse Memoirs font was chosen as the name fit with the theme and the comic s
 
 The Mickey Mouse favicon in the browser text was taken from [icons8](https://icons8.com/icons/set/mickey-mouse)
 
-### Sounds 
+### Sounds 🔊
 
 - Mickey Mouse, Goofy and Daisy Duck sound clips courtesy of [Mallerie's Sonic Boom The Series](https://www.youtube.com/watch?v=NYttHXAszkk),(https://www.youtube.com/watch?v=elmbWaAKM1E)
 - Donald Duck sound clip courtesty of [Minnie-Mouse](https://www.youtube.com/watch?v=xB2S7qmebUk)
@@ -212,13 +220,13 @@ The Mickey Mouse favicon in the browser text was taken from [icons8](https://ico
 - Sparkle sound effect from [orangefreesounds](https://orangefreesounds.com/sparkle-sound-effect/#google_vignette)
 - Mickey Mouse congratulations and ding sound sound effects from [101soundboards.com](https://www.101soundboards.com/sounds/1342530-gosh-what-a-great-place-congratulations-pal)
 
-### Accessability
+### Accessability ♿
 
 The WAVE accessabilty tool found [6-contrast-errors](./assets/images/readme-images/WAVE-results.png). However, the test here appears to be picking up previous versions of the game. A check of contrast using google dev tools found the contrasts were fine. There was one contrast issue with the green 'ok' button on the congrats modal. Chaning the background of the button here to black and the text to white addressed this. All the 'cards' have an alt text attribute. 4
 
 # Features
 
-## Hero Image
+## Hero Image 🦸‍♀️
 
 The Disney themed hero image was used to capture the fun and excitement of Disney. The aim was to get the viewer to further explore the page and play the game. 
   
@@ -257,7 +265,7 @@ The buttons change color from yellow to orange when hovered over. This adds to t
 
  When a specific characters cards match a sound specific to that character is produced. 
 
-## Stars when button pressed
+## Stars when button pressed ⭐
 
 - This again added to the element of fun, while playing. The code was adapted from [GreatStack](https://youtu.be/Odr24UQs3uY?feature=shared). Stars pop out of both the play and play how buttons when pressed. 
 ![Stars-Explode](./assets/images/readme-images2/starspopgif.gif)
@@ -284,15 +292,15 @@ Once the first card is clicked this text no longer bounces and is removed from t
 
 When a star is scored a ping noise activates
 
-### Timer
+### Timer ⏲
 
 - The time starts at the beginning of the game and players can aim to get more stars in less time.
 
-### Moves
+### Moves ♟
 
 The moves counter increases whenever a player tries another card. Getting 3 stars with the least amount of moves is another sign of progress. 
 
-### Reset
+### Reset 👈
 
 The reset game button is displayed as a repeat icon. This looks pleasant and is easily accessible.
 
@@ -319,13 +327,13 @@ The footer contains an email address for the user to contact. There are also 3 s
 ![Footer](./assets/images/readme-images/footer.png)
 
 
-### Congrats Modal
+### Congrats Modal 😁
 
 When the game is completed a modal pops up congratulating the user. It also tells the user it's socre re stars, time and moves. A blue overlay is also present to focus the users attention on the pop up.
 
 ![Congrats-Modal](./assets/images/readme-images2/congratsModalPopup.png)
 
-### Error Page
+### Error Page 😵
 
 Error page displayed when wrong address is entered. It offers a link to the games main page
 
@@ -554,7 +562,7 @@ The project will now be cloned locally for you to use.
 ![Orientation-mobile](./assets/images/readme-images2/TurnDevicePrompt.png)
 ![Card-Container-Mobile](./assets/images/readme-images2/mobilegamecontainer.png)
 
-# Credits
+# Credits 💛
 
 - Inspiration for description of Memory Game from [Ania Kubow](https://github.com/kubowania/memory-game.git)
 - Code for memory card game adapted from [Marina-Ferria](https://www.youtube.com/watch?v=ZniVgo8U7ek);
