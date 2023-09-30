@@ -38,14 +38,10 @@ body {
   position: relative;
   top: 5vh;
   color: #FFEC3D;
-  font-size: 4vw;
+  font-size: 5vw;
   padding: 1vw;
   text-shadow: 2px 2px 10px black, 7px 7px 4px #a34c06;
 }
-
-
-
-
 
 /* styling for hero image title */
 .hero-image {
@@ -840,7 +836,7 @@ a.fab.fa-{
     font-size: 5vw !important;
   }
   #btn{
-    left: 10vw 
+    left: 10vw;
   }
   
 }

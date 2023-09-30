@@ -353,6 +353,38 @@ Error page displayed when wrong address is entered. It offers a link to the game
 
 A big challenge was that dev tools on all browsers didn't match my actual iphone 7 screen size. This meant I eventually had to find the exact viewport size for my phone through trial and error (as the numbers given were incorrect). Instead of using a media query with max height and width, I had to set a specific size for the iphone 7 so it didn't interfere with the other screensizes. There was also bugs between going from easy to hard mode and vice versa. I had to refactor alot of functions and make them more specific and ensure they acted appropriately depending on the game mode. 
 
+### Browser Compatibility
+
+<details><summary>Browser Compatibility</summary>
+<img src="./assets/images/readme-images2/browser-compatibility.png">
+</details>
+
+On Firebox the play button anchor went to an error page. On safari mobile the play congrats audio would not play. All other browsers tested were fine. 
+
+<details><summary>Firefox Browser Hero Image</summary>
+<img src="./assets/images/readme-images2/FirefoxHero.png">
+</details>
+<details><summary>Firefox Browser Game Image</summary>
+<img src="./assets/images/readme-images2/FirefoxGame.png">
+</details>
+<details><summary>Firefox Browser Error Image</summary>
+<img src="./assets/images/readme-images2/FirefoxError.png">
+</details>
+
+<details><summary>Chrome Browser Hero Image</summary>
+<img src="./assets/images/readme-images2/GoogleChromeHero.png">
+</details>
+<details><summary>Chrome Browser Game Image</summary>
+<img src="./assets/images/readme-images2/GoogleChromeGame.png">
+</details>
+
+<details><summary>Edge Browser Hero Image</summary>
+<img src="./assets/images/readme-images2/microsoftEdgeBrowserHero.png">
+</details>
+<details><summary>Edge Browser Game Image</summary>
+<img src="./assets/images/readme-images2/MicroSoftEdgeGame.png">
+</details>
+
 ### Change in color of play/how play buttons when hovered over by cursor
 
 - Expected: Play/How play buttons background to change from orange to yellow; and text to change from yellow to orange
