@@ -353,6 +353,40 @@ Error page displayed when wrong address is entered. It offers a link to the game
 
 A big challenge was that dev tools on all browsers didn't match my actual iphone 7 screen size. This meant I eventually had to find the exact viewport size for my phone through trial and error (as the numbers given were incorrect). Instead of using a media query with max height and width, I had to set a specific size for the iphone 7 so it didn't interfere with the other screensizes. There was also bugs between going from easy to hard mode and vice versa. I had to refactor alot of functions and make them more specific and ensure they acted appropriately depending on the game mode. 
 
+<details><summary>Galaxy 5S orientation error</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/galaxy5sOrientationfonttoowide.png">
+</details>
+<details><summary>Galaxy 5s hero title too low</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/galaxyS5HeroTitleTooLow.png">
+</details>
+<details><summary>Ipad clickcard jump screen</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/ipadclickcardjumpscreenserror.png">
+</details>
+<details><summary>Ipad congrats modal too high</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/IpadCongratsModalTooHigh.png">
+</details>
+<details><summary>Ipad easy/hard overspill</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/ipadEasyHardButtonOverSpill.png">
+</details>
+<details><summary>Ipad footer email too small</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/Ipademailaddresstoosmall.png">
+</details>
+<details><summary>Ipad game info padding too small</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/IpadGameInfoPaddingTooSmall.png">
+</details>
+<details><summary>Ipad game mode button too small</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/Ipadgametogglefonttoosmall.png">
+</details>
+<details><summary>Ipad Pro click card font too large</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/IpadProClickCardFontTooLarge.png">
+</details>
+<details><summary>Ipad yellow back card showing upon card match</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/IpadYellowBackCardShowingError.png">
+</details>
+<details><summary>Cards disappear when change mode</summary>
+<img src="./assets/images/readme-images2/responsivenessTestImages/matchedCardsMissingwhentoggle.png">
+</details>
+
 ### Browser Compatibility
 
 <details><summary>Browser Compatibility</summary>
