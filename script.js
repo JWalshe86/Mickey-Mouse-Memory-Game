@@ -889,7 +889,6 @@ let hardModeClickedWhenInHardMode = function(){
 		
 if(!timerActivate && btn.style.left == '10vw' && !startTimerCounter && moves <= '30'){
 	clearInterval(setIntervalTimerID);
-	alert('hardModeInHardMode');
 };
 
 };

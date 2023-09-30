@@ -337,6 +337,14 @@ Error page displayed when wrong address is entered. It offers a link to the game
 
 [Code-Institute-Manual-Testing-Overview](./CI-Manual-testing-overview.pdf) was used as a guide for the following.
 
+### Responsiveness Testing
+
+<details><summary>Responsiveness Test Checksheet</summary>
+<img src="./ResponsivenessTest280923.pdf">
+</details>
+
+A big challenge was that dev tools on all browsers didn't match my actual iphone 7 screen size. This meant I eventually had to find the exact viewport size for my phone through trial and error (as the numbers given were incorrect). Instead of using a media query with max height and width, I had to set a specific size for the iphone 7 so it didn't interfere with the other screensizes. There was also bugs between going from easy to hard mode and vice versa. I had to refactor alot of functions and make them more specific and ensure they acted appropriately depending on the game mode. 
+
 ### Change in color of play/how play buttons when hovered over by cursor
 
 - Expected: Play/How play buttons background to change from orange to yellow; and text to change from yellow to orange
@@ -500,7 +508,7 @@ pressed the card won't shake after 5 iterations. .card-front.horizontal-shake {
 
 - congrats voice not showing up on iphone 7 Safari
 
-- if flip one card in easy then go into hard, the first card will flip but won't unflip unless another card is flipped. The game will go ahead as normal then.  
+- Galaxy S5 Hero Title not go down
 
 ## Cleaning 🛁
 
