@@ -453,7 +453,7 @@ span.counter {
    /*Every HTML element has a mirrored image of itself. The property backface-visibility 
      defaults to visible so one needs to put this to hidden before the front of the cards 
      can be shown when flipped*/
-  /* backface-visibility: hidden; */
+  backface-visibility: hidden;
 }
 
 .card-front {
@@ -791,6 +791,7 @@ footer {
 	color: black;
   display: flex;
   justify-content:space-evenly;
+  align-items: flex-start;
 }
 
 footer div {
@@ -798,6 +799,7 @@ footer div {
 	display: flex;
 	position: relative;
   font-size:2vw;
+  align-items: center;
 }
 
 footer i {
@@ -842,6 +844,11 @@ i.disney{
   width: 2vw;
   height: 2vh;
   display: block; 
+}
+
+i.envelope-icon{
+  height: 10vh;
+  width: 10vw;
 }
 
 /* @Media queries */
