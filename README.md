@@ -538,7 +538,7 @@ Script tested using jshint jscript command
 
 [Original-lighthouse-scores-for-load-page](./assets/images/readme-images/Original-lighthouse-loadpage.png). Two SEO issues 1. Document does not have a meta description. 2. Document doesn't use legible font sizes 20.5% legible text. [Lighthouse-scores-post-edits](./assets/images/readme-images/lighthouse-score-post-edits.png) were all nearly 100% once the font size in places was increased and the meta tag given more detail.
 
-A second lighthouse test 2 weeks later on 30/09/23 found rendering issues.
+A second lighthouse test 2 weeks later on 30/09/23 found rendering issues due to unused code. 
 
 <details><summary>Dev tools coverage</summary>
 <img src="./assets/images/readme-images2/compressed-images/devtoolsCoverage.png">
