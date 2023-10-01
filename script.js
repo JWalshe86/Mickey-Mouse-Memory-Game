@@ -13,7 +13,7 @@ let moves = document.getElementsByClassName('moves');
 
 let stars1Counter = document.querySelector('span.starCounter');
 
-let stars = document.getElementsByClassName('fa-star');
+let stars = document.getElementsByClassName('star');
 
 let match = 0;
 
@@ -730,25 +730,22 @@ function incrementCounter() {
  */
 
 let oneStarGo = function() {
-	let starDisplay1 = document.createElement('div');
-	starDisplay1.className = "fa fa-star";
-	let congratsModal = document.querySelector('.congratsStars');
-	congratsModal.appendChild(starDisplay1);
+	stars[0].style.color ="orange";
+	// let congratsModal = document.querySelector('.congratsStars');
+	// congratsModal.appendChild(stars[0]);
 }
-	function secondStarGo() {
-		let starDisplay2 = document.createElement('div');
-		starDisplay2.className = "fa fa-star";
-		let congratsModal = document.querySelector('.congratsStars');
-		congratsModal.appendChild(starDisplay2);
+let secondStarGo = function() {
+		stars[1].style.color ="orange";
+		// let congratsModal = document.querySelector('.congratsStars');
+		// congratsModal.appendChild(starDisplay2);
 	}
 
-function thirdStarGo() {
-	let starDisplay3 = document.createElement('div');
-	starDisplay3.className = "fa fa-star";
-	let starDisplay31 = document.createElement('div');
-	starDisplay31.className = "fa fa-star";
-	let congratsModal = document.querySelector('.congratsStars');
-	congratsModal.appendChild(starDisplay3);
+let thirdStarGo = function() {
+	stars[2].style.color ="orange";
+	// let starDisplay31 = document.createElement('div');
+	// starDisplay31.className = "fa fa-star";
+	// let congratsModal = document.querySelector('.congratsStars');
+	// congratsModal.appendChild(starDisplay3);
 }
 
 //Mute sound script

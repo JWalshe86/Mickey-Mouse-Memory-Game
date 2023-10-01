@@ -659,13 +659,11 @@ span.counter {
   flex-wrap: wrap;
 }
 
-
 /* stars code adapted from Susan Chen */
 .info-container .stars {
   margin: 0 1.25rem 0 0;
   padding: 1vw;
   display: flex;
-  color: #FFEB3D;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -678,7 +676,7 @@ span.counter {
 
 /* hollowed out stars  */
 
-i.star.dimmed {
+i.star {
   mix-blend-mode: overlay;
   width: 2vw;
   height: 2vh;
