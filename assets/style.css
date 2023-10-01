@@ -825,6 +825,11 @@ a.fab.fa-{
     margin: 0.5% 5%;
 }
 
+i.faceBook{
+  width: 2vw;
+  height: 2vh;
+  display: block;
+}
 
 /* @Media queries */
 
