@@ -664,6 +664,7 @@ The project will now be cloned locally for you to use.
 - Easy/Hard toggle button code adapted from [Tuat Tran Anh Youtube](https://www.youtube.com/watch?v=vfFSoTvJsV4)
 - Code for countdown timer adapted from [Riddhijain stackoverflow](https://stackoverflow.com/questions/63178274/how-to-change-timer-into-a-countdown-timer-for-the-memory-game)
 - nested for loop code adapted from [freeCodeCamp](https://www.freecodecamp.org/news/nesting-for-loops-in-javascript/)
+- code to store icons locally adapted from [Eric-Murphy](https://www.youtube.com/watch?v=or7amkb0Pk8)
 
 
 

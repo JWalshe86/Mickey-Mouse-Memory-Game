@@ -831,6 +831,18 @@ i.faceBook{
   display: block;
 }
 
+i.github{
+  width: 2vw;
+  height: 2vh;
+  display: block;
+}
+
+i.disney{
+  width: 2vw;
+  height: 2vh;
+  display: block; 
+}
+
 /* @Media queries */
 
 
