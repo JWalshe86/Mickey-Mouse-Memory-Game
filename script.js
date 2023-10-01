@@ -728,25 +728,21 @@ function incrementCounter() {
 /**Creating an element containing the class fa-star each time a star is won. This allows 3 stars to be
  * presented in the congrats modal
  */
-
+let congratsModal = document.querySelector('.congratsStars');
 let oneStarGo = function() {
 	stars[0].style.color ="orange";
-	// let congratsModal = document.querySelector('.congratsStars');
-	// congratsModal.appendChild(stars[0]);
+	congratsModal.innerHTML +='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height = "2vh"; width = "2vw";><path fill="currentColor" d="M18.5 2a4.5 4.5 0 0 1 .883 8.913a8 8 0 1 1-14.765-.001A4.499 4.499 0 0 1 5.5 2a4.5 4.5 0 0 1 4.493 4.254A7.998 7.998 0 0 1 12 6a7.99 7.99 0 0 1 2.006.254A4.5 4.5 0 0 1 18.5 2Z"/></svg>';
 }
+
 let secondStarGo = function() {
 		stars[1].style.color ="orange";
-		// let congratsModal = document.querySelector('.congratsStars');
-		// congratsModal.appendChild(starDisplay2);
+		congratsModal.innerHTML +='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height = "2vh"; width = "2vw";><path fill="currentColor" d="M18.5 2a4.5 4.5 0 0 1 .883 8.913a8 8 0 1 1-14.765-.001A4.499 4.499 0 0 1 5.5 2a4.5 4.5 0 0 1 4.493 4.254A7.998 7.998 0 0 1 12 6a7.99 7.99 0 0 1 2.006.254A4.5 4.5 0 0 1 18.5 2Z"/></svg>';
 	}
 
 let thirdStarGo = function() {
 	stars[2].style.color ="orange";
-	// let starDisplay31 = document.createElement('div');
-	// starDisplay31.className = "fa fa-star";
-	// let congratsModal = document.querySelector('.congratsStars');
-	// congratsModal.appendChild(starDisplay3);
-}
+	congratsModal.innerHTML +='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height = "2vh"; width = "2vw";><path fill="currentColor" d="M18.5 2a4.5 4.5 0 0 1 .883 8.913a8 8 0 1 1-14.765-.001A4.499 4.499 0 0 1 5.5 2a4.5 4.5 0 0 1 4.493 4.254A7.998 7.998 0 0 1 12 6a7.99 7.99 0 0 1 2.006.254A4.5 4.5 0 0 1 18.5 2Z"/></svg>';
+	}
 
 //Mute sound script
 // sound here refers to all the audio elements. It is then passed
