@@ -664,7 +664,7 @@ span.counter {
 .info-container .stars {
   margin: 0 1.25rem 0 0;
   padding: 1vw;
-  display: inline-block;
+  display: flex;
   color: #FFEB3D;
   text-shadow: 2px 2px 2px black;
 }
@@ -673,16 +673,19 @@ span.counter {
   /* remove bullet points */
   list-style: none;
   /* put the stars in even row */
-  display: inline-block;
+  display: flex;
 }
 
 /* hollowed out stars  */
 
-i.fa.fa-star.dimmed {
+i.star.dimmed {
   mix-blend-mode: overlay;
+  width: 2vw;
+  height: 2vh;
+  position: relative;
 }
 
-.fa-star:before {
+.star:before {
   color: yellow;
   float: right;
   left: 2px;
