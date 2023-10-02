@@ -84,6 +84,17 @@ body {
   min-width: fit-content;
 }
 
+/* volume button styling */
+
+i.volume-off, i.volume-on{
+  width: 3vw;
+  position: relative;
+  /* display block takes up the entire width of what's containing it
+  it will force new lines above and below it */
+  display: block;
+}
+
+
 .howToPlay1:hover,
 .play-button:hover, .mute-button:hover {
   background-color: #FFEC3D; /* change to your desired color */
@@ -794,12 +805,15 @@ footer {
   align-items: flex-start;
 }
 
+.footerContentFlexboxContainer{
+  display: flex;
+}
+
 footer div {
-	padding: 4vh;
+	padding: 3vh;
 	display: flex;
 	position: relative;
   font-size:2vw;
-  align-items: center;
 }
 
 footer i {
@@ -807,6 +821,12 @@ footer i {
 	color: black;
 	margin: 0.5% 5%;
 	padding: 1% 0.5%;
+}
+
+
+/* keep email text inline with email icon  */
+footer p{
+  padding-top: inherit;
 }
 
 div.social.links{
