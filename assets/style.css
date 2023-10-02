@@ -11,9 +11,7 @@
 body {
   /* body will take 100% of available viewport space */
   height: 100vh;
-  font-family: 'Mouse Memoirs';
-  font-family: "Open Sans", sans-serif;
-  font-family: "Permanent Marker";
+  font-family: "Mouse Memoirs", sans-serif;
 }
 
 /* styling for landing page */
@@ -38,6 +36,7 @@ body {
   /* centers the top of the text to the middle */
   position: relative;
   top: 5vh;
+  letter-spacing: .5vw;
   color: #FFEC3D;
   font-size: 5vw;
   padding: 1vw;
