@@ -350,10 +350,10 @@ i.volume-off, i.volume-on{
   border-left: 10vh solid transparent;
   border-bottom: 7vh solid rgba(72, 98, 247, 0.8);
   border-top: 7vh solid rgba(72, 98, 247, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 2vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .info-container::after {
   width: 50%;
@@ -368,11 +368,11 @@ i.volume-off, i.volume-on{
 
 .timer-counter-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
   color: yellow;
   text-shadow: 2px 2px 2px black;
   font-size: 2vw;
+  align-items: flex-end;
 }
 
 /* game & info stay in same screen */
@@ -800,15 +800,72 @@ h3.cardShake {
 /*----------------FOOTER---*/
 /* code adapted from Iris Smok */
 
-footer {
-	float: left;
-	width: 100%;
+footer{
+  position: relative;
+  width: 100vw;
+  background-color: #FFEC3D;
+  min-height: 15vh;
+  padding: 5vh 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .social-links{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-links li {
+  width: 4vw;
+  height: 2vh;
+  display: block; 
+  margin-bottom: 7vh;
+  margin-right: 4vh;
+  list-style: none;
+}
+
+footer .social-links li a {
+    width: 100%;
+    color: black;
+    display:inline-block;
+    transition: 0.5s;  
+}
+
+footer .social-links li a:hover{
+  transform: translateY(-2vh);
+}
+
+footer .email-frame{
+  display:flex;
+  font-size: 4vh;
+}
+
+footer .envelope-icon{
+  margin-right: 2vw;
+  height: 5vh;
+  width: 2vw;
+}
+
+svg{
+  width: 100%;
+  height: 100%;
+}
+
+.envelopeSVGContainer{
+ width: 4vw;
+ height: 4vh;
+ resize: both;
+}
+
+/* footer {
+	width: 100vw;
 	text-align: center;
 	background-color: #FFEC3D;
 	color: black;
-  display: flex;
-  justify-content:space-evenly;
-  align-items: flex-start;
 }
 
 .footerContentFlexboxContainer{
@@ -816,33 +873,22 @@ footer {
 }
 
 footer div {
-	padding: 3vh;
-	display: flex;
-	position: relative;
   font-size:2vw;
 }
 
 footer i {
-	font-size: 180%;
+
 	color: black;
 	margin: 0.5% 5%;
 	padding: 1% 0.5%;
-}
+} */
 
 
 /* keep email text inline with email icon  */
-footer p{
-  padding-top: inherit;
-}
+/* footer p{
+  padding-top: 3vh;
+  padding-right: 2vw;}
 
-div.social.links{
-  column-gap: 2vw;
-  padding-right: 6vw;
-}
-
-.social-media a {
-	margin-left: 2%;
-}
 
 a.fab.fa-{
     font-weight: bold;
@@ -854,28 +900,11 @@ a.fab.fa-{
     margin: 0.5% 5%;
 }
 
-i.faceBook{
-  width: 2vw;
-  height: 2vh;
-  display: block;
-}
-
-i.github{
-  width: 2vw;
-  height: 2vh;
-  display: block;
-}
-
-i.disney{
-  width: 2vw;
-  height: 2vh;
-  display: block; 
-}
-
 i.envelope-icon{
   height: 10vh;
   width: 10vw;
-}
+} */
+
 
 /* @Media queries */
 
@@ -1096,6 +1125,11 @@ i.envelope-icon{
 
   .timer-counter-container{
     font-size: 2.6vh;
+  }
+ 
+  footer div{
+    font-size: 5vw;
+  
   }
 }
 
