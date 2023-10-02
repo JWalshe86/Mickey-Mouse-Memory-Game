@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 11 */
 
 let cardsMatched = [];
 let cardsMatched2 = [];
@@ -67,7 +67,7 @@ let hardModeFirstCardFlip = function(){
 
 		startMoves = false;
 	}
-}
+};
 
 
  let cardToUnflip; 
@@ -186,7 +186,7 @@ function checkForMatch() {
 	let cardsRemainUnflipped = function(){
 		firstCardFrontAfterMatch[1].classList.add('front1');
 		secondCardFrontAfterMatch[1].classList.add('front1');
-	}
+	};
 	
 	firstCardFrontAfterMatch = firstCard.getElementsByTagName('img');
 	secondCardFrontAfterMatch = secondCard.getElementsByTagName('img');
@@ -432,53 +432,53 @@ let cardsStopReactingToClicks = function(){
 	
 	firstCard.removeEventListener('click', firstCardFlip);
 	secondCard.removeEventListener('click', firstCardFlip);
-}
+};
 
 let removeCardsFlip = function(){
 	
 	firstCard.classList.remove('flip');
 	secondCard.classList.remove('flip');
-}
+};
 
 let removeCardsFlipAndBackFace = function(){
 	removeBackFace();
 	// cards remain unflipped
 	
 	removeCardsFlip();
-}
+};
 
 let makeBackOfCardsInvisible = function(){
 	firstCard.children[0].classList.add('visibilityHidden');
 	secondCard.children[0].classList.add('visibilityHidden');
-}
+};
 
 
 
 let makeBackOfCardsVisible = function(){
 	firstCard.children[0].classList.remove('visibilityHidden');
 	secondCard.children[0].classList.remove('visibilityHidden');
-}
+};
 
 let cardsStartToShake = function(){
 	firstCard.children[1].classList.add('horizontal-shake');
 	secondCard.children[1].classList.add('horizontal-shake');	
-}
+};
 
 let cardShakeRemove = function(){
 	setTimeout(() =>{
 		clearTimeout(cardsStartToShake);
 	},1500);
-}
+};
 
 let removeBackFace = function(){
 	firstCard.children[1].classList.add('backFaceVisibility');
 	secondCard.children[1].classList.add('backFaceVisibility');
-}
+};
 
 // called if the cards match
 function disableCards() {
 
-	removeCardsFlipAndBackFace()
+	removeCardsFlipAndBackFace();
 	
 	// The backcard is hidden while the cards shake
 	// if statement here allows back of card to return when hard mode re clicked
@@ -505,7 +505,7 @@ let unFlipCards = function(){
 
 		resetBoard();
 	}, 1500);
-}
+};
 
 /**  In order for the function to work after each round the first card and second card 
 need to be reset to null */
@@ -700,7 +700,7 @@ function openCongratsModalPopup() {
 		let myPlayMickeyCongrats = function(){
 			let audio = document.getElementsByClassName('mickeyMouseCongrats')[0];
 			audio.play();
-		}
+		};
 		setTimeout(function() {
 			myPlayMickeyCongrats();
 		}, 2000);
@@ -732,17 +732,17 @@ let congratsModal = document.querySelector('.congratsStars');
 let oneStarGo = function() {
 	stars[0].style.color ="orange";
 	congratsModal.innerHTML +='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height = "2vh"; width = "2vw";><path fill="currentColor" d="M18.5 2a4.5 4.5 0 0 1 .883 8.913a8 8 0 1 1-14.765-.001A4.499 4.499 0 0 1 5.5 2a4.5 4.5 0 0 1 4.493 4.254A7.998 7.998 0 0 1 12 6a7.99 7.99 0 0 1 2.006.254A4.5 4.5 0 0 1 18.5 2Z"/></svg>';
-}
+};
 
 let secondStarGo = function() {
 		stars[1].style.color ="orange";
 		congratsModal.innerHTML +='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height = "2vh"; width = "2vw";><path fill="currentColor" d="M18.5 2a4.5 4.5 0 0 1 .883 8.913a8 8 0 1 1-14.765-.001A4.499 4.499 0 0 1 5.5 2a4.5 4.5 0 0 1 4.493 4.254A7.998 7.998 0 0 1 12 6a7.99 7.99 0 0 1 2.006.254A4.5 4.5 0 0 1 18.5 2Z"/></svg>';
-	}
+	};
 
 let thirdStarGo = function() {
 	stars[2].style.color ="orange";
 	congratsModal.innerHTML +='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height = "2vh"; width = "2vw";><path fill="currentColor" d="M18.5 2a4.5 4.5 0 0 1 .883 8.913a8 8 0 1 1-14.765-.001A4.499 4.499 0 0 1 5.5 2a4.5 4.5 0 0 1 4.493 4.254A7.998 7.998 0 0 1 12 6a7.99 7.99 0 0 1 2.006.254A4.5 4.5 0 0 1 18.5 2Z"/></svg>';
-	}
+	};
 
 //Mute sound script
 // sound here refers to all the audio elements. It is then passed
@@ -753,11 +753,11 @@ let volume = false;
 
 	let muteMe = function(sound){
 		sound.muted=true;	
-	}
+	};
 	let unMuteMe = document.getElementById('UnMuteIcon');
 	let UnmuteMeFunction = function(sound){
 		sound.muted=false;	
-	}
+	};
 
 	let muteSounds = function() {
 	// 	// returns node list of all sounds
@@ -765,7 +765,7 @@ let volume = false;
 	// 	// for each sound add mute me to it
 		[].forEach.call(sounds, function(sound){muteMe(sound);});
 		volume = true;
-	}	
+	};	
 	
 	let UnmuteSounds = function() {
 		// returns node list of all sounds
@@ -773,7 +773,7 @@ let volume = false;
 		// for each sound add mute me to it
 		[].forEach.call(sounds, function(sound){UnmuteMeFunction(sound);});
 		volume = false;
-			}
+			};
 
 // toggle between volume/no volume
 // mute is always false and unmute is always true so when the function below
@@ -824,7 +824,7 @@ let startCountdownTimer = function() {
 		
 	  }, 1000);
 
-}
+};
 
 // Code for Moves Countdown
 let startMoves = true;
@@ -868,21 +868,21 @@ easyBtnHasBeenClickedElement.onclick = function(){
 	easyBtnHasBeenClicked();
 
 	startTimerCounter = false;
-	clickCard[0].classList.remove('after')
+	clickCard[0].classList.remove('after');
 	clickCard[0].classList.add('cardShake');
 	
 	increaseFontAfterClick.classList.add('infoContainerAfterClick');
-}
+};
 let setIntervalTimerID;
 
 let stopCardsUnflipping = function(){
 	clearInterval(setIntervalTimerID);
-}
+};
 let hardModeClickedWhenInHardMode = function(){
 		
 if(!timerActivate && btn.style.left == '10vw' && !startTimerCounter && moves <= '30'){
 	clearInterval(setIntervalTimerID);
-};
+}
 
 };
 
@@ -890,11 +890,11 @@ let unFlipCardsFunction = function(){
 	const unFlipCardsHard = () => {
 		let cardsLeftToUnflip = document.querySelector('.front1');
 		cardsLeftToUnflip?.classList.remove('front1');
-	  }
+	  };
 	  setIntervalTimerID = setInterval(() =>{
-		unFlipCardsHard()
-			},50,);
-}
+		unFlipCardsHard();
+			},50);
+};
 
 //Addresses bug whereby matched cards would not display 
 // the back of the card when moving from easy to hard mode
@@ -954,7 +954,7 @@ element.classList.remove('visibilityHidden');
 	if(!startTimerCounter && HardModeElement.onclick){
 		movesCounter = false;
 	}
- }
+ };
 			
 let btn = document.getElementById('btn');
 
@@ -963,11 +963,10 @@ let easyBtn = document.querySelector('#easyBtn');
 let easyBtnHasBeenClicked = function(){
 	btn.style.left = '0';
 	resetGame();
-	console.log(startMoves)
 	if(!startMoves){
 		unFlipCardsFunction();
 	}
-}
+};
 
 /**tells the game what moves values to display
  * when hardMode is activated initially
@@ -979,7 +978,7 @@ let hardModeMovesResetValues = function(){
 	startMovesCountdown();
 	// so counter timer not start until first click
 	startTimerCounter = false;
-}
+};
 
 /**tells the game what timer valuestartMoves = false;s to display
  * when hardMode is activated initially
@@ -991,26 +990,26 @@ let hardModeTimerResetValues = function(){
 	second = 60;
 	// clears the setinterval that's set to 1s
 	clearInterval(interval);
-}
+};
 
 // how the computer can tell it's in hardmode
 let howKnowInHardMode = function(){
 	btn.style.left = '10vw';
 	timerActivate = false;
 	startMoves = false;
-}
+};
 
 // sets both hard modes timer and moves default values
 let hardModeResetValues = function(){
 	hardModeMovesResetValues();
 	hardModeTimerResetValues(); 
-}
+};
 
 let hardMode = function(){
 	hardModeResetValues();
 	howKnowInHardMode();
 	startCountdownTimer();
-}
+};
 
 
 
