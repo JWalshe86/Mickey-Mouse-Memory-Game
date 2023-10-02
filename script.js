@@ -1,8 +1,7 @@
 /*jshint esversion: 11 */
+/*jshint esversion: 6 */
 
 let cardsMatched = [];
-let cardsMatched2 = [];
-let moveCounter = 0;
 let starCounter = 0;
 
 let increaseStar1 = true;
@@ -596,7 +595,7 @@ function resetGame() {
 
 }
 // get reference to repeat icon
-let reset = document.querySelector(".fa-repeat");
+let reset = document.querySelector(".repeat");
 // add event listener for the button, for action "click"
 reset.addEventListener("click", resetGame);
 

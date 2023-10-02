@@ -531,7 +531,7 @@ Script tested using jshint jscript command
 
 ### CSS
 
-<details><summary>Wireframe Desktop View</summary>
+<details><summary>W3C CSS Validator Results</summary>
 <img src="./assets/images/readme-images/W3C-CSS-Validator-Results.png">
 </details>
 

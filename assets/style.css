@@ -412,6 +412,12 @@ span.counter {
   width: 100%;
 }
 
+i.repeat{
+  width: 2vw;
+  display: flex;
+  cursor: pointer;
+}
+
 .memory-card {
   /* 4 cards @ 25% each for row, 3 cards @ 33% each for columns */
   /* The css calc function allows one to remove 
