@@ -45,7 +45,7 @@ body {
 
 /* styling for hero image title */
 .hero-image {
-  background-image: url(./images/test.jpg);
+  background-image: url(./images/heroImg.webp);
   justify-content: center;
   height: 100vh;
   display: flex;
