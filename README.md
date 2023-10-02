@@ -161,6 +161,7 @@ When the player completes the game a congrats pop up is shown with the viewers s
 - [ytmp3](https://ytmp3.nu/dijp/) to convert youtube to mp3
 - [veed.io](https://www.veed.io/) to cut mp3 clips to ideal size
 - [webfx.com](https://www.webfx.com/tools/emoji-cheat-sheet/) for emoji's
+- Images converted to webp using [Convertio](https://convertio.co/download/df1aa8ccf17ac45e8cec9876eb39385e9ea205/)
 
 ## Languages Used
 
