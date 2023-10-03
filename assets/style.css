@@ -1,3 +1,27 @@
+
+/* code for responsive typography adapted from Kevin Powell */
+/* root directory */
+/* custom properties */
+/* anything below 800 px width */
+:root {
+--fs-xl: 3rem;
+--fs-600: 1.5rem;
+/* 1 time the root font size */
+/* most browsers have a default root font size of 16px */
+--fs-400: 1rem;
+}
+
+/* 40 times the current font size */
+/* 50em = 800px */
+/* Anything above 800px in width size */
+@media (min-width: 50em){
+  :root{
+    --fs-xl: 5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -12,6 +36,8 @@ body {
   /* body will take 100% of available viewport space */
   height: 100vh;
   font-family: "Mouse Memoirs", sans-serif;
+  /* my equivalent of 1rem for normal text */
+  font-size: var(--fs-400);
 }
 
 /* styling for landing page */
@@ -38,7 +64,7 @@ body {
   top: 5vh;
   letter-spacing: .5vw;
   color: #FFEC3D;
-  font-size: 5vw;
+  font-size: var(--fs-xl);
   padding: 1vw;
   text-shadow: 2px 2px 10px black, 7px 7px 4px #a34c06;
 }
@@ -866,12 +892,10 @@ footer .envelope-icon{
   .heroTitle{
     /* Galaxy S5*/
     top:1vh !important;
-    font-size: 5vw !important;
   }
   #btn{
     left: 10vw;
   }
-  
 }
 
 /* iphone7 portrait */
@@ -897,7 +921,6 @@ footer .envelope-icon{
     bottom: 80vh;
   }
   .heroTitle{
-    font-size: 5vw !important;
     top: 4vh !important;
   }
   }
@@ -905,7 +928,6 @@ footer .envelope-icon{
   @media only screen and (width: 812px) and (height:375px) {
    
     .heroTitle{
-      font-size: 5vw !important;
       top: -2vh !important;
     }
     }
@@ -913,7 +935,6 @@ footer .envelope-icon{
     @media only screen and (width: 375px) and (height:812px) {
    
       .heroTitle{
-        font-size: 7vw !important;
         top: 4vh !important;
       }
       }
@@ -974,7 +995,6 @@ footer .envelope-icon{
 
 @media screen and (min-width: 240px) and (max-width: 350px) {
   .heroTitle {
-    font-size: 4vh;
     top: 5vh;
     text-align: center;
     padding-right: 11vw;
@@ -1045,9 +1065,6 @@ footer .envelope-icon{
 }
 
 @media (max-width: 350px) {
-  .heroTitle {
-    font-size: 3.5vh !important;
-  }
 
   .modal-body{
     font-size: 3.5vw !important;
@@ -1066,7 +1083,7 @@ footer .envelope-icon{
 
 @media screen and (min-width: 650px) and (max-width: 800px) and (min-height: 800px) and (max-height: 1030px) {
   .heroTitle {
-    font-size: 4vh;
+
     top: 4vh;
     text-align: center;
   }

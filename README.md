@@ -666,6 +666,7 @@ The project will now be cloned locally for you to use.
 - nested for loop code adapted from [freeCodeCamp](https://www.freecodecamp.org/news/nesting-for-loops-in-javascript/)
 - code to store icons locally adapted from [Eric-Murphy](https://www.youtube.com/watch?v=or7amkb0Pk8)
 [Crisp-code](https://www.youtube.com/watch?v=Yn55sH3FKKk) for how to store google fonts locally
+[Kevin-Powell](https://www.youtube.com/watch?v=wARbgs5Fmuw) code for responsive font sizes
 
 
 
