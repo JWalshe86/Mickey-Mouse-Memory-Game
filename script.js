@@ -22,12 +22,12 @@ let backOfCardsImg = document.querySelectorAll('.card-back');
 // As querySelectorAll returns an array I'd to loop through them
 function turnBackOfCardsPurple(){
 	for (i=0;i<backOfCardsImg.length;i++){
+		backOfCardsImg[i].style.backgroundColor ='rgb(68 33 224)';
 		backOfCardsImg[i].src = "./assets/images/readme-images2/compressed-images/mickey-mouse-background-Purple.jpg";
+
 	}			
 }
 
-
-turnBackOfCardsPurple();
 /* Store all memory card elements in a cards variable. 
 This is where the function will reach to when looking for cards to flip. The 
 querySelectorAll function returns all the elements from the memory-card document.
@@ -366,7 +366,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left == '7.8vw' && match === 2 && moves <= 20 && timer.textContent > 30) {
+	if (btn.style.left == 'var(--fs-xxl)' && match === 2 && moves <= 20 && timer.textContent > 30) {
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
 		if(increaseStar1){
@@ -398,7 +398,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left == '7.8vw' && match === 4 && moves <= 20 && timer.textContent > 15) {
+	if (btn.style.left == 'var(--fs-xxl)' && match === 4 && moves <= 20 && timer.textContent > 15) {
 	
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
@@ -428,7 +428,7 @@ function checkForMatch() {
 	}
 
 	//for hard mode
-	if (btn.style.left == '7.8vw' && match === 6 && moves <= 20 && timer.textContent > 0) {
+	if (btn.style.left == 'var(--fs-xxl)' && match === 6 && moves <= 20 && timer.textContent > 0) {
 		// removing the 'dimmed' star introduces the 'lit-up' star
 		stars[0].classList.remove('dimmed');
 		if(increaseStar1){
@@ -894,7 +894,7 @@ let stopCardsUnflipping = function(){
 };
 let hardModeClickedWhenInHardMode = function(){
 		
-if(!timerActivate && btn.style.left == '7.8vw' && !startTimerCounter && moves <= '30'){
+if(!timerActivate && btn.style.left == 'var(--fs-xxl)' && !startTimerCounter && moves <= '30'){
 	clearInterval(setIntervalTimerID);
 }
 
@@ -923,6 +923,8 @@ let unFlipCardsFunction = function(){
 
  HardModeElement.onclick = function(){
 	hardMode();
+	turnBackOfCardsPurple();
+
 	
 	// this.getElementsByClassName doesn't have a forEach method but turning it into an array allows one to use forEach
 	let strayCardsToUnflipHardMode = Array.from(document.getElementsByClassName('visibilityHidden'));
@@ -942,7 +944,7 @@ let unFlipCardsFunction = function(){
 	// Cards remain unflipped when going from easy to hardmode. So need
 	// to have cards flip in this instance. 
 	/** if the button styling is > 1vw easy has moved into hard */
-	if(btn.style.left == '7.8vw'){
+	if(btn.style.left == 'var(--fs-xxl)'){
 		setTimeout(() =>{
 				unFlipCardsFunction();
 				},30);
