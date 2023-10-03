@@ -71,16 +71,22 @@ let hardModeFirstCardFlip = function(){
 
  let cardToUnflip; 
 
-let timerCounterContainer = document.getElementsByClassName('timer-counter-container');
+ let timerCounterContainer = document.querySelector('.timer-counter-container');
+
+//  timer counter stars only show when first card clicked
+function addVisibility(){
+	timerCounterContainer.style.visibility = 'visible';
+}
 
 function firstCardFlip() {
 	// startTimer function adapted so it only runs once to stop time speeding up on every card click
 	cardToUnflip = document.getElementsByClassName('flip');
 	hardModeFirstCardFlip();
 	cardToUnflip = this;
+	addVisibility();
 
 	// so the info stays centered when first card clicked
-	timerCounterContainer[0].style.bottom = '0';
+	// timerCounterContainer[0].style.bottom = '0';
 	
 	startTimerCounter = true;
 	
@@ -894,7 +900,6 @@ let unFlipCardsFunction = function(){
 		unFlipCardsHard();
 			},50);
 };
-
 //Addresses bug whereby matched cards would not display 
 // the back of the card when moving from easy to hard mode
 //solution adapted from code from Web Dev Simplified
@@ -905,8 +910,10 @@ function removeVisibility(element){
 element.classList.remove('visibilityHidden');
 }
 
+
  HardModeElement.onclick = function(){
 	hardMode();
+	
 	// this.getElementsByClassName doesn't have a forEach method but turning it into an array allows one to use forEach
 	let strayCardsToUnflipHardMode = Array.from(document.getElementsByClassName('visibilityHidden'));
 	// for each card left unflipped when moving from easy to hard mode the back of the card will now still display

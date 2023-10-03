@@ -4,7 +4,7 @@
 /* custom properties */
 /* anything below 800 px width */
 :root {
---fs-xl: 3rem;
+--fs-xl: 2.5rem;
 --fs-600: 1.5rem;
 /* 1 time the root font size */
 /* most browsers have a default root font size of 16px */
@@ -93,7 +93,7 @@ body {
 .howToPlay1,
 .play-button, .mute-button {
   display: inline-block;
-  font-size: 4vh;
+  font-size: var(--fs-600);
   padding: 2vw;
   font-weight: bold;
   font-family: "Mouse Memoirs", sans-serif;
@@ -113,7 +113,7 @@ body {
 /* volume button styling */
 
 i.volume-off, i.volume-on{
-  width: 3vw;
+  width: 5vw;
   position: relative;
   /* display block takes up the entire width of what's containing it
   it will force new lines above and below it */
@@ -399,6 +399,7 @@ i.volume-off, i.volume-on{
   text-shadow: 2px 2px 2px black;
   font-size: 2vw;
   align-items: flex-end;
+  visibility: hidden;
 }
 
 /* game & info stay in same screen */
@@ -745,6 +746,7 @@ span.starCounter {
 h3 {
   color: yellow;
   text-shadow: 2px 2px 2px black;
+  font-size: var(--fs-600);
 }
 
 .after{
@@ -1009,7 +1011,6 @@ footer .envelope-icon{
     padding-bottom: 0;
     padding-top:5vh;
     position: relative;
-    font-size: 2.5vw !important;
   }
 
   .timer-counter-container{
@@ -1089,7 +1090,6 @@ footer .envelope-icon{
   }
 
   h3{
-    font-size: 3vh !important;
     position: relative;
   }
 
