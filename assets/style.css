@@ -870,13 +870,9 @@ footer .email-frame{
   font-size: var(--fs-600);
 }
 
-footer .envelope-icon{
-  height: 5vh;
-  width: 6vw;
-}
-
 #svgEnvelope{
-  width: 100%;
+  width: 120%;
+  height: 120%;
 }
 
 .envelopeSVGContainer{

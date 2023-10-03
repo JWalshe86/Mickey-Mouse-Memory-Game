@@ -16,6 +16,18 @@ let stars = document.getElementsByClassName('star');
 
 let match = 0;
 
+// select back of cards
+let backOfCardsImg = document.querySelectorAll('.card-back');
+
+// As querySelectorAll returns an array I'd to loop through them
+function turnBackOfCardsPurple(){
+	for (i=0;i<backOfCardsImg.length;i++){
+		backOfCardsImg[i].src = "./assets/images/readme-images2/compressed-images/mickey-mouse-background-Purple.jpg";
+	}			
+}
+
+
+turnBackOfCardsPurple();
 /* Store all memory card elements in a cards variable. 
 This is where the function will reach to when looking for cards to flip. The 
 querySelectorAll function returns all the elements from the memory-card document.
@@ -903,10 +915,11 @@ let unFlipCardsFunction = function(){
 // so whatever element is passed into this function
 // it's visibilityHidden class is removed. Using functions 
 // this way allow for repeatibility
-function removeVisibility(element){
-element.classList.remove('visibilityHidden');
-}
+			function removeVisibility(element){
+					element.classList.remove('visibilityHidden');
+					}
 
+			
 
  HardModeElement.onclick = function(){
 	hardMode();
