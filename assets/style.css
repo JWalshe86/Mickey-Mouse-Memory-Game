@@ -52,7 +52,6 @@ body {
   align-items: center;
   position: absolute;
   width: 100%;
-  font-size: 10vh;
   bottom: 70vh;
   flex-wrap: wrap;
   flex-direction: column;
@@ -571,7 +570,7 @@ i.repeat{
   border: none;
   outline: none;
   background: none;
-  font-size: 4vw;
+  font-size: var(--fs-400);
   font-weight: bold;
   color: black;
   box-shadow: none;
@@ -678,11 +677,15 @@ i.repeat{
   background: black;
   color: white;
   outline: none;
-  font-size: 7vh;
+  font-size: var(--fs-400);
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-family: "Mouse Memoirs", sans-serif;
+}
+
+.congratsStars svg{
+  height: var(--fs-xxl)
 }
 
 .congratsCounter {
@@ -690,7 +693,7 @@ i.repeat{
 }
 
 .congratsCounter, .congratsTimer, .congratsStars {
-  font-size: 2.5vh;
+  font-size: var(--fs-600);
   text-align: center;
 }
 
@@ -769,7 +772,7 @@ h3 {
 }
 .header404{
   font-family: "Mouse Memoirs", sans-serif;
-  font-size: 15vh;
+  font-size: var(--fs-xxl);
   text-align: center;
 }
 
@@ -864,18 +867,16 @@ footer .social-links li a:hover{
 
 footer .email-frame{
   display:flex;
-  font-size: 4vh;
+  font-size: var(--fs-600);
 }
 
 footer .envelope-icon{
-  margin-right: 2vw;
   height: 5vh;
-  width: 2vw;
+  width: 6vw;
 }
 
 #svgEnvelope{
   width: 100%;
-  height: 100%;
 }
 
 .envelopeSVGContainer{
@@ -1007,7 +1008,6 @@ footer .envelope-icon{
     align-content: center;
     top: 50vh;
     z-index: 2;
-    font-size: 10vw;
     text-align: center;
   }
   .info-game-container {
@@ -1040,15 +1040,11 @@ footer .envelope-icon{
 
 @media (max-width: 350px) {
 
-  .congratsModal-popup {
-    font-size: medium;
-  }
   .title-container{
     padding-left:15vw;
   }
   .modal-header .title {
     padding: 0 10vw 0 17vw;
-    font-size: 4vw;
   }
 }
 
@@ -1068,7 +1064,6 @@ footer .envelope-icon{
   }
   .toggle-btn{
     width: 50%;
-    font-size: 10vw !important;
   }
 }
 
@@ -1105,9 +1100,6 @@ footer .envelope-icon{
 @media (max-width: 1500px) {
   .heroTitle {
     text-align: center;
-  }
-  .congratsCounter, .congratsTimer, .congratsStars {
-    font-size: 4vh !important;
   }
   .hero-image {
     background-size: cover !important;
