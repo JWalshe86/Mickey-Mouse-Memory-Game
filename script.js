@@ -925,7 +925,7 @@ let unFlipCardsFunction = function(){
 	hardMode();
 	turnBackOfCardsPurple();
 
-	
+
 	// this.getElementsByClassName doesn't have a forEach method but turning it into an array allows one to use forEach
 	let strayCardsToUnflipHardMode = Array.from(document.getElementsByClassName('visibilityHidden'));
 	// for each card left unflipped when moving from easy to hard mode the back of the card will now still display
