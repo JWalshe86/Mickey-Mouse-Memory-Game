@@ -226,19 +226,36 @@ function checkForMatch() {
 	}
 	
 	// script for sounds
+	let uniqueSounds = ['mm', 'dd', 'dyd', 'p', 'g', 'mi'];
+	
+	let cardNames = ['micky-mouse', 'donald-duck', 'daisy-duck', 'pete', 'goofy', 'minnie-mouse'];
+	
+	
+	function UniqueSoundPlayUponCardMatch(first, second){
+		console.log(first, second)
+
+		// for(i = 0; i < cardNames.length; i++){
+		// 	if(firstCard.dataset.framework === cardNames[i]);
+		// 		return firstCard.dataset.framework;
+		// }
+
+	}
+let uniqueSound = UniqueSoundPlayUponCardMatch(firstCard.dataset.framework, secondCard.dataset.framework);
+console.log(uniqueSound);
+
 
 	let myPlayMickey = function(){
 		
 		lockBoard = true;
 			
-		let audio = document.getElementsByClassName('mickeyMouseSound')[0];
+		let audio = document.getElementsByClassName('mm')[0];
 			
 			audio.play();
 			setTimeout(() =>{
 				lockBoard = false;
 					},3000);
 		};
-	
+
 		// Mickey Mouse Sound Clip Plays when two Mickey Mouse Cards Match
 	if(isMatch && firstCard.dataset.framework === 'micky-mouse' && !lockBoard){
 		// code for myplay function adapted from computeshorts
@@ -254,7 +271,7 @@ function checkForMatch() {
 			
 			lockBoard = true;
 				
-			let audio = document.getElementsByClassName('donaldDuckSound')[0];
+			let audio = document.getElementsByClassName('dd')[0];
 
 				audio.play();
 				setTimeout(() =>{
@@ -275,7 +292,7 @@ function checkForMatch() {
 			let myPlayDaisy = function(){
 				lockBoard = true;
 					
-				let audio = document.getElementsByClassName('daisyDuckSound')[0];
+				let audio = document.getElementsByClassName('dyd')[0];
 				audio.play();
 				setTimeout(() =>{
 					lockBoard = false;
@@ -290,7 +307,7 @@ function checkForMatch() {
 			}
 
 				let myPlayPete = function(){
-					let audio = document.getElementsByClassName('peteSound')[0];
+					let audio = document.getElementsByClassName('p')[0];
 					audio.play();	
 					setTimeout(() =>{
 						lockBoard = false;
@@ -307,24 +324,17 @@ function checkForMatch() {
 
 				// Goofy Sound Clip Plays when two Goofy Cards Match
 				let myPlayGoofy = function(){
-					let audio = document.getElementsByClassName('goofySound')[0];
+					let audio = document.getElementsByClassName('g')[0];
 					audio.play();
 					setTimeout(() =>{
 						lockBoard = false;
 							},1000);
 				};
-
-				if(isMatch && firstCard.dataset.framework === 'pluto' && !lockBoard){
-					// code for myplay function adapted from computeshorts
-					myPlayGoofy();
-					cardsStartToShake();
-					makeBackOfCardsInvisible();
-				}
 	
 				let myPlayMinnie = function(){
 					lockBoard = true;
 						
-					let audio = document.getElementsByClassName('minnieSound')[0];
+					let audio = document.getElementsByClassName('mi')[0];
 					
 					audio.play();
 						setTimeout(() =>{
