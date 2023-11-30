@@ -7,6 +7,8 @@ repeatedly showed 'memory game'. I was able to envision my daughter enjoying pla
 View [live site here](https://jwalshe86.github.io/Mickey-Mouse-Memory-Game/
 )
 
+[Learn Java Memory Game dcode](https://youtu.be/bznJPt4t_4s?si=AmjTFCIWfHeRrFKi)
+
 ![Responsiveness](./assets/images/readme-images2/AmIResponsiveHeroImg.png)
 ![GitHub last Commit](https://img.shields.io/badge/Last_commit-Sept_2023-blue
 )
