@@ -1,36 +1,77 @@
-const tilesContainer = $('.tiles');
-const colors = ['aqua', 'aquamarine', 'crimson', 'blue', 'dodgerblue', 'gold', 'greenyellow', 'teal'];
-const colorsPicklist = [...colors, ...colors]; // spread operator: places the individual array elements into an array 
+const tilesContainer = document.querySelector(".tiles");
+const colors = ["aqua", "aquamarine", "crimson", "blue", "dodgerblue", "gold", "greenyellow", "teal"];
+const colorsPicklist = [...colors, ...colors];
 const tileCount = colorsPicklist.length;
 
-// Game State
+// Game state
+let revealedCount = 0;
+let activeTile = null;
+let awaitingEndOfMove = false;
 
 function buildTile(color) {
-    const element = $('<div />').addClass('tile').attr('data-color', color);
-    return element;
-}
+	const element = document.createElement("div");
 
-let revealedCount = 0;  //game starts with 0 tiles revealed
-let activeTile = null;  //the tile the user has just clicked & is now looking for the next tile to match
-let awaitingEndOfMove = false; //waiting for tiles to turn back to default
+	element.classList.add("tile");
+	element.setAttribute("data-color", color);
+	element.setAttribute("data-revealed", "false");
+
+	element.addEventListener("click", () => {
+		const revealed = element.getAttribute("data-revealed");
+
+		if (
+			awaitingEndOfMove
+			|| revealed === "true"
+			|| element == activeTile
+		) {
+			return;
+		}
+
+		// Reveal this color
+		element.style.backgroundColor = color;
+
+		if (!activeTile) {
+			activeTile = element;
+
+			return;
+		}
+
+		const colorToMatch = activeTile.getAttribute("data-color");
+
+		if (colorToMatch === color) {
+			element.setAttribute("data-revealed", "true");
+			activeTile.setAttribute("data-revealed", "true");
+
+			activeTile = null;
+			awaitingEndOfMove = false;
+			revealedCount += 2;
+
+			if (revealedCount === tileCount) {
+				alert("You win! Refresh to start again.");
+			}
+
+			return;
+		}
+
+		awaitingEndOfMove = true;
+
+		setTimeout(() => {
+			activeTile.style.backgroundColor = null;
+			element.style.backgroundColor = null;
+
+			awaitingEndOfMove = false;
+			activeTile = null;
+		}, 1000);
+	});
+
+	return element;
+}
 
 // Build up tiles
-for (let i = 0; i < tileCount; i++){
-    const randomIndex = Math.floor(Math.random() * colorsPicklist.length); //picks random int between 0-15
-    const color = colorsPicklist[randomIndex] // colors assigned a random number
+for (let i = 0; i < tileCount; i++) {
+	const randomIndex = Math.floor(Math.random() * colorsPicklist.length);
+	const color = colorsPicklist[randomIndex];
+	const tile = buildTile(color);
 
-const tile = buildTile(color);
-
-    colorsPicklist.splice(randomIndex, 1); //remove the selected random number, so it can't be selected more than twice
-    $(tilesContainer).append(tile); //put tiles into the container
+	colorsPicklist.splice(randomIndex, 1);
+	tilesContainer.appendChild(tile);
 }
-
-
-$( document ).ready(function() {
-
-
-
-
-
-
-});
