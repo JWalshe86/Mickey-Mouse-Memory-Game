@@ -1,4 +1,4 @@
-const tilesContainer = document.querySelector(".tiles");
+const tilesContainer = $(".tiles");
 const colors = ["aqua", "aquamarine", "crimson", "blue", "dodgerblue", "gold", "greenyellow", "teal"];
 const colorsPicklist = [...colors, ...colors];
 const tileCount = colorsPicklist.length;
@@ -9,14 +9,14 @@ let activeTile = null;
 let awaitingEndOfMove = false;
 
 function buildTile(color) {
-	const element = document.createElement("div");
+	const element = $("<div/>");
 
-	element.classList.add("tile");
-	element.setAttribute("data-color", color);
-	element.setAttribute("data-revealed", "false");
+	element.addClass("tile");
+	element.attr("data-color", color);
+	element.attr("data-revealed", "false");
 
-	element.addEventListener("click", () => {
-		const revealed = element.getAttribute("data-revealed");
+	element.on("click", () => {
+		const revealed = element.attr("data-revealed");
 
 		if (
 			awaitingEndOfMove
@@ -27,7 +27,7 @@ function buildTile(color) {
 		}
 
 		// Reveal this color
-		element.style.backgroundColor = color;
+		element.css('background-color', color);
 
 		if (!activeTile) {
 			activeTile = element;
@@ -35,11 +35,11 @@ function buildTile(color) {
 			return;
 		}
 
-		const colorToMatch = activeTile.getAttribute("data-color");
+		const colorToMatch = activeTile.attr("data-color");
 
 		if (colorToMatch === color) {
-			element.setAttribute("data-revealed", "true");
-			activeTile.setAttribute("data-revealed", "true");
+			element.attr("data-revealed", "true");
+			activeTile.attr("data-revealed", "true");
 
 			activeTile = null;
 			awaitingEndOfMove = false;
@@ -55,8 +55,8 @@ function buildTile(color) {
 		awaitingEndOfMove = true;
 
 		setTimeout(() => {
-			activeTile.style.backgroundColor = null;
-			element.style.backgroundColor = null;
+			activeTile.css('background-color', "");
+			element.css('background-color', "");
 
 			awaitingEndOfMove = false;
 			activeTile = null;
@@ -73,5 +73,5 @@ for (let i = 0; i < tileCount; i++) {
 	const tile = buildTile(color);
 
 	colorsPicklist.splice(randomIndex, 1);
-	tilesContainer.appendChild(tile);
+	tilesContainer.append(tile);
 }
