@@ -3,6 +3,28 @@ body{
     margin: 0;
 }
 
+/* background image styling */
+.masthead {
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .masthead{
+        min-height: 100vh;
+    }
+}
+
+/* background image styling end */
+
+/* game styling */
 .tiles{
     margin: 48px auto; /*centers grid to center of page */
     width: max-content;
@@ -16,4 +38,29 @@ body{
     background: #111111;
     border: 5px solid #444444;
     cursor: pointer;
+}
+
+@media (min-width: 630px) {
+    .tile{
+        height: 67px;
+    }
+}
+
+@media (min-width: 768px) {
+    .tile{
+        height: 116px;
+    }
+    .tiles{
+        grid-template-columns: repeat(4, 150px);
+    }
+}
+
+@media (min-width: 1000px) {
+    .tile{
+        height: 150px;
+    }
+    .tiles{
+        grid-template-columns: repeat(4, 200px);
+    }
+
 }

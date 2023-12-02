@@ -34,9 +34,8 @@ function buildTile(color) {
             return;
         }
         awaitingEndOfMove = true;
-        const colorToMatch = activeTile.attr("src");
-
-
+        
+        const colorToMatch = activeTile.children().attr("src").split('/',-1).pop();
         if (colorToMatch === color) {
             element.attr("data-revealed", "true");
             activeTile.attr("data-revealed", "true");
@@ -54,7 +53,6 @@ function buildTile(color) {
         awaitingEndOfMove = true;
 
         setTimeout(() => {
-            console.log(activeTile)
             activeTile.children().remove('img');
             element.children().remove('img');
 
