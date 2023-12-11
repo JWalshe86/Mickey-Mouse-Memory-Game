@@ -4,6 +4,7 @@ const colorsPicklist = [...colors, ...colors];
 const tileCount = colorsPicklist.length;
 
 // Game state
+
 let revealedCount = 0;
 let activeTile = null;
 let awaitingEndOfMove = false;
