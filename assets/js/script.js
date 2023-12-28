@@ -9,61 +9,62 @@ let revealedCount = 0;
 let activeTile = null;
 let awaitingEndOfMove = false;
 
-function buildTile(color) {
-    const element = $("<div/>");
-
-    element.addClass("tile");
-    element.attr("data-color", color);
-    element.attr("data-revealed", "false");
-
-    element.on("click", () => {
-        const revealed = element.attr("data-revealed");
-
-        if (
-            awaitingEndOfMove
-            || revealed === "true"
-            || element == activeTile
-        ) {
-            return;
-        }
-
-        // Reveal this color
-        element.prepend(`<img class="w-100 h-100" src="/assets/images/card-images/${color}" />`)
-
-        if (!activeTile) {
-            activeTile = element;
-            return;
-        }
-        awaitingEndOfMove = true;
-        
-        const colorToMatch = activeTile.children().attr("src").split('/',-1).pop();
-        if (colorToMatch === color) {
-            element.attr("data-revealed", "true");
-            activeTile.attr("data-revealed", "true");
-
-            activeTile = null;
-            awaitingEndOfMove = false;
-            revealedCount += 2;
-
-            if (revealedCount === tileCount) {
-                alert("You win! Refresh to start again.");
+    function buildTile(color) {
+        const element = $("<div/>");
+    
+        element.addClass("tile");
+        element.attr("data-color", color);
+        element.attr("data-revealed", "false");
+    
+        element.on("click", () => {
+            const revealed = element.attr("data-revealed");
+    
+            if (
+                awaitingEndOfMove
+                || revealed === "true"
+                || element == activeTile
+            ) {
+                return;
             }
+    
+            // Reveal this color
+            element.prepend(`<img class="w-100 h-100" src="/assets/images/card-images/${color}" />`)
+    
+            if (!activeTile) {
+                activeTile = element;
+                return;
+            }
+            awaitingEndOfMove = true;
+            
+            const colorToMatch = activeTile.children().attr("src").split('/',-1).pop();
+            if (colorToMatch === color) {
+                element.attr("data-revealed", "true");
+                activeTile.attr("data-revealed", "true");
+    
+                activeTile = null;
+                awaitingEndOfMove = false;
+                revealedCount += 2;
+    
+                if (revealedCount === tileCount) {
+                    alert("You win! Refresh to start again.");
+                }
+    
+                return;
+            }
+            awaitingEndOfMove = true;
+    
+            setTimeout(() => {
+                activeTile.children().remove('img');
+                element.children().remove('img');
+    
+                awaitingEndOfMove = false;
+                activeTile = null;
+            }, 1000);
+        });
+    
+        return element;
+    }
 
-            return;
-        }
-        awaitingEndOfMove = true;
-
-        setTimeout(() => {
-            activeTile.children().remove('img');
-            element.children().remove('img');
-
-            awaitingEndOfMove = false;
-            activeTile = null;
-        }, 1000);
-    });
-
-    return element;
-}
 
 // Build up tiles
 for (let i = 0; i < tileCount; i++) {
@@ -74,3 +75,17 @@ for (let i = 0; i < tileCount; i++) {
     colorsPicklist.splice(randomIndex, 1);
     tilesContainer.append(tile);
 }
+
+// Timer
+
+var timer;
+const ele = document.getElementById('timer');
+
+(function (){
+    let sec = 0;
+    timer = setInterval(()=>{
+        ele.innerHTML = '00:' +sec;
+    sec++;
+},1000 )
+})()
+
